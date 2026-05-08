@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>HTML LIST : : 서민금융진흥원 ENG</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+      h1,h2,h3,h4,ul,li,dl,dt,dd,p,span,body,div,img,a,button,input,label,fieldset{margin: 0;padding: 0;}
+
+      li{list-style: none;}
+      a{text-decoration: none;}
+      img{vertical-align: top;}
+
+      
+      table {table-layout:fixed; border-collapse: collapse; border-spacing: 0px; word-break: break-all; word-wrap: break-word; }
+
+
+      body {background-color: #fff; font-weight: 500; font-family: sans-serif;}
+      .fa-solid {color:inherit} 
+
+      .fixed-head {position:sticky; top:0; width:100%; z-index:10}
+      
+      h2.bg_green {background-color:#00A684}
+      table {width:100%; line-height:1.3; margin-top:-2px; border-collapse: separate;}
+      table * {font-size:14px}
+      table thead th {height:25px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; line-height:1.3; vertical-align: middle; text-align: center; color:#333; background-color: #ddd}
+      table thead th > span {letter-spacing: -1px;}
+      table tbody th {height:35px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:1px solid #ccc; line-height:1.3; padding-left:20px; line-height:1.3; vertical-align: middle; text-align:left; letter-spacing: -1px; color:#333; background-color: #eee;}
+      table td {height:37px; padding:5px 10px; line-height:1.3; border-right:1px solid #ccc; border-bottom:1px solid #f1f1f1; vertical-align: middle; color:#333; word-break: keep-all; }
+      table tr:nth-child(odd) {background-color:rgba(245,245,245, .7);}
+      .no {text-align:center; font-weight:bold}
+      .date {text-align:center}
+      table .file {text-align:center; color:#bbb}
+      .file > a {color:#333}
+      .file > a:hover {text-decoration: underline;}
+      .status {position:absolute; right:20px; top:10px}
+      .status .sec {display:inline-block; padding:7px 10px; border-radius: 10px; font-weight: bold; font-size:14px; color:#333; background-color: rgba(255,255,255, .7);}
+      .status #finish {padding:0 10px; border-radius: 20px; font-weight:bold; background-color:#fff}
+      .etc {vertical-align: top;}
+
+      .btn-toggle {padding:3px 10px; border:1px solid #fff; border-radius: 10px; color:#004d40; font-size:12px; background-color: #fff;}
+      h2 .btn-toggle {position:absolute; right:20px; top:6px;}
+
+      th .layer, a.layer {color:green !important}
+      th .get, a.get {color:blue !important}
+      th .mobile, a.mobile {color:blue !important}
+      th .comm, a.comm {color:red !important}
+
+      .f-org {color:orange !important}
+
+      table tr.del {text-decoration: line-through; opacity: 0.5}
+
+      [class^="btn-"] > i {margin:0}
+
+      .fc-pri2 {color:green !important;}
+      .fc-point1 {color:blue}
+      .fc-point2 {color:red}
+
+      tr.web td {background-color: rgba(179, 255, 179, 0.2);}
+      tr.app td {background-color: rgba(255, 179, 179, 0.2);}
+
+      tr.thick-line td {border-top: 2px solid #ccc;}
+      
+      .g_wrap {min-height:100%; padding-bottom:30px; box-sizing: border-box;}
+      .g_wrap header {padding:15px; background-color:#00205E}
+      .g_wrap header h1 {color:#fff; font-size:20px; text-align:center;}
+      .g_wrap header h1 .fab {color:#fff; font-size:20px; vertical-align: -1px;}
+      .g_wrap header button {background-color: transparent;}
+      .g_tabHead {position:sticky; top:0; z-index: 99; width:100%; overflow-y:hidden; background-color: #008ad1;}
+      .g_tabHead::-webkit-scrollbar { display: none; /* Chrome, Safari, Opera*/}
+      .g_tabHead ul {display:flex;}
+      .g_tabHead ul > li {border: 5px solid transparent;}
+      .g_tabHead ul > li > a {display:inline-block; padding:10px 30px;font-size:16px; font-weight: bold; color:#fff}
+      .g_tabHead ul > li.active {border-bottom-color:#cae2ff}
+      .g_tabBody > .tabContent {display:none; padding:20px}
+      .g_tabBody > .tabContent.on {display:block}
+      .g_tabBody > .tabContent .contBody + h2 {margin-top:20px}
+      .html_list h2 {position:relative; padding:10px; margin-bottom:1px; font-size:18px; color:#00205E; background-color:#E2E8F0;}
+      h2 {font-size:16px; margin-bottom:20px;}
+      h3 {font-size:14px; margin-bottom:15px}
+
+      footer {text-align:center; background-color: #000; margin-top:-30px}
+      footer p {height:30px; line-height: 30px; color:#fff;}
+    </style>
+  </head>
+  <body>
+    <div class="g_wrap html_list">
+      <div class="fixed-head">
+        <header>
+          <h1>HTML LIST : : 서민금융진흥원 ENG</h1>
+          <!-- <a href="guide/guide.html" class="g-btn-gnb">&lt; Guide 보기</a> -->
+        </header>
+        
+        <div class="status">
+          <div class="sec">진행현황 : <span id="finish">0</span> / <span id="total"></span></div>
+          <div class="sec">진척률 : <span id="progress"></span> %</div>
+        </div>
+        <table class="ls-head">
+          <colgroup>
+            <col style="width:5%">
+            <col style="width:25%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:10%">
+            <col style="width:auto">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">No</th>
+              <th scope="col" colspan="2">화면</th>
+              <th scope="col" rowspan="2">파일</th>
+              <th scope="col" rowspan="2"><span class="fc-pri2">수정일</span><br>완료일</th>
+              <th scope="col" rowspan="2">비고<br><span class="fc-pri2">수정내용</span> / <span class="fc-point1">참고</span> / <span class="fc-point2">중요</span></th>
+            </tr>
+            <tr>
+              <th scope="col">1 depth</th>
+              <th scope="col">2 depth</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:25%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">layout</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/layout.html" target="_blank">layout.html</a></td>
+            <td class="date">2026-05-01</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Main</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/main.html" target="_blank">main.html</a></td>
+            <td class="date">2026-05-05</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="menu-01">1. About KINFA</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:25%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Message from the CEO</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub1_1.html" target="_blank">sub1_1.html</a> </td>
+            <td class="date">2026-05-02</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Mission and Vision</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub1_2.html" target="_blank">sub1_2.html</a> </td>
+            <td class="date">2026-05-03</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Micro Credit Support Act</td>
+            <td class="2dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">History</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub1_4.html" target="_blank">sub1_4.html</a></td>
+            <td class="date">2026-05-03</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Organization</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub1_5.html" target="_blank">sub1_5.html</a></td>
+            <td class="date">2026-05-04</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Ci & Mascot</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub1_6.html" target="_blank">sub1_6.html</a></td>
+            <td class="date">2026-05-04</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-02">2. Services</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:25%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Inclusive Funds Support</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub2_1.html" target="_blank">sub2_1.html</a></td>
+            <td class="date">2026-05-04</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Guaranteed Loan Support</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub2_2.html" target="_blank">sub2_2.html</a></td>
+            <td class="date">2026-05-04</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Credit&Debt Management Consulting Service</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub2_3.html" target="_blank">sub2_3.html</a></td>
+            <td class="date">2026-05-04</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Inclusive Life Support</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub2_4.html" target="_blank">sub2_4.html</a></td>
+            <td class="date">2026-05-05</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Personalized Loan Service</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub2_5.html" target="_blank">sub2_5.html</a></td>
+            <td class="date">2026-05-05</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Protection of Original</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub2_6.html" target="_blank">sub2_6.html</a></td>
+            <td class="date">2026-05-05</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-03">3. Publications</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:25%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Videos</td>
+            <td class="2dep">youtube</td>
+            <td class="file"><a href="html/sub3_1_1.html" target="_blank">sub3_1_1.html</a></td>
+            <td class="date">2026-05-02</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">Promotional video</td>
+            <td class="file"><a href="html/sub3_1_2.html" target="_blank">sub3_1_2.html</a></td>
+            <td class="date">2026-05-02</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Annual Report</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub3_2.html" target="_blank">sub3_2.html</a></td>
+            <td class="date">2026-05-02</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">ETC</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub3_3.html" target="_blank">sub3_3.html</a></td>
+            <td class="date">2026-05-02</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-04">4. Network</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:25%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Domestic</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub4_1.html" target="_blank">sub4_1.html</a></td>
+            <td class="date">2026-05-03</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Global</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub4_2.html" target="_blank">sub4_2.html</a></td>
+            <td class="date">2026-05-03</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-05">5. Contact</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:25%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Headquater</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub5_1.html" target="_blank">sub5_1.html</a></td>
+            <td class="date">2026-05-06</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Financial Inclusive Centers</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub5_2.html" target="_blank">sub5_2.html</a></td>
+            <td class="date">2026-05-06</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">1397 Inclusive Finance Call Center Introduction</td>
+            <td class="2dep"></td>
+            <td class="file"><a href="html/sub5_3.html" target="_blank">sub5_3.html</a></td>
+            <td class="date">2026-05-06</td>
+            <td class="etc">
+              <p class="fc-pri2"></p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <p>copyright 2026. kinfa all rights reserved.</p>
+    </footer>
+
+    <script>
+      let elemNo = document.querySelectorAll(".no");
+      let elemTable = document.querySelectorAll("table");
+      let elemDate = document.querySelectorAll(".date");
+      const fixedHead = document.querySelector(".fixed-head");
+      let elemDel = document.querySelectorAll(".del");
+
+      let count = 0;
+      
+      /* elemNo.forEach(function(obj, i){
+        obj.innerHTML= i + 1;
+      }); */
+
+      elemTable.forEach(function(obj){
+        const no =  obj.querySelectorAll(".no");
+        console.log(no);
+        no.forEach(function(obj, i){
+          obj.innerHTML= i + 1;
+        });
+      });
+      console.log(elemDel.length);
+
+      total.innerHTML = elemNo.length - elemDel.length;
+
+      // 완료건 count 및 진척률
+      elemDate.forEach(function(obj, i){
+        //console.log(elemDate);
+        if(obj.hasChildNodes()){
+          count = count + 1;
+          finish.innerHTML = count;
+          console.log(obj.hasChildNodes());
+        }
+
+        let progr = ( count / (elemNo.length - elemDel.length) ) * 100;
+        progress.innerHTML = Math.floor(progr);
+      });
+
+      
+      
+     // gnbControlGuide();
+    </script>
+  </body>
+</html>
