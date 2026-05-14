@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@import url(../font/pretendard.css); /* font 정의 */
+
+:root {
+  --primary-color : #EF3B24;  
+  --default-font-color : #141414;
+  --default-font : 14px;
+  --side-padding : 20px;  
+}
+
+/* reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, strike, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video { margin: 0; padding: 0; font-family: "Pretendard", sans-serif; color:#141414; font-size: 14px; font-weight: 500; box-sizing: border-box;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+
+p {line-height: 1.4;}
+img {vertical-align: top;}
+
+/* html::-webkit-scrollbar, body::-webkit-scrollbar {width:0;} */
+button { cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 1); background-color: transparent }
+button, textarea, select { box-shadow: none; cursor: pointer;  font-family: "Pretendard", "Noto Sans Korean", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",  Roboto,"Pretendard", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
+select {height:24px; min-width: 90px; border:1px solid #D2D7DB;}
+input { /* -webkit-appearance: none; appearance: none; */ }
+::-webkit-input-placeholder { color: #ACB8C2;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+a { font-size: inherit; color: inherit; text-decoration:none; cursor:pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+a, dl, dt, dd, ul, li, button, span, div, p { -webkit-appearance: none; appearance: none; box-shadow: none; border: none; border-radius: 0; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+a.link { display: block; }
+ul, ol, li, dl, dt, dd { list-style:none; }
+
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:none; }
+ 
+table {table-layout:fixed; border-collapse: collapse; border-spacing: 0px; word-break: break-all; word-wrap: break-word; }
+caption, legend { visibility:hidden;overflow:hidden;font-size:0;line-height:0; }
+address,caption,cite,code,dfn,em,var {font-style: normal; font-weight: 400;}
+
+button:disabled{opacity:0.3;}
+
+b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:700; letter-spacing:inherit;}
+
+em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter-spacing:inherit;}
+
+
+/* 대체텍스트 hidden */
+.blind {position: absolute;	clip: rect(0 0 0 0); display:block; width: 1px; height: 1px; margin: -1px;	overflow: hidden;}
+
+/*flexbox*/
+.flexSb { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; -webkit-box-orient: horizontal; -webkit-box-pack: justify; -webkit-box-align: center; }
+.flexTop { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; -webkit-box-orient: horizontal; -webkit-box-pack: justify; -webkit-box-align: start; }
+.flexBottom { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-end; align-items: flex-end; -webkit-box-orient: horizontal; -webkit-box-pack: justify; -webkit-box-align: center; }
+.flexCen { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; }
+.flexSb > *, .flexTop > *, .flexBottom > *, .flexCen > * { display: block; }
+.flex-1 { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+
+.v-top {vertical-align: top !important;}
+.v-mid {vertical-align: middle !important;}
+.v-bot {vertical-align: bottom !important;}
+
+
+/* ds-none */
+.ds-none { display: none; }
+.ds-block { display: block; }
+
+/* padding */
+.paBot10 { padding-bottom: 10px; }
+
+/* margin */
+.maBot10 { margin-bottom: 10px; }
+
+/* text */
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+
+/* ==== button ==== */
+.btn-small {display: inline-block; height: 25px; padding:0 8px; border:1px solid #ED7222; border-radius: 4px; color: var(--primary-color);  background-color: #FDEFE4;}
+.btn-small:hover {color:#fff; background-color: var(--primary-color);}
+
+/* ==== icon ==== */
+[class^="ic-call"] {display: inline-block; width: 16px; height: 16px; vertical-align: middle; background: no-repeat center / contain;}
+.ic-callIn {background-image: url(../images/ic_call_in.png);}
+.ic-callMiss {background-image: url(../images/ic_call_miss.png);}
+.ic-callOut {background-image: url(../images/ic_call_out.png);}
+.ic-callNo {background-image: url(../images/ic_call_no.png);}
+
+/* ==== layout ==== */
+.header {display: flex; justify-content: space-between; align-items: center; height:52px; padding:0 var(--side-padding); border-bottom:1px solid #00000033;}
+.header__logo {width: 62px; height: 32px; background: url(../images/new_logo.png) no-repeat center / contain;}
+
+.utility {display: flex; align-items: center; gap: 19px;}
+.log > dl {display: flex; gap: 8px;}
+.log > dl > dd::before {content: ''; display: inline-block; width: 1px; height: 8px; margin-right:8px; vertical-align: middle; background-color: #898C8E;}
+.sitemap__btn {display: block; width: 30px; height: 30px; background: url(../images/btn_menu.png) no-repeat center / contain;}
+.sitemap__menu {display: none;}
+
+.content {padding:20px var(--side-padding); }
+
+
+/* ==== content ==== */
+.callList__title {padding:8px 20px; border-radius: 20px 20px 0 0; font-weight: 500; color:#fff; background-color: #ADADAD;}
+.callList__list {padding:12px 20px 20px; border:1px solid #E4E4E4; border-top:0; border-radius: 0 0 20px 20px;}
+.callList__list > li {position: relative; padding:8px 0 8px 24px;}
+.callList__list > li + li {border-top:1px solid #E4E4E4;}
+.callList__state {position: absolute; left:0;}
+.callList__info > dd {display: flex; justify-content: space-between; align-items: center; margin-top:4px;}
+.callList__info .btns > .btn-small {margin-left:8px;} 
+
+
+.call--newly .callList__title {background-color: var(--primary-color);}
+.call--newly .callList__title::before {content: ''; display: inline-block; width: 20px; height: 20px; margin-right:13px; vertical-align: middle; background: url(../images/ic_call.png) no-repeat center / contain;}
+.callList + .callList {margin-top:20px;}
+
+
+
+
+
+
