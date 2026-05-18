@@ -27,12 +27,26 @@
         </div>
         <div class="sitemap">
           <button type="button" class="sitemap__btn"><span class="blind">메뉴</span></button>
-          <ul class="sitemap__menu">
-            <li><a href="#n">Home</a></li>
-            <li><a href="#n">곤리건조회</a></li>
-            <li><a href="#n">문자수신관리</a></li>
-            <li><a href="#n">방문관리</a></li>
-          </ul>
+          <div class="gnb">
+            <div class="dim"></div>
+            <div class="gnb__cont">
+              <div class="gnb__head">
+                <a href="/" class="btn-home"><span class="blind">home</span></a>
+                <button type="button" class="btn-gnb-close"><span class="blind">닫기</span></button>
+              </div>
+              <div class="gnb__title">
+                <p>메뉴목록</p>
+              </div>
+              <ul class="gnb__menu">
+                <li><a href="#n">관리건조회</a></li>
+                <li><a href="#n">문자수신관리</a></li>
+                <li><a href="#n">방문관리</a></li>
+              </ul>
+              <div class="gnb__foot">
+                <a href="#n" class="btn-logout">로그아웃</a>
+              </div>
+            </div>            
+          </div>
         </div>
       </div>
     </header>
@@ -50,7 +64,24 @@
 
 
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sitemapBtn = document.querySelector('.sitemap__btn');
+      const gnb = document.querySelector('.gnb');
+      const gnbMenu = document.querySelector('.gnb__cont');
+      const gnbClosdBtn = document.querySelector('.btn-gnb-close');
 
+      sitemapBtn.addEventListener('click', () => {
+        gnbMenu.style.display = 'block';
+        setTimeout(function(){
+          gnb.classList.add('open');
+        }, 200);        
+      });
+
+      gnbClosdBtn.addEventListener('click', () => {
+        gnb.classList.remove('open');
+        gnbMenu.style.display = 'none'; 
+      });
+    });
   </script>
 </body>
 </html>
