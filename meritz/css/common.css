@@ -124,6 +124,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .searchBox.open .searchBox__btn {background: url(../images/btn_search_up.png) no-repeat center / 12px 12px;}
 .searchBox.open .searchBox__body {display: block;}
 
+.searchNoneData {padding:24px; text-align: center; color:#898C8E; font-size: 16px;}
+
 /* ==== layout ==== */
 .header {display: flex; justify-content: space-between; align-items: center; height:52px; padding:0 var(--side-padding); border-bottom:1px solid #00000033;}
 .header__logo {width: 62px; height: 32px; background: url(../images/new_logo.png) no-repeat center / contain;}
