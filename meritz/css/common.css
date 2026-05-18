@@ -97,7 +97,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
 /* ==== form ==== */
 
-.inpBasic {width: 100%; height: 40px; padding:0 16px; border:1px solid #E4E4E4; border-radius: 8px;}
+.inpBasic {width: 100%; height: 40px; padding:0 16px; border:1px solid #E4E4E4; border-radius: 8px; font-size: 16px;}
 
 .inpupWrap {position: relative;}
 .inpupWrap > label {display: block; margin-bottom:8px;}
@@ -139,7 +139,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .sitemap__btn {display: block; width: 30px; height: 30px; background: url(../images/btn_menu.png) no-repeat center / contain;}
 
 .gnb > .dim {display: none; position: fixed; top:0; right:0; bottom:0; left:0; background: rgba(0, 0, 0, 0.7);}
-.gnb__cont {display: none; position: fixed; z-index: 2; top:0; right:0; bottom:0; transform: translateX(100%); transition:block 1s, transform .2s .2s; width: 220px; background-color: #fff;}
+.gnb__cont {display: none; position: fixed; z-index: 2; top:0; right:0; bottom:0; transform: translateX(100%); transition:transform .2s .2s ease; width: 220px; background-color: #fff;}
 .gnb__head {display: flex; justify-content: space-between; align-items: center; height: 55px; padding:0 14px;}
 .gnb__head .btn-home {display: block; width: 30px; height: 30px; background: url(../images/btn_home.png) no-repeat center / 18px 19px;}
 .gnb__head .btn-gnb-close {display: block; width: 30px; height: 30px; background: url(../images/btn_gnb_close.png) no-repeat center / 18px 18px;}
@@ -154,7 +154,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .gnb.open > .dim {display: block;} 
 .gnb.open > .gnb__cont {transform: translateX(0);}
 
-.content {padding:20px var(--side-padding); }
+.content {padding:20px var(--side-padding) 40px; }
 
 
 /* ==== content ==== */
