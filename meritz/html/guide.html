@@ -12,6 +12,12 @@
   <meta name="description" content="메리츠캐피탈">
 
   <link type="text/css" rel="stylesheet" href="../css/common.css">
+
+  <!-- 가이드를 위한 css 입니다. :: 사용금지 -->
+  <style>
+    .guideBox + .guideBox {margin-top:40px;}
+    .flexSb {gap: 8px;}
+  </style>
 </head>
 <body>
   <div class="wrapper">
@@ -28,7 +34,6 @@
         <div class="sitemap">
           <button type="button" class="sitemap__btn"><span class="blind">메뉴</span></button>
           <div class="gnb">
-            <div class="dim"></div>
             <div class="gnb__cont">
               <div class="gnb__head">
                 <a href="/" class="btn-home"><span class="blind">home</span></a>
@@ -54,9 +59,85 @@
 
     <div class="container">
       <section class="content">
-        <h2 class="blind">통화내역</h2>
-        <div class="callList call__newly">
-          
+        <h2 class="blind">가이드</h2>
+        
+        <div class="guideBox">
+          <h3 class="title3">Date</h3>
+          <div class="searchBox">
+            <div class="searchBox__row">
+              <div class="dateInp">
+                <input type="date" id="dateInp02">
+              </div>
+            </div>
+            <div class="searchBox__row">
+              <div class="dateInpWrap">
+                <div class="dateInp">
+                  <input type="date" id="dateInp02">
+                </div>
+                <span>~</span>
+                <div class="dateInp">
+                  <input type="date" id="dateInp03">
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="guideBox">
+          <h3 class="title3">Input</h3>
+          <div class="searchBox">
+            <div class="searchBox__row">
+              <div class="inpupWrap">
+                <input type="text" id="searchBoxInput" class="inpBasic" placeholder="label 없는 경우" title="검색어 입력">
+                <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+              </div>
+            </div>
+            <div class="searchBox__row">
+              <div class="inpupWrap">
+                <label for="searchName">담당자</label>
+                <input type="text" id="searchName" class="inpBasic" placeholder="label 있는 경우">
+                <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+              </div>
+            </div> 
+          </div>
+        </div>
+
+        <div class="guideBox">
+          <h3 class="title3">Radio</h3>
+          <div class="searchBox">
+            <div class="searchBox__row">
+              <div class="radioBtnsWrap">
+                <div class="radioBtn">
+                  <input type="radio" id="radioBtn01_1" name="radioBtn01"><label for="radioBtn01_1">버튼형1</label>
+                </div>
+                <div class="radioBtn">
+                  <input type="radio" id="radioBtn01_2" name="radioBtn01"><label for="radioBtn01_2">버튼형2</label>
+                </div>
+                <div class="radioBtn">
+                  <input type="radio" id="radioBtn01_3" name="radioBtn01"><label for="radioBtn01_3">버튼형3</label>
+                </div>
+              </div>
+            </div>
+            <div class="searchBox__row">
+              <div class="radioInp">
+                <input type="radio" name="radio01" id="radio01_1" checked><label for="radio01_1">기본형1</label>
+              </div>
+              <div class="radioInp">
+                <input type="radio" name="radio01" id="radio01_2"><label for="radio01_2">기본형2</label>
+              </div>
+              <div class="radioInp">
+                <input type="radio" name="radio01" id="radio01_3"><label for="radio01_3">기본형3</label>
+              </div>
+            </div> 
+          </div>
+        </div>
+
+        <div class="guideBox">
+          <h3 class="title3">Button</h3>
+          <button type="button" class="btn-small">.btn-small</button>
+          <br><br>
+          <button type="button" class="btn-search">.btn-search</button>
+          <br>
+          <button type="button" class="btn-cta-pri">.btn-cta-pri</button>
         </div>
       </section>
     </div>
@@ -71,15 +152,24 @@
       const gnbClosdBtn = document.querySelector('.btn-gnb-close');
 
       sitemapBtn.addEventListener('click', () => {
+        gnb.style.display = 'block';
         gnbMenu.style.display = 'block';
         setTimeout(function(){
           gnb.classList.add('open');
-        }, 200);        
+        }, 100);        
       });
 
       gnbClosdBtn.addEventListener('click', () => {
         gnb.classList.remove('open');
         gnbMenu.style.display = 'none'; 
+        gnb.style.display = 'none';
+      });
+
+      //date 오늘 날짜 셋팅
+      const today = new Date().toISOString().split('T')[0];
+      const daetInp = document.querySelectorAll('.dateInp input');
+      daetInp.forEach((elm, i) => {
+         elm.value = today;
       });
     });
   </script>

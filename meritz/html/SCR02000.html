@@ -41,10 +41,10 @@
 
         <div class="tab">
           <ul>
-            <li><button type="button">보증인정보</button></li><!-- 선택시 li class="selected" -->
-            <li><button type="button">법조치내역</button></li>
-            <li><button type="button">상담이력</button></li>
-            <li><button type="button">비고</button></li>
+            <li><button type="button" onclick="bottomSheetOpen('#tabCont01')">보증인정보</button></li><!-- 선택시 li class="selected" -->
+            <li><button type="button" onclick="bottomSheetOpen('#tabCont02')">법조치내역</button></li>
+            <li><button type="button" onclick="bottomSheetOpen('#tabCont03')">상담이력</button></li>
+            <li><button type="button" onclick="bottomSheetOpen('#tabCont04')">비고</button></li>
           </ul>
         </div>     
         
@@ -198,10 +198,251 @@
     </div>
   </div>
 
+  <!-- 바텀시트 : 보증인정보 -->
+  <div class="bottomSheet" id="tabCont01">
+    <div class="bottomSheet__container">
+      <div class="bottomSheet__head">
+        <h1>보증인정보</h1>
+      </div>
+      <div class="bottomSheet__body">
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 100px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">보증인명<br>(생년월일)</th>
+                <td>김보증(1988.01.23)</td>
+              </tr>
+              <tr>
+                <th scope="row">주소선택</th>
+                <td>
+                  <div class="radioInp">
+                    <input type="radio" name="radio03" id="radio03_1" checked><label for="radio03_1">자택</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio03" id="radio03_2"><label for="radio03_2">직장</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio03" id="radio03_3"><label for="radio03_3">청구지</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소</th>
+                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 100px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">보증인명<br>(생년월일)</th>
+                <td>김보증(1988.01.23)</td>
+              </tr>
+              <tr>
+                <th scope="row">주소선택</th>
+                <td>
+                  <div class="radioInp">
+                    <input type="radio" name="radio04" id="radio04_1" checked><label for="radio04_1">자택</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio04" id="radio04_2"><label for="radio04_2">직장</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio04" id="radio04_3"><label for="radio04_3">청구지</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소</th>
+                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 100px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">보증인명<br>(생년월일)</th>
+                <td>김보증(1988.01.23)</td>
+              </tr>
+              <tr>
+                <th scope="row">주소선택</th>
+                <td>
+                  <div class="radioInp">
+                    <input type="radio" name="radio05" id="radio05_1" checked><label for="radio05_1">자택</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio05" id="radio05_2"><label for="radio05_2">직장</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio05" id="radio05_3"><label for="radio05_3">청구지</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소</th>
+                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- //bottomSheet__body -->
+      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#tabCont01')"><span class="blind">닫기</span></button>
+    </div><!-- //bottomSheet__container -->
+  </div><!-- //bottomSheet -->
+  <!-- //바텀시트 : 보증인정보 -->
+
+  <!-- 바텀시트 : 법조치 내역 -->
+  <div class="bottomSheet" id="tabCont02">
+    <div class="bottomSheet__container">
+      <div class="bottomSheet__head">
+        <h1>법조치 내역</h1>
+      </div>
+      <div class="bottomSheet__body">
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 120px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">법조치유형(중)<br>/대상자</th>
+                <td>지급명령 / 나채무</td>
+              </tr>
+              <tr>
+                <th scope="row">사건번호<br>/법원명</th>
+                <td>2025차전1486 영천시 법원</td>
+              </tr>
+              <tr>
+                <th scope="row">진행상태</th>
+                <td>확정</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 120px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">법조치유형(중)<br>/대상자</th>
+                <td>지급명령 / 나채무</td>
+              </tr>
+              <tr>
+                <th scope="row">사건번호<br>/법원명</th>
+                <td>2025차전1486 영천시 법원</td>
+              </tr>
+              <tr>
+                <th scope="row">진행상태</th>
+                <td>확정</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- //bottomSheet__body -->
+      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#tabCont02')"><span class="blind">닫기</span></button>
+    </div><!-- //bottomSheet__container -->
+  </div><!-- //bottomSheet -->
+  <!-- //바텀시트 : 법조치 내역 -->
+
+  <!-- 바텀시트 : 상담이력 -->
+  <div class="bottomSheet" id="tabCont03">
+    <div class="bottomSheet__container">
+      <div class="bottomSheet__head">
+        <h1>상담이력</h1>
+      </div>
+      <div class="bottomSheet__body">
+        <div class="searchBox">
+          <div class="searchBox__row">
+            <div class="dateInpWrap">
+              <div class="dateInp">
+                <input type="date" id="dateInp02">
+              </div>
+              <span>~</span>
+              <div class="dateInp">
+                <input type="date" id="dateInp03">
+              </div>
+            </div>
+          </div>          
+          <div class="searchBox__btns">
+            <button type="button" class="btn-search">조회</button>
+          </div>
+        </div>
+
+        <div class="bottomSheet__result">
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col style="width: 120px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록일시<br>/등록자</th>
+                  <td>2026/04/23 / 전주현</td>
+                </tr>
+                <tr>
+                  <th scope="row">상담내용</th>
+                  <td>
+                    통화중<br>
+                    확대버튼클릭시 확대 되는 것<br>
+                    예시를사용 하기  위해 글씨를 많이 적었습니다.<br>
+                    상담이력을 클릭하면 텍스트가 다 표기될 수 있을 정도로 확대가 되었으면 합니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col style="width: 120px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록일시<br>/등록자</th>
+                  <td>2026/04/23 / 전주현</td>
+                </tr>
+                <tr>
+                  <th scope="row">상담내용</th>
+                  <td>통화중</tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- //bottomSheet__body -->
+      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#tabCont03')"><span class="blind">닫기</span></button>
+    </div><!-- //bottomSheet__container -->
+  </div><!-- //bottomSheet -->
+  <!-- //바텀시트 : 상담이력 -->
+
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 조건 검색 열기/닫기
+      // accordionBox 열기/닫기
       const accordionBoxBtn = document.querySelectorAll('.accordionBox__btn');
 
       accordionBoxBtn.forEach((elm, i) => {
@@ -215,10 +456,54 @@
         });
       });
       
-
+      //date 오늘 날짜 셋팅
       const today = new Date().toISOString().split('T')[0];
-      document.getElementById('dateInp01').value = today;
+      const daetInp = document.querySelectorAll('.dateInp input');
+      daetInp.forEach((elm, i) => {
+         elm.value = today;
+      });
+     
+
+      //tab
+      const tabLi = document.querySelectorAll('.tab li');
+      const tabBtn = document.querySelectorAll('.tab button');
+      tabBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = elm.parentElement;
+          tabLi.forEach((elm, i) => {
+            elm.classList.remove('selected');
+          });
+          parent.classList.add('selected');
+        });
+      });
     });
+
+    //바텀시트
+    function bottomSheetOpen(id) {
+      const sheetId = document.querySelector(id);
+      const bottomSheet = document.querySelectorAll('.bottomSheet');
+
+      bottomSheet.forEach((elm, i) => {
+        elm.classList.remove('open');
+        elm.style.display = 'none'; 
+      });
+      sheetId.style.display = 'block';
+      setTimeout(function(){
+        sheetId.classList.add('open');
+      }, 100);  
+    }
+
+    function bottomSheetClose(id) {
+      const sheetId = document.querySelector(id);
+      const tabBtn = document.querySelectorAll('.tab button');
+
+      sheetId.classList.remove('open');
+      sheetId.style.display = 'none'; 
+      
+      tabBtn.forEach((elm, i) => {
+        elm.parentElement.classList.remove('selected');
+      });
+    }
   </script>
 </body>
 </html>
