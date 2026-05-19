@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>meritz 메리츠캐피탈</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="keywords" content="메리츠캐피탈">
+  <meta name="description" content="메리츠캐피탈">
+
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo"><span class="blind">meritz 메리츠캐피탈</span></h1>
+      <div class="utility">
+        <div class="log">
+          <dl>
+            <dt>채권관리팀</dt>
+            <dd>전주현</dd>
+          </dl>
+        </div>
+        <div class="sitemap">
+          <button type="button" class="sitemap__btn"><span class="blind">메뉴</span></button>
+          <div class="gnb">
+            <!-- guide.html에서 확인해주세요 -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <div class="container">
+      <section class="content-counsel">
+        <h2 class="blind">상담관리</h2>
+
+        <div class="tab">
+          <ul>
+            <li><button type="button">보증인정보</button></li><!-- 선택시 li class="selected" -->
+            <li><button type="button">법조치내역</button></li>
+            <li><button type="button">상담이력</button></li>
+            <li><button type="button">비고</button></li>
+          </ul>
+        </div>     
+        
+        <div class="counsel__body">
+          <!-- 고객정보 -->
+          <div class="counsel__info">
+            <h3 class="title3">고객정보</h3>
+            <p class="fcPri">(접촉가능여부 : Y (2회 / 1일, 3회 / 7일))</p>
+            <div class="tableWrap">
+              <table>
+                <colgroup>
+                  <col style="width: 100px;">
+                  <col style="width: auto;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">거래처명<br>(생년월일)</th>
+                    <td>김채무(1988.08.23)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">주소선택</th>
+                    <td>
+                      <div class="radioInp">
+                        <input type="radio" name="radio01" id="radio01_1" checked><label for="radio01_1">자택</label>
+                      </div>
+                      <div class="radioInp">
+                        <input type="radio" name="radio01" id="radio01_2"><label for="radio01_2">직장</label>
+                      </div>
+                      <div class="radioInp">
+                        <input type="radio" name="radio01" id="radio01_3"><label for="radio01_3">청구지</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">주소</th>
+                    <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="counsel__cont">
+
+            <div class="accordionBox open">
+              <div class="accordionBox__head">
+                <h3>연체정보</h3>
+                <button type="button" class="accordionBox__btn"><span class="blind">열기/닫기</span></button>
+              </div>
+              <div class="accordionBox__body">
+                <div class="accordionBox__row">
+                  <div class="radioBtnsWrap">
+                    <div class="radioBtn">
+                      <input type="radio" id="radio02_1" name="radio02"><label for="radio01_1">정상</label>
+                    </div>
+                    <div class="radioBtn">
+                      <input type="radio" id="radio02_2" name="radio02"><label for="radio01_2">일시납</label>
+                    </div> 
+                  </div>
+                </div>
+                <div class="accordionBox__row">
+                  <div class="dateInp">
+                    <input type="date" name="dateInp" id="dateInp01">
+                  </div>
+                </div>
+                <div class="accordionBox__btns">
+                  <button type="button" class="btn-search">조회</button>
+                </div>  
+
+                <div class="tableWrap">
+                  <table>
+                    <colgroup>
+                      <col style="width: 110px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">연체금액</th>
+                        <td>506,063원</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">실행금액<br>/여신잔액</th>
+                        <td>25,000,000원  / 16,040,713원</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">납부일<br>/최종입금일</th>
+                        <td>15일자 / 2026.02.26</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">상실<br> /해지일자</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">약정이자율<br>/연체이자율</th>
+                        <td>11.9% / 14.9%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>            
+              </div>
+            </div><!-- //accordionBox -->
+
+            <div class="accordionBox open">
+              <div class="accordionBox__head">
+                <h3>실행정보</h3>
+                <button type="button" class="accordionBox__btn"><span class="blind">열기/닫기</span></button>
+              </div>
+              <div class="accordionBox__body">
+                <div class="tableWrap">
+                  <table>
+                    <colgroup>
+                      <col style="width: 110px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">실행번호</th>
+                        <td>PC26060668001</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">상품명<br>(물건명)</th>
+                        <td>국산중고가계대출(SM6-2.0 Lpe 렌터카 PE)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">차량번호</th>
+                        <td>235소5075</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">채권상태<br>/연체개월</th>
+                        <td>대손상각 / 20개월</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">추심불가상태</th>
+                        <td>개인회생 - 미확정채권</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>     
+                       
+              </div>
+            </div><!-- //accordionBox -->
+
+          </div><!-- //counsel__cont -->
+        </div>
+
+        <div class="counsel__foot">
+          <button type="button" class="btn-cta-pri">전화하기</button>
+          <button type="button" class="btn-cta-pri">문자전송</button>
+        </div>
+      </section><!-- //content-counsel -->
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 조건 검색 열기/닫기
+      const accordionBoxBtn = document.querySelectorAll('.accordionBox__btn');
+
+      accordionBoxBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = elm.parentElement.parentElement;
+          if (parent.classList[1] == 'open') {
+            parent.classList.remove('open');
+          } else {
+            parent.classList.add('open');
+          }
+        });
+      });
+      
+
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('dateInp01').value = today;
+    });
+  </script>
+</body>
+</html>
+

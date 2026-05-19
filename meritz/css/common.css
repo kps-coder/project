@@ -81,12 +81,13 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .text-center { text-align: center !important; }
 
 .fcRed {color:#ff0000 !important}
+.fcPri {color:var(--primary-color) !important}
 
 /* ==== button ==== */
 .btn-small {display: inline-block; height: 25px; padding:0 8px; border:1px solid #ED7222; border-radius: 4px; color: var(--primary-color);  background-color: #FDEFE4;}
 .btn-small:hover {color:#fff; background-color: var(--primary-color);}
 
-
+.btn-cta-pri {display: block; width: 100%; height:45px; border: 1px solid var(--primary-color); border-radius: 8px; color: var(--primary-color); background-color: #fff;}
 
 /* ==== icon ==== */
 [class^="ic-call"] {display: inline-block; width: 16px; height: 16px; vertical-align: middle; background: no-repeat center / contain;}
@@ -96,8 +97,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .ic-callNo {background-image: url(../images/ic_call_no.png);}
 
 /* ==== form ==== */
-
-.inpBasic {width: 100%; height: 40px; padding:0 16px; border:1px solid #E4E4E4; border-radius: 8px; font-size: 16px;}
+.inpBasic {width: 100%; height: 40px; padding:0 8px; border:1px solid #E4E4E4; border-radius: 8px; font-size: 16px;}
 
 .inpupWrap {position: relative;}
 .inpupWrap > label {display: block; margin-bottom:8px;}
@@ -105,14 +105,28 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .btn-del {display: none; position: absolute; bottom:8px; right:8px; width: 24px; height: 24px; background: url(../images/btn_del.png) no-repeat center / contain;}
 .btn-del.on {display: block;}
 
+/* 기본 라디오 */
+.radioInp {position: relative; display: inline-block;}
+.radioInp > input {position: absolute; opacity: 0; width: 100%; height: 100%;}
+.radioInp > input + label {display: inline-block; padding-left:22px; line-height: 18px;}
+.radioInp > input + label::before {position: absolute; left:0; display: inline-block; content: ''; width: 18px; min-width: 18px; height: 18px; margin-right:4px; vertical-align: middle; background: url(../images/ic_radio.png) 0 0 / 18px auto;}
+.radioInp > input:checked + label::before {background-position: 0 bottom;}
+.radioInp + .radioInp {margin-left:11px;}
+
 /* button radio */
-.radioBtn {position: relative;}
+.radioBtn {position: relative; display: inline-block;}
 .radioBtn > input {position: absolute; opacity: 0; width: 100%; height: 100%;}
-.radioBtn > input + label {display: inline-flex; align-items: center; justify-content: center; width: 100%; min-width: 88px; height:32px;  border:1px solid #E4E4E4; border-radius: 100px; cursor: pointer; background-color: #fff;}
-.radioBtn > input:checked + label {padding:8px; border-color: var(--primary-color); background-color: #FDEFE4;}
-.radioBtnsWrap {display: flex; gap: 8px;}
-.radioBtnsWrap > .radioBtn {flex:1;}
+.radioBtn > input + label {display: inline-flex; align-items: center; justify-content: center; min-width: 62px; height:32px; padding:8px 12px;  border:1px solid #E4E4E4; border-radius: 100px; cursor: pointer; background-color: #fff;}
+.radioBtn > input:checked + label {border-color: var(--primary-color); background-color: #FDEFE4;}
+.radioBtn + .radioBtn {margin-left:8px;}
+
 .radioBtnsWrap + .inpBasic {margin-top:8px;}
+
+/* date input */
+.dateInp {position: relative; width: 100%;}
+.dateInp input[type="date"] {width: 100%; height:40px; padding:0 8px; border:1px solid #E4E4E4; border-radius: 8px; appearance:none; -webkit-appearance:none; -moz-appearance:none;}
+.dateInp input[type="date"]::-webkit-calendar-picker-indicator {position:absolute; right:16px; width:21px; height:21px; cursor:pointer; opacity:0;}
+.dateInp input[type="date"]::after {content: ''; position: absolute; top:50%; right: 16px; transform: translateY(-50%); width: 21px; height: 21px; pointer-events: none; background: url(../images/ic_date.png) no-repeat center / contain;}
 
 /* 검색박스 */
 .searchBox {margin-bottom:20px;}
@@ -123,6 +137,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .searchBox__row + .searchBox__row {margin-top:16px;}
 .btn-search {display: block; width: 100%; height: 40px; border:1px solid #FFD5CF; border-radius: 100px; color:#EF3B24; font-size: 16px; background-color: #FFF5F5;}
 .radioBtnsWrap + .inpupWrap {margin-top:8px;}
+.searchBox__btns {margin-top:16px;}
 .searchBox.open .searchBox__head {border-radius: 16px 16px 0 0; background-color: var(--primary-color);} 
 .searchBox.open .searchBox__btn {background: url(../images/btn_search_up.png) no-repeat center / 12px 12px;}
 .searchBox.open .searchBox__body {display: block;}
@@ -155,6 +170,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .gnb.open > .gnb__cont {transform: translateX(0);}
 
 .content {padding:20px var(--side-padding) 40px; }
+.title3 {margin-bottom:10px; color: #000; font-size: 16px; font-weight: 600;}
 
 
 /* ==== content ==== */
@@ -179,3 +195,30 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .tableWrap td {height:50px; padding:8px 16px; border-bottom:1px solid #E4E4E4; line-height: 1.4; word-break: keep-all; background-color: #ffffff;}
 .tableWrap tr:last-child th,
 .tableWrap tr:last-child td {border-bottom:0}
+.tableWrap:first-child {margin-top:0;}
+
+
+/* 상담관리 */
+.content-counsel {position: relative; padding-bottom:105px;}
+.counsel__body {height:100%;}
+.counsel__foot {position: fixed; bottom:0; display: flex; gap: 8px; width: 100%; padding: 20px; border-top:1px solid #EAEAEA; background-color: #F9F9F9;}
+
+.tab > ul {display: flex;}
+.tab > ul > li {position: relative; flex: 1; border-bottom:1px solid #E4E4E4;}
+.tab > ul > li > button {display: block; width: 100%; height: 50px; }
+.tab > ul > li.selected::after {content: ''; position: absolute; bottom:-1px; display: block; width: 100%; height: 3px; background-color: var(--primary-color);}
+
+.counsel__info {padding:20px var(--side-padding); background-color: #FFFAF5;}
+.counsel__cont {padding:20px var(--side-padding);}
+
+.accordionBox__head {position: relative; padding:8px 20px; border-radius: 16px; color:#fff; background-color: #ADADAD;}
+.accordionBox__head > h3 {font-size: 16px; color:#fff; font-weight: 600;} 
+.accordionBox__btn {position: absolute; right:15px; top:3px; width: 30px; height: 30px; background: url(../images/btn_search_down.png) no-repeat center / 12px 12px;}
+.accordionBox__body {display: none; padding:24px 20px; border:1px solid #E4E4E4; border-top:0;  border-radius: 0 0 16px 16px;}
+.accordionBox__row + .accordionBox__row {margin-top:8px;}
+.accordionBox__btns {margin-top:16px;}
+
+.accordionBox.open .accordionBox__head {border-radius: 16px 16px 0 0; background-color: var(--primary-color);} 
+.accordionBox.open .accordionBox__btn {background: url(../images/btn_search_up.png) no-repeat center / 12px 12px;}
+.accordionBox.open .accordionBox__body {display: block;}
+.accordionBox + .accordionBox {margin-top:20px;}
