@@ -124,7 +124,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
 /* date input */
 .dateInp {position: relative; width: 100%;}
-.dateInp input[type="date"] {width: 100%; height:40px; padding:0 8px; border:1px solid #E4E4E4; border-radius: 8px; text-align: left; background-color: #fff; appearance:none; -webkit-appearance:none; -moz-appearance:none;}
+.dateInp input[type="date"] {appearance:none; -webkit-appearance:none; -moz-appearance:none; width: 100%; height:40px; padding:0 8px; border:1px solid #E4E4E4; border-radius: 8px; text-align: left; background-color: #fff; }
 .dateInp input[type="date"]::-webkit-calendar-picker-indicator {position:absolute; right:16px; width:21px; height:21px; cursor:pointer; opacity:0;}
 .dateInp input[type="date"]::after {content: ''; position: absolute; top:50%; right: 16px; transform: translateY(-50%); width: 21px; height: 21px; pointer-events: none; background: url(../images/ic_date.png) no-repeat center / contain;}
 
