@@ -130,7 +130,12 @@
     document.addEventListener('DOMContentLoaded', () => {
       bottomSheetOpen('#tabCont03');
 
-      
+      //date 오늘 날짜 셋팅
+      const today = new Date().toISOString().split('T')[0];
+      const daetInp = document.querySelectorAll('.dateInp input');
+      daetInp.forEach((elm, i) => {
+         elm.value = today;
+      });
 
       //tab
       const tabLi = document.querySelectorAll('.tab li');
