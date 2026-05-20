@@ -107,16 +107,16 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
 /* 기본 라디오 */
 .radioInp {position: relative; display: inline-block;}
-.radioInp > input {position: absolute; opacity: 0; width: 100%; height: 100%;}
-.radioInp > input + label {display: inline-block; padding-left:22px; line-height: 18px;}
+.radioInp > input {position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;}
+.radioInp > input + label {display: inline-block; padding-left:22px; line-height: 18px;} 
 .radioInp > input + label::before {position: absolute; left:0; display: inline-block; content: ''; width: 18px; min-width: 18px; height: 18px; margin-right:4px; vertical-align: middle; background: url(../images/ic_radio.png) 0 0 / 18px auto;}
 .radioInp > input:checked + label::before {background-position: 0 bottom;}
 .radioInp + .radioInp {margin-left:11px;}
 
 /* button radio */
 .radioBtn {position: relative; display: inline-block;}
-.radioBtn > input {position: absolute; opacity: 0; width: 100%; height: 100%;}
-.radioBtn > input + label {display: inline-flex; align-items: center; justify-content: center; min-width: 62px; height:32px; padding:8px 12px;  border:1px solid #E4E4E4; border-radius: 100px; cursor: pointer; background-color: #fff;}
+.radioBtn > input {position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;}
+.radioBtn > input + label {display: inline-flex; align-items: center; justify-content: center; min-width: 62px; height:32px; padding:8px 12px;  border:1px solid #E4E4E4; border-radius: 100px; background-color: #fff;}
 .radioBtn > input:checked + label {border-color: var(--primary-color); background-color: #FDEFE4;}
 .radioBtn + .radioBtn {margin-left:4px;}
 
