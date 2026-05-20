@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>meritz 메리츠캐피탈</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="keywords" content="메리츠캐피탈">
+  <meta name="description" content="메리츠캐피탈">
+
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo"><span class="blind">meritz 메리츠캐피탈</span></h1>
+      <div class="utility">
+        <div class="log">
+          <dl>
+            <dt>채권관리팀</dt>
+            <dd>전주현</dd>
+          </dl>
+        </div>
+        <div class="sitemap">
+          <button type="button" class="sitemap__btn"><span class="blind">메뉴</span></button>
+          <div class="gnb">
+            <!-- guide.html에서 확인해주세요 -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <div class="container">
+      <section class="content-counsel">
+        <h2 class="blind">상담관리</h2>
+
+        <div class="tab">
+          <ul>
+            <li class="selected"><button type="button" onclick="bottomSheetOpen('#tabCont01')">보증인정보</button></li><!-- 선택시 li class="selected" -->
+            <li><button type="button">법조치내역</button></li>
+            <li><button type="button">상담이력</button></li>
+            <li><button type="button">비고</button></li>
+          </ul>
+        </div>     
+
+      </section><!-- //content-counsel -->
+    </div>
+  </div>
+
+  <!-- 바텀시트 : 보증인정보 -->
+  <div class="bottomSheet" id="tabCont01">
+    <div class="bottomSheet__container">
+      <div class="bottomSheet__head">
+        <h1>보증인정보</h1>
+      </div>
+      <div class="bottomSheet__body">
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 100px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">보증인명<br>(생년월일)</th>
+                <td>김보증(1988.01.23)</td>
+              </tr>
+              <tr>
+                <th scope="row">주소선택</th>
+                <td>
+                  <div class="radioInp">
+                    <input type="radio" name="radio03" id="radio03_1" checked><label for="radio03_1">자택</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio03" id="radio03_2"><label for="radio03_2">직장</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio03" id="radio03_3"><label for="radio03_3">청구지</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소</th>
+                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 100px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">보증인명<br>(생년월일)</th>
+                <td>김보증(1988.01.23)</td>
+              </tr>
+              <tr>
+                <th scope="row">주소선택</th>
+                <td>
+                  <div class="radioInp">
+                    <input type="radio" name="radio04" id="radio04_1" checked><label for="radio04_1">자택</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio04" id="radio04_2"><label for="radio04_2">직장</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio04" id="radio04_3"><label for="radio04_3">청구지</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소</th>
+                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 100px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">보증인명<br>(생년월일)</th>
+                <td>김보증(1988.01.23)</td>
+              </tr>
+              <tr>
+                <th scope="row">주소선택</th>
+                <td>
+                  <div class="radioInp">
+                    <input type="radio" name="radio05" id="radio05_1" checked><label for="radio05_1">자택</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio05" id="radio05_2"><label for="radio05_2">직장</label>
+                  </div>
+                  <div class="radioInp">
+                    <input type="radio" name="radio05" id="radio05_3"><label for="radio05_3">청구지</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소</th>
+                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- //bottomSheet__body -->
+      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#tabCont01')"><span class="blind">닫기</span></button>
+    </div><!-- //bottomSheet__container -->
+  </div><!-- //bottomSheet -->
+  <!-- //바텀시트 : 보증인정보 -->
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      bottomSheetOpen('#tabCont01');
+     
+
+      //tab
+      const tabLi = document.querySelectorAll('.tab li');
+      const tabBtn = document.querySelectorAll('.tab button');
+      tabBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = elm.parentElement;
+          tabLi.forEach((elm, i) => {
+            elm.classList.remove('selected');
+          });
+          parent.classList.add('selected');
+        });
+      });
+    });
+
+    //바텀시트
+    function bottomSheetOpen(id) {
+      const sheetId = document.querySelector(id);
+      const bottomSheet = document.querySelectorAll('.bottomSheet');
+
+      bottomSheet.forEach((elm, i) => {
+        elm.classList.remove('open');
+        elm.style.display = 'none'; 
+      });
+      sheetId.style.display = 'block';
+      setTimeout(function(){
+        sheetId.classList.add('open');
+      }, 100);  
+    }
+
+    function bottomSheetClose(id) {
+      const sheetId = document.querySelector(id);
+      const tabBtn = document.querySelectorAll('.tab button');
+
+      sheetId.classList.remove('open');
+      sheetId.style.display = 'none'; 
+      
+      tabBtn.forEach((elm, i) => {
+        elm.parentElement.classList.remove('selected');
+      });
+    }
+  </script>
+</body>
+</html>
+

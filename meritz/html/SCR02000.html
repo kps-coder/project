@@ -44,7 +44,7 @@
             <li><button type="button" onclick="bottomSheetOpen('#tabCont01')">보증인정보</button></li><!-- 선택시 li class="selected" -->
             <li><button type="button" onclick="bottomSheetOpen('#tabCont02')">법조치내역</button></li>
             <li><button type="button" onclick="bottomSheetOpen('#tabCont03')">상담이력</button></li>
-            <li><button type="button" onclick="bottomSheetOpen('#tabCont04')">비고</button></li>
+            <li><button type="button" onclick="popLayerOpen('#tabCont04')">비고</button></li>
           </ul>
         </div>     
         
@@ -439,6 +439,24 @@
   </div><!-- //bottomSheet -->
   <!-- //바텀시트 : 상담이력 -->
 
+  <!-- 팝업 : 비고 -->
+  <div class="popLayer" id="tabCont04">
+    <div class="popLayer__container">
+      <div class="popLayer__head">
+        <h1>상담이력</h1>
+      </div>
+      <div class="popLayer__body">
+        <div class="popLayer__text">
+          2024.10.24 운행정지등록<br>
+          2024.04.09 배우자 실납자 안내 동의<br>
+          차량 번호 변경<br>
+        </div>
+      </div><!-- //popLayer__body -->
+      <button type="button" class="popLayer__closeBtn" onclick="popLayerClose('#tabCont04')"><span class="blind">닫기</span></button>
+    </div><!-- //popLayer__container -->
+  </div><!-- //popLayer -->
+  <!-- //팝업 : 비고 -->
+
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -476,13 +494,29 @@
           parent.classList.add('selected');
         });
       });
+
+      // layer 배경 클릭시 닫기
+      const popLayer = document.querySelectorAll('.popLayer');
+      const popLayerContainer = document.querySelectorAll('.popLayer__container');
+      popLayer.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          //console.log(e.target.id)
+          if(e.target.classList[0] === 'popLayer'){
+            popLayerClose('#' + e.target.id);
+          }
+        });        
+      });
     });
 
     //바텀시트
     function bottomSheetOpen(id) {
       const sheetId = document.querySelector(id);
       const bottomSheet = document.querySelectorAll('.bottomSheet');
+      const popLayer = document.querySelectorAll('.popLayer');
 
+      popLayer.forEach((elm, i) => {
+        elm.classList.remove('open');
+      });
       bottomSheet.forEach((elm, i) => {
         elm.classList.remove('open');
         elm.style.display = 'none'; 
@@ -499,6 +533,33 @@
 
       sheetId.classList.remove('open');
       sheetId.style.display = 'none'; 
+      
+      tabBtn.forEach((elm, i) => {
+        elm.parentElement.classList.remove('selected');
+      });
+    }
+
+    // layer popup
+    function popLayerOpen(id) {
+      const layerId = document.querySelector(id);
+      const bottomSheet = document.querySelectorAll('.bottomSheet');
+      const popLayer = document.querySelectorAll('.popLayer');      
+
+      popLayer.forEach((elm, i) => {
+        elm.classList.remove('open');
+      });
+      bottomSheet.forEach((elm, i) => {
+        elm.classList.remove('open');
+        elm.style.display = 'none'; 
+      });
+      layerId.classList.add('open'); 
+    }
+
+    function popLayerClose(id) {
+      const layerId = document.querySelector(id);
+      const tabBtn = document.querySelectorAll('.tab button');
+
+      layerId.classList.remove('open');
       
       tabBtn.forEach((elm, i) => {
         elm.parentElement.classList.remove('selected');

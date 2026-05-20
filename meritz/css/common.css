@@ -191,7 +191,14 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .bottomSheet.open {display: block;}
 .bottomSheet.open .bottomSheet__container {transform: translateY(0);}
 
-
+.popLayer {display: none; position: fixed; top:0; left:0; right:0; bottom: 0;}
+.popLayer__container {position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); width: 90%; border:1px solid #6D6E71; border-radius: 16px; background-color: #fff;}
+.popLayer__head {padding:20px 20px 10px;}
+.popLayer__head > h1 {color: #000; font-size: 16px; font-weight: 600;}
+.popLayer__body {overflow-y: auto; min-height:50px; max-height: calc(80vh - 59px); padding:10px 20px 20px;}
+.popLayer__text {line-height: 1.6;}
+.popLayer__closeBtn {position: absolute; right:12px; top:15px; width: 30px; height: 30px; background: url(../images/btn_layer_close.png) no-repeat center / 12px 12px;}
+.popLayer.open {display: block;}
 
 
 /* ==== content ==== */
