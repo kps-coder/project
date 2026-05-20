@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>meritz 메리츠캐피탈</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="keywords" content="메리츠캐피탈">
+  <meta name="description" content="메리츠캐피탈">
+
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo"><span class="blind">meritz 메리츠캐피탈</span></h1>
+      <div class="utility">
+        <div class="log">
+          <dl>
+            <dt>채권관리팀</dt>
+            <dd>전주현</dd>
+          </dl>
+        </div>
+        <div class="sitemap">
+          <button type="button" class="sitemap__btn"><span class="blind">메뉴</span></button>
+          <div class="gnb">
+            <!-- guide.html에서 확인해주세요 -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <div class="container">
+      <section class="content">
+        <h2 class="blind">문자수신관리</h2>
+
+        <div class="searchBox open"><!-- 아코디언 열기 : open 클래스 추가 -->
+          <div class="searchBox__head">
+            <h3>문자수신관리</h3>
+            <button type="button" class="searchBox__btn"><span class="blind">열기/닫기</span></button>
+          </div>
+          <div class="searchBox__body">
+            <div class="searchBox__row">
+              <div class="radioBtnsWrap">
+                <div class="radioBtn">
+                  <input type="radio" id="radio01_1" name="radio01"><label for="radio01_1">거래처명</label>
+                </div>
+                <div class="radioBtn">
+                  <input type="radio" id="radio01_2" name="radio01"><label for="radio01_2">차량번호</label>
+                </div>
+                <div class="radioBtn">
+                  <input type="radio" id="radio01_3" name="radio01"><label for="radio01_3">전화번호</label>
+                </div>
+              </div>
+              <div class="inpupWrap">
+                <input type="text" id="searchBoxInput" class="inpBasic" placeholder="검색어를 입력하세요" title="검색어 입력">
+                <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+              </div>
+            </div>
+            <div class="searchBox__btns">
+              <button type="button" class="btn-search">조회</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="searchResults">
+          <!-- 검색결과 없을 시 -->
+          <div class="searchNoneData">검색결과가 없습니다.</div>
+
+          <!-- 검색결과 테이블 -->
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col style="width: 110px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">수신전화번호</th>
+                  <td>010-1111-1111</td>
+                </tr>
+                <tr>
+                  <th scope="row">최종수신시간</th>
+                  <td>2026/05/14 14:52</td>
+                </tr>
+                <tr>
+                  <th scope="row">차주명</th>
+                  <td>김채무</td>
+                </tr>
+                <tr>
+                  <th scope="row">문자내용</th>
+                  <td>입금계좌 부탁드립니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col style="width: 110px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">수신전화번호</th>
+                  <td>010-1111-1111</td>
+                </tr>
+                <tr>
+                  <th scope="row">최종수신시간</th>
+                  <td>2026/05/14 14:52</td>
+                </tr>
+                <tr>
+                  <th scope="row">차주명</th>
+                  <td>김채무</td>
+                </tr>
+                <tr>
+                  <th scope="row">문자내용</th>
+                  <td>투싼차량 결제금액좀 알려주세요 투싼차량 결제금액좀 알려주세요투싼차량 결제금액좀 알려주세요</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // input 검색어 삭제
+      const inputBox = document.querySelectorAll('.inpupWrap > input');
+
+      inputBox.forEach(function(elm, i){
+        elm.addEventListener('input', (e) => {
+          let inpDelBtn = e.srcElement.nextElementSibling;
+          if (elm.value == ''){
+             inpDelBtn.classList.remove('on');
+          } else {
+            inpDelBtn.classList.add('on');
+          }
+
+          inpDelBtn.addEventListener('click', (e) => {
+            elm.value = '';
+            inpDelBtn.classList.remove('on');
+          });
+        });
+      });
+
+      // 조건 검색 열기/닫기
+      const searchBoxBtn = document.querySelector('.searchBox__btn');
+      searchBoxBtn.addEventListener('click', (e) => {
+        const parent = searchBoxBtn.parentElement.parentElement;
+        if (parent.classList[1] == 'open') {
+          parent.classList.remove('open');
+        } else {
+          parent.classList.add('open');
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
+

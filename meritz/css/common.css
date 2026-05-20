@@ -118,7 +118,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .radioBtn > input {position: absolute; opacity: 0; width: 100%; height: 100%;}
 .radioBtn > input + label {display: inline-flex; align-items: center; justify-content: center; min-width: 62px; height:32px; padding:8px 12px;  border:1px solid #E4E4E4; border-radius: 100px; cursor: pointer; background-color: #fff;}
 .radioBtn > input:checked + label {border-color: var(--primary-color); background-color: #FDEFE4;}
-.radioBtn + .radioBtn {margin-left:8px;}
+.radioBtn + .radioBtn {margin-left:4px;}
 
 .radioBtnsWrap + .inpBasic {margin-top:8px;}
 
