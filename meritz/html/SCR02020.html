@@ -41,8 +41,8 @@
 
         <div class="tab">
           <ul>
-            <li class="selected"><button type="button" onclick="bottomSheetOpen('#tabCont01')">보증인정보</button></li><!-- 선택시 li class="selected" -->
-            <li><button type="button" disabled>법조치내역</button></li>
+            <li><button type="button" disabled>보증인정보</button></li><!-- 선택시 li class="selected" -->
+            <li class="selected"><button type="button" onclick="bottomSheetOpen('#tabCont02')">법조치내역</button></li>
             <li><button type="button" disabled>상담이력</button></li>
             <li><button type="button" disabled>비고</button></li>
           </ul>
@@ -52,41 +52,31 @@
     </div>
   </div>
 
-  <!-- 바텀시트 : 보증인정보 -->
-  <div class="bottomSheet" id="tabCont01">
+  <!-- 바텀시트 : 법조치 내역 -->
+  <div class="bottomSheet" id="tabCont02">
     <div class="bottomSheet__container">
       <div class="bottomSheet__head">
-        <h1>보증인정보</h1>
+        <h1>법조치 내역</h1>
       </div>
       <div class="bottomSheet__body">
         <div class="tableWrap">
           <table>
             <colgroup>
-              <col style="width: 100px;">
+              <col style="width: 120px;">
               <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
-                <th scope="row">보증인명<br>(생년월일)</th>
-                <td>김보증(1988.01.23)</td>
+                <th scope="row">법조치유형(중)<br>/대상자</th>
+                <td>지급명령 / 나채무</td>
               </tr>
               <tr>
-                <th scope="row">주소선택</th>
-                <td>
-                  <div class="radioInp">
-                    <input type="radio" name="radio03" id="radio03_1" checked><label for="radio03_1">자택</label>
-                  </div>
-                  <div class="radioInp">
-                    <input type="radio" name="radio03" id="radio03_2"><label for="radio03_2">직장</label>
-                  </div>
-                  <div class="radioInp">
-                    <input type="radio" name="radio03" id="radio03_3"><label for="radio03_3">청구지</label>
-                  </div>
-                </td>
+                <th scope="row">사건번호<br>/법원명</th>
+                <td>2025차전1486 영천시 법원</td>
               </tr>
               <tr>
-                <th scope="row">주소</th>
-                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+                <th scope="row">진행상태</th>
+                <td>확정</td>
               </tr>
             </tbody>
           </table>
@@ -95,79 +85,36 @@
         <div class="tableWrap">
           <table>
             <colgroup>
-              <col style="width: 100px;">
+              <col style="width: 120px;">
               <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
-                <th scope="row">보증인명<br>(생년월일)</th>
-                <td>김보증(1988.01.23)</td>
+                <th scope="row">법조치유형(중)<br>/대상자</th>
+                <td>지급명령 / 나채무</td>
               </tr>
               <tr>
-                <th scope="row">주소선택</th>
-                <td>
-                  <div class="radioInp">
-                    <input type="radio" name="radio04" id="radio04_1" checked><label for="radio04_1">자택</label>
-                  </div>
-                  <div class="radioInp">
-                    <input type="radio" name="radio04" id="radio04_2"><label for="radio04_2">직장</label>
-                  </div>
-                  <div class="radioInp">
-                    <input type="radio" name="radio04" id="radio04_3"><label for="radio04_3">청구지</label>
-                  </div>
-                </td>
+                <th scope="row">사건번호<br>/법원명</th>
+                <td>2025차전1486 영천시 법원</td>
               </tr>
               <tr>
-                <th scope="row">주소</th>
-                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="tableWrap">
-          <table>
-            <colgroup>
-              <col style="width: 100px;">
-              <col style="width: auto;">
-            </colgroup>
-            <tbody>
-              <tr>
-                <th scope="row">보증인명<br>(생년월일)</th>
-                <td>김보증(1988.01.23)</td>
-              </tr>
-              <tr>
-                <th scope="row">주소선택</th>
-                <td>
-                  <div class="radioInp">
-                    <input type="radio" name="radio05" id="radio05_1" checked><label for="radio05_1">자택</label>
-                  </div>
-                  <div class="radioInp">
-                    <input type="radio" name="radio05" id="radio05_2"><label for="radio05_2">직장</label>
-                  </div>
-                  <div class="radioInp">
-                    <input type="radio" name="radio05" id="radio05_3"><label for="radio05_3">청구지</label>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">주소</th>
-                <td>서울시 영등포구 국제금융로10 Three IFC 23층 (영등포구 여의도동)</td>
+                <th scope="row">진행상태</th>
+                <td>확정</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div><!-- //bottomSheet__body -->
-      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#tabCont01')"><span class="blind">닫기</span></button>
+      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#tabCont02')"><span class="blind">닫기</span></button>
     </div><!-- //bottomSheet__container -->
   </div><!-- //bottomSheet -->
-  <!-- //바텀시트 : 보증인정보 -->
+  <!-- //바텀시트 : 법조치 내역 -->
 
 
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      bottomSheetOpen('#tabCont01');
+      bottomSheetOpen('#tabCont02');
      
 
       //tab
