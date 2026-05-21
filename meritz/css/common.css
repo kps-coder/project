@@ -134,7 +134,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 /* 인증번호 인풋 */
 .citationInp {display: flex; align-items: center; gap: 8px; padding: 8px; border:1px solid #E4E4E4; border-radius: 8px;}
 .citationInp > label {white-space: nowrap;}
-.citationInp > input {width: calc(100% - 160px); height:32px; padding:0 8px; border:0;}
+.citationInp > input {width: calc(100% - 160px); height:32px; padding:0 8px; border:0; font-size: 16px;}
 .citationInp > .btn-small {height: 32px; white-space: nowrap; color:#000000; background-color: #FFF5F5;} 
 
 
