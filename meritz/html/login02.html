@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>meritz 메리츠캐피탈</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="keywords" content="메리츠캐피탈">
+  <meta name="description" content="메리츠캐피탈">
+
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="loginHeader">
+      <h1 class="header__logo"><span class="blind">meritz 메리츠캐피탈</span></h1>
+    </header>
+    <section class="loginContainer">
+      <h2>디지털 고객접촉이력 시스템 로그인</h2>
+      <div class="loginContent">
+        <fieldset class="loginWrap">
+          <div class="inpupWrap">
+            <input type="text" id="loginId" class="inpBasic" placeholder="사번을 입력하세요" title="사번 입력" value="C16079">
+          </div>
+          <div class="inpupWrap">
+            <input type="password" id="loginPw" class="inpBasic" placeholder="비밀번호를 입력하세요" title="비밀번호 입력" value="122wssdfggg">
+          </div>
+          <div class="citationInp">
+            <label for="citationInp">인증번호</label>
+            <div class="tooltip">
+              <button type="button" class="tooltip__btn"><span class="blind">툴팁</span></button>
+              <div class="tooltip_cont">
+                <p>툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.</p>
+                <button type="button" class="tooltip__close"><span class="blind">툴팁</span></button>
+              </div>
+            </div>
+            <input type="number" id="citationInp" placeholder="입력하세요">
+            <button type="button" class="btn-small">인증번호전송</button>
+          </div>
+          <div class="loginWrap__save">
+            <div class="chechInp">
+              <input type="checkbox" id="checkBox01" name="checkBox01">
+              <label for="checkBox01">사번저장</label>
+            </div>
+          </div>
+          <button type="button" class="btn-login">인증번호 확인</button>
+        </fieldset>
+      </div>
+    </section>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tooltipBtn = document.querySelector('.tooltip__btn');
+      const tooltipClose = document.querySelector('.tooltip__close');
+
+      tooltipBtn.addEventListener('click', (e) => {        
+        const parent = e.target.parentElement;
+        if(parent.classList[1] == 'open') {
+          parent.classList.remove('open');
+        } else {
+          parent.classList.add('open');
+        }        
+      });
+
+      tooltipClose.addEventListener('click', (e) => {
+        const parent = e.target.parentElement.parentElement;
+        parent.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
+

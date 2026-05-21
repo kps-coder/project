@@ -98,6 +98,20 @@
                 <button type="button" class="btn-del"><span class="blind">삭제</span></button>
               </div>
             </div> 
+            <div class="searchBox__row">
+              <div class="citationInp">
+                <label for="citationInp">인증번호</label>
+                <div class="tooltip">
+                  <button type="button" class="tooltip__btn"><span class="blind">툴팁</span></button>
+                  <div class="tooltip_cont">
+                    <p>툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.</p>
+                    <button type="button" class="tooltip__close"><span class="blind">툴팁</span></button>
+                  </div>
+                </div>
+                <input type="number" id="citationInp" placeholder="입력하세요">
+                <button type="button" class="btn-small">인증번호전송</button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -128,6 +142,18 @@
                 <input type="radio" name="radio01" id="radio01_3"><label for="radio01_3">기본형3</label>
               </div>
             </div> 
+          </div>
+        </div>
+
+        <div class="guideBox">
+          <h3 class="title3">툴팁</h3>
+          <span>툴팁입니다.</span>
+          <div class="tooltip">
+            <button type="button" class="tooltip__btn"><span class="blind">툴팁</span></button>
+            <div class="tooltip_cont">
+              <p>툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.</p>
+              <button type="button" class="tooltip__close"><span class="blind">툴팁</span></button>
+            </div>
           </div>
         </div>
 
@@ -170,6 +196,50 @@
       const daetInp = document.querySelectorAll('.dateInp input');
       daetInp.forEach((elm, i) => {
          elm.value = today;
+      });
+
+
+      // 툴팁
+      const tooltipBtn = document.querySelectorAll('.tooltip__btn');
+      const tooltipClose = document.querySelectorAll('.tooltip__close');
+
+      tooltipBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {        
+          const parent = e.target.parentElement;
+          if(parent.classList[1] == 'open') {
+            parent.classList.remove('open');
+          } else {
+            parent.classList.add('open');
+          }        
+        });
+      });
+
+      tooltipClose.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = e.target.parentElement.parentElement;
+          parent.classList.remove('open');
+        });
+      });     
+
+      
+
+      // input 검색어 삭제
+      const inputBox = document.querySelectorAll('.inpupWrap > input');
+
+      inputBox.forEach(function(elm, i){
+        elm.addEventListener('input', (e) => {
+          let inpDelBtn = e.srcElement.nextElementSibling;
+          if (elm.value == ''){
+             inpDelBtn.classList.remove('on');
+          } else {
+            inpDelBtn.classList.add('on');
+          }
+
+          inpDelBtn.addEventListener('click', (e) => {
+            elm.value = '';
+            inpDelBtn.classList.remove('on');
+          });
+        });
       });
     });
   </script>
