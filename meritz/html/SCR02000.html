@@ -191,7 +191,7 @@
         </div>
 
         <div class="counsel__foot">
-          <button type="button" class="btn-cta-pri">전화하기</button>
+          <button type="button" class="btn-cta-pri" onclick="bottomSheetOpen('#callBottomSheet')">전화하기</button>
           <button type="button" class="btn-cta-pri">문자전송</button>
         </div>
       </section><!-- //content-counsel -->
@@ -462,6 +462,97 @@
     </div><!-- //popLayer__container -->
   </div><!-- //popLayer -->
   <!-- //팝업 : 비고 -->
+
+  <!-- 바텀시트 : 전화걸기 -->
+  <div class="bottomSheet" id="callBottomSheet">
+    <div class="bottomSheet__container">
+      <div class="bottomSheet__head">
+        <h1>발신대상선택</h1>
+      </div>
+      <div class="bottomSheet__body">
+        <div class="bottomSheet__result">
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col style="width: 105px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">대상구분</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTarget" id="radioTarget_1" checked><label for="radioTarget_1">계약자</label>
+                    </div>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTarget" id="radioTarget_2"><label for="radioTarget_2">보증인</label>
+                    </div>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTarget" id="radioTarget_3"><label for="radioTarget_3">기타</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">접촉대상자명</th>
+                  <td>
+                    <p class="targetName">나보증</p>
+                    <!-- 2명 이상 시 노출 -->
+                    <!--
+                    <div class="selectInp">
+                      <select name="selectInp01" title="접촉대상자명">
+                        <option>나보증01</option>
+                        <option>나보증02</option>
+                      </select>
+                    </div>
+                    -->
+                    <p class="targetCheck">접촉가능여부 <span class="fcPri">Y</span></p>
+                    <p>( <span class="fcPri">1회 1일/ 3회 /7일</span> )</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자택전화번호</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_1"><label for="radioTargetCall_1">02-3809-6971</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">휴대전화번호</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_2"><label for="radioTargetCall_2">010-1111-2222</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">직장전화번호</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_3"><label for="radioTargetCall_3">010-1111-2222</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">직접입력</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_4"><label for="radioTargetCall_4"><input type="text" class="inpBasic" placeholder="전화번호를 입력하세요"></label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- //bottomSheet__body -->
+      <div class="bottomSheet__foot">
+        <button type="button" class="btn-cta-pri">선택된 번호 발신</button>
+      </div>
+      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#callBottomSheet')"><span class="blind">닫기</span></button>
+    </div><!-- //bottomSheet__container -->
+  </div><!-- //bottomSheet -->
+  <!-- //바텀시트 : 전화걸기 -->
 
 
   <script>
