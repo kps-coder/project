@@ -406,10 +406,15 @@
                 <tr>
                   <th scope="row">상담내용</th>
                   <td>
-                    통화중<br>
-                    확대버튼클릭시 확대 되는 것<br>
-                    예시를사용 하기  위해 글씨를 많이 적었습니다.<br>
-                    상담이력을 클릭하면 텍스트가 다 표기될 수 있을 정도로 확대가 되었으면 합니다.
+                    <div class="accordionText">                    
+                      <div class="accordionText__cont">
+                        통화중<br>
+                        확대버튼클릭시 확대 되는 것<br>
+                        예시를사용 하기  위해 글씨를 많이 적었습니다.<br>
+                        상담이력을 클릭하면 텍스트가 다 표기될 수 있을 정도로 확대가 되었으면 합니다.
+                      </div>                    
+                      <button type="button" class="accordionText__btn"><span class="blind">열기/닫기</span></button>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -428,7 +433,8 @@
                 </tr>
                 <tr>
                   <th scope="row">상담내용</th>
-                  <td>통화중</tr>
+                  <td>통화중</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -505,6 +511,19 @@
             popLayerClose('#' + e.target.id);
           }
         });        
+      });
+
+      //상담내용 펼치기
+      const accordionTextBtn = document.querySelectorAll('.accordionText__btn');
+      accordionTextBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = e.target.parentElement;
+          if(parent.classList[1] == 'open'){
+            parent.classList.remove('open');
+          } else {
+            parent.classList.add('open');
+          }
+        });
       });
     });
 
