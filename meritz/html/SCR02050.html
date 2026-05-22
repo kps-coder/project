@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>meritz 메리츠캐피탈</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="keywords" content="메리츠캐피탈">
+  <meta name="description" content="메리츠캐피탈">
+
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo"><span class="blind">meritz 메리츠캐피탈</span></h1>
+      <div class="utility">
+        <div class="log">
+          <dl>
+            <dt>채권관리팀</dt>
+            <dd>전주현</dd>
+          </dl>
+        </div>
+        <div class="sitemap">
+          <button type="button" class="sitemap__btn"><span class="blind">메뉴</span></button>
+          <div class="gnb">
+            <!-- guide.html에서 확인해주세요 -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <div class="container">
+      <section class="content-counsel">
+        <h2 class="blind">상담관리</h2>
+
+        <div class="tab">
+          <ul>
+            <li><button type="button" disabled>보증인정보</button></li><!-- 선택시 li class="selected" -->
+            <li><button type="button" disabled>법조치내역</button></li>
+            <li><button type="button" disabled>상담이력</button></li>
+            <li><button type="button" disabled>비고</button></li>
+          </ul>
+        </div>
+        <div class="counsel__body"></div>
+        <div class="counsel__foot">
+          <button type="button" class="btn-cta-pri" onclick="bottomSheetOpen('#callBottomSheet')">전화하기</button>
+          <button type="button" class="btn-cta-pri">문자전송</button>
+        </div>
+
+      </section><!-- //content-counsel -->
+    </div>
+  </div>
+
+  <!-- 바텀시트 : 전화걸기 -->
+  <div class="bottomSheet" id="callBottomSheet">
+    <div class="bottomSheet__container">
+      <div class="bottomSheet__head">
+        <h1>발신대상선택</h1>
+      </div>
+      <div class="bottomSheet__body">
+        <div class="bottomSheet__result">
+          <div class="tableWrap">
+            <table>
+              <colgroup>
+                <col style="width: 105px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">대상구분</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTarget" id="radioTarget_1" checked><label for="radioTarget_1">계약자</label>
+                    </div>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTarget" id="radioTarget_2"><label for="radioTarget_2">보증인</label>
+                    </div>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTarget" id="radioTarget_3"><label for="radioTarget_3">기타</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">접촉대상자명</th>
+                  <td>
+                    <p class="targetName">나보증</p>
+                    <!-- 2명 이상 시 노출 -->
+                    <!--
+                    <div class="selectInp">
+                      <select name="selectInp01" title="접촉대상자명">
+                        <option>나보증01</option>
+                        <option>나보증02</option>
+                      </select>
+                    </div>
+                    -->
+                    <p class="targetCheck">접촉가능여부 <span class="fcPri">Y</span></p>
+                    <p>( <span class="fcPri">1회 1일/ 3회 /7일</span> )</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자택전화번호</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_1"><label for="radioTargetCall_1">02-3809-6971</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">휴대전화번호</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_2"><label for="radioTargetCall_2">010-1111-2222</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">직장전화번호</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_3"><label for="radioTargetCall_3">010-1111-2222</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">직접입력</th>
+                  <td>
+                    <div class="radioInp">
+                      <input type="radio" name="radioTargetCall" id="radioTargetCall_4"><label for="radioTargetCall_4"><input type="text" class="inpBasic" placeholder="전화번호를 입력하세요"></label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- //bottomSheet__body -->
+      <div class="bottomSheet__foot">
+        <button type="button" class="btn-cta-pri">선택된 번호 발신</button>
+      </div>
+      <button type="button" class="bottomSheet__closeBtn" onclick="bottomSheetClose('#callBottomSheet')"><span class="blind">닫기</span></button>
+    </div><!-- //bottomSheet__container -->
+  </div><!-- //bottomSheet -->
+  <!-- //바텀시트 : 전화걸기 -->
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      bottomSheetOpen('#callBottomSheet');
+
+      //date 오늘 날짜 셋팅
+      const today = new Date().toISOString().split('T')[0];
+      const daetInp = document.querySelectorAll('.dateInp input');
+      daetInp.forEach((elm, i) => {
+         elm.value = today;
+      });
+
+      //tab
+      const tabLi = document.querySelectorAll('.tab li');
+      const tabBtn = document.querySelectorAll('.tab button');
+      tabBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = elm.parentElement;
+          tabLi.forEach((elm, i) => {
+            elm.classList.remove('selected');
+          });
+          parent.classList.add('selected');
+        });
+      });
+
+      //상담내용 펼치기
+      const accordionTextBtn = document.querySelectorAll('.accordionText__btn');
+      accordionTextBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = e.target.parentElement;
+          if(parent.classList[1] == 'open'){
+            parent.classList.remove('open');
+          } else {
+            parent.classList.add('open');
+          }
+        });
+      });
+    });
+
+    //바텀시트
+    function bottomSheetOpen(id) {
+      const sheetId = document.querySelector(id);
+      const bottomSheet = document.querySelectorAll('.bottomSheet');
+
+      bottomSheet.forEach((elm, i) => {
+        elm.classList.remove('open');
+        elm.style.display = 'none'; 
+      });
+      sheetId.style.display = 'block';
+      setTimeout(function(){
+        sheetId.classList.add('open');
+      }, 100);  
+    }
+
+    function bottomSheetClose(id) {
+      const sheetId = document.querySelector(id);
+      const tabBtn = document.querySelectorAll('.tab button');
+
+      sheetId.classList.remove('open');
+      sheetId.style.display = 'none'; 
+      
+      tabBtn.forEach((elm, i) => {
+        elm.parentElement.classList.remove('selected');
+      });
+    }
+  </script>
+</body>
+</html>
+
