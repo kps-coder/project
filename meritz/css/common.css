@@ -152,6 +152,9 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .dateInp input[type="date"]::-webkit-datetime-edit{text-align:left;}
 .dateInpWrap {display: flex; align-items: center; gap: 8px;}
 
+/* textarea */
+.textareaInp {resize: none; width: 100%; padding:8px; border:1px solid #E4E4E4; border-radius: 8px; box-sizing: border-box;}
+
 
 /* 검색박스 */
 .searchBox {margin-bottom:20px;}
