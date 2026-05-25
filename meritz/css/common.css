@@ -154,7 +154,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .dateInpWrap {display: flex; align-items: center; gap: 8px;}
 
 /* textarea */
-.textareaInp {resize: none; width: 100%; padding:8px; border:1px solid #E4E4E4; border-radius: 8px; box-sizing: border-box;}
+.textareaInp {resize: none; width: 100%; padding:8px; border:1px solid #E4E4E4; border-radius: 8px; box-sizing: border-box; font-size: 16px;}
 
 
 /* 검색박스 */
