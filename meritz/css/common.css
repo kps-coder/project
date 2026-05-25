@@ -87,7 +87,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .btn-small {display: inline-block; height: 25px; padding:0 8px; border:1px solid #ED7222; border-radius: 4px; color: var(--primary-color);  background-color: #FDEFE4;}
 .btn-small:hover {color:#fff; background-color: var(--primary-color);}
 
-.btn-cta-pri {display: block; width: 100%; height:45px; border: 1px solid var(--primary-color); border-radius: 8px; color: var(--primary-color); background-color: #fff;}
+.btn-cta-pri {display: block; width: 100%; height:45px; padding:0 8px; border: 1px solid var(--primary-color); border-radius: 8px; color: var(--primary-color); background-color: #fff;}
+.btn-cta-sec {display: block; width: 100%; height:45px; padding:0 8px; border: 1px solid var(--primary-color); border-radius: 8px; color: #fff; background-color: var(--primary-color);}
 
 /* ==== icon ==== */
 [class^="ic-call"] {display: inline-block; width: 16px; height: 16px; vertical-align: middle; background: no-repeat center / contain;}
@@ -217,11 +218,13 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .bottomSheet.open .bottomSheet__container {transform: translateY(0);}
 
 .popLayer {display: none; position: fixed; top:0; left:0; right:0; bottom: 0;}
-.popLayer__container {position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); width: 90%; border:1px solid #ED1A1A; border-radius: 16px; box-shadow: 0px 4px 4px 0px #00000040; background-color: #fff;}
+.popLayer__container {position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); width: 80%; max-width: 400px; border:1px solid #ED1A1A; border-radius: 16px; box-shadow: 0px 4px 4px 0px #00000040; background-color: #fff;}
 .popLayer__head {padding:20px 20px 10px;}
 .popLayer__head > h1 {color: #000; font-size: 16px; font-weight: 600;}
 .popLayer__body {overflow-y: auto; min-height:50px; max-height: calc(80vh - 59px); padding:10px 20px 20px;}
-.popLayer__text {line-height: 1.6;}
+.popLayer__foot {display: flex; gap: 10px; justify-content: center; padding:0 var(--side-padding) 20px;}
+.popLayer__foot [class^="btn-"] {width:auto; min-width: 68px;}
+.popLayer__text {line-height: 1.6; word-break: keep-all;}
 .popLayer__closeBtn {position: absolute; right:12px; top:15px; width: 30px; height: 30px; background: url(../images/btn_layer_close.png) no-repeat center / 12px 12px;}
 .popLayer.open {display: block;}
 
