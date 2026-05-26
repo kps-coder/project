@@ -173,6 +173,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
 .searchNoneData {padding:24px; text-align: center; color:#898C8E; font-size: 16px;}
 
+
+
 /* ==== layout ==== */
 .header {display: flex; justify-content: space-between; align-items: center; height:52px; padding:0 var(--side-padding); border-bottom:1px solid #00000033; background-color: #fff;}
 .header__logo {width: 62px; height: 32px; background: url(../images/new_logo.png) no-repeat center / contain;}
@@ -199,10 +201,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .gnb.open > .gnb__cont {transform: translateX(0);}
 
 .content {padding:20px var(--side-padding) 40px; }
+.title2,
 .title3 {margin-bottom:10px; color: #000; font-size: 16px; font-weight: 600;}
-
-
-
 
 
 
@@ -237,6 +237,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .tooltip__close {position: absolute; top:4px; right:4px; display: block; width: 20px; height: 20px; background: url(../images/btn_tooltip_close.png) no-repeat center / 12px 12px;}
 .tooltip.open .tooltip_cont {display: block;}
 
+
+
 /* ==== login ==== */
 .loginHeader {display: flex; align-items: center; justify-content: center; height: 52px;}
 .loginContainer > h2 {padding:10px 20px 20px; text-align: center; font-weight: 500; font-size: 16px;}
@@ -248,7 +250,9 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .loginWrap .citationInp {margin-top:8px;}
 
 
+
 /* ==== content ==== */
+/* home */
 .callList__title {padding:8px 20px; border-radius: 20px 20px 0 0; font-weight: 500; color:#fff; background-color: #ADADAD;}
 .callList__list {padding:12px 20px 20px; border:1px solid #E4E4E4; border-top:0; border-radius: 0 0 20px 20px;}
 .callList__list > li {position: relative; padding:8px 0 8px 24px;}
@@ -263,7 +267,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .callList + .callList {margin-top:20px;}
 
 
-
+/* table */
 .tableWrap {overflow: hidden; margin-top:20px; border:1px solid #E4E4E4; border-radius: 16px;}
 .tableWrap table {width: 100%;}
 .tableWrap th {height:50px; padding:8px 16px; border-right:1px solid #E4E4E4; border-bottom:1px solid #E4E4E4; text-align: left; color: #6D6E71; line-height: 1.4; background-color: #F9F9F9;}
@@ -271,6 +275,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .tableWrap tr:last-child th,
 .tableWrap tr:last-child td {border-bottom:0}
 .tableWrap:first-child {margin-top:0;}
+.title2 + .tableWrap,
+.title3 + .tableWrap  {margin-top:10px;}
 
 
 /* 상담관리 */
@@ -308,3 +314,18 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 /* 접촉대상자명 */
 .targetName {display: flex; align-items: center; height:40px;  padding:0 8px; border:1px solid #E4E4E4; border-radius: 8px;}
 .targetCheck {margin-top:4px;}
+
+/* 문자수신관리 */
+.smsListWrap {margin-top:20px;}
+.smsListBox {overflow: hidden; border:1px solid #E4E4E4; border-radius: 16px;}
+.smsListBox + .smsListBox {margin-top:20px;}
+.smsListBox__head { background-color: #ADADAD;}
+.smsListBox__head > dl {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; height:36px; padding:8px 20px; color:#fff;}
+.smsListBox__head > dl > dt {display: flex; align-items: center; gap: 12px; color:#fff; }
+.smsListBox__head > dl > dt::before {content: ''; display: block; width: 20px; height: 20px; background: url(../images/ic_call.png) no-repeat left center / contain;}
+.smsListBox__head > dl > dd {color:#fff;}
+.smsListBox__list {padding:12px 20px;}
+.smsListBox__list > ul > li {position: relative; display: flex; gap: 8px; justify-content: space-between; padding:16px 0 16px 24px;}
+.smsListBox__list > ul > li::before {content: ''; display: block; position: absolute; left:0; width: 16px; height: 16px; background: url(../images/ic_sms.png) no-repeat center / contain;}
+.smsListBox__list > ul > li > p {word-break: keep-all;}
+.smsListBox__list > ul > li + li {border-top:1px solid #E4E4E4;}
