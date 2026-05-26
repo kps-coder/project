@@ -86,9 +86,13 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 /* ==== button ==== */
 .btn-small {display: inline-block; height: 25px; padding:0 8px; border:1px solid #ED7222; border-radius: 4px; color: var(--primary-color);  background-color: #FDEFE4;}
 .btn-small:hover {color:#fff; background-color: var(--primary-color);}
+.btn-medium {display: inline-block; height: 34px; padding:8px; border:1px solid #D9D9D9; border-radius: 4px; color: var(--primary-color);  background-color: #fff;}
+.btn-large {display: inline-block; height: 40px; padding:8px 12px; border:1px solid #FFD5CF; border-radius: 100px; color: var(--primary-color);  background-color: #FFF5F5;}
 
 .btn-cta-pri {display: block; width: 100%; height:45px; padding:0 8px; border: 1px solid var(--primary-color); border-radius: 8px; color: var(--primary-color); background-color: #fff;}
 .btn-cta-sec {display: block; width: 100%; height:45px; padding:0 8px; border: 1px solid var(--primary-color); border-radius: 8px; color: #fff; background-color: var(--primary-color);}
+
+.btnWrap {margin-top:20px;}
 
 /* ==== icon ==== */
 [class^="ic-call"] {display: inline-block; width: 16px; height: 16px; vertical-align: middle; background: no-repeat center / contain;}
@@ -108,7 +112,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .inpupWrap + .inpupWrap {margin-top:8px;}
 
 /* 기본 라디오 */
-.radioInp {position: relative; display: inline-block; margin-right:2px;}
+.radioInp {position: relative; display: inline-block; margin-right:2px; padding:2px 0;}
 .radioInp > input[type="radio"] {position: absolute; opacity: 0; width: 20px; height: 100%; cursor: pointer;}
 .radioInp > input[type="radio"] + label {display: inline-block; padding-left:22px; line-height: 18px; cursor: pointer;} 
 .radioInp > input[type="radio"] + label::before {position: absolute; left:0; display: inline-block; content: ''; width: 18px; min-width: 18px; height: 18px; margin-right:4px; vertical-align: middle; background: url(../images/ic_radio.png) 0 0 / 18px auto;}
