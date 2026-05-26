@@ -74,6 +74,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 
 /* margin */
 .maBot10 { margin-bottom: 10px; }
+.maTop20 { margin-top: 20px; }
 
 /* text */
 .text-left { text-align: left !important; }
@@ -87,12 +88,14 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .btn-small {display: inline-block; height: 25px; padding:0 8px; border:1px solid #ED7222; border-radius: 4px; color: var(--primary-color);  background-color: #FDEFE4;}
 .btn-small:hover {color:#fff; background-color: var(--primary-color);}
 .btn-medium {display: inline-block; height: 34px; padding:8px; border:1px solid #D9D9D9; border-radius: 4px; color: var(--primary-color);  background-color: #fff;}
-.btn-large {display: inline-block; height: 40px; padding:8px 12px; border:1px solid #FFD5CF; border-radius: 100px; color: var(--primary-color);  background-color: #FFF5F5;}
+.btn-large {display: inline-block; min-width: 62px; height: 40px; padding:8px 12px; border:1px solid #FFD5CF; border-radius: 100px; color: var(--primary-color);  background-color: #FFF5F5;}
 
 .btn-cta-pri {display: block; width: 100%; height:45px; padding:0 8px; border: 1px solid var(--primary-color); border-radius: 8px; color: var(--primary-color); background-color: #fff;}
 .btn-cta-sec {display: block; width: 100%; height:45px; padding:0 8px; border: 1px solid var(--primary-color); border-radius: 8px; color: #fff; background-color: var(--primary-color);}
+.btn-cta-thi {display: block; width: 100%; height:45px; padding:0 8px; border: 1px solid #28AA3C; border-radius: 8px; color: #000000; background-color: #E8F6D9;}
 
-.btnWrap {margin-top:20px;}
+.fixedBtnsWrap {width: 100%; height:85px;}
+.fixedBtnsWrap__inner {position: fixed; bottom:0; left:0; right:0; padding:20px; border-top:1px solid #EAEAEA; background-color: #F9F9F9;}
 
 /* ==== icon ==== */
 [class^="ic-call"] {display: inline-block; width: 16px; height: 16px; vertical-align: middle; background: no-repeat center / contain;}
@@ -291,10 +294,10 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .counsel__foot {position: fixed; bottom:0; display: flex; gap: 8px; width: 100%; padding: 20px; border-top:1px solid #EAEAEA; background-color: #F9F9F9;}
 
 .tab {background-color: #fff;}
-.tab > ul {display: flex;}
-.tab > ul > li {position: relative; flex: 1; border-bottom:1px solid #E4E4E4;}
-.tab > ul > li > button {display: block; width: 100%; height: 50px; }
-.tab > ul > li.selected::after {content: ''; position: absolute; bottom:-1px; display: block; width: 100%; height: 3px; background-color: var(--primary-color);}
+.tab > ul {display: flex; gap: 4px; padding:8px var(--side-padding)}
+.tab > ul > li {position: relative; flex: 1;}
+.tab > ul > li > button {display: block; width: 100%; height: 33px; border:1px solid #E4E4E4; border-radius: 100px;}
+.tab > ul > li.selected > button {color: #fff; background-color: var(--primary-color);}
 
 .counsel__info {padding:20px var(--side-padding); background-color: #FFFAF5;}
 .counsel__cont {padding:20px var(--side-padding);}
@@ -335,3 +338,11 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .smsListBox__list > ul > li::before {content: ''; display: block; position: absolute; left:0; width: 16px; height: 16px; background: url(../images/ic_sms.png) no-repeat center / contain;}
 .smsListBox__list > ul > li > p {word-break: keep-all;}
 .smsListBox__list > ul > li + li {border-top:1px solid #E4E4E4;}
+
+/* 이미지등록 */
+.insertImage {margin-top: 20px; }
+.btn-img-del {display: inline-flex; width: 20px; height:20px; background: url(../images/btn_img_del.png) no-repeat center / 14px 14px;}
+.insertImage__image {height: 105px; margin-top:16px; border: 1px solid #D9D9D9; border-radius: 8px; background: url(../images/bg_img.svg) no-repeat center / 115px 65px;}
+.insertImage__list {margin-top:8px;}
+.insertImage__list > li {display: flex; justify-content: space-between; align-items: center; padding:8px 0;}
+.insertImage__list > li + li {margin-top:16px;}

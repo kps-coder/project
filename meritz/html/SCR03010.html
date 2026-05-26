@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>meritz 메리츠캐피탈</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="keywords" content="메리츠캐피탈">
+  <meta name="description" content="메리츠캐피탈">
+
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo"><span class="blind">meritz 메리츠캐피탈</span></h1>
+      <div class="utility">
+        <div class="log">
+          <dl>
+            <dt>채권관리팀</dt>
+            <dd>전주현</dd>
+          </dl>
+        </div>
+        <div class="sitemap">
+          <button type="button" class="sitemap__btn"><span class="blind">메뉴</span></button>
+          <div class="gnb">
+            <!-- guide.html에서 확인해주세요 -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <div class="container">
+      <section class="content">
+        <h2 class="title2">방문내역등록</h2>
+
+        <div class="tableWrap">
+          <table>
+            <colgroup>
+              <col style="width: 105px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">실행번호</th>
+                <td>PA2606068001</div>                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">거래처명<br>(생년월일)</th>
+                <td>김채무(1998.08.23)</td>
+              </tr>
+              <tr>
+                <th scope="row">방문거래처명</th>
+                <td>김채무</td>
+              </tr>
+              <tr>
+                <th scope="row">방문상태</th>
+                <td>방문예약</td>
+              </tr>
+              <tr>
+                <th scope="row">방문목적</th>
+                <td>차량추적</td>
+              </tr>
+              <tr>
+                <th scope="row">방문결과</th>
+                <td>
+                  <div class="selectInp">
+                    <select name="selectInp01" title="방문결과 선택">
+                      <option>방문결과를 선택하세요</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">방문주소</th>
+                <td>서울시 영등포구 국제금융로10 Three IFCE 23층</td>
+              </tr>
+              <tr>
+                <th scope="row">방문일시</th>
+                <td>2026/04/30 16:30</td>
+              </tr>
+              <tr>
+                <th scope="row">면담내용</th>
+                <td>
+                  <textarea name="textareaInp01" id="textareaInp01" rows="5" class="textareaInp" placeholder="면담내용을 입력하세요"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">향후계획</th>
+                <td>
+                  <textarea name="textareaInp02" id="textareaInp02" rows="5" class="textareaInp" placeholder="향후 계획을 입력하세요"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>        
+
+        <div class="insertImage">
+          <div class="flexSb">
+            <h3 class="title3">방문이미지등록</h3>
+            <button type="button" class="btn-large">촬영</button>
+          </div>
+          
+          <div class="insertImage__image">
+
+          </div>
+          <ul class="insertImage__list">
+            <li>
+              <p>0202605171415.jpg</p>
+              <button type="button" class="btn-img-del"><span class="blind">삭제</span></button>
+            </li>
+            <li>
+              <p>0202605171415.jpg</p>
+              <button type="button" class="btn-img-del"><span class="blind">삭제</span></button>
+            </li>
+            <li>
+              <p>0202605171415.jpg</p>
+              <button type="button" class="btn-img-del"><span class="blind">삭제</span></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="fixedBtnsWrap">
+        <div class="fixedBtnsWrap__inner">
+          <button type="button" class="btn-cta-sec">등록</button>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // input 검색어 삭제
+      const inputBox = document.querySelectorAll('.inpupWrap > input');
+
+      inputBox.forEach(function(elm, i){
+        elm.addEventListener('input', (e) => {
+          let inpDelBtn = e.srcElement.nextElementSibling;
+          if (elm.value == ''){
+             inpDelBtn.classList.remove('on');
+          } else {
+            inpDelBtn.classList.add('on');
+          }
+
+          inpDelBtn.addEventListener('click', (e) => {
+            elm.value = '';
+            inpDelBtn.classList.remove('on');
+          });
+        });
+      });
+
+      // 조건 검색 열기/닫기
+      const searchBoxBtn = document.querySelector('.searchBox__btn');
+      searchBoxBtn.addEventListener('click', (e) => {
+        const parent = searchBoxBtn.parentElement.parentElement;
+        if (parent.classList[1] == 'open') {
+          parent.classList.remove('open');
+        } else {
+          parent.classList.add('open');
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
+

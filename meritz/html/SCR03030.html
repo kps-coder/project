@@ -133,46 +133,19 @@
             </tbody>
           </table>
         </div>
-
-        <div class="btnWrap">
-          <button type="button" class="btn-cta-pri">등록</button>
-        </div>
       </section>
+      <div class="fixedBtnsWrap">
+        <div class="fixedBtnsWrap__inner">
+          <button type="button" class="btn-cta-sec">등록</button>
+        </div>        
+      </div>
     </div>
   </div>
 
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // input 검색어 삭제
-      const inputBox = document.querySelectorAll('.inpupWrap > input');
-
-      inputBox.forEach(function(elm, i){
-        elm.addEventListener('input', (e) => {
-          let inpDelBtn = e.srcElement.nextElementSibling;
-          if (elm.value == ''){
-             inpDelBtn.classList.remove('on');
-          } else {
-            inpDelBtn.classList.add('on');
-          }
-
-          inpDelBtn.addEventListener('click', (e) => {
-            elm.value = '';
-            inpDelBtn.classList.remove('on');
-          });
-        });
-      });
-
-      // 조건 검색 열기/닫기
-      const searchBoxBtn = document.querySelector('.searchBox__btn');
-      searchBoxBtn.addEventListener('click', (e) => {
-        const parent = searchBoxBtn.parentElement.parentElement;
-        if (parent.classList[1] == 'open') {
-          parent.classList.remove('open');
-        } else {
-          parent.classList.add('open');
-        }
-      });
+      
 
     });
   </script>
