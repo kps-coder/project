@@ -42,11 +42,11 @@
     </div>
   </div>
 
-  <!-- 팝업 : 문자전송제한 알람팝업1 -->
-  <div class="popLayer" id="callInPopLayer">
+  <!-- 팝업 : 전화 수신 시 (수신알림) -->
+  <div class="popLayer popLayer--callIn" id="callInPopLayer"><!-- 수신알림 전용 class : popLayer--callIn -->
     <div class="popLayer__container">
       <div class="popLayer__head">
-        <h1>전화 수신</h1>
+        <h1>수신알림</h1>
       </div>
       <div class="popLayer__body">
         <div class="tableWrap">
@@ -80,10 +80,10 @@
         <button type="button" class="btn-cta-pri">받기</button>
         <button type="button" class="btn-cta-sec">거절</button>
       </div>
-      <button type="button" class="popLayer__closeBtn" onclick="popLayerClose('#callInPopLayer')"><span class="blind">닫기</span></button>
+      <!-- <button type="button" class="popLayer__closeBtn" onclick="popLayerClose('#callInPopLayer')"><span class="blind">닫기</span></button> -->
     </div><!-- //popLayer__container -->
   </div><!-- //popLayer -->
-  <!-- //팝업 : 문자전송제한 알람팝업1 -->
+  <!-- //팝업 : 팝업 : 전화 수신 시 (수신알림) -->
 
 
 
@@ -93,16 +93,16 @@
       
       
       // layer 배경 클릭시 닫기
-      const popLayer = document.querySelectorAll('.popLayer');
-      const popLayerContainer = document.querySelectorAll('.popLayer__container');
-      popLayer.forEach((elm, i) => {
-        elm.addEventListener('click', (e) => {
-          //console.log(e.target.id)
-          if(e.target.classList[0] === 'popLayer'){
-            popLayerClose('#' + e.target.id);
-          }
-        });        
-      });
+      // const popLayer = document.querySelectorAll('.popLayer');
+      // const popLayerContainer = document.querySelectorAll('.popLayer__container');
+      // popLayer.forEach((elm, i) => {
+      //   elm.addEventListener('click', (e) => {
+      //     //console.log(e.target.id)
+      //     if(e.target.classList[0] === 'popLayer'){
+      //       popLayerClose('#' + e.target.id);
+      //     }
+      //   });        
+      // });
     });
 
     // layer popup

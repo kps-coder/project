@@ -241,6 +241,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .tooltip__close {position: absolute; top:4px; right:4px; display: block; width: 20px; height: 20px; background: url(../images/btn_tooltip_close.png) no-repeat center / 12px 12px;}
 .tooltip.open .tooltip_cont {display: block;}
 
+/* 전화 수신 시 */
+.popLayer--callIn .popLayer__foot > [class^="btn-"] {width: 100%;}
 
 
 /* ==== login ==== */
