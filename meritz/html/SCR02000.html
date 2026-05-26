@@ -51,8 +51,11 @@
         <div class="counsel__body">
           <!-- 고객정보 -->
           <div class="counsel__info">
-            <h3 class="title3">고객정보</h3>
-            <p class="fcPri">(접촉가능여부 : Y (2회 / 1일, 3회 / 7일))</p>
+            <div class="flexSb">
+              <h3 class="title3">고객정보</h3>
+              <p class="fcPri">(접촉가능여부 : Y (2회 / 1일, 3회 / 7일))</p>
+            </div>
+
             <div class="tableWrap">
               <table>
                 <colgroup>
@@ -98,18 +101,17 @@
                 <div class="accordionBox__row">
                   <div class="radioBtnsWrap">
                     <div class="radioBtn">
-                      <input type="radio" id="radio02_1" name="radio02"><label for="radio01_1">정상</label>
+                      <input type="radio" id="radio02_1" name="radio02" checked><label for="radio01_1">정상</label>
                     </div>
                     <div class="radioBtn">
                       <input type="radio" id="radio02_2" name="radio02"><label for="radio01_2">일시납</label>
                     </div> 
                   </div>
-                </div>
-                <div class="accordionBox__row">
                   <div class="dateInp">
                     <input type="date" name="dateInp" id="dateInp01">
                   </div>
                 </div>
+
                 <div class="accordionBox__btns">
                   <button type="button" class="btn-search">조회</button>
                 </div>  

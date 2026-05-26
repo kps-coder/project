@@ -28,6 +28,8 @@
           <div class="inpupWrap">
             <input type="password" id="loginPw" class="inpBasic" placeholder="비밀번호를 입력하세요" title="비밀번호 입력" value="122wssdfggg">
           </div>
+
+          <!-- 인증번호 전송 이전 -->
           <div class="citationInp">
             <label for="citationInp">인증번호</label>
             <div class="tooltip">
@@ -37,9 +39,26 @@
                 <button type="button" class="tooltip__close"><span class="blind">툴팁</span></button>
               </div>
             </div>
-            <input type="number" id="citationInp" placeholder="입력하세요">
+            <input type="number" id="citationInp" placeholder="입력">
+            <span class="time"></span>
             <button type="button" class="btn-small">인증번호전송</button>
           </div>
+
+          <!-- 인증번호 전송 이후 노출 -->
+          <div class="citationInp">
+            <label for="citationInp">인증번호</label>
+            <div class="tooltip">
+              <button type="button" class="tooltip__btn"><span class="blind">툴팁</span></button>
+              <div class="tooltip_cont">
+                <p>툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.툴팁 설명을 넣어주세요.</p>
+                <button type="button" class="tooltip__close"><span class="blind">툴팁</span></button>
+              </div>
+            </div>
+            <input type="number" id="citationInp" placeholder="입력">
+            <span class="time">03:00</span>
+            <button type="button" class="btn-small">인증번호재전송</button>
+          </div> 
+
           <div class="loginWrap__save">
             <div class="chechInp">
               <input type="checkbox" id="checkBox01" name="checkBox01">
@@ -55,22 +74,27 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const tooltipBtn = document.querySelector('.tooltip__btn');
-      const tooltipClose = document.querySelector('.tooltip__close');
+      // 툴팁
+      const tooltipBtn = document.querySelectorAll('.tooltip__btn');
+      const tooltipClose = document.querySelectorAll('.tooltip__close');
 
-      tooltipBtn.addEventListener('click', (e) => {        
-        const parent = e.target.parentElement;
-        if(parent.classList[1] == 'open') {
+      tooltipBtn.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {        
+          const parent = e.target.parentElement;
+          if(parent.classList[1] == 'open') {
+            parent.classList.remove('open');
+          } else {
+            parent.classList.add('open');
+          }        
+        });
+      });
+
+      tooltipClose.forEach((elm, i) => {
+        elm.addEventListener('click', (e) => {
+          const parent = e.target.parentElement.parentElement;
           parent.classList.remove('open');
-        } else {
-          parent.classList.add('open');
-        }        
-      });
-
-      tooltipClose.addEventListener('click', (e) => {
-        const parent = e.target.parentElement.parentElement;
-        parent.classList.remove('open');
-      });
+        });
+      });  
     });
   </script>
 </body>

@@ -142,10 +142,11 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .chechInp + .chechInp {margin-left:4px;}
 
 /* 인증번호 인풋 */
-.citationInp {display: flex; align-items: center; gap: 8px; padding: 8px; border:1px solid #E4E4E4; border-radius: 8px;}
+.citationInp {display: flex; align-items: center; justify-content: space-between; gap: 4px; padding: 8px; border:1px solid #E4E4E4; border-radius: 8px;}
 .citationInp > label {white-space: nowrap;}
-.citationInp > input {width: calc(100% - 160px); height:32px; padding:0 8px; border:0; font-size: 16px;}
-.citationInp > .btn-small {height: 32px; white-space: nowrap; color:#000000; background-color: #FFF5F5;} 
+.citationInp > input {width: calc(100% - 200px); height:32px; padding:0 8px; border:0; font-size: 16px;}
+.citationInp > .time {display: inline-block; width: 40px; color: #EF3B24;}
+.citationInp > .btn-small { height: 32px; white-space: nowrap; color:#000000; background-color: #FFF5F5;} 
 
 /* select */
 .selectInp > select {width: 100%; height:40px; padding:0 8px; border:1px solid #E4E4E4; border-radius: 8px; font-size: 14px; color:var(--default-font-color); font-family: "Pretendard", sans-serif; font-weight: 400; background-color: #fff;}
@@ -155,7 +156,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .dateInp {position: relative; width: 100%;}
 .dateInp input[type="date"] {appearance:none; -webkit-appearance:none; -moz-appearance:none; width: 100%; height:40px; padding:0 8px; border:1px solid #E4E4E4; border-radius: 8px; text-align: left; background-color: #fff; }
 .dateInp input[type="date"]::-webkit-calendar-picker-indicator {position:absolute; right:16px; width:21px; height:21px; cursor:pointer; opacity:0;}
-.dateInp input[type="date"]::after {content: ''; position: absolute; top:50%; right: 16px; transform: translateY(-50%); width: 21px; height: 21px; pointer-events: none; background: url(../images/ic_date.png) no-repeat center / contain;}
+.dateInp input[type="date"]::after {content: ''; position: absolute; top:50%; right: 8px; transform: translateY(-50%); width: 21px; height: 21px; pointer-events: none; background: url(../images/ic_date.png) no-repeat center / contain;}
 .dateInp input[type="date"]::-webkit-date-and-time-value{text-align:left;}
 .dateInp input[type="date"]::-webkit-datetime-edit{text-align:left;}
 .dateInpWrap {display: flex; align-items: center; gap: 8px;}
@@ -210,6 +211,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .content {padding:20px var(--side-padding) 40px; }
 .title2,
 .title3 {margin-bottom:10px; color: #000; font-size: 16px; font-weight: 600;}
+.flexSb .title3 {margin-bottom:0;}
 
 
 
@@ -306,6 +308,8 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .accordionBox__head > h3 {font-size: 16px; color:#fff; font-weight: 600;} 
 .accordionBox__btn {position: absolute; right:15px; top:3px; width: 30px; height: 30px; background: url(../images/btn_search_down.png) no-repeat center / 12px 12px;}
 .accordionBox__body {display: none; padding:24px 20px; border:1px solid #E4E4E4; border-top:0;  border-radius: 0 0 16px 16px;}
+.accordionBox__row {display: flex; gap:4px; align-items: center;}
+.accordionBox__row > * {flex:1;}
 .accordionBox__row + .accordionBox__row {margin-top:8px;}
 .accordionBox__btns {margin-top:16px;}
 
