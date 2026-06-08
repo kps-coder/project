@@ -165,6 +165,7 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .textareaInp {resize: none; width: 100%; padding:8px; border:1px solid #E4E4E4; border-radius: 8px; box-sizing: border-box; font-size: 16px;}
 
 
+
 /* 검색박스 */
 .searchBox {margin-bottom:20px;}
 .searchBox__head {position: relative; padding:8px 20px; border-radius: 16px; color:#fff; background-color: #ADADAD;}
@@ -180,6 +181,11 @@ em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter
 .searchBox.open .searchBox__body {display: block;}
 
 .searchNoneData {padding:24px; text-align: center; color:#898C8E; font-size: 16px;}
+
+/* 방문내역등록 > 방문 거래처명 */
+.inputRadioType > li {display: flex; align-items: center; gap: 4px;}
+.inputRadioType > li .radioInp > label {min-width: 60px;}
+.inputRadioType > li + li {margin-top:12px;}
 
 
 

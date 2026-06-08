@@ -55,10 +55,33 @@
                 <th scope="row">거래처명<br>(생년월일)</th>
                 <td>김채무(1998.08.23)</td>
               </tr>
+              <!-- 20260608 수정 -->
               <tr>
-                <th scope="row">방문거래처명</th>
-                <td>김채무</td>
+                <th scope="row">방문관계/<br>방문<br>거래처명</th>
+                <td>
+                  <ul class="inputRadioType">
+                    <li>
+                      <div class="radioInp">
+                        <input type="radio" name="radio01" id="radio01_1" checked><label for="radio01_1">계약자</label>
+                      </div>
+                      <input type="text" id="radioName1" class="inpBasic" placeholder="자동입력" title="계약자" readonly>
+                    </li>
+                    <li>
+                      <div class="radioInp">
+                        <input type="radio" name="radio01" id="radio01_2" checked><label for="radio01_2">보증인</label>
+                      </div>
+                      <input type="text" id="radioName2" class="inpBasic" placeholder="자동입력" title="보증인" readonly>
+                    </li>
+                    <li>
+                      <div class="radioInp">
+                        <input type="radio" name="radio01" id="radio01_3" checked><label for="radio01_3">기타</label>
+                      </div>
+                      <input type="text" id="radioName2" class="inpBasic" placeholder="입력" title="기타">
+                    </li>
+                  </ul>
+                </td>
               </tr>
+              <!-- //20260608 수정 -->
               <tr>
                 <th scope="row">방문상태</th>
                 <td>방문예약</td>
