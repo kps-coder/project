@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@import url(../font/pretendard.css); /* font 정의 */
+
+
+/* reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, strike, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video { margin: 0; padding: 0; font-family: 'Pretendard', 'Nanum Gothic', '나눔고딕', sans-serif; font-weight: 400; line-height: 1; color:#666; box-sizing: border-box;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+html, body { width: 100%; height: 100%; }
+
+p {line-height: 1.4;}
+
+/* html::-webkit-scrollbar, body::-webkit-scrollbar {width:0;} */
+button { cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 1); background-color: #fff; }
+button, textarea, select { font-size: 14px; box-shadow: none; cursor: pointer;  font-family: 'Pretendard', 'Nanum Gothic', '나눔고딕', sans-serif;}
+select {height:24px; min-width: 90px; border:1px solid #D2D7DB; color:#000000; font-family: 'Pretendard', 'Nanum Gothic', '나눔고딕', sans-serif;}
+input { /* -webkit-appearance: none; appearance: none; */ }
+::-webkit-input-placeholder { color: #ACB8C2;}
+
+a { font-size: inherit; color: inherit; text-decoration:none; cursor:pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+a, dl, dt, dd, ul, li, button, span, div, p { -webkit-appearance: none; appearance: none; box-shadow: none; border: none; border-radius: 0; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+a.link { display: block; }
+img { width: 100%; height: auto; }
+ul, ol, li, dl, dt, dd { list-style:none; }
+
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:none; }
+ 
+table {table-layout:fixed; border-collapse: collapse; border-spacing: 0px; word-break: break-all; word-wrap: break-word; }
+caption, legend { visibility:hidden;overflow:hidden;font-size:0;line-height:0; }
+address,caption,cite,code,dfn,em,var {font-style: normal; font-weight: 400;}
+
+button:disabled{opacity:0.3;}
+
+b, strong {font-family: inherit; font-size:inherit; color:inherit; font-weight:700; letter-spacing:inherit;}
+
+em, span, i, label{font-size:inherit; color:inherit; font-weight:inherit; letter-spacing:inherit;}
+
+/* 대체텍스트 hidden */
+.blind {position: absolute;	clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px;	overflow: hidden;}
+
+/*flexbox*/
+.flexSb { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; -webkit-box-orient: horizontal; -webkit-box-pack: justify; -webkit-box-align: center; }
+.flexTop { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-start; align-items: flex-start; -webkit-box-orient: horizontal; -webkit-box-pack: justify; -webkit-box-align: start; }
+.flexBottom { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: flex-end; align-items: flex-end; -webkit-box-orient: horizontal; -webkit-box-pack: justify; -webkit-box-align: center; }
+.flexCen { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; }
+.flexSb > *, .flexTop > *, .flexBottom > *, .flexCen > * { display: block; }
+.flex-1 { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+
+.v-top {vertical-align: top;}
+.v-mid {vertical-align: middle;}
+.v-bot {vertical-align: bottom;}
+
+
+/* ds-none */
+.ds-none { display: none; }
+.ds-block { display: block; }
+
+/* padding */
+.paBot10 { padding-bottom: 10px; }
+
+/* margin */
+.maBot10 { margin-bottom: 10px; }
+
+/* text */
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+
+.gradient::before{position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; content: ''; display: block; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(242, 245, 247, 0), rgba(242, 245, 247, 0.33) 80%, #f5f7faa6 100%);}
+
+/* input[type=password]{letter-spacing:-1.5px !important;} */
+.scrN{overflow:hidden;}
+
+/* input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px white inset;} */
+
+/* datepicker */
+.ui-widget-header {border:0; background-color: transparent;}
+.ui-datepicker {width: 395px;}
+.ui-datepicker .ui-datepicker-title {font-weight: 700; font-size: 24px;}
+.ui-widget-content {border: 0;}
+.ui-widget.ui-widget-content {border: 0; padding:24px 32px 32px; border-radius: 16px; box-shadow: 4px 4px 6.2px 3px #0000001A;}
+.ui-datepicker th {color:#7E818C; font-weight: 400;}
+.ui-state-default, .ui-widget-content .ui-state-default {width: 24px; height: 24px; line-height: 20px; border:0; color:#0F2552; background-color: transparent;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {border-radius: 100%; background-color: #eee;}
+.ui-state-active, .ui-widget-content .ui-state-active {border-radius: 100%; background-color: #FFD983;}
+.ui-datepicker td span, .ui-datepicker td a {text-align: center;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {top:13px;}
+.ui-icon {width: 24px; height: 24px;}
+.ui-widget-header .ui-datepicker-prev .ui-icon {background: url(../images/date_prev.svg) no-repeat center / contain;}
+.ui-widget-header .ui-datepicker-next .ui-icon {background: url(../images/date_next.svg) no-repeat center / contain;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {width: 24px; height: 24px;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {position: static; margin:0;}

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>HTML LIST : : ARKO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!-- 가이드용 -->
+    <link rel="stylesheet" href="guide/css/guide.css">
+    <!-- <script src="guide/asset/js/ui-guide.js"></script> -->
+    <!-- //가이드용 -->
+
+    <style>
+      body {background-color: #fff; font-weight: 500;}
+      .fa-solid {color:inherit} 
+
+      .fixed-head {position:fixed; top:0; width:100%; z-index:10}
+      
+      h2.bg_green {background-color:#00A684}
+      table {width:100%; line-height:1.3; margin-top:-2px; border-collapse: separate;}
+      table * {font-size:14px}
+      table thead th {height:25px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; line-height:1.3; vertical-align: middle; text-align: center; color:#333; background-color: #ddd}
+      table thead th > span {letter-spacing: -1px;}
+      table tbody th {height:35px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:1px solid #ccc; line-height:1.3; padding-left:20px; line-height:1.3; vertical-align: middle; text-align:left; letter-spacing: -1px; color:#333; background-color: #eee;}
+      table td {height:37px; padding:5px 10px; line-height:1.3; border-right:1px solid #ccc; border-bottom:1px solid #f1f1f1; vertical-align: middle; color:#333}
+      table tr:nth-child(odd) {background-color:rgba(245,245,245, .7);}
+      .no {text-align:center; font-weight:bold}
+      .date {text-align:center}
+      table .file {text-align:center; color:#bbb}
+      .file > a {color:#333}
+      .status {position:absolute; right:20px; top:10px}
+      .status .sec {display:inline-block; padding:7px 10px; border-radius: 10px; font-weight: bold; font-size:14px; color:#333; background-color: rgba(255,255,255, .7);}
+      .status #finish {padding:0 10px; border-radius: 20px; font-weight:bold; background-color:#fff}
+      .etc {vertical-align: top;}
+
+      .btn-toggle {padding:3px 10px; border:1px solid #fff; border-radius: 10px; color:#004d40; font-size:12px; background-color: #fff;}
+      h2 .btn-toggle {position:absolute; right:20px; top:6px;}
+
+      th .layer, a.layer {color:green !important}
+      th .get, a.get {color:blue !important}
+      th .mobile, a.mobile {color:blue !important}
+      th .comm, a.comm {color:red !important}
+
+      .f-org {color:orange !important}
+
+      table tr.del {text-decoration: line-through; opacity: 0.5}
+
+      [class^="btn-"] > i {margin:0}
+
+      .fc-pri2 {color:green !important;}
+      .fc-point1 {color:blue}
+      .fc-point2 {color:red}
+
+      tr.web td {background-color: rgba(179, 255, 179, 0.2);}
+      tr.app td {background-color: rgba(255, 179, 179, 0.2);}
+
+      tr.thick-line td {border-top: 2px solid #ccc;}
+    </style>
+  </head>
+  <body>
+    <div class="g_wrap html_list">
+      <div class="fixed-head">
+        <header>
+          <h1>HTML LIST : : 아르코예술기록원 </h1>
+          <!-- <a href="guide/guide.html" class="g-btn-gnb">&lt; Guide 보기</a> -->
+        </header>
+        <nav class="g-gnb-wrap">
+          <div class="gnb-container">
+            <div class="gnb-head"></div>
+            <ul>
+              <li><a href="index.html">HTML List</a></li>
+              <li><a href="guide/guide.html">UI/UX Guide</a>
+                <ul>
+                  <li class="active"><a href="guide/guide.html"><i class="fa-solid fa-minus-circle"></i>  Guide</a></li>
+                  <li><a href="guide/component.html"><i class="fa-solid fa-minus-circle"></i>  Component</a></li>
+                  <li><a href="guide/button.html"><i class="fa-solid fa-minus-circle"></i> Button</a></li>
+                  <li><a href="guide/form.html"><i class="fa-solid fa-minus-circle"></i> Form</a></li>
+                  <li><a href="guide/modal.html"><i class="fa-solid fa-minus-circle"></i> Modal</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="gnb-close"><button type="button"><i class="fa-solid fa-times"></i></button></div>
+          </div>
+        </nav>
+        <div class="status">
+          <div class="sec">진행현황 : <span id="finish">0</span> / <span id="total"></span></div>
+          <div class="sec">진척률 : <span id="progress"></span> %</div>
+        </div>
+        <table class="ls-head">
+          <colgroup>
+            <col style="width:5%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:15%">
+            <col style="width:10%">
+            <col style="width:auto">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">No</th>
+              <th scope="col" colspan="3">화면</th>
+              <th scope="col" rowspan="2">파일</th>
+              <th scope="col" rowspan="2"><span class="fc-pri2">수정일</span><br>완료일</th>
+              <th scope="col" rowspan="2">비고<br><span class="fc-pri2">수정내용</span> / <span class="fc-point1">참고</span> / <span class="fc-point2">중요</span></th>
+            </tr>
+            <tr>
+              <th scope="col">중메뉴</th>
+              <th scope="col">소메뉴</th>
+              <th scope="col">기능명</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">서브레이아웃 및 가이드</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><a href="guide/guide.html" target="_blank">guide</a></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">메인화면</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><a href="html/MAIN.html" target="_blank"></a></td>
+            <td class="date">
+              <p class="fc-pri2"></p>
+            </td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="menu-01">아카이브</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">소장 기록물</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">소장 컬렉션</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-02">라이브러리</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">도서 간행물</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">Web-DB</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-03">DA-Arts</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">구술채록</td>
+            <td class="2dep">생애사</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">주제사</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">원테이블</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">공연영상화사업</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">예술가의 공간</td>
+            <td class="2dep">예술가의 공간</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">나운영 서재</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">베니스비엔날레 한국관</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">인물·단체-DB</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">기획 콘텐츠</td>
+            <td class="2dep">기획 콘텐츠</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">전시자료</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">공연 예술</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">한국현대음악</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-04">안내·지원센터</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">FAQ</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">이용안내</td>
+            <td class="2dep">운영시간</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">자료열람 안내</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">서비스 소개</td>
+            <td class="2dep">디지털 아카이브 소개</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">무대미술 사업안내</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">공연대본</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">르네쌍스</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">원테이블</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">자료기증</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">공지사항</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-05">기록원 소개</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">소개</td>
+            <td class="2dep">기록원소개</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">아카이브현황</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">사업안내</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">소개영상</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">기록원 활동</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">조직도 및 연락처</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">찾아오시는 길</td>
+            <td class="2dep">본원 - 에술의전당 내</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">분원 - 대학로</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-06">마이페이지</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">내정보</td>
+            <td class="2dep">내정보</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">회원정보 수정</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">비밀번호 변경</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">회원탈퇴</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">예약 및 열람현황</td>
+            <td class="2dep">예약 및 열람현황</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">기록물 예약현황</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">열람 이력</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">담은 기록물</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">최근 검색</td>
+            <td class="2dep">최근 검색어</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">최근 검색 자료</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">서재 즐겨찾기</td>
+            <td class="2dep">서재 즐겨찾기</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">내 서재 관리</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">서지정보 내보내기</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">맞춤 설정</td>
+            <td class="2dep">알림 설정</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">맞춤 추천 설정</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">추천 콘텐츠</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">나의 알림</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">1:1 문의</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-07">회원</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">회원가입</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">로그인</td>
+            <td class="2dep">로그인</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">아이디 찾기</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">비밀번호 재설정</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">휴면회원 해제</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-08">공통</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">통합검색</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">오류페이지</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">시스템 점검 안내</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <p>copyright 2026. ARKO all rights reserved.</p>
+    </footer>
+
+    <script>
+      let elemNo = document.querySelectorAll(".no");
+      let elemTable = document.querySelectorAll("table");
+      let elemDate = document.querySelectorAll(".date");
+      const fixedHead = document.querySelector(".fixed-head");
+      let elemDel = document.querySelectorAll(".del");
+
+      let count = 0;
+      
+      /* elemNo.forEach(function(obj, i){
+        obj.innerHTML= i + 1;
+      }); */
+
+      elemTable.forEach(function(obj){
+        const no =  obj.querySelectorAll(".no");
+        console.log(no);
+        no.forEach(function(obj, i){
+          obj.innerHTML= i + 1;
+        });
+      });
+      console.log(elemDel.length);
+
+      total.innerHTML = elemNo.length - elemDel.length;
+
+      // 완료건 count 및 진척률
+      elemDate.forEach(function(obj, i){
+        //console.log(elemDate);
+        if(obj.hasChildNodes()){
+          count = count + 1;
+          finish.innerHTML = count;
+          console.log(obj.hasChildNodes());
+        }
+
+        let progr = ( count / (elemNo.length - elemDel.length) ) * 100;
+        progress.innerHTML = Math.floor(progr);
+      });
+
+      //공통 아이콘
+      const comIcon = document.querySelectorAll(".comm");
+      comIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-plug"></i> ');
+      });
+
+      //상단 fixed
+      const htmlWrap = document.querySelector(".html_list");
+      htmlWrap.style.paddingTop = fixedHead.clientHeight + "px";
+      //alert(fixedHead.clientHeight);
+
+      //레이어 아이콘
+      const layerIcon = document.querySelectorAll(".layer");
+      layerIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-clone"></i> ');
+      });
+
+      //모바일 아이콘
+      const mobileIcon = document.querySelectorAll(".mobile");
+      mobileIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-mobile-alt"></i> ');
+      });
+
+      //팝업 아이콘
+      const winPopIcon = document.querySelectorAll(".get");
+      winPopIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-arrow-up-right-from-square"></i> ');
+      });
+
+      //열기닫기
+      const btnTbToggle = document.querySelectorAll(".btn-toggle");
+      btnTbToggle.forEach(function(obj, i){
+        obj.addEventListener('click', function(){
+          const nextTable = obj.closest("h2").nextElementSibling;
+          
+          if (obj.classList.contains("open")){
+            nextTable.style.display = "none";
+            obj.classList.remove("open");
+            obj.innerHTML = "<i class='fa-solid fa-chevron-down'></i>";
+          } else {
+            nextTable.removeAttribute("style");
+            obj.classList.add("open");
+            obj.innerHTML = "<i class='fa-solid fa-chevron-up'></i>";
+          } 
+        });
+      });
+      
+     // gnbControlGuide();
+    </script>
+  </body>
+</html>
