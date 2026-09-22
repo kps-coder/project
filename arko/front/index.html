@@ -28,6 +28,7 @@
       .no {text-align:center; font-weight:bold}
       .date {text-align:center}
       table .file {text-align:center; color:#bbb}
+      .plan {text-align: center; color:#999}
       .file > a {color:#333}
       .status {position:absolute; right:20px; top:10px}
       .status .sec {display:inline-block; padding:7px 10px; border-radius: 10px; font-weight: bold; font-size:14px; color:#333; background-color: rgba(255,255,255, .7);}
@@ -90,10 +91,11 @@
         <table class="ls-head">
           <colgroup>
             <col style="width:5%">
+            <col style="width:12%">
+            <col style="width:12%">
+            <col style="width:12%">
             <col style="width:15%">
-            <col style="width:15%">
-            <col style="width:15%">
-            <col style="width:15%">
+            <col style="width:10%">
             <col style="width:10%">
             <col style="width:auto">
           </colgroup>
@@ -101,7 +103,8 @@
             <tr>
               <th scope="col" rowspan="2">No</th>
               <th scope="col" colspan="3">화면</th>
-              <th scope="col" rowspan="2">파일</th>
+              <th scope="col" rowspan="2">화면ID</th>
+              <th scope="col" rowspan="2">퍼블일정</th>
               <th scope="col" rowspan="2"><span class="fc-pri2">수정일</span><br>완료일</th>
               <th scope="col" rowspan="2">비고<br><span class="fc-pri2">수정내용</span> / <span class="fc-point1">참고</span> / <span class="fc-point2">중요</span></th>
             </tr>
@@ -116,20 +119,22 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
         <tbody>
           <tr>
             <td class="no"></td>
-            <td class="1dep">서브레이아웃 및 가이드</td>
+            <td class="1dep">서브레이아웃</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file"><a href="guide/guide.html" target="_blank">guide</a></td>
+            <td class="file"><a href="html/guide.html" target="_blank">guide</a></td>
+            <td class="plan">2026-09-30</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -138,7 +143,8 @@
             <td class="1dep">메인화면</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file"><a href="html/MAIN.html" target="_blank"></a></td>
+            <td class="file">UI-IAP-0011-V01</td>
+            <td class="plan">2026-10-19</td>
             <td class="date">
               <p class="fc-pri2"></p>
             </td>
@@ -150,10 +156,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -161,18 +168,100 @@
           <tr>
             <td class="no"></td>
             <td class="1dep">소장 기록물</td>
+            <td class="2dep">목록</td>
+            <td class="3dep">목록형</td>
+            <td class="file">UI-IAP-1111-L01</td>
+            <td class="plan">2026-10-02</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
             <td class="2dep"></td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">앨범형</td>
+            <td class="file">UI-IAP-1111-L02</td>
+            <td class="plan">2026-10-02</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep">
+              기록물 정보<br>
+              멀티미디어 정보<br>
+              관련 컬렉션<br>
+              관련 소장물
+            </td>
+            <td class="file">
+              UI-IAP-1111-T01<br>
+              UI-IAP-1111-T02<br>
+              UI-IAP-1111-T03<br>
+              UI-IAP-1111-T04
+            </td>
+            <td class="plan">2026-10-02</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">계층탐색</td>
+            <td class="3dep">컬렉션</td>
+            <td class="file">UI-IAP-1111-V01</td>
+            <td class="plan">2026-10-02</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">시리즈</td>
+            <td class="file">UI-IAP-1111-V02</td>
+            <td class="plan">2026-10-02</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">폴더</td>
+            <td class="file">UI-IAP-1111-V03</td>
+            <td class="plan">2026-10-02</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">소장 컬렉션</td>
+            <td class="2dep">목록</td>
+            <td class="3dep">목록형</td>
+            <td class="file">UI-IAP-1211-L01</td>
+            <td class="plan">2026-10-02</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
             <td class="2dep"></td>
+            <td class="3dep">앨범형</td>
+            <td class="file">UI-IAP-1211-L02</td>
+            <td class="plan">2026-10-02</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-1211-V01</td>
+            <td class="plan">2026-10-02</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -183,10 +272,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -194,18 +284,40 @@
           <tr>
             <td class="no"></td>
             <td class="1dep">도서 간행물</td>
-            <td class="2dep"></td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-2111-L01</td>
+            <td class="plan">2026-10-06</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep">단행본</td>
+            <td class="file">UI-IAP-2111-V01</td>
+            <td class="plan">2026-10-06</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">연속간행물</td>
+            <td class="file">UI-IAP-2111-V02</td>
+            <td class="plan">2026-10-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">Web-DB</td>
-            <td class="2dep"></td>
+            <td class="2dep">상세</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-2211-V02</td>
+            <td class="plan">2026-10-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -216,10 +328,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -228,8 +341,49 @@
             <td class="no"></td>
             <td class="1dep">구술채록</td>
             <td class="2dep">생애사</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-IAP-3111-L01</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세 - 구술채록</td>
+            <td class="file">UI-IAP-3111-V01</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세 - 기증자료(탭)</td>
+            <td class="file">UI-IAP-3111-V01</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세 - 소장기록물(탭)</td>
+            <td class="file">UI-IAP-3111-V03</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세 - PDF뷰어(구술채록pdf, 새탭)</td>
+            <td class="file">UI-IAP-3111-V04</td>
+            <td class="plan">2026-10-12</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -237,35 +391,89 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">주제사</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">목록-전체 주제</td>
+            <td class="file">UI-IAP-3121-L01</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">목록-특정 주제</td>
+            <td class="file">UI-IAP-3121-L02</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-IAP-3121-V01</td>
+            <td class="plan">2026-10-12</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">원테이블</td>
-            <td class="2dep"></td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-3211-L01</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-3211-V01</td>
+            <td class="plan">2026-10-12</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">공연영상화사업</td>
+            <td class="2dep">목록</td>
+            <td class="3dep">목록형</td>
+            <td class="file">UI-IAP-3311-L01</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
             <td class="2dep"></td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">앨범형</td>
+            <td class="file">UI-IAP-3311-L02</td>
+            <td class="plan">2026-10-12</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep">공연정보</td>
+            <td class="file">UI-IAP-3311-V01</td>
+            <td class="plan">2026-10-12</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">예술가의 공간</td>
-            <td class="2dep">예술가의 공간</td>
+            <td class="2dep">사업 소개</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-3411-V02</td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -274,7 +482,8 @@
             <td class="1dep"></td>
             <td class="2dep">나운영 서재</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-3411-V03</td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -283,25 +492,89 @@
             <td class="1dep"></td>
             <td class="2dep">베니스비엔날레 한국관</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-3411-V04</td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">인물·단체-DB</td>
-            <td class="2dep"></td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-3511-L01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep">인물 전거</td>
+            <td class="file">
+              UI-IAP-3511-V01<br>
+              UI-IAP-3511-V02<br>
+              UI-IAP-3511-V03<br>
+              UI-IAP-3511-V04<br>
+              UI-IAP-3511-V05<br>
+              UI-IAP-3511-V06
+            </td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">단체 전거</td>
+            <td class="file">
+              UI-IAP-3511-V07<br>
+              UI-IAP-3511-V08<br>
+              UI-IAP-3511-V09<br>
+              UI-IAP-3511-V10<br>
+              UI-IAP-3511-V11<br>
+              UI-IAP-3511-V12
+            </td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">이벤트 전거</td>
+            <td class="file">
+              UI-IAP-3511-V13<br>
+              UI-IAP-3511-V14<br>
+              UI-IAP-3511-V15<br>
+              UI-IAP-3511-V16<br>
+              UI-IAP-3511-V17<br>
+              UI-IAP-3511-V18
+            </td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">기획 콘텐츠</td>
-            <td class="2dep">기획 콘텐츠</td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-3611-L01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-3611-V01</td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -309,8 +582,29 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">전시자료</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-IAP-3641-L01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-IAP-3641-V01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">이미지뷰어(L)</td>
+            <td class="file">UI-IAP-3641-P01</td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -318,8 +612,39 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">공연 예술</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">목록(1)-앨범형</td>
+            <td class="file">UI-IAP-3651-L01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">목록(2)-목록형</td>
+            <td class="file">UI-IAP-3651-L02</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-IAP-3651-V01</td>
+            <td class="plan"></td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">이미지뷰어</td>
+            <td class="file">UI-IAP-3651-P01</td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -327,8 +652,99 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">한국현대음악</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">음악단체-목록</td>
+            <td class="file">UI-IAP-3661-L01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 목록-컬렉션안내</td>
+            <td class="file">UI-IAP-3661-L02</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 상세-기본정보</td>
+            <td class="file">UI-IAP-3661-V01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 상세-작품소개(탭)</td>
+            <td class="file">UI-IAP-3661-T01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 음원 플래이어(L)</td>
+            <td class="file">UI-IAP-3661-P01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">작곡가별-목록</td>
+            <td class="file">UI-IAP-3662-L01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 상세</td>
+            <td class="file">UI-IAP-3662-V01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">작품별-목록</td>
+            <td class="file">UI-IAP-3662-L01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 상세</td>
+            <td class="file">UI-IAP-3662-V01</td>
+            <td class="plan">2026-10-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 이미지뷰어(L)</td>
+            <td class="file">UI-IAP-3663-P01</td>
+            <td class="plan">2026-10-23</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -339,10 +755,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -350,9 +767,20 @@
           <tr>
             <td class="no"></td>
             <td class="1dep">FAQ</td>
-            <td class="2dep"></td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4111-L01</td>
+            <td class="plan">2026-10-28</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-4111-V01</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -361,7 +789,8 @@
             <td class="1dep">이용안내</td>
             <td class="2dep">운영시간</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4211-V02</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -369,8 +798,49 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">자료열람 안내</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">수집기록물</td>
+            <td class="file">UI-IAP-4221-T01</td>
+            <td class="plan">2026-10-28</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">생산기록물</td>
+            <td class="file">UI-IAP-4222-T02</td>
+            <td class="plan">2026-10-28</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">디지털기록물</td>
+            <td class="file">UI-IAP-4223-T03</td>
+            <td class="plan">2026-10-28</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">일반자료</td>
+            <td class="file">UI-IAP-4224-T04</td>
+            <td class="plan">2026-10-28</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">WEB-DB</td>
+            <td class="file">UI-IAP-4225-T05</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -379,7 +849,8 @@
             <td class="1dep">서비스 소개</td>
             <td class="2dep">디지털 아카이브 소개</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4311-V01</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -388,7 +859,18 @@
             <td class="1dep"></td>
             <td class="2dep">무대미술 사업안내</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4321-V02</td>
+            <td class="plan">2026-10-28</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">민화 화본</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-4331-V03</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -397,7 +879,8 @@
             <td class="1dep"></td>
             <td class="2dep">공연대본</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4341-V04</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -406,7 +889,8 @@
             <td class="1dep"></td>
             <td class="2dep">르네쌍스</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4351-V05</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -415,7 +899,8 @@
             <td class="1dep"></td>
             <td class="2dep">원테이블</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4361-V06</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -424,16 +909,28 @@
             <td class="1dep">자료기증</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4411-V07</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">공지사항</td>
-            <td class="2dep"></td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-4511-L01</td>
+            <td class="plan">2026-10-28</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-4511-V01</td>
+            <td class="plan">2026-10-28</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -444,10 +941,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -457,7 +955,8 @@
             <td class="1dep">소개</td>
             <td class="2dep">기록원소개</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5111-V02</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -466,7 +965,8 @@
             <td class="1dep"></td>
             <td class="2dep">아카이브현황</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5121-V03</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -475,7 +975,8 @@
             <td class="1dep"></td>
             <td class="2dep">사업안내</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5131-V04</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -484,16 +985,28 @@
             <td class="1dep"></td>
             <td class="2dep">소개영상</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5141-V05</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">기록원 활동</td>
-            <td class="2dep"></td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5211-L01</td>
+            <td class="plan">2026-11-06</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-5211-V01</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -502,7 +1015,8 @@
             <td class="1dep">조직도 및 연락처</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5311-O01</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -511,7 +1025,8 @@
             <td class="1dep">찾아오시는 길</td>
             <td class="2dep">본원 - 에술의전당 내</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5411-V01</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -520,7 +1035,8 @@
             <td class="1dep"></td>
             <td class="2dep">분원 - 대학로</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-5421-T01</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -531,10 +1047,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -544,7 +1061,8 @@
             <td class="1dep">내정보</td>
             <td class="2dep">내정보</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6111-V01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -552,8 +1070,19 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">회원정보 수정</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">비밀번호 재확인</td>
+            <td class="file">UI-IAP-6121-I01</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">회원정보</td>
+            <td class="file">UI-IAP-6121-I02</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -562,7 +1091,8 @@
             <td class="1dep"></td>
             <td class="2dep">비밀번호 변경</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6131-I03</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -571,7 +1101,8 @@
             <td class="1dep"></td>
             <td class="2dep">회원탈퇴</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6141-I04</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -580,7 +1111,8 @@
             <td class="1dep">예약 및 열람현황</td>
             <td class="2dep">예약 및 열람현황</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6211-L01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -588,8 +1120,19 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">기록물 예약현황</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-IAP-6221-L02</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-IAP-6221-V01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -598,7 +1141,8 @@
             <td class="1dep"></td>
             <td class="2dep">열람 이력</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6231-L01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -606,8 +1150,49 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">담은 기록물</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-IAP-6241-L02</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">열람예약 신청</td>
+            <td class="file">UI-IAP-6241-I01</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 기록물 추가(L)</td>
+            <td class="file">UI-IAP-6241-P01</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 방문예약정보 선택(L)</td>
+            <td class="file">UI-IAP-6241-P02</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">열람예약 상세/취소</td>
+            <td class="file">UI-IAP-6241-V01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -616,7 +1201,8 @@
             <td class="1dep">최근 검색</td>
             <td class="2dep">최근 검색어</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6311-L01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -625,7 +1211,8 @@
             <td class="1dep"></td>
             <td class="2dep">최근 검색 자료</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6321-L02</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -634,25 +1221,28 @@
             <td class="1dep">서재 즐겨찾기</td>
             <td class="2dep">서재 즐겨찾기</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6411-L03</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep"></td>
-            <td class="2dep">내 서재 관리</td>
+            <td class="2dep">내 서재 관리(P)</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6421-P01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep"></td>
-            <td class="2dep">서지정보 내보내기</td>
+            <td class="2dep">서지정보 내보내기(P)</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6431-P02</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -661,7 +1251,8 @@
             <td class="1dep">맞춤 설정</td>
             <td class="2dep">알림 설정</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6511-I01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -670,7 +1261,8 @@
             <td class="1dep"></td>
             <td class="2dep">맞춤 추천 설정</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6521-I02</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -678,8 +1270,19 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">추천 콘텐츠</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">최근 업데이트된 기록물</td>
+            <td class="file">UI-IAP-6531-T01</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">지난주 많이 본 기록물</td>
+            <td class="file">UI-IAP-6531-T02</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -688,16 +1291,38 @@
             <td class="1dep">나의 알림</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6611-L01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
           <tr>
             <td class="no"></td>
             <td class="1dep">1:1 문의</td>
-            <td class="2dep"></td>
+            <td class="2dep">목록</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-6711-L02</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-6711-V01</td>
+            <td class="plan">2026-10-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">등록</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-6711-I01</td>
+            <td class="plan">2026-10-16</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -708,10 +1333,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -719,9 +1345,40 @@
           <tr>
             <td class="no"></td>
             <td class="1dep">회원가입</td>
-            <td class="2dep"></td>
+            <td class="2dep">약관 동의</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-7111-I02</td>
+            <td class="plan">2026-10-20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">본인 인증</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-7121-I03</td>
+            <td class="plan">2026-10-20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">정보 입력</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-7131-I04</td>
+            <td class="plan">2026-10-20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">가입 완료</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-7141-I05</td>
+            <td class="plan">2026-10-20</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -730,7 +1387,8 @@
             <td class="1dep">로그인</td>
             <td class="2dep">로그인</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-7211-I06</td>
+            <td class="plan">2026-10-20</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -738,8 +1396,19 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">아이디 찾기</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">본인인증</td>
+            <td class="file">UI-IAP-7221-V01</td>
+            <td class="plan">2026-10-20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">찾기완료</td>
+            <td class="file">UI-IAP-7221-V02</td>
+            <td class="plan">2026-10-20</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -747,8 +1416,19 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">비밀번호 재설정</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">본인인증</td>
+            <td class="file">UI-IAP-7231-V03</td>
+            <td class="plan">2026-10-20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">비밀번호입력-> 완료</td>
+            <td class="file">UI-IAP-7231-I01</td>
+            <td class="plan">2026-10-20</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -756,8 +1436,19 @@
             <td class="no"></td>
             <td class="1dep"></td>
             <td class="2dep">휴면회원 해제</td>
-            <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="3dep">본인인증</td>
+            <td class="file">UI-IAP-7241-V01</td>
+            <td class="plan">2026-10-20</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">해제완료</td>
+            <td class="file">UI-IAP-7241-I01</td>
+            <td class="plan">2026-10-20</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -768,10 +1459,11 @@
       <table>
         <colgroup>
           <col style="width:5%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:12%">
           <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
-          <col style="width:15%">
+          <col style="width:10%">
           <col style="width:10%">
           <col style="width:auto">
         </colgroup>
@@ -779,9 +1471,20 @@
           <tr>
             <td class="no"></td>
             <td class="1dep">통합검색</td>
-            <td class="2dep"></td>
+            <td class="2dep">통합검색 결과</td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-8111-V01</td>
+            <td class="plan">2026-11-06</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">검색결과 목록(탭)</td>
+            <td class="3dep"></td>
+            <td class="file">UI-IAP-8111-V01</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -790,7 +1493,8 @@
             <td class="1dep">오류페이지</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-8311-V01</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
@@ -799,7 +1503,8 @@
             <td class="1dep">시스템 점검 안내</td>
             <td class="2dep"></td>
             <td class="3dep"></td>
-            <td class="file"></td>
+            <td class="file">UI-IAP-8411-V02</td>
+            <td class="plan">2026-11-06</td>
             <td class="date"></td>
             <td class="etc"></td>
           </tr>
