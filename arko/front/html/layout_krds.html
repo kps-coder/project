@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>아르코예술기록원</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="통합검색 | 아르코예술기록원">
+  <meta property="og:image" content="/images/logo.svg">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="keywords" content="아르코예술기록원,통합 검색">
+  <link rel="canonical" href="https://artsarchive.arko.or.kr">
+  
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" /> 
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <!-- 건너뛰기 링크 -->
+    <div id="krds-skip-link">
+      <a href="#breadcrumb">본문 바로가기</a>
+    </div>
+    <!-- //건너뛰기 링크 -->
+    
+    <!-- 상단 배너영역 -->
+    <div id="krds-masthead">
+      <div class="toggle-wrap">
+        <div class="toggle-head">
+          <div class="inner">
+            <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+            <!-- <button type="button" class="krds-btn xsmall text toggle-btn">
+							공식 누리집 확인방법 <i class="svg-icon ico-angle"></i>
+							<span class="sr-only">열기</span>
+						</button> -->
+          </div>
+        </div>
+
+        <!-- <div class="toggle-body">
+					<div class="inner">
+						<dl class="nuri">
+							<dt>공식 누리집 주소 확인하기</dt>
+							<dd class="desc">
+								go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다.<br>
+								이밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요
+							</dd>
+							<dd>
+								<a href="#" class="krds-btn xsmall text" target="_blank" title="새 창 열기">
+									운영중인 공식 누리집보기 <i class="svg-icon ico-link"></i>
+								</a>
+							</dd>
+						</dl>
+					</div>
+				</div> -->
+
+      </div>
+    </div>
+    <!-- //상단 배너영역 -->
+
+
+    <!-- header -->
+    <header class="header">
+      <div class="utility-menu">
+        <div class="inner">
+          <ul class="utility-menu__list">
+            <li>
+              <!-- resize -->
+              <div class="krds-drop-wrap krds-resize" data-adjust="scale">
+                <button type="button" class="krds-btn small text drop-btn">글자크기 설정 <i class="svg-icon ico-toggle"></i></button>
+                <div class="drop-menu">
+                  <div class="drop-in">
+                    <ul class="drop-list">
+                      <li><button type="button" class="item-link sm" data-adjust-scale="sm">작게</button></li>
+                      <li><button type="button" class="item-link md active" data-adjust-scale="md">보통</button></li>
+                      <li><button type="button" class="item-link lg" data-adjust-scale="lg">조금 크게</button></li>
+                      <li><button type="button" class="item-link xlg" data-adjust-scale="xlg">크게</button></li>
+                      <li><button type="button" class="item-link xxlg" data-adjust-scale="xxlg">가장크게</button></li>
+                    </ul>
+                    <div class="drop-bottom">
+                      <button type="button" class="krds-btn medium text" data-adjust-scale="md"><i class="svg-icon ico-reset"></i> 초기화</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //resize -->
+            </li>
+            <li><button type="button">로그아웃</button></li>
+            <li><button type="button">마이페이지</button></li>
+          </ul>
+          <a href="https://www.arko.or.kr/main/arko" target="_blank" rel="noopener noreferrer" title="새창 열림" class="arko-logo"><span class="sr-only">한국문화예술위원회</span></a>
+        </div>
+      </div>
+
+      <div class="header-gnb">
+        <div class="inner">
+          <h1 class="h1-logo"><a href="/"><span class="sr-only">아르코예술기록원</span></a></h1>
+
+          <!-- GNB -->
+          <nav class="gnb">
+            <ul class="gnb__depth">
+              <li><a href="#n" class="depth1-link">아카이브</a>
+                <ul class="gnb__depth2">
+                  <li><a href="#n" class="depth2-link">소장기록물</a></li>
+                  <li><a href="#n" class="depth2-link">소장기록물</a></li>
+                </ul>
+              </li>
+              <li><a href="#n" class="depth1-link">라이브러리</a>
+                <ul class="gnb__depth2">
+                  <li><a href="#n" class="depth2-link">도서 간행물</a></li>
+                  <li><a href="#n" class="depth2-link">Web-DB</a></li>
+                </ul>
+              </li>  
+              <li><a href="#n" class="depth1-link">DA-Arts</a>
+                <ul class="gnb__depth2">
+                  <li><a href="#n" class="depth2-link">구술채록</a>
+                    <ul class="gnb__depth3">
+                      <li><a href="#n" class="depth3-link">생애사</a></li>
+                      <li><a href="#n" class="depth3-link">주제사</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">원테이블</a></li>
+                  <li><a href="#n" class="depth2-link">공연영상화사업</a></li>
+                  <li><a href="#n" class="depth2-link">예술가의 공간</a>
+                    <ul class="gnb__depth3">
+                      <li><a href="#n" class="depth3-link">나운영 서재</a></li>
+                      <li><a href="#n" class="depth3-link">베니스비엔날레 한국관</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">인물·단체-DB</a></li>
+                  <li><a href="#n" class="depth2-link">기획 콘텐츠</a>
+                    <ul class="gnb__depth3">
+                      <li><a href="#n" class="depth3-link">민화 화본</a></li>
+                      <li><a href="#n" class="depth3-link">르네쌍스(한국유성기음반)</a></li>
+                      <li><a href="#n" class="depth3-link">공연 예술</a></li>
+                      <li><a href="#n" class="depth3-link">한국현대음악</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> 
+              <li><a href="#n" class="depth1-link">안내·지원센터</a>
+                <ul class="gnb__depth2">
+                  <li><a href="#n" class="depth2-link">FAQ</a></li>
+                  <li><a href="#n" class="depth2-link">이용안내</a>
+                    <ul class="gnb__depth3">
+                      <li><a href="#n" class="depth3-link">운영시간</a></li>
+                      <li><a href="#n" class="depth3-link">자료열람 안내</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">서비스 소개</a>
+                    <ul class="gnb__depth3">
+                      <li><a href="#n" class="depth3-link">디지털 아카이브 소개</a></li>
+                      <li><a href="#n" class="depth3-link">무대미술 사업안내</a></li>
+                      <li><a href="#n" class="depth3-link">민화 화본</a></li>
+                      <li><a href="#n" class="depth3-link">공연대본</a></li>
+                      <li><a href="#n" class="depth3-link">르네쌍스</a></li>
+                      <li><a href="#n" class="depth3-link">원테이블</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">자료기증</a></li>
+                  <li><a href="#n" class="depth2-link">공지사항</a></li>
+                </ul>
+              </li>   
+              <li><a href="#n" class="depth1-link">기록원 소개</a>
+                <ul class="gnb__depth2">
+                  <li><a href="#n" class="depth2-link">소개</a>
+                    <ul class="gnb__depth3">
+                      <li><a href="#n" class="depth3-link">기록원소개</a></li>
+                      <li><a href="#n" class="depth3-link">아카이브현황</a></li>
+                      <li><a href="#n" class="depth3-link">사업안내</a></li>
+                      <li><a href="#n" class="depth3-link">소개영상</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">기록원 활동</a></li>
+                  <li><a href="#n" class="depth2-link">조직도 및 연락처</a></li>
+                  <li><a href="#n" class="depth2-link">찾아오시는 길</a></li>
+                </ul>
+              </li>  
+            </ul>
+          </nav>
+
+          <!-- 통합검색 및 사이트맵 -->
+          <div class="search-sitemap">
+            <ul>
+              <li><button type="button" class="btn-head-search"><span class="sr-only">통합검색</span></button></li>
+              <li><button type="button" class="btn-head-sitemap"><span class="sr-only">사이트맵</span></button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sitemap-wrap">
+        <div class="sitemap-container">
+          <div class="sitemap-logo"><span class="sr-only">아르코예술기록원</span></div>
+          <div class="sitemap-mobile-head">
+            <ul>
+              <li><a href="#n">로그인</a></li>
+              <li><a href="#n">회원가입</a></li>
+            </ul>
+          </div>         
+
+          <nav class="sitemap">
+            <ul class="sitemap__depth">
+              <li><a href="#n" class="depth1-link">아카이브</a>
+                <ul class="sitemap__depth2">
+                  <li><a href="#n" class="depth2-link">소장기록물</a></li>
+                  <li><a href="#n" class="depth2-link">소장기록물</a></li>
+                </ul>
+              </li>
+              <li><a href="#n" class="depth1-link">라이브러리</a>
+                <ul class="sitemap__depth2">
+                  <li><a href="#n" class="depth2-link">도서 간행물</a></li>
+                  <li><a href="#n" class="depth2-link">Web-DB</a></li>
+                </ul>
+              </li>  
+              <li><a href="#n" class="depth1-link">DA-Arts</a>
+                <ul class="sitemap__depth2">
+                  <li><a href="#n" class="depth2-link">구술채록</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">생애사</a></li>
+                      <li><a href="#n" class="depth3-link">주제사</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">원테이블</a></li>
+                  <li><a href="#n" class="depth2-link">공연영상화사업</a></li>
+                  <li><a href="#n" class="depth2-link">예술가의 공간</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">나운영 서재</a></li>
+                      <li><a href="#n" class="depth3-link">베니스비엔날레 한국관</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">인물·단체-DB</a></li>
+                  <li><a href="#n" class="depth2-link">기획 콘텐츠</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">민화 화본</a></li>
+                      <li><a href="#n" class="depth3-link">르네쌍스(한국유성기음반)</a></li>
+                      <li><a href="#n" class="depth3-link">공연 예술</a></li>
+                      <li><a href="#n" class="depth3-link">한국현대음악</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> 
+              <li><a href="#n" class="depth1-link">안내·지원센터</a>
+                <ul class="sitemap__depth2">
+                  <li><a href="#n" class="depth2-link">FAQ</a></li>
+                  <li><a href="#n" class="depth2-link">이용안내</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">운영시간</a></li>
+                      <li><a href="#n" class="depth3-link">자료열람 안내</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">서비스 소개</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">디지털 아카이브 소개</a></li>
+                      <li><a href="#n" class="depth3-link">무대미술 사업안내</a></li>
+                      <li><a href="#n" class="depth3-link">민화 화본</a></li>
+                      <li><a href="#n" class="depth3-link">공연대본</a></li>
+                      <li><a href="#n" class="depth3-link">르네쌍스</a></li>
+                      <li><a href="#n" class="depth3-link">원테이블</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">자료기증</a></li>
+                  <li><a href="#n" class="depth2-link">공지사항</a></li>
+                </ul>
+              </li>   
+              <li><a href="#n" class="depth1-link">기록원 소개</a>
+                <ul class="sitemap__depth2">
+                  <li><a href="#n" class="depth2-link">소개</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">기록원소개</a></li>
+                      <li><a href="#n" class="depth3-link">아카이브현황</a></li>
+                      <li><a href="#n" class="depth3-link">사업안내</a></li>
+                      <li><a href="#n" class="depth3-link">소개영상</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">기록원 활동</a></li>
+                  <li><a href="#n" class="depth2-link">조직도 및 연락처</a></li>
+                  <li><a href="#n" class="depth2-link">찾아오시는 길</a></li>
+                </ul>
+              </li>  
+            </ul>
+          </nav>
+
+          <div class="sitemp-moblie-foot">
+            <a href="tel:02-760-4750" class="btn-moblie-tel">대표전화 02-760-4750</a>
+          </div>
+
+          <button type="button" class="btn-sitemap-off"><span class="sr-only">닫기</span></button>
+        </div> <!-- //sitemap-container -->
+      </div>
+
+      
+
+      <div class="header-notice">
+        <div class="inner">
+          <dl class="header-notice__cont">
+            <dt>NOTICE</dt>
+            <dd>
+              <a href="#n">한국예술디지털아카이브(DA-Arts) 디지털 기록물 열람 서비스 변경 안내</a>
+              <span class="notice-date">2026.03.27</span>
+            </dd>
+          </dl>
+          <button type="button" class="header-notice__btn"><span class="sr-only">닫기</span></button>
+        </div>
+      </div>
+    </header><!-- // header -->
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <!-- 컨텐츠 영역 -->
+      <div class="contents">
+        <div class="arko-breadcrumb">
+          <div class="inner">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#;" class="txt">홈</a></li>
+                <li><a href="#;" class="txt">Depth</a></li>
+                <li><a href="#;" class="txt">Depth</a></li>
+                <li><a href="#;" class="txt">Depth Last</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+            </div>
+        </div>
+        <div class="inner">
+
+        </div>
+      </div>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <!-- 푸터 영역 -->
+    <footer id="krds-footer">
+
+    </footer>
+    <!-- //푸터 영역 -->
+  </div>
+
+  <script src="../assets/krds/js/component/ui-script.js"></script>
+  <script src="../assets/js/arko-common.js"></script>
+
+  <script>
+    
+  </script>
+</body>
+</html>
