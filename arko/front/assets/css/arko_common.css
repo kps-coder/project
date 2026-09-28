@@ -424,10 +424,14 @@ body {
   .sitemap__depth > li.gnb-open {
     border-bottom: 1px solid #E3E4E8;
   }
-  .sitemap__depth > li.gnb-open .depth1-link,
-  .sitemap__depth2 > li.gnb-open .depth2-link {
+  .sitemap__depth > li.gnb-open .depth1-link {
     color: var(--arko-brand-color);
     border-bottom:1px solid var(--arko-brand-color);
+    background-image: url(../img/comm/ico_sitemap_up.svg);
+  }
+  .sitemap__depth2 > li.gnb-open .depth2-link {
+    color: var(--arko-brand-color);
+    
   }
 
   .sitemap__depth2 > li.mobile-gnb-down.gnb-open .depth2-link {
