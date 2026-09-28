@@ -232,10 +232,151 @@ const headerCtrl = {
   }
 }
 
+/* === 모바일 GNB === */
+const arko_mobile_gnb = {
+  // 요소
+  mobileGnb: {
+    wrap: null,
+    depth1Btn: null,
+    depth1Item: null,
+    depth2: null,
+    depth2Btn: null,
+    depth2Item: null,
+    depth3: null,
+  },
+
+  init() {
+    // 최초 1회만 이벤트 등록
+    this.mobileGnbInit();
+  },
+
+  // 모바일 GNB 초기화
+  mobileGnbInit() {
+    const mobileGnbWrap = document.querySelector('.sitemap-wrap');
+
+    if (!mobileGnbWrap) return;
+
+    this.mobileGnb.wrap = mobileGnbWrap;
+    this.mobileGnb.depth1Btn =
+      mobileGnbWrap.querySelectorAll('.depth1-link');
+    this.mobileGnb.depth1Item =
+      mobileGnbWrap.querySelectorAll('.sitemap__depth > li');
+    this.mobileGnb.depth2 =
+      mobileGnbWrap.querySelectorAll('.sitemap__depth2');
+    this.mobileGnb.depth2Btn = mobileGnbWrap.querySelectorAll('.depth2-link');
+    this.mobileGnb.depth2Item = mobileGnbWrap.querySelectorAll('.sitemap__depth2 > li');
+    this.mobileGnb.depth3 = mobileGnbWrap.querySelectorAll('.sitemap__depth3');
+
+    this.mobileGnb.depth3.forEach((depth3) => {
+      depth3.parentElement.classList.add('mobile-gnb-down');
+    });
+
+    // 2depth ID 설정
+    this.mobileGnb.depth2.forEach((elm, i) => {
+      elm.setAttribute('id', `moGnbSub${i}`);
+    });
+
+    // 1depth 버튼 설정
+    this.mobileGnb.depth1Btn.forEach((btn, i) => {
+      btn.setAttribute('aria-controls', `moGnbSub${i}`);
+      btn.setAttribute('aria-expanded', 'false');
+
+      btn.addEventListener('click', (event) => {
+
+        // PC에서는 모바일 기능 실행하지 않음
+        if (window.innerWidth > 1024) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const parent = btn.parentElement;
+        const isOpen = parent.classList.contains('gnb-open');
+
+        // 이미 열려 있으면 닫기
+        if (isOpen) {
+          parent.classList.remove('gnb-open');
+          btn.setAttribute('aria-expanded', 'false');
+          return;
+        }
+
+        // 기존 메뉴 닫기
+        this.mobileGnbClose();
+
+        // 선택한 GNB 열기
+        parent.classList.add('gnb-open');
+        btn.setAttribute('aria-expanded', 'true');
+      });
+    });
+
+    // 2depth 버튼 설정
+    this.mobileGnb.depth2Btn.forEach((btn, i) => {
+      btn.setAttribute('aria-controls', `moGnbSub2${i}`);
+      btn.setAttribute('aria-expanded', 'false');
+
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const parent = btn.parentElement;
+        const isOpen = parent.classList.contains('gnb-open');
+
+
+        this.mobileGnb.depth2Item.forEach((item) => {
+          item.classList.remove('gnb-open');
+        });
+
+        this.mobileGnb.depth2Btn.forEach((btn) => {
+          btn.setAttribute('aria-expanded', 'false');
+        });
+
+        // 선택한 GNB 열기
+        parent.classList.add('gnb-open');
+        btn.setAttribute('aria-expanded', 'true');
+      });
+    });
+  },
+
+  // GNB 열기
+  mobileGnbOpen() {
+    if (!this.mobileGnb.wrap) return;
+
+    this.mobileGnb.wrap.classList.add('active');
+
+    this.updateBodyScroll();
+  },
+
+  // GNB 닫기
+  mobileGnbClose() {
+    if (!this.mobileGnb.wrap) return;
+
+    this.mobileGnb.depth1Item.forEach((item) => {
+      item.classList.remove('gnb-open');
+    });
+
+    this.mobileGnb.depth1Btn.forEach((btn) => {
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  },
+
+  // Body Scroll 제어
+  updateBodyScroll() {
+    const isGnbOpen =
+      this.mobileGnb.wrap &&
+      this.mobileGnb.wrap.classList.contains('active');
+
+    if (isGnbOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+};
+
 
 // 초기 이벤트
 window.addEventListener("DOMContentLoaded", () => {
   headerCtrl.init();
+  arko_mobile_gnb.init();
 });
 
 // 스크롤 이벤트
@@ -245,5 +386,5 @@ window.addEventListener("scroll", () => {
 
 // 리사이즈 이벤트
 window.addEventListener("resize", () => {
-
+  
 });

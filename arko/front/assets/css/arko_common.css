@@ -291,6 +291,7 @@ body {
     font-weight: 500;
     white-space: nowrap;
     color: #333;
+    pointer-events: none;
   }
 
   .sitemap__depth2 {
@@ -395,7 +396,14 @@ body {
 
   .sitemap .depth2-link {
     width: 100%;
-    background: #F6F5F3 url(../img/comm/ico_sitemap_down.svg) no-repeat right 16px center / 13px 8px;
+    height:51px;
+    border:1px solid transparent;
+    font-size: 1.8rem;
+    background-color: transparent;
+  }
+
+  .mobile-gnb-down .depth2-link {
+    background: transparent url(../img/comm/ico_sitemap_down.svg) no-repeat right 16px center / 13px 8px;
   }
 
   .sitemap__depth2 {
@@ -404,23 +412,40 @@ body {
     padding: 0 14px;
   }
 
-  .sitemap__depth2 > li + li {
-    margin-top: 12px;
-  }
-
   .sitemap__depth3 {
     display: none;
   }
 
-  .sitemap__depth > li.gnb-open .depth1-link {
+  .sitemap .depth3-link {
+    margin:0;
+    padding-block: 16px;
+  }
+  
+  .sitemap__depth > li.gnb-open {
+    border-bottom: 1px solid #E3E4E8;
+  }
+  .sitemap__depth > li.gnb-open .depth1-link,
+  .sitemap__depth2 > li.gnb-open .depth2-link {
     color: var(--arko-brand-color);
     border-bottom:1px solid var(--arko-brand-color);
+  }
+
+  .sitemap__depth2 > li.mobile-gnb-down.gnb-open .depth2-link {
     background-image: url(../img/comm/ico_sitemap_up.svg);
   }
 
-  .sitemap__depth > li.gnb-open .sitemap__depth2 {
+  .sitemap__depth > li.gnb-open .sitemap__depth2,
+  .sitemap__depth2 > li.gnb-open .sitemap__depth3 {
     display: block;
   }
+
+  .sitemap__depth2 > li.gnb-open .depth2-link {
+    width: 100%;
+    border-color: var(--arko-brand-color);
+    background-color: #F6F5F3;;
+
+  }
+
 
   .sitemap .btn-moblie-tel {
     display: block;
@@ -537,7 +562,12 @@ body {
 }
 .arko-breadcrumb  .krds-breadcrumb-wrap .breadcrumb li:not(:last-child)::after {
   background-color: #999;
-  margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+  .krds-breadcrumb-wrap .breadcrumb li:not(.home):not(:nth-child(2)):last-child::before, .krds-breadcrumb-wrap .breadcrumb li:not(.home):not(:nth-child(2)):last-child::after {
+    background-color: #999;
+  }
 }
 
 /* contents */
