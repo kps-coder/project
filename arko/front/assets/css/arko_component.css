@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+
+/* ====== contents ======== */
+
+/* contents */
+.arko-contents {
+  min-height: 60rem;
+  padding-block:var(--arko-contents-padding-block);
+}
+
+.title-area {
+  border-bottom:1px solid #848794;
+  margin-bottom:var(--arko-title-area-margin-bottom);
+}
+
+.h1-title {
+  font-size: var(--arko-h1-font-size);
+  font-weight: var(--arko-h1-font-weight);
+  color: var(--arko-h1-font-color);
+  line-height: 1.6;
+}
+
+.title-desc {
+  padding-top:var(--arko-title-area-padding-top);
+  padding-bottom:var(--arko-title-area-padding-bottom);
+  color:#757575;
+  font-size: var(--arko-title-desc-size);
+}
+
+
+

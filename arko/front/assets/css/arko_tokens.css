@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+:root {
+  --arko-primary-color: #09102A;
+  --arko-brand-color: #93681e;
+  --arko-brand-color-text: #8c5e17;
+
+  --arko-font-size-base: 1.8rem;
+
+  --arko-contents-wrap-size: 1440px;
+
+  --arko-font-color-default: #666;
+  --arko-font-color-title: #000;
+  --arko-font-color-sub: #767676;
+  --arko-font-color-point: #93681e;
+  --arko-font-color-guide: #085691;
+
+  --arko-h1-font-size: 4.4rem;
+  --arko-h2-font-size: 2.8rem;
+  --arko-h3-font-size: 2.4rem;
+  --arko-h4-font-size: 2rem;
+  --arko-h5-font-size: 1.8rem;
+  --arko-title-desc-size: 2rem;
+
+  --arko-h1-font-weight: 700;
+  --arko-h2-font-weight: 600;
+  --arko-h3-font-weight: 500;
+  --arko-h4-font-weight: 600;
+  --arko-h5-font-weight: 600;
+
+  --arko-h1-font-color: #000;
+  --arko-h2-font-color: #000;
+  --arko-h3-font-color: #000;
+  --arko-h4-font-color: #000;
+  --arko-h5-font-color: #000;
+
+  --arko-title-area-padding-top: 4rem;
+  --arko-title-area-padding-bottom: 6.4rem;
+  --arko-title-area-margin-bottom: 6.4rem;
+
+  --arko-contents-padding-block: 8rem;
+
+  --arko-input-border-color-search: #09102a;
+  --arko-input-border-color: #8A8E9E;
+  
+  --arko-line-color-top: #09102a;
+  --arko-line-color-etc: #e3e4e8;
+
+  --arko-background-color: #f2f3f5;
+
+  --arko-side-padding : var(--krds-number-9);
+  --arko-sitemap-logo-height: 100px;
+  --arko-gnb-depth2-color: #333;
+
+  --arko-footer-background-color: #1F2633;
+  --arko-footer-font-color: rgba(255,255,255,.75);
+
+  --arko-input-xlarge-font-size: 2rem;
+  --arko-placeholder-font-color: #6B6F79;
+
+  --arko-border-radius-default: 5px;
+
+  --arko-contents-gap-xlager: 6.4rem;
+  --arko-contents-gap-lager: 3.2rem;
+  --arko-contents-gap-medium: 2.4rem;
+  --arko-contents-gap-small: 1.6rem;
+}
+
+/* tablet 변수 */
+@media (min-width:768px) and (max-width:1279px) {
+  :root {
+    --arko-h1-font-size: 3.4rem;
+    --arko-h2-font-size: 2.4rem;
+    --arko-h3-font-size: 2rem;
+    --arko-h4-font-size: 1.8rem;
+    --arko-h5-font-size: 1.8rem;
+  }
+}
+
+/* mobile 변수 */
+@media (max-width:767px) {
+  :root {
+    --arko-h1-font-size: 2.6rem;
+    --arko-h2-font-size: 2rem;
+    --arko-h3-font-size: 1.8rem;
+    --arko-h4-font-size: 1.6rem;
+    --arko-h5-font-size: 1.6rem;
+    --arko-title-desc-size: 1.8rem;
+
+    --arko-contents-padding-block: 6.4rem;
+
+    --arko-title-area-padding-top: 3.2rem;
+    --arko-title-area-padding-bottom: 4rem;
+    --arko-title-area-margin-bottom: 4rem;
+
+    --arko-input-xlarge-font-size: 1.6rem;
+
+    --arko-contents-gap-xlager: 3.2rem;
+    --arko-contents-gap-lager: 2.4rem;
+    --arko-contents-gap-medium: 1.6rem;
+    --arko-contents-gap-small: 1.2rem;
+  }  
+}
+
+
+body {
+  font-size: var(--arko-font-size-base);
+  letter-spacing: -.3px;
+  color: var(--arko-font-color-default)
+}
+
+/* mobile */
+@media (max-width:767px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
