@@ -76,7 +76,7 @@
                 </div>
               </div> 
               <div class="sch-detail">
-                <h2 class="sch-h2-title mob-only">검색 조건</h2>
+                <h2 class="h2-title mob-only">검색 조건</h2>
                 <div class="sch-detail__row">
                   <dl class="sch-detail__column">
                     <dt class="sch-detail__tit">장르별</dt>
@@ -239,6 +239,22 @@
                     </dd>
                   </dl>                  
                 </div>
+
+                <div class="sch-detail__foot mob-only">
+                  <div class="form-conts">
+                    <div class="krds-form-check medium">
+                      <input type="checkbox" id="chk_1-3a">
+                      <label for="chk_1-3a">결과 내 재검색</label>
+                    </div>
+                  </div>                 
+
+                  <div class="arko-btns">
+                    <button type="button" class="krds-btn medium tertiary">초기화</button>
+                    <button type="button" class="krds-btn medium primary">검색하기(342,560건)</button>
+                  </div>
+
+                  <button type="button" class="sch-detail-off-btn"></button>
+                </div>
               </div>                   
             </div>
 
@@ -318,7 +334,7 @@
                   </div>
                   <div class="tr">
                     <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
+                    <span class="td-badge">연극·뮤지컬</span>
                     <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
                     <span class="td-code">MC-KSM-02082</span>
                     <span class="td-collection">임성남 컬렉션</span>
@@ -382,6 +398,12 @@
                   </div>
                 </div>
               </div>
+
+              <div class="arko-board-foot">
+                <div class="arko-pagination">
+                  
+                </div>
+              </div>
             </div>
           </div>          
         </section>
@@ -404,6 +426,9 @@
   <script>
     const buttons = document.querySelectorAll('.arko-board-type button');
     const board = document.querySelector('.arko-toggle-board');
+    const btnFilter = document.querySelector('.btn-filter');
+    const btnFilterOff = document.querySelector('.sch-detail-off-btn');
+    const searchDetail = document.querySelector('.sch-detail');
 
     buttons.forEach(button => {
       button.addEventListener('click', () => {
@@ -417,6 +442,28 @@
         board.classList.remove('toggle--list', 'toggle--thum');
         board.classList.add(`toggle--${type}`);
       });
+    });
+
+    // 모바일 시 필터 열기
+    btnFilter.addEventListener('click', () => {
+      searchDetail.classList.add('open');
+
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+
+      requestAnimationFrame(() => {
+        searchDetail.focus();
+      });
+    });
+
+    // 모바일 시 필터 닫기
+    btnFilterOff.addEventListener('click', () => {
+      searchDetail.classList.remove('open');
+
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+
+      btnFilter.focus();
     });
   </script>
 </body>

@@ -125,7 +125,7 @@
   display: flex;
   align-items: center;
   height: 4.8rem;
-  min-width: 186px;
+  min-width: var(--arko-sch-detail-title-width);
   color: var(--arko-font-color-title);
   font-weight: 600;
 }
@@ -153,7 +153,7 @@
 }
 
 /* 모바일 */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .sch-form-wrap {
     flex-direction: column-reverse;
     align-items: flex-end;

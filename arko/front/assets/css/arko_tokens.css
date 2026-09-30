@@ -64,6 +64,8 @@
   --arko-contents-gap-large: 3.2rem;
   --arko-contents-gap-medium: 2.4rem;
   --arko-contents-gap-small: 1.6rem;
+
+  --arko-sch-detail-title-width: 186px;
 }
 
 /* tablet 변수 */
@@ -74,6 +76,8 @@
     --arko-h3-font-size: 2rem;
     --arko-h4-font-size: 1.8rem;
     --arko-h5-font-size: 1.8rem;
+
+    --arko-sch-detail-title-width: 140px;
   }
 }
 

@@ -9,6 +9,25 @@ b {
   background-color: var(--arko-primary-color);
 }
 
+.krds-btn.tertiary {
+  border-color: var(--arko-primary-color);
+  color: var(--arko-primary-color);
+}
+
+.krds-btn.primary {
+  border-color: var(--arko-primary-color);
+  background-color: var(--arko-primary-color);
+}
+
+.arko-btns {
+  text-align: center;
+}
+
+.arko-btns > * {
+  margin:0 .8rem;
+}
+
+
 
 .inner {
   max-width: var(--arko-contents-wrap-size);
