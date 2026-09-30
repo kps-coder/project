@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+b {
+  font-weight: 600;
+}
+
+.krds-btn {
+  --krds-button--radius-medium: var(--arko-border-radius-default);
+  background-color: var(--arko-primary-color);
+}
+
 
 .inner {
   max-width: var(--arko-contents-wrap-size);
@@ -657,5 +666,43 @@
     display: none;
   }
 
+}
+
+/* 아이콘 */
+.svg-icon.ico-sch {
+  -webkit-mask-image: url(../img/comm/ico_sch.svg);
+  mask-image: url(../img/comm/ico_sch.svg);
+}
+
+.svg-icon.ico-help {
+  width: 28px;
+  height: 28px;
+  background: url(../img/comm/ico_help.svg) no-repeat center / contain;
+  vertical-align: middle;
+}
+
+.svg-icon.ico-thum {
+  width: 16px;
+  height: 18px;
+  -webkit-mask-image: url(../img/comm/ico_type_thum.svg);
+  mask-image: url(../img/comm/ico_type_thum.svg);
+  vertical-align: middle;
+}
+
+.svg-icon.ico-list {
+  width: 16px;
+  height: 18px;
+  -webkit-mask-image: url(../img/comm/ico_type_list.svg);
+  mask-image: url(../img/comm/ico_type_list.svg);
+  background-color:var(--arko-primary-color);
+  vertical-align: middle;
+}
+
+.svg-icon.ico-filter {
+  width: 18px;
+  height: 12px;
+  -webkit-mask-image: url(../img/comm/ico_filter.svg);
+  mask-image: url(../img/comm/ico_filter.svg);
+  background-color:var(--arko-primary-color);
 }
 

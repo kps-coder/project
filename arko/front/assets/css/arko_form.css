@@ -2,6 +2,22 @@
 
 
 /* ===== form ===== */
+.krds-form-select {
+  --krds-form-select--radius-small: var(--arko-border-radius-default);
+  border-color: var(--arko-input-border-color);
+  font-size: var(--arko-font-size-base) !important;
+}
+.krds-input {
+  --krds-input--radius-medium: var(--arko-border-radius-default);
+  border: 1px solid var(--arko-input-border-color);
+  font-size: var(--arko-font-size-base) !important;
+}
+
+.krds-form-check {
+  display: inline-block;
+}
+
+
 /* 버튼형 체크박스 */
 .checkbox-btn {
   display: inline-block;
@@ -10,7 +26,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 116px;
+  min-width: 106px;
   height: 40px;
   border-radius: var(--arko-border-radius-default);
   background-color: var(--arko-background-color);;
@@ -30,8 +46,16 @@
 .checkbox-btn-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 1.2rem;
 }
+
+.checkbox-group  {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--arko-contents-gap-large);
+  row-gap: var(--arko-contents-gap-small);
+}
+
 
 /* 검색 */
 .krds-form-check input[type=checkbox]:checked ~ label:before {
@@ -42,6 +66,10 @@
 .krds-form-check.medium > input[type=radio] ~ label, 
 .krds-form-check.medium > input[type=checkbox] ~ label {
   font-size: var(--arko-font-size-base);
+}
+
+.arko-search-area {
+  margin-bottom:var(--arko-contents-gap-xlarge)
 }
 
 .arko-search-area .sch-input {
@@ -60,34 +88,68 @@
   white-space: nowrap;
 }
 
-.svg-icon.ico-help {
-  width: 28px;
-  height: 28px;
-  background: url(../img/comm/ico_help.svg) no-repeat center / contain;
-  vertical-align: middle;
+.krds-btn.icon.xlarge .svg-icon {
+  width: 2.7rem;
+  height: 2.7rem;
 }
 
 .btn-search-help {
   display: inline-block;
+  color: var(--arko-primary-color);
 }
 .btn-search-help .svg-icon {
   margin-right:12px;
 }
 
 .sch-detail {
-  margin-top: var(--arko-contents-gap-xlager);
+  padding-block:var(--arko-contents-gap-xlarge);
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
+
+.sch-detail__row {
+  display: flex;
+  column-gap: var(--arko-contents-gap-xlarge);
+  row-gap: var(--arko-contents-gap-medium);
+}
+
+.sch-detail__row ~ .sch-detail__row {
+  margin-top: var(--arko-contents-gap-large);
+}
+
+.sch-detail__column {
+  display: flex;
+  flex: 1;
 }
 
 .sch-detail__tit {
+  display: flex;
+  align-items: center;
+  height: 4.8rem;
   min-width: 186px;
   color: var(--arko-font-color-title);
   font-weight: 600;
 }
 
+.sch-detail__cont {
+  flex:1;
+  align-self: center;
+}
+
+.form-period {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.form-arko--period {
+  flex-direction: row;
+  align-items: center;
+  max-width: 340px;
+}
+
+/* pc */
 @media (min-width: 1280px) {
-  .sch-detail__row {
-    display: flex;
-  }
+
 }
 
 /* 모바일 */
@@ -100,5 +162,19 @@
   .arko-search-area .sch-input .krds-input.xlarge {
     height: 5.4rem;
   }
+
+  .sch-detail__row {
+    flex-direction: column;
+  }
+
+  .sch-detail__column {
+    flex-direction: column;
+  }
+
+  .sch-detail__cont {
+    align-self: flex-start;
+    width: 100%;
+  }
 }
+
 
