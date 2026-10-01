@@ -160,6 +160,22 @@
   background: var(--arko-background-color) url(../img/comm/img_none.svg) no-repeat center / 100px 94px;
 }
 
+/* 결과 없음 */
+.arko-board-nodata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:var(--arko-contents-gap-small);
+  text-align: center;
+  padding: var(--arko-contents-gap-large);
+}
+.nodata__tit {
+  color: #333333;
+  font-size: var(--arko-h3-font-size);
+  font-weight: 500;
+}
+
 /* pc */
 @media (min-width:769px) {
   .arko-toggle-board.toggle--list .tr {
@@ -388,7 +404,7 @@
 }
 
 
-/* 페이지네이션 */
+/* ===== 페이지네이션 ===== */
 .arko-pagination {
   display: flex;
   justify-content: space-between;
