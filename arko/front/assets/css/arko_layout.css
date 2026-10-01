@@ -4,6 +4,11 @@ b {
   font-weight: 600;
 }
 
+a,
+button {
+  transition: none;
+}
+
 .krds-btn {
   --krds-button--radius-medium: var(--arko-border-radius-default);
   background-color: var(--arko-primary-color);
