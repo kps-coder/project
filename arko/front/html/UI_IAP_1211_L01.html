@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 
-  <title>소장 기록물 : 아르코예술기록원</title>  
+  <title>소장 컬렉션 : 아르코예술기록원</title>  
 
-  <meta property="og:title" content="소장 기록물 : 아르코예술기록원">
+  <meta property="og:title" content="소장 컬렉션 : 아르코예술기록원">
   <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
   <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
 
@@ -38,7 +38,7 @@
               <ol class="breadcrumb">
                 <li class="home"><a href="#;" class="txt">홈</a></li>
                 <li><a href="#;" class="txt">아카이브</a></li>
-                <li><a href="#;" class="txt">소장 기록물</a></li>
+                <li><a href="#;" class="txt">소장 컬렉션</a></li>
               </ol>
             </nav>
             <!-- breadcrumb -->
@@ -49,14 +49,14 @@
         <section class="arko-contents">
           <div class="inner">
             <div class="title-area">
-              <h1 class="h1-title">소장 기록물</h1>
-              <p class="title-desc">수집기록물과 생산기록물 전체를 검색하고 둘러볼 수 있습니다.</p>
+              <h1 class="h1-title">소장 컬렉션</h1>
+              <p class="title-desc">예술인·단체·기관으로부터 수집한 기록물을 컬렉션별로 살펴보고, 관련 기록물을 함께 탐색할 수 있습니다.</p>
             </div>
             
             <div class="arko-search-area">
               <div class="sch-form-wrap">
                 <div class="sch-input">
-                  <input type="text" class="krds-input xlarge" id="searchWrd-total" placeholder="키워드를 입력하세요.">
+                  <input type="text" class="krds-input xlarge" id="searchWrd-total" placeholder="제목, 인명, 키워드, 컬렉션명 검색">
                   <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
                     <span class="sr-only">검색</span>
                     <i class="svg-icon ico-sch"></i>
@@ -123,10 +123,6 @@
                           <label for="chk_btn1_9">예술정책</label>
                         </span>
                         <span class="checkbox-btn">
-                          <input type="checkbox" name="chk_btn1" id="chk_btn1_10">
-                          <label for="chk_btn1_10">예술정책</label>
-                        </span>
-                        <span class="checkbox-btn">
                           <input type="checkbox" name="chk_btn1" id="chk_btn1_11">
                           <label for="chk_btn1_11">기타</label>
                         </span>
@@ -134,60 +130,22 @@
                     </dd>
                   </dl>
                 </div>
+
                 <div class="sch-detail__row">
                   <dl class="sch-detail__column">
-                    <dt class="sch-detail__tit">매체</dt>
+                    <dt class="sch-detail__tit"><label for="select_1">컬렉션명</label></dt>
                     <dd class="sch-detail__cont">
-                      <div class="checkbox-group">
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_1" id="chk_1_all">
-                          <label for="chk_1_all">전체</label>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_1" id="chk_1_1">
-                          <label for="chk_1_1">도서/간행물류</label>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_1" id="chk_1_2">
-                          <label for="chk_1_2">문서류</label>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_1" id="chk_1_3">
-                          <label for="chk_1_3">사진/필름류</label>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_1" id="chk_1_4">
-                          <label for="chk_1_4">음향/영상류</label>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_1" id="chk_1_5">
-                          <label for="chk_1_5">홍보인쇄물류</label>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_1" id="chk_1_6">
-                          <label for="chk_1_6">박물류</label>
+                      <div class="form-group">
+                        <div class="form-conts">
+                          <select id="select_1" class="krds-form-select medium" title="선택">
+                            <option value="">전체</option>
+                          </select>
                         </div>
                       </div>
                     </dd>
-                  </dl>                  
+                  </dl>              
                 </div>
-                <div class="sch-detail__row">
-                  <dl class="sch-detail__column">
-                    <dt class="sch-detail__tit">서비스범위</dt>
-                    <dd class="sch-detail__cont">
-                      <div class="checkbox-group">
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_2" id="chk_2_1">
-                          <label for="chk_2_1">실물열람</label>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" name="chk_2" id="chk_2_2">
-                          <label for="chk_2_2">디지털원문</label>
-                        </div>
-                      </div>
-                    </dd>
-                  </dl>                  
-                </div>
+                
                 <div class="sch-detail__row">
                   <dl class="sch-detail__column middle">
                     <dt class="sch-detail__tit">시기분류</dt>
@@ -221,32 +179,6 @@
                           <label for="chk_1-11a">미상 포함</label>
                         </div>
                       </div>                     
-                    </dd>
-                  </dl>                  
-                </div>
-                <div class="sch-detail__row">
-                  <dl class="sch-detail__column">
-                    <dt class="sch-detail__tit"><label for="select_1">인물</label></dt>
-                    <dd class="sch-detail__cont">
-                      <div class="form-group">
-                        <div class="form-conts">
-                          <select id="select_1" class="krds-form-select medium" title="선택">
-                            <option value="">인물 선택 및 검색</option>
-                          </select>
-                        </div>
-                      </div>
-                    </dd>
-                  </dl>
-                  <dl class="sch-detail__column">
-                    <dt class="sch-detail__tit"><label for="select_2">컬렉션</label></dt>
-                    <dd class="sch-detail__cont">
-                      <div class="form-group">
-                        <div class="form-conts">
-                          <select id="select_2" class="krds-form-select medium" title="선택">
-                            <option value="">컬렉션 선택 및 검색</option>
-                          </select>
-                        </div>
-                      </div>
                     </dd>
                   </dl>                  
                 </div>
@@ -336,84 +268,37 @@
                 <div class="arko-toggle-board toggle--list">
                   <div class="tr tr--head pc-only">
                     <span class="td-badge">장르</span>
-                    <span class="td-subject">제목</span>
+                    <span class="td-subject">컬렉션명</span>
                     <span class="td-code">참조코드</span>
-                    <span class="td-collection">컬렉션</span>
-                    <span class="td-media">매체</span>
                     <span class="td-period">시기분류</span>         
                   </div>
                   <div class="tr">
                     <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
                     <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진 &lt;백조의 호수&gt; 공연사진&lt;백조의 호수&gt; 공연사진&lt;백조의 호수&gt; 공연사진</a>
+                    <a href="#n" class="td-subject al">평론가 이미원 컬렉션</a>
                     <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션임성남 컬렉션임성남 컬렉션임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
+                    <span class="td-period">1952</span>      
                   </div>
                   <div class="tr">
                     <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">연극·뮤지컬</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
+                    <span class="td-badge">무용</span>
+                    <a href="#n" class="td-subject al">작가 박서보 컬렉션</a>
                     <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
+                    <span class="td-period">1952</span>      
+                  </div>
+                  <div class="tr">
+                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
+                    <span class="td-badge">시각예술 </span>
+                    <a href="#n" class="td-subject al">평론가 이미원 컬렉션</a>
+                    <span class="td-code">MC-KSM-02082</span>
+                    <span class="td-period">1912-1973</span>      
                   </div>
                   <div class="tr">
                     <a href="#n" class="td-thum"></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
+                    <span class="td-badge">시각예술 </span>
+                    <a href="#n" class="td-subject al">평론가 이미원 컬렉션</a>
                     <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
-                  </div>
-
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-collection">임성남 컬렉션</span>
-                    <span class="td-media">사진</span>
-                    <span class="td-period">1984</span>         
+                    <span class="td-period">1912-1973</span>      
                   </div>
                 </div>
 

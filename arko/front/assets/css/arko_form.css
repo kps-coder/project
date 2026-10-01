@@ -130,9 +130,15 @@
   font-weight: 600;
 }
 
+
 .sch-detail__cont {
   flex:1;
   align-self: center;
+}
+
+.sch-detail__cont .krds-form-select {
+  width: 100%;
+  max-width: 475px;
 }
 
 .form-period {
@@ -153,16 +159,18 @@
 
 
 /* pc */
-@media (min-width: 1280px) {
-
+@media (min-width: 1024px) {
+  .sch-detail__column.middle {
+    align-items: center;
+  }
 }
 
 /* pc */
 @media (max-width:1023px) {
-   .form-period {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  .form-period {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* 모바일 */
@@ -187,6 +195,11 @@
   .sch-detail__cont {
     align-self: flex-start;
     width: 100%;
+  }
+
+  .sch-detail__cont .krds-form-select {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
