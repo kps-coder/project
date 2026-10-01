@@ -7,6 +7,7 @@ b {
 a,
 button {
   transition: none;
+  vertical-align: middle;
 }
 
 .krds-btn {
@@ -25,17 +26,25 @@ button {
 }
 
 .arko-btns {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: var(--arko-contents-gap-xsmall);
 }
-
-.arko-btns > * {
-  margin:0 .8rem;
+.arko-btns.between {
+  display: flex;
+  justify-content: space-between;
+}
+.arko-btns .btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--arko-contents-gap-xsmall);
 }
 
 
 
 .inner {
   max-width: var(--arko-contents-wrap-size);
+  box-sizing: content-box;
 }
 
 .utility-menu {
@@ -117,7 +126,7 @@ button {
   left: 0;
   right: 0;
   display: block;  
-  margin-top:14px;
+  margin-top:8px;
   border-bottom:1px solid #E7E9EF;
   background-color: #fff;
 }
@@ -689,7 +698,6 @@ button {
   .arko-foot-site {
     display: none;
   }
-
 }
 
 /* 아이콘 */
@@ -737,3 +745,15 @@ button {
   background-color: transparent;
 }
 
+.svg-icon.ico-clip {
+  -webkit-mask-image: url(../img/comm/ico_clip.svg);
+  mask-image: url(../img/comm/ico_clip.svg);
+}
+.svg-icon.ico-star {
+  -webkit-mask-image: url(../img/comm/ico_star.svg);
+  mask-image: url(../img/comm/ico_star.svg);
+}
+.svg-icon.ico-quote {
+  -webkit-mask-image: url(../img/comm/ico_quote.svg);
+  mask-image: url(../img/comm/ico_quote.svg);
+}

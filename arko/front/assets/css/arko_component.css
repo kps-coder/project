@@ -3,15 +3,52 @@
 
 /* ====== contents ======== */
 
+.hashtag {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--arko-contents-gap-small);
+  row-gap: var(--arko-contents-gap-xsmall);
+}
+
+.hashtag > a {
+  color: #757575;
+}
+.hashtag > a::before {
+  content: '# ';
+}
+
+
 /* contents */
 .arko-contents {
   min-height: 60rem;
   padding-block:var(--arko-contents-padding-block);
 }
 
+.right-nav {
+  padding: 40px var(--arko-contents-gap-medium);  
+}
+
+@media (min-width: 1280px) {
+  .arko-contents.column .inner {
+    display: flex;
+  }
+  .arko-contents.column .left-cont {
+    flex: 1;
+  }
+  .right-nav {
+    width: 23.5%;
+    max-width: 324px;
+    border-left:1px solid #7E818F;
+  }
+}
+
+
+/* title area */
+
 .title-area {
-  border-bottom:1px solid #848794;
+  border-bottom:1px solid var(--arko-primary-color);
   margin-bottom:var(--arko-title-area-margin-bottom);
+  padding-bottom:var(--arko-title-area-padding-bottom);
 }
 
 .h1-title {
@@ -30,11 +67,44 @@
 
 .title-desc {
   padding-top:var(--arko-title-area-padding-top);
-  padding-bottom:var(--arko-title-area-padding-bottom);
   color:#757575;
   font-size: var(--arko-title-desc-size);
 }
 
+.title-category {
+  font-size: 1.6rem;
+  color: var(--arko-brand-color-text);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  font-weight: 500;
+  margin-bottom: var(--arko-contents-gap-small);
+}
+
+.title-area .hashtag {
+  margin-top:var(--arko-contents-gap-large);
+}
+
+.title-area .arko-btns {
+  margin-top: var(--arko-contents-gap-medium);
+}
+
+@media (min-width: 1280px) {
+  .arko-contents.column .title-area {
+    padding-right: 3.7rem;
+  }
+}
+
+@media (max-width:767px) {
+  .title-area .arko-btns {
+    flex-direction: column;
+    gap:1.2rem;
+  }
+
+  .title-area .arko-btns .krds-btn {
+    flex:1;
+    padding-inline: 4px;
+  }
+}
 
 /* === 목록 === */
 .arko-board-type {
@@ -407,6 +477,8 @@
 
 /* ===== 페이지네이션 ===== */
 .arko-pagination {
+  --page-border-color: #CBCCD1;
+
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -421,7 +493,7 @@
   display: block;
   width: 4.8rem;
   height: 4.8rem;
-  border:1px solid #CBCCD1;
+  border:1px solid var(--page-border-color);
   border-radius: var(--arko-border-radius-default);
 }
 .page-first {
@@ -445,6 +517,7 @@
 
 .page-links .krds-form-select {
   width: var(--arko-page-select-width);
+  border:1px solid var(--page-border-color);
 }
 
 @media (max-width: 767px) {
@@ -484,4 +557,33 @@
    .page-links {
     order: 3;
    }
+}
+
+/* 계층 네비게이션 */
+.tree-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--arko-primary-color);
+}
+.tree-list {
+  position: relative;
+}
+.tree-list::before {
+  position: absolute;
+  top:calc(var(--arko-font-size-base) / 2);
+  bottom:calc(var(--arko-font-size-base) / 2);
+  display: block;
+  content: '';
+  width: 1px;
+  background-color: var(--arko-primary-color);
+}
+
+.tree-depth1-link {
+  color: var(--arko-font-color-title);
+}
+
+@media (max-width:767px) {
+  .tree-title {
+    font-size: 1.8rem;
+  }
 }
