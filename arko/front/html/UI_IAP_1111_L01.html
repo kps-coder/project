@@ -195,15 +195,26 @@
                       <div class="form-period">
                         <div class="form-group form-arko--period">
                           <div class="form-conts">
-                            <input type="text" id="consult_name32" class="krds-input medium ac" placeholder="" value="1925">
+                            <input type="text" id="periodStart" class="krds-input medium ac" placeholder="" value="1925">
                           </div>
                           <span>~</span>
                           <div class="form-conts">
-                            <input type="text" id="consult_name33" class="krds-input medium ac" placeholder="" value="1993">
+                            <input type="text" id="periodEnd" class="krds-input medium ac" placeholder="" value="1993">
                           </div>
                         </div>
                         <div class="form-period-range">
+                          <!-- Slider -->
+                          <div class="period-slider" id="periodSlider" aria-label="기간 선택"></div>
 
+                          <!-- 하단 연도 -->
+                          <div class="period-years">
+                            <span>1900</span>
+                            <span>1925</span>
+                            <span>1950</span>
+                            <span>1975</span>
+                            <span>2000</span>
+                            <span>2026</span>
+                          </div>
                         </div>
                         <div class="krds-form-check medium">
                           <input type="checkbox" id="chk_1-2a">
@@ -253,7 +264,7 @@
                     <button type="button" class="krds-btn medium primary">검색하기(342,560건)</button>
                   </div>
 
-                  <button type="button" class="sch-detail-off-btn"></button>
+                  <button type="button" class="sch-detail-off-btn"><span class="sr-only">닫기</span></button>
                 </div>
               </div>                   
             </div>
@@ -400,8 +411,26 @@
               </div>
 
               <div class="arko-board-foot">
+                <!-- 페이지네이션 -->
                 <div class="arko-pagination">
-                  
+                  <div class="page-btns">
+                    <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                    <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                  </div>                  
+
+                  <div class="page-links">
+                    <select id="select_page" class="krds-form-select medium" title="페이지 선택">
+                      <option value="">1</option>
+                      <option value="" selected>2</option>
+                    </select>
+                    <em>/</em>
+                    <span class="page-total">2</span>
+                  </div>
+
+                  <div class="page-btns">
+                    <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                    <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                  </div>                  
                 </div>
               </div>
             </div>
@@ -464,6 +493,146 @@
       document.body.style.overflow = '';
 
       btnFilter.focus();
+    });
+
+    // 기간 선택
+    $(function () {
+      const $slider = $('#periodSlider');
+      const $start = $('#periodStart');
+      const $end = $('#periodEnd');
+
+      const MIN = 1900;
+      const MAX = 2026;
+
+
+      /* --------------------------------
+        Slider 생성
+      -------------------------------- */
+
+      $slider.slider({
+
+        range: true,
+
+        min: MIN,
+        max: MAX,
+
+        step: 1,
+
+        values: [
+          Number($start.val()),
+          Number($end.val())
+        ],
+
+        slide: function (event, ui) {
+
+          // Slider → Input
+          $start.val(ui.values[0]);
+          $end.val(ui.values[1]);
+
+          updateTooltip(ui.values);
+        },
+
+        change: function (event, ui) {
+
+          // Slider → Input
+          $start.val(ui.values[0]);
+          $end.val(ui.values[1]);
+
+          updateTooltip(ui.values);
+        },
+
+        create: function () {
+
+          const values = $(this).slider('values');
+
+          updateTooltip(values);
+        }
+
+      });
+
+
+      /* --------------------------------
+        Tooltip
+      -------------------------------- */
+
+      function updateTooltip(values) {
+
+        const $handles = $slider.find('.ui-slider-handle');
+
+        $handles.eq(0).attr('data-value', values[0]);
+        $handles.eq(1).attr('data-value', values[1]);
+      }
+
+
+      /* --------------------------------
+        Input → Slider
+      -------------------------------- */
+
+      $start.on('change', function () {
+
+        let start = parseInt($(this).val(), 10);
+        let end = $slider.slider('values', 1);
+
+
+        // 숫자가 아니면 기존 값 유지
+        if (isNaN(start)) {
+          start = $slider.slider('values', 0);
+        }
+
+
+        // 범위 제한
+        start = Math.max(MIN, Math.min(start, MAX));
+
+
+        // 시작값이 종료값보다 클 수 없음
+        if (start > end) {
+          start = end;
+        }
+
+
+        $(this).val(start);
+
+        $slider.slider('values', 0, start);
+      });
+
+
+      $end.on('change', function () {
+
+        let start = $slider.slider('values', 0);
+        let end = parseInt($(this).val(), 10);
+
+
+        // 숫자가 아니면 기존 값 유지
+        if (isNaN(end)) {
+          end = $slider.slider('values', 1);
+        }
+
+
+        // 범위 제한
+        end = Math.max(MIN, Math.min(end, MAX));
+
+
+        // 종료값이 시작값보다 작을 수 없음
+        if (end < start) {
+          end = start;
+        }
+
+
+        $(this).val(end);
+
+        $slider.slider('values', 1, end);
+      });
+
+
+      /* --------------------------------
+        입력 중 숫자만 허용
+      -------------------------------- */
+
+      $start.add($end).on('input', function () {
+
+        this.value = this.value.replace(/[^0-9]/g, '');
+      });
+
     });
   </script>
 </body>

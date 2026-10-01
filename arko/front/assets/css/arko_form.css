@@ -147,9 +147,22 @@
   max-width: 340px;
 }
 
+.form-period .krds-form-check {
+  white-space: nowrap;
+}
+
+
 /* pc */
 @media (min-width: 1280px) {
 
+}
+
+/* pc */
+@media (max-width:1023px) {
+   .form-period {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 }
 
 /* 모바일 */
@@ -178,3 +191,126 @@
 }
 
 
+/* ==== 기간 검색 Range Slider ==== */
+.form-period-range {
+  --period-active: var(--arko-primary-color);
+  --period-track: var(--arko-background-color);
+  --period-text: #8C8C8C;
+  --period-tooltip: var(--arko-background-color);
+
+  position: relative;
+  width: 100%;
+  height: 105px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+
+/* Slider*/
+
+.form-period-range .period-slider {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 54px;
+  width: auto;
+  height: 4px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--period-track);
+}
+
+
+/* 기본 jQuery UI 스타일 제거 */
+
+.form-period-range .ui-slider {
+  border: 0;
+}
+
+.form-period-range .ui-widget-content {
+  border: 0;
+  background: var(--period-track);
+}
+
+
+/* 선택 영역 */
+
+.form-period-range .ui-slider-range {
+  height: 4px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--period-active);
+}
+
+
+/* Handle */
+
+.form-period-range .ui-slider-handle {
+  position: absolute;
+  top: -6px;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  padding: 0;
+  border: 2px solid var(--period-active);
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+}
+
+
+/* jQuery UI 기본 효과 제거 */
+.form-period-range .ui-slider-handle.ui-state-default,
+.form-period-range .ui-slider-handle.ui-state-hover,
+.form-period-range .ui-slider-handle.ui-state-focus,
+.form-period-range .ui-slider-handle.ui-state-active {
+  border: 2px solid var(--period-active);
+  background: #fff;
+}
+
+
+/* 선택 연도 Tooltip */
+.form-period-range .ui-slider-handle::before {
+  content: attr(data-value);
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  width: 96px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  background: var(--period-tooltip);
+  color: var(--period-active);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+
+/* 하단 연도 */
+.form-period-range .period-years {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 76px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--period-text);
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.form-period-range .period-years span {
+  white-space: nowrap;
+}
+
+/* ==== //기간 검색 Range Slider ==== */

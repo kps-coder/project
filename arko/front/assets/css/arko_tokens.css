@@ -66,6 +66,9 @@
   --arko-contents-gap-small: 1.6rem;
 
   --arko-sch-detail-title-width: 186px;
+
+  --arko-page-gap: 8rem;
+  --arko-page-select-width: 11rem;
 }
 
 /* tablet 변수 */
@@ -105,8 +108,12 @@
     --arko-contents-gap-large: 2.4rem;
     --arko-contents-gap-medium: 1.6rem;
     --arko-contents-gap-small: 1.2rem;
+
+    --arko-page-gap: 6rem;
+    --arko-page-select-width: 9rem;
   }  
 }
+
 
 
 body {

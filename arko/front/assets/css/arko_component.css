@@ -181,6 +181,7 @@
 
   .arko-toggle-board.toggle--list .tr > * {
     text-align: center;
+    padding:0 4px;
   }
 
   .toggle--list .td-badge {width: 10%;}
@@ -384,4 +385,86 @@
     height: 30px;
     background: url(../img/comm/ico_sitemap_off.svg) no-repeat center / 14px 14px;
   }
+}
+
+
+/* 페이지네이션 */
+.arko-pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: var(--arko-page-gap);
+}
+
+.page-btns {
+  display: flex;
+  gap: 1.2rem;
+}
+.page-btns button {
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  border:1px solid #CBCCD1;
+  border-radius: var(--arko-border-radius-default);
+}
+.page-first {
+  background: url(../img/comm/page_first.svg) no-repeat center / 14px 14px;
+}
+.page-prev {
+  background: url(../img/comm/page_prev.svg) no-repeat center / 14px 14px;
+}
+.page-next {
+  background: url(../img/comm/page_next.svg) no-repeat center / 14px 14px;
+}
+.page-last {
+  background: url(../img/comm/page_last.svg) no-repeat center / 14px 14px;
+}
+
+.page-links {
+  display: flex;
+  align-items: center;
+  gap:1.2rem;
+}
+
+.page-links .krds-form-select {
+  width: var(--arko-page-select-width);
+}
+
+@media (max-width: 767px) {
+  .page-btns {
+    gap: 0;
+  }
+  .page-btns button {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+  .page-btns .page-first,
+  .page-btns .page-next {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+  }
+  .page-btns .page-prev,
+  .page-btns .page-last {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+ .page-links > .krds-form-select {
+    height: 4.4rem;
+  }
+}
+
+@media (max-width: 350px) {
+   .arko-pagination {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:12px;
+   }       
+   .page-btns:last-child {
+    order: 1;
+   }
+   .page-links {
+    order: 3;
+   }
 }
