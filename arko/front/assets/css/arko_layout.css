@@ -1,46 +1,5 @@
 @charset "utf-8";
 
-b {
-  font-weight: 600;
-}
-
-a,
-button {
-  transition: none;
-  vertical-align: middle;
-}
-
-.krds-btn {
-  --krds-button--radius-medium: var(--arko-border-radius-default);
-  background-color: var(--arko-primary-color);
-}
-
-.krds-btn.tertiary {
-  border-color: var(--arko-primary-color);
-  color: var(--arko-primary-color);
-}
-
-.krds-btn.primary {
-  border-color: var(--arko-primary-color);
-  background-color: var(--arko-primary-color);
-}
-
-.arko-btns {
-  display: flex;
-  justify-content: center;
-  gap: var(--arko-contents-gap-xsmall);
-}
-.arko-btns.between {
-  display: flex;
-  justify-content: space-between;
-}
-.arko-btns .btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--arko-contents-gap-xsmall);
-}
-
-
 
 .inner {
   max-width: var(--arko-contents-wrap-size);
@@ -126,7 +85,7 @@ button {
   left: 0;
   right: 0;
   display: block;  
-  margin-top:8px;
+  margin-top:7px;
   border-bottom:1px solid #E7E9EF;
   background-color: #fff;
 }
@@ -698,62 +657,4 @@ button {
   .arko-foot-site {
     display: none;
   }
-}
-
-/* 아이콘 */
-.svg-icon.ico-sch {
-  -webkit-mask-image: url(../img/comm/ico_sch.svg);
-  mask-image: url(../img/comm/ico_sch.svg);
-}
-
-.svg-icon.ico-help {
-  width: 28px;
-  height: 28px;
-  background: url(../img/comm/ico_help.svg) no-repeat center / contain;
-  vertical-align: middle;
-}
-
-.svg-icon.ico-thum {
-  width: 16px;
-  height: 18px;
-  -webkit-mask-image: url(../img/comm/ico_type_thum.svg);
-  mask-image: url(../img/comm/ico_type_thum.svg);
-  vertical-align: middle;
-}
-
-.svg-icon.ico-list {
-  width: 16px;
-  height: 18px;
-  -webkit-mask-image: url(../img/comm/ico_type_list.svg);
-  mask-image: url(../img/comm/ico_type_list.svg);
-  background-color:var(--arko-primary-color);
-  vertical-align: middle;
-}
-
-.svg-icon.ico-filter {
-  width: 18px;
-  height: 12px;
-  -webkit-mask-image: url(../img/comm/ico_filter.svg);
-  mask-image: url(../img/comm/ico_filter.svg);
-  background-color:var(--arko-primary-color);
-}
-
-.svg-icon.ico-nodata {
-  width: 96px;
-  height: 91px;
-  background: url(../img/comm/ico_nodata.svg) no-repeat center / contain;
-  background-color: transparent;
-}
-
-.svg-icon.ico-clip {
-  -webkit-mask-image: url(../img/comm/ico_clip.svg);
-  mask-image: url(../img/comm/ico_clip.svg);
-}
-.svg-icon.ico-star {
-  -webkit-mask-image: url(../img/comm/ico_star.svg);
-  mask-image: url(../img/comm/ico_star.svg);
-}
-.svg-icon.ico-quote {
-  -webkit-mask-image: url(../img/comm/ico_quote.svg);
-  mask-image: url(../img/comm/ico_quote.svg);
 }

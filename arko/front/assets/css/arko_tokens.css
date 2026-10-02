@@ -1,11 +1,13 @@
 @charset "utf-8";
 
 :root {
+  --krds-line-height-base: 1.6;
+
   --arko-primary-color: #09102A;
   --arko-brand-color: #93681e;
   --arko-brand-color-text: #8c5e17;
 
-  --arko-font-size-base: 1.8rem;
+  --arko-font-size-base: 1.8rem;  
 
   --arko-contents-wrap-size: 1440px;
 
@@ -45,6 +47,7 @@
   
   --arko-line-color-top: #09102a;
   --arko-line-color-etc: #e3e4e8;
+  --arko-line-color:#848794;
 
   --arko-background-color: #f2f3f5;
 

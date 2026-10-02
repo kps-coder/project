@@ -56,6 +56,14 @@
   row-gap: var(--arko-contents-gap-small);
 }
 
+/* 라디오 */
+.krds-form-check input[type=radio]:checked ~ label:before {
+  border-color: var(--krds-form-check--button-color-border);
+}
+.krds-form-check input[type=radio]:checked ~ label:after {
+  background-color: var(--arko-primary-color);
+}
+
 
 /* 검색 */
 .krds-form-check input[type=checkbox]:checked ~ label:before {
