@@ -110,6 +110,12 @@ button {
   gap: var(--arko-contents-gap-xsmall);
 }
 
+@media (max-width:767px) {
+  .arko-btns > button {
+    flex: 1;
+  }
+}
+
 /* tab */
 .tab > ul {
   overflow: hidden;
@@ -219,4 +225,11 @@ button {
   -webkit-mask-image: url(../img/comm/ico_quote.svg);
   mask-image: url(../img/comm/ico_quote.svg);
 }
-
+.svg-icon.ico-list-view {
+  -webkit-mask-image: url(../img/comm/ico_list.svg);
+  mask-image: url(../img/comm/ico_list.svg);
+}
+.svg-icon.ico-view {
+  -webkit-mask-image: url(../img/comm/ico_view.svg);
+  mask-image: url(../img/comm/ico_view.svg);
+}

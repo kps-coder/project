@@ -752,6 +752,39 @@
   }
 }
 
+/* 관련 컬렉션 */
+.related-collection .h2-title > span {
+  color: var(--arko-brand-color);
+  margin-right: var(--arko-contents-gap-medium);
+}
+
+.related-collection__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--arko-contents-gap-large);
+  column-gap: 2.4rem;
+  row-gap: 2.4rem;
+}
+
+.related-collection__head .h2-title {
+  margin-bottom:0;  
+}
+
+.related-collection__head .arko-btns {
+  margin-left: auto;
+}
+
+.related-collection .detail-txt-box {
+  padding-bottom: var(--arko-contents-gap-large);
+  border-bottom:1px dashed var(--arko-line-color-etc);
+}
+
+.related-collection .arko-btns.mob-only {
+  margin-top: var(--arko-contents-gap-xlarge);
+}
+
 /* 관련소장물 게시판 */
 .related-material__item {
   display: flex;
