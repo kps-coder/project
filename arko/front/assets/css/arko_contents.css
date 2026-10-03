@@ -114,6 +114,10 @@
   }
 }
 
+.sec-cont ~ .sec-cont {
+  margin-top:var(--arko-contents-gap-xlarge)
+}
+
 /* === 목록 === */
 .arko-board-type {
   display: flex;
@@ -254,6 +258,11 @@
   font-weight: 500;
 }
 
+.td-db-name:not(.tr--head .td-db-name) {
+  color: var(--arko-brand-color);
+  font-weight: 500;
+}
+
 /* pc */
 @media (min-width:769px) {
   .arko-toggle-board.toggle--list .tr {
@@ -275,16 +284,25 @@
 
   .arko-toggle-board.toggle--list .tr > * {
     text-align: center;
-    padding:0 4px;
+    padding:0 .8rem;
+    box-sizing: content-box;
   }
 
+  .arko-toggle-board.toggle--list .tr.tr--head > * {
+    padding:0 .4rem;
+  }
+
+  .arko-toggle-board.toggle--list .tr b {
+    display: none;
+  }
+
+  /* 아카이브 > 소장기록물 */
   .toggle--list .td-badge {width: 10%;}
-  .toggle--list .td-subject {width: 25%; flex: 1;}
+  .toggle--list .td-subject {width: 25%;}
   .toggle--list .td-code {width: 20%;}
   .toggle--list .td-collection {width: 20%;}
   .toggle--list .td-media {width: 10%;}
   .toggle--list .td-period {width: 15%;}
-
 
   /* 앨범형 */
   .arko-toggle-board.toggle--thum {
@@ -332,12 +350,6 @@
     max-height: calc(1.6em * 2);
   }
 
-  .arko-toggle-board .toggle--thum.td-code,
-  .arko-toggle-board.toggle--thum .td-collection {
-    display: block;
-    margin-bottom:12px;
-  }
-
   .arko-toggle-board.toggle--thum .td-media + .td-period {
     float: right;
   }
@@ -366,12 +378,6 @@
     -webkit-box-orient: vertical;
     max-height: calc(1.6em * 2);
   }
-
-  .arko-toggle-board .td-code,
-  .arko-toggle-board .td-collection {
-    display: block;
-    margin-bottom:12px;
-  }
 }
 
 /* 모바일 */
@@ -384,6 +390,16 @@
   .arko-toggle-board .tr--head {
     display: none;
   }
+   .arko-toggle-board.toggle--list .tr b {
+    display: inline-block;
+    width: 110px;
+    color: var(--arko-font-color-title);
+  }
+
+  .arko-toggle-board.toggle--list .tr b.block {
+    width: 100%;
+  }
+
   .arko-toggle-board .td-badge {
     display: block;
     min-width: 76px;
@@ -439,6 +455,26 @@
 
   .arko-toggle-board.toggle--thum .td-media + .td-period {
     float: right;
+  }
+
+  /* 라이브러리 > web-DB */
+  .td-db-name,
+  .td-feature,
+  .td-use,
+  .td-btns {
+    display: block;
+  }
+  .td-btns > button {width: 100%;}
+
+  .web-DB-table .tr {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 2.4rem 0;
+  }
+
+  .arko-toggle-board.toggle--list.web-DB-table .tr b.block {
+    margin-bottom:1.2rem;
   }
 }
 
@@ -899,5 +935,45 @@
 
   .related-material__item > * {
     width: 100%;
+  }
+}
+
+
+/* 라이브러리 */
+.arko-board-library > ul > li {
+  padding: var(--arko-contents-gap-medium);
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
+.abl__title {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: var(--arko-contents-gap-small);
+  color: var(--arko-font-color-title);
+}
+
+.abl__info > dl {
+  display: flex;
+}
+
+.abl__info > dl > dt {
+  flex: 0 0 10rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.abl__info > dl > dd { 
+  flex: 1;
+  padding:0 .8rem; 
+}
+
+@media (min-width: 1025px) {
+  .abl__info {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.2rem;
+  }
+  .abl__info > dl {
+    width: 33%;
   }
 }

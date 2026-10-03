@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>도서 간행물 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="도서 간행물 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width:769px) {
+      .td-db-name {width: 20%;}
+      .td-feature {width: 35%;}
+      .td-use {width: 35%;}
+      .td-btns {width: 10%;}
+    }    
+  </style>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <div id="headerInclude"><!-- 퍼블전용::상단 영역 include용 --></div>
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <div class="contents">
+        <div class="arko-breadcrumb">
+          <div class="inner">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#;" class="txt">홈</a></li>
+                <li><a href="#;" class="txt">라이브러리</a></li>
+                <li><a href="#;" class="txt">Web-DB</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+            </div>
+        </div>
+
+        <!-- 컨텐츠 영역 -->
+        <section class="arko-contents">
+          <div class="inner">
+            <div class="title-area">
+              <h1 class="h1-title">Web-DB</h1>
+              <ul class="text-list dot">
+                <li>Web-DB는 국내 및 해외에서 발행되는 문화예술 분야의 학술정보를 온라인으로 이용할 수 있는 데이터베이스로, 각 DB별로 초록, 색인, 원문(Fulltext) 등의 정보를 제공합니다.</li>
+                <li>Web-DB는 아르코예술기록원 내에서 이용 가능하며, 제공되는 원문(Fulltext) 정보도 예술기록원 내에서 열람하실 수 있습니다.</li>
+                <li>DB 이용에 관한 자세한 사항은 아르코예술기록원(02-760-4750, artsarchive@arko.or.kr)으로 문의하시기 바랍니다.</li>
+              </ul>
+            </div>
+            
+            <section class="sec-cont">
+              <h2 class="h2-title">해외 학술정보 DB</h2>
+              <!-- 목록 -->
+              <div class="arko-toggle-board toggle--list web-DB-table">
+                <!-- cell width는 내부 스타일에 100%로 정의(상단 style 참조) -->
+                <div class="tr tr--head pc-only">
+                  <span class="td-db-name">DB명</span>
+                  <span class="td-feature">특징</span>
+                  <span class="td-use">이용방법</span>   
+                  <span class="td-btns"></span>
+                </div>
+                <div class="tr">
+                  <span class="td-db-name al">NAXOS Music  Library</span>
+                  <span class="td-feature al">
+                    <b class="block">특징</b>
+                    클래식 음악 CD 182,602장, 2,816,618개 트랙을 스트리밍으로 제공하며(2023년 8월 기준), 한국어 검색 기능을 지원합니다.
+                  </span>
+                  <span class="td-use al">
+                    <b class="block">이용방법</b>
+                    외부에서 이용할 경우, 예술기록원 홈페이지에서 정회원 계정으로 로그인한 후 이용할 수 있습니다.
+                  </span>   
+                  <span class="td-btns">
+                    <button type="button" class="krds-btn tertiary small">바로가기</button>
+                  </span>
+                </div>
+                <div class="tr">
+                  <span class="td-db-name al">EBSCO Arts Collection</span>
+                  <span class="td-feature al">
+                    <b class="block">특징</b>
+                    시각예술, 공연예술, 무용, 음악 분야의 해외 학술지 원문 약 1,700종을 제공하며(2023년 8월 기준), 한국어 인터페이스를 지원합니다.
+                  </span>
+                  <span class="td-use al">
+                    <b class="block">이용방법</b>
+                    예술기록원 내에서 이용할 수 있습니다.
+                  </span>   
+                  <span class="td-btns">
+                    <button type="button" class="krds-btn tertiary small">바로가기</button>
+                  </span>
+                </div>
+                <div class="tr">
+                  <span class="td-db-name al">Music & Performing Arts Collection</span>
+                  <span class="td-feature al">
+                    <b class="block">특징</b>
+                    음악 및 공연예술 분야에 특화된 해외 학술지 원문 495종을 제공하며(2023년 8월 기준), 한국어 인터페이스를 지원합니다.
+                  </span>
+                  <span class="td-use al">
+                    <b class="block">이용방법</b>
+                    외부에서 이용할 경우, 예술기록원 홈페이지에서 정회원 계정으로 로그인한 후 이용할 수 있습니다
+                  </span>   
+                  <span class="td-btns">
+                    <button type="button" class="krds-btn tertiary small">바로가기</button>
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            <section class="sec-cont">
+              <h2 class="h2-title">국내 학술정보 DB</h2>
+              <!-- 목록 -->
+              <div class="arko-toggle-board toggle--list web-DB-table">
+                <!-- cell width는 내부 스타일에 100%로 정의(상단 style 참조) -->
+                <div class="tr tr--head pc-only">
+                  <span class="td-db-name">DB명</span>
+                  <span class="td-feature">특징</span>
+                  <span class="td-use">이용방법</span>   
+                  <span class="td-btns"></span>
+                </div>
+                <div class="tr">
+                  <span class="td-db-name al">사이버 문학광장 문예지아카이브즈</span>
+                  <span class="td-feature al">
+                    <b class="block">특징</b>
+                    문예지 콘텐츠 디지털 아카이빙 사업으로, 국내에서 발간된 주요 문예지에 수록된 콘텐츠를 디지털 아카이빙하여 제공합니다. 희소성이 높은 문예지의 원문을 구축하여 디지털 자료로 보존·활용하기 위한 서비스입니다.
+                  </span>
+                  <span class="td-use al">
+                    <b class="block">이용방법</b>
+                    예술기록원 내에서 이용할 수 있습니다.
+                  </span>   
+                  <span class="td-btns">
+                    <button type="button" class="krds-btn tertiary small">바로가기</button>
+                  </span>
+                </div>
+                <div class="tr">
+                  <span class="td-db-name al">한국학술정보 KISS</span>
+                  <span class="td-feature al">
+                    <b class="block">특징</b>
+                    국내 학술지 및 학술자료를 검색·열람할 수 있는 학술정보 서비스로, 국내 학술지 약 3,420종의 정보를 제공합니다(2023년 8월 기준).
+                  </span>
+                  <span class="td-use al">
+                    <b class="block">이용방법</b>
+                    외부에서 이용할 경우, 예술기록원 홈페이지에서 정회원 계정으로 로그인한 후 이용할 수 있습니다
+                  </span>   
+                  <span class="td-btns">
+                    <button type="button" class="krds-btn tertiary small">바로가기</button>
+                  </span>
+                </div>
+                <div class="tr">
+                  <span class="td-db-name al">DBPIA</span>
+                  <span class="td-feature al">
+                    <b class="block">특징</b>
+                    국내 학술지, 학술대회 자료 등 약 1,797종의 저널을 제공하며(2023년 8월 기준), 매월 약 1만여 편의 새로운 논문을 지속적으로 업데이트하는 국내 학술지 원문 서비스입니다.
+                  </span>
+                  <span class="td-use al">
+                    <b class="block">이용방법</b>
+                    외부에서 이용할 경우, 예술기록원 홈페이지에서 정회원 계정으로 로그인한 후 이용할 수 있습니다.
+                  </span>   
+                  <span class="td-btns">
+                    <button type="button" class="krds-btn tertiary small">바로가기</button>
+                  </span>
+                </div>
+              </div>
+            </section>
+          </div>          
+        </section>
+      </div>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
+  </div>
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+
+</body>
+</html>

@@ -74,8 +74,20 @@ button {
   margin-bottom: var(--arko-contents-gap-xsmall) !important;
 }
 
+.pt-0 {
+  padding-top:0 !important;
+}
+
 .v-mid {
   vertical-align: middle !important;
+}
+
+/* point color */
+.font-color-pri {
+  color: var(--arko-primary-color) !important;
+}
+.font-color-brand {
+  color: var(--arko-brand-color) !important;
 }
 
 /* btn */
@@ -161,6 +173,33 @@ button {
   height: 6rem;
 }
 
+/* list */
+.text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.text-list > li {
+  position: relative;
+}
+.text-list.dot > li {
+  padding-left: var(--arko-contents-gap-small);
+}
+.text-list.dot > li::before {
+  position: absolute;
+  left: 0;
+  top:calc(var(--arko-font-size-base) / 2 + 2px);
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #757575;
+}
+
+.title-area .text-list {
+  margin-top: var(--arko-contents-gap-large);
+}
 
 /* 아이콘 */
 .svg-icon.ico-sch {
