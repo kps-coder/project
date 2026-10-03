@@ -606,6 +606,8 @@
 }
 .tree-list {
   --tree-list-gap: 2.4rem;
+  --tree-list-underline-offset: 3px;
+  --tree-list-active-color: #000;
 
   position: relative;
 }
@@ -640,6 +642,11 @@
   border-radius: 100%;
   vertical-align: middle;
   background-color: var(--arko-primary-color);
+}
+
+.tree-list > li.active .tree-depth1-link {
+  text-decoration: underline;
+  text-underline-offset: var(--tree-list-underline-offset);
 }
 
 .tree-depth2-link {
@@ -686,6 +693,16 @@
   margin-top:1.2rem;
 }
 
+.tree-depth2 > li.active .tree-depth2-link {
+  color: var(--tree-list-active-color);
+  text-decoration: underline;
+  text-underline-offset: var(--tree-list-underline-offset);
+}
+.tree-depth2 > li.active .tree-depth2-link::before,
+.tree-depth2 > li.active .tree-depth2-link::after {
+  background-color: var(--tree-list-active-color);;
+}
+
 @media (max-width:767px) {
   .tree-title {
     font-size: 1.8rem;
@@ -704,6 +721,12 @@
 
 .arko-tab-scroll-style .tab-conts-wrap .tab-conts ~ .tab-conts {
   border-top: 1px solid #7E818F;
+}
+
+.arko-tab-scroll-style .tab-conts-wrap .tab-conts:focus {
+  outline:none;
+  box-shadow:none;
+  border:0;
 }
 
 .detail-info {
@@ -736,6 +759,40 @@
   margin-bottom: var(--arko-contents-gap-large)
 }
 
+.detail-cont-padding {
+  display: flex;
+  flex-direction: column;
+  gap: var(--arko-contents-gap-xlarge);
+  padding-bottom: 4rem;
+}
+
+.detail-info-table .d__tr > dl {
+  display: flex;
+  min-width: 50%;
+}
+
+.detail-info-table .d__tr > dl > dt {
+  color: var(--arko-font-color-title);
+  font-weight: 600;
+  min-width: 110px;
+  padding:7px 0;
+}
+.detail-info-table .d__tr > dl > dd {
+  flex: 1;
+  padding:7px 0;
+  text-align: left;
+}
+
+.detail-info-table .d__tr > dl > dt.a-center {
+  align-self: center;
+}
+
+@media (min-width:1279px) {  
+  .detail-cont-padding {
+    padding-right: var(--arko-contents-gap-extra-large);
+  }
+}
+
 
 @media (min-width:1025px) {
   .cont-column {
@@ -752,9 +809,16 @@
   }
 
   .detail-cont .tab-conts {
-    padding-right: var(--arko-contents-gap-large);
+    padding-right: var(--arko-contents-gap-extra-large);
+  }
+
+  .detail-info-table .d__tr {
+    display: flex;
   }
 }
+
+
+
 
 /* 관련 컬렉션 */
 .related-collection .h2-title > span {
