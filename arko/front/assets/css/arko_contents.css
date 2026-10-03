@@ -227,10 +227,15 @@
   object-fit: contain; 
   margin:0 auto;
 }
-.arko-toggle-board.toggle--thum .td-thum:empty {
+.board--records .arko-toggle-board.toggle--thum .td-thum:empty {
   height:311px;
   margin-inline: 0;
   background: var(--arko-background-color) url(../img/comm/img_none.svg) no-repeat center / 100px 94px;
+}
+.board--collection .arko-toggle-board.toggle--thum .td-thum:empty {
+  height:311px;
+  margin-inline: 0;
+  background: var(--arko-background-color) url(../img/comm/img_none_book.svg) no-repeat center / 100px 94px;
 }
 
 /* 결과 없음 */
