@@ -61,15 +61,15 @@
 
                 <div class="arko-btns between">
                   <div class="btns">
-                    <button type="button" class="krds-btn medium tertiary">
+                    <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalURL">
                       <i class="svg-icon ico-clip"></i>
                       URL복사
                     </button>
-                    <button type="button" class="krds-btn medium tertiary">
+                    <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalLike">
                       <i class="svg-icon ico-star"></i>
                       즐겨찾기
                     </button>
-                    <button type="button" class="krds-btn medium tertiary">
+                    <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalQuotation">
                       <i class="svg-icon ico-quote"></i>
                       인용하기
                     </button>
@@ -390,7 +390,7 @@
                                   <span>관내열람</span>
                                 </dd>
                               </dl>
-                              <button type="button" class="krds-btn tertiary small">담기</button>
+                              <button type="button" class="krds-btn tertiary small open-modal" data-target="modalAdd">담기</button>
                             </li>
                             <li class="related-material__item">
                               <dl class="related-material__info">
@@ -403,7 +403,7 @@
                                   <span>관내열람</span>
                                 </dd>
                               </dl>
-                              <button type="button" class="krds-btn tertiary small">담기</button>
+                              <button type="button" class="krds-btn tertiary small open-modal" data-target="modalAdd">담기</button>
                             </li>
                             <li class="related-material__item">
                               <dl class="related-material__info">
@@ -416,7 +416,7 @@
                                   <span>관내열람</span>
                                 </dd>
                               </dl>
-                              <button type="button" class="krds-btn tertiary small">담기</button>
+                              <button type="button" class="krds-btn tertiary small open-modal" data-target="modalAdd">담기</button>
                             </li>
                           </ul>
 
@@ -490,6 +490,168 @@
 
     <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
   </div>
+
+  <!-- modal -->
+  <!-- 담기 -->
+  <section id="modalAdd" class="krds-modal fade in" role="dialog" aria-labelledby="tit_modalAdd">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalAdd" class="modal-title"><span class="sr-only">담기</span></h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            선택한 기록물을 담았습니다.
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+
+  <!-- url 복사 -->
+  <section id="modalURL" class="krds-modal fade in" role="dialog" aria-labelledby="tit_modalURL">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalURL" class="modal-title"><span class="sr-only">URL 복사</span></h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            URL을 복사했습니다.
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+
+  <!-- 즐겨찾기 -->
+  <section id="modalLike" class="krds-modal fade in" role="dialog" aria-labelledby="tit_modalLike">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalLike" class="modal-title">즐겨찾기</h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            <div class="form-group">
+              <div class="form-conts">
+                <select id="select_1" class="krds-form-select medium" title="선택">
+                  <option value="">서재명을 선택하세요.</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+
+  <!-- 인용하기 -->
+  <section id="modalQuotation" class="krds-modal fade in" role="dialog" aria-labelledby="tit_modalQuotation">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalQuotation" class="modal-title">서지정보 내보내기</h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            <p>선택한 자료에 대한 서지정보를 원하는 방식으로 복사하거나 다운로드할 수 있습니다.</p>
+
+            <h3 class="h3-title">인용형식 선택</h3>
+            <div class="form-radio-group">
+              <div class="krds-form-check">
+                <input type="radio" name="rdo_1" id="rdo_1">
+                <label for="rdo_1">기본형</label>
+              </div>
+              <div class="krds-form-check">
+                <input type="radio" name="rdo_1" id="rdo_2">
+                <label for="rdo_2">형식2</label>
+              </div>
+              <div class="krds-form-check">
+                <input type="radio" name="rdo_1" id="rdo_3">
+                <label for="rdo_3">형식3</label>
+              </div>
+              <div class="krds-form-check">
+                <input type="radio" name="rdo_1" id="rdo_4">
+                <label for="rdo_4">형식4</label>
+              </div>
+            </div>
+
+            <h3 class="h3-title">서지정보 미리보기</h3>
+            <div class="preview-area">
+              서지정보 미리보기 정보 영역
+            </div>
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">복사</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+  <!-- //modal -->
 
 
   <!-- 퍼블전용:: include용 사용금지 -->

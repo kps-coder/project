@@ -59,7 +59,6 @@
 }
 
 .h3-title {
-  margin-bottom: var(--arko-contents-gap-small);
   font-size: var(--arko-h3-font-size);
   font-weight: var(--arko-h3-font-weight);
   color: var(--arko-h3-font-color);
