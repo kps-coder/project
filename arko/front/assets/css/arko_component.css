@@ -153,13 +153,19 @@ button {
   .tab.full {
     overflow-x: auto;
   }
-  .tab.full > ul {
+  .arko-tab-scroll-style .tab.full > ul {
     width: fit-content;
     flex-wrap: nowrap;
   }
-  .tab.full > ul > li {
+  .arko-tab-scroll-style .tab.full > ul > li {
     flex:none;
   }
+}
+
+@media (max-width: 767px) {
+    .tab-conts.active {
+      gap: 0;
+    }
 }
 
 /* table */
@@ -199,6 +205,14 @@ button {
 
 .title-area .text-list {
   margin-top: var(--arko-contents-gap-large);
+}
+
+/* modal */
+.krds-modal .modal-dialog .modal-btn {
+  justify-content: center;
+}
+.krds-modal .modal-dialog .modal-conts .conts-area {
+  align-items: center;
 }
 
 /* 아이콘 */

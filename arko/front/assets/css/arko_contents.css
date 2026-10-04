@@ -193,8 +193,8 @@
   height: 4.4rem;
 }
 
-.pc-only .krds-form-select.medium {
-  width: 212px;
+.arko-board__sort .pc-only .krds-form-select.medium {
+  width: 230px;
 }
 
 .arko-board-mob {
@@ -215,31 +215,55 @@
 }
 
 /* 토글 게시판 */
+.arko-toggle-board.toggle--thum .tr {
+  display: block;
+}
 
 .arko-toggle-board.toggle--list .td-thum {
   display: none;
 }
 .arko-toggle-board.toggle--thum .td-thum {
   display: block;
+  height: 311px;
   margin:0 auto 24px;
   border-radius: var(--arko-border-radius-default) var(--arko-border-radius-default) 0 0;
 }
 .arko-toggle-board.toggle--thum .td-thum img {
   display: block;
   width: 100%;
-  height: 311px;
+  height: 100%;
   object-fit: contain; 
   margin:0 auto;
+  border-radius: var(--arko-border-radius-default) var(--arko-border-radius-default) 0 0;
 }
-.board--records .arko-toggle-board.toggle--thum .td-thum:empty {
-  height:311px;
+
+/* 이미지 없음 기본값 */
+.arko-toggle-board.toggle--thum .td-thum:empty {
   margin-inline: 0;
   background: var(--arko-background-color) url(../img/comm/img_none.svg) no-repeat center / 100px 94px;
 }
+/* 이미지 없음 - 소장기록물 */
+.board--records .arko-toggle-board.toggle--thum .td-thum:empty {
+  background: var(--arko-background-color) url(../img/comm/img_none.svg) no-repeat center / 100px 94px;
+}
+/* 이미지 없음 - 소장컬렉션 */
 .board--collection .arko-toggle-board.toggle--thum .td-thum:empty {
-  height:311px;
-  margin-inline: 0;
   background: var(--arko-background-color) url(../img/comm/img_none_book.svg) no-repeat center / 100px 94px;
+}
+
+/* DA-Art */
+.board--da-art .arko-toggle-board.toggle--thum .td-thum img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.arko-toggle-board.toggle--thum .tr .mark  {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding: .2rem 2.4rem;
+  border-radius: var(--arko-border-radius-default);
+  color: var(--arko-primary-color);
+  background-color: var(--arko-background-color);
 }
 
 /* 결과 없음 */
@@ -284,8 +308,7 @@
 
   .arko-toggle-board.toggle--list .tr > * {
     text-align: center;
-    padding:0 .8rem;
-    box-sizing: content-box;
+    padding:0 .4rem;
   }
 
   .arko-toggle-board.toggle--list .tr.tr--head > * {
@@ -297,12 +320,12 @@
   }
 
   /* 아카이브 > 소장기록물 */
-  .toggle--list .td-badge {width: 10%;}
-  .toggle--list .td-subject {width: 25%;}
-  .toggle--list .td-code {width: 20%;}
-  .toggle--list .td-collection {width: 20%;}
-  .toggle--list .td-media {width: 10%;}
-  .toggle--list .td-period {width: 15%;}
+  .board--records .toggle--list .td-badge {width: 10%;}
+  .board--records .toggle--list .td-subject {width: 25%;}
+  .board--records .toggle--list .td-code {width: 20%;}
+  .board--records .toggle--list .td-collection {width: 20%;}
+  .board--records .toggle--list .td-media {width: 10%;}
+  .board--records .toggle--list .td-period {width: 15%;}
 
   /* 앨범형 */
   .arko-toggle-board.toggle--thum {
@@ -320,8 +343,8 @@
     border-radius: var(--arko-border-radius-default);
     padding-bottom: 32px;
   }
-  .arko-toggle-board.toggle--thum  .tr > * {
-  margin-inline: 24px;
+  .arko-toggle-board.toggle--thum  .tr > *:not(.td-thum) {
+    margin-inline: 24px;
   }
   .arko-toggle-board.toggle--thum .td-badge {
     display: block;
@@ -348,6 +371,12 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     max-height: calc(1.6em * 2);
+  }
+
+  .arko-toggle-board.toggle--thum .td-code,
+  .arko-toggle-board.toggle--thum .td-collection {
+    display: block;
+    margin-bottom:12px;
   }
 
   .arko-toggle-board.toggle--thum .td-media + .td-period {
@@ -390,6 +419,9 @@
   .arko-toggle-board .tr--head {
     display: none;
   }
+   .arko-toggle-board .tr > *:not(.td-thum) {
+    display: block;
+   }
    .arko-toggle-board.toggle--list .tr b {
     display: inline-block;
     width: 110px;
@@ -424,10 +456,13 @@
 
   .arko-toggle-board .td-code,
   .arko-toggle-board .td-collection {
-    display: block;
     margin-bottom:12px;
   }
 
+  .arko-toggle-board.toggle--list .td-media,
+  .arko-toggle-board.toggle--list .td-period {
+    display: inline-block;
+  }
   .arko-toggle-board.toggle--list .td-media + .td-period::before {
     display: inline-block;
     content: '';
@@ -449,7 +484,7 @@
     margin-top:40px;
   }
 
-  .arko-toggle-board.toggle--thum .tr > * {
+  .arko-toggle-board.toggle--thum .tr > *:not(.td-thum) {
     margin-inline: 16px;
   }
 

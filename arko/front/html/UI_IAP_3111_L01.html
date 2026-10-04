@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 
-  <title>소장 컬렉션 : 아르코예술기록원</title>  
+  <title>구술채록 생애사 : 아르코예술기록원</title>  
 
-  <meta property="og:title" content="소장 컬렉션 : 아르코예술기록원">
+  <meta property="og:title" content="구술채록 생애사 : 아르코예술기록원">
   <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
   <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
 
@@ -23,15 +23,6 @@
   <script src="../assets/js/lib/jquery.js"></script>
   <script src="../assets/js/lib/jquery-ui.min.js"></script>
   <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
-
-  <style>
-    @media (min-width:769px) {
-      .board--collection .toggle--list .td-badge {width: 10%;}
-      .board--collection .toggle--list .td-subject {width: 30%;}
-      .board--collection .toggle--list .td-code {width: 30%;}
-      .board--collection .toggle--list .td-period {width: 30%;}
-    }
-  </style>
 </head>
 <body>
   <div id="wrap" class="krds-scaled-layout">
@@ -46,8 +37,9 @@
             <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
               <ol class="breadcrumb">
                 <li class="home"><a href="#;" class="txt">홈</a></li>
-                <li><a href="#;" class="txt">아카이브</a></li>
-                <li><a href="#;" class="txt">소장 컬렉션</a></li>
+                <li><a href="#;" class="txt">DA-Arts</a></li>
+                <li><a href="#;" class="txt">구술채록</a></li>
+                <li><a href="#;" class="txt">생애사</a></li>
               </ol>
             </nav>
             <!-- breadcrumb -->
@@ -58,14 +50,14 @@
         <section class="arko-contents">
           <div class="inner">
             <div class="title-area">
-              <h1 class="h1-title">소장 컬렉션</h1>
-              <p class="title-desc">예술인·단체·기관으로부터 수집한 기록물을 컬렉션별로 살펴보고, 관련 기록물을 함께 탐색할 수 있습니다.</p>
+              <h1 class="h1-title">구술채록 생애사</h1>
+              <p class="title-desc">2003년부터 예술인의 삶과 예술 활동의 발자취를 생생한 구술 기록으로 만나보세요.</p>
             </div>
             
             <div class="arko-search-area">
               <div class="sch-form-wrap">
                 <div class="sch-input">
-                  <input type="text" class="krds-input xlarge" id="searchWrd-total" placeholder="제목, 인명, 키워드, 컬렉션명 검색">
+                  <input type="text" class="krds-input xlarge" id="searchWrd-total" placeholder="키워드를 입력하세요.">
                   <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
                     <span class="sr-only">검색</span>
                     <i class="svg-icon ico-sch"></i>
@@ -88,7 +80,7 @@
                 <h2 class="h2-title mob-only">검색 조건</h2>
                 <div class="sch-detail__row">
                   <dl class="sch-detail__column">
-                    <dt class="sch-detail__tit">장르별</dt>
+                    <dt class="sch-detail__tit">장르</dt>
                     <dd class="sch-detail__cont">
                       <div class="checkbox-btn-group">
                         <span class="checkbox-btn">
@@ -132,64 +124,16 @@
                           <label for="chk_btn1_9">예술정책</label>
                         </span>
                         <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_10">
+                          <label for="chk_btn1_10">예술정책</label>
+                        </span>
+                        <span class="checkbox-btn">
                           <input type="checkbox" name="chk_btn1" id="chk_btn1_11">
                           <label for="chk_btn1_11">기타</label>
                         </span>
                       </div>
                     </dd>
                   </dl>
-                </div>
-
-                <div class="sch-detail__row">
-                  <dl class="sch-detail__column">
-                    <dt class="sch-detail__tit"><label for="select_1">컬렉션명</label></dt>
-                    <dd class="sch-detail__cont">
-                      <div class="form-group">
-                        <div class="form-conts">
-                          <select id="select_1" class="krds-form-select medium" title="선택">
-                            <option value="">전체</option>
-                          </select>
-                        </div>
-                      </div>
-                    </dd>
-                  </dl>              
-                </div>
-                
-                <div class="sch-detail__row">
-                  <dl class="sch-detail__column middle">
-                    <dt class="sch-detail__tit">시기분류</dt>
-                    <dd class="sch-detail__cont">
-                      <div class="form-period">
-                        <div class="form-group form-arko--period">
-                          <div class="form-conts">
-                            <input type="text" id="periodStart" class="krds-input medium ac" placeholder="" value="1925">
-                          </div>
-                          <span>~</span>
-                          <div class="form-conts">
-                            <input type="text" id="periodEnd" class="krds-input medium ac" placeholder="" value="1993">
-                          </div>
-                        </div>
-                        <div class="form-period-range">
-                          <!-- Slider -->
-                          <div class="period-slider" id="periodSlider" aria-label="기간 선택"></div>
-
-                          <!-- 하단 연도 -->
-                          <div class="period-years">
-                            <span>1900</span>
-                            <span>1925</span>
-                            <span>1950</span>
-                            <span>1975</span>
-                            <span>2000</span>
-                            <span>2026</span>
-                          </div>
-                        </div>
-                        <div class="krds-form-check medium">
-                          <input type="checkbox" id="chk_1-11a">
-                          <label for="chk_1-11a">미상 포함</label>
-                        </div>
-                      </div>                     
-                    </dd>
-                  </dl>                  
                 </div>
 
                 <div class="sch-detail__foot mob-only">
@@ -210,7 +154,7 @@
               </div>                   
             </div>
 
-            <div class="arko-board-area board--collection"><!-- 소장컬렉션 .board--collection -->
+            <div class="arko-board-area board--da-art"><!-- DA-Art 게시판 -->
               <div class="arko-board-head">
                 <!-- 모바일 시 노출 : 정렬기준이 mob, pc 각각 존재하니 개발하실 때 확인 부탁드립니다. -->
                 <div class="arko-board-mob mob-only">
@@ -220,12 +164,12 @@
                   </button>
                   <div class="form-conts">
                     <select id="sort_12" class="krds-form-select medium" title="선택">
-                      <option value="">제목(오름차순)</option>
-                      <option value="">제목(오름차순)</option>
-                      <option value="">제목(내림차순)</option>
-                      <option value="">생산일자(오름차순)</option>
-                      <option value="">생산일자(내림차순)</option>
-                      <option value="">최근 등록일순</option>
+                      <option value="">구술연도순</option>
+                      <option value="">구술자명(오름차순)</option>
+                      <option value="">구술자명(내림차순)</option>
+                      <option value="">최근등록일순</option>
+                      <option value="">시리즈번호순(오름차순)</option>
+                      <option value="">시리즈번호순(내림차순)</option>
                     </select>
                   </div>
                 </div>
@@ -242,25 +186,14 @@
                         <label for="sort_1">정렬기준</label>
                       </div>
                       <select id="sort_1" class="krds-form-select medium" title="선택">
-                        <option value="">제목(오름차순)</option>
-                        <option value="">제목(오름차순)</option>
-                        <option value="">제목(내림차순)</option>
-                        <option value="">생산일자(오름차순)</option>
-                        <option value="">생산일자(내림차순)</option>
-                        <option value="">최근 등록일순</option>
+                        <option value="">구술연도순</option>
+                        <option value="">구술자명(오름차순)</option>
+                        <option value="">구술자명(내림차순)</option>
+                        <option value="">최근등록일순</option>
+                        <option value="">시리즈번호순(오름차순)</option>
+                        <option value="">시리즈번호순(내림차순)</option>
                       </select>
                     </div>
-                  </div>
-
-                  <div class="arko-board-type">
-                    <button type="button" data-toggle-type="list">
-                      <i class="svg-icon ico-list"></i>
-                      <span>목록형</span>
-                    </button>
-                    <button type="button" class="active" data-toggle-type="thum">
-                      <i class="svg-icon ico-thum"></i>
-                      <span>앨범형</span>
-                    </button>
                   </div>
                 </div>
               </div>
@@ -272,43 +205,101 @@
                 <p class="nodata__txt">다른 검색어를 입력해주세요.</p>
               </div>
 
-              <div class="arko-board-area">
+              <div class="arko-board-body">
                 <!-- 목록 -->
                 <div class="arko-toggle-board toggle--thum">
-                  <div class="tr tr--head pc-only">
-                    <span class="td-badge">장르</span>
-                    <span class="td-subject">컬렉션명</span>
-                    <span class="td-code">참조코드</span>
-                    <span class="td-period">시기분류</span>         
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">평론가 이미원 컬렉션</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-period">1952</span>      
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">무용</span>
-                    <a href="#n" class="td-subject al">작가 박서보 컬렉션</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-period">1952</span>      
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                    <span class="td-badge">시각예술 </span>
-                    <a href="#n" class="td-subject al">평론가 이미원 컬렉션</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-period">1912-1973</span>      
-                  </div>
-                  <div class="tr">
-                    <a href="#n" class="td-thum"></a>
-                    <span class="td-badge">시각예술 </span>
-                    <a href="#n" class="td-subject al">평론가 이미원 컬렉션</a>
-                    <span class="td-code">MC-KSM-02082</span>
-                    <span class="td-period">1912-1973</span>      
-                  </div>
+                  <a href="#n" class="tr">
+                    <div class="td-thum">
+                      <img src="../assets/img/comm/img_sample_2.jpg" alt="">
+                    </div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
+                  <a href="#n" class="tr">
+                    <div class="td-thum">
+                      <img src="../assets/img/comm/img_sample_2.jpg" alt="">
+                    </div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
+                  <a href="#n" class="tr">
+                    <div class="td-thum">
+                      <img src="../assets/img/comm/img_sample_2.jpg" alt="">
+                    </div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
+                  <a href="#n" class="tr">
+                    <div class="td-thum">
+                      <img src="../assets/img/comm/img_sample_2.jpg" alt="">
+                    </div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
+                  <a href="#n" class="tr">
+                    <div class="td-thum">
+                      <img src="../assets/img/comm/img_sample_2.jpg" alt="">
+                    </div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
+                  <a href="#n" class="tr">
+                    <div class="td-thum"></div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
+                  <a href="#n" class="tr">
+                    <div class="td-thum">
+                      <img src="../assets/img/comm/img_sample_2.jpg" alt="">
+                    </div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
+                  <a href="#n" class="tr">
+                    <div class="td-thum"></div>
+                    <span class="td-badge">대중예술</span>
+                    <div class="td-subject al">장한성 章翰成, Chang Han Sung</div>
+                    <span class="td-code">337</span>
+                    <p class="ar">
+                      <span class="mark">구술 5회</span>
+                      <span class="mark">1984년생</span>  
+                    </p>       
+                  </a>
                 </div>
 
                 <!-- 페이지네이션 -->
