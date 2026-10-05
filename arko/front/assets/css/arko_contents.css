@@ -25,6 +25,16 @@
   padding-block:var(--arko-contents-padding-block);
 }
 
+.cont-area {
+  padding:var(--arko-contents-gap-xlarge) 0;
+}
+.cont-area:first-child {
+  padding-top:0;
+}
+.cont-area + .cont-area {
+  border-top:1px solid #7E818F;
+}
+
 
 /* title area */
 
@@ -807,6 +817,10 @@
   background-color: var(--arko-background-color);
 }
 
+.detail-info__thum {
+  margin-bottom:2.4rem;
+}
+
 .detail-info .h2-title {
   margin-bottom:var(--arko-contents-gap-large);
 }
@@ -1010,5 +1024,123 @@
   }
   .abl__info > dl {
     width: 33%;
+  }
+}
+
+
+/* === 원테이블 === */
+.one-table__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--arko-contents-gap-large);
+  padding: var(--arko-contents-gap-medium);
+  border:1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+.one-table__box ~ .one-table__box {
+  margin-top:var(--arko-contents-gap-xlarge);
+}
+.one-table__thum {
+  
+}
+.one-table__thum img {
+  width: 100%;
+  max-height: 346px;
+  object-fit: contain;
+  border-radius: var(--arko-border-radius-default);
+}
+.one-table__title {
+  margin-bottom:var(--arko-contents-gap-large);
+  font-size: var(--arko-h2-font-size);
+  color: var(--arko-h2-font-color);
+  font-weight: var(--arko-h2-font-weight);
+}
+.one-table__info {
+  flex: 1;
+}
+.one-table__meta dl {
+  display: flex;
+}
+.one-table__meta dl ~ dl {
+  margin-top:1.2rem;
+}
+.one-table__meta dt {
+  flex:0 0 100px;
+  font-weight: 600;
+  color: var(--arko-font-color-title);
+}
+.one-table__meta dd {
+  flex: 1;
+}
+
+/* pc */
+@media (min-width:900px) {
+  .one-table .arko-btns {
+    align-self: flex-end;
+  }
+}
+
+/* mob */
+@media (max-width:899px) {
+  .one-table__box {
+    flex-direction: column;
+  }
+}
+
+.onetable-img {
+  margin-bottom: var(--arko-contents-gap-large);
+}
+.onetable-img img {
+  display: block;
+  width: 100%;
+  max-height: 536px;
+  object-fit: contain;
+}
+.download-area dl {
+  display: flex;
+  row-gap: 1.2rem;
+}
+
+.download-area dl ~ dl {
+  margin-top:2.4rem;
+}
+.download-area dt {
+  width: 130px;
+  color: var(--arko-font-color-title);
+  font-weight: 600;
+}
+.download-area dd {
+  flex: 1;
+}
+
+.download-list > li + li {
+  margin-top:1.2rem;
+}
+.download-list > li > span {
+  display: inline-block;
+}
+.download-list > li > span + button {
+  margin-left: 2.4rem;
+}
+.download-list > li.all {
+  text-align: right;
+  padding: 1.2rem;
+  border-radius: var(--arko-border-radius-default);
+  background-color: #F5EFE4;
+}
+
+.download-list > li.all .krds-btn.small {
+  border-color: var(--arko-brand-color);
+  color: var(--arko-brand-color);
+  background-color: #fff;
+}
+
+/* mob */
+@media (max-width:767px) {
+  .download-area dl {
+    flex-direction: column  ;
+  }
+  .download-list > li.all .krds-btn.small {
+    width: 100%;
   }
 }
