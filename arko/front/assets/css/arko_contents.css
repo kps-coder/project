@@ -354,6 +354,7 @@
     padding-bottom: 32px;
   }
   .arko-toggle-board.toggle--thum  .tr > *:not(.td-thum) {
+    display: block;
     margin-inline: 24px;
   }
   .arko-toggle-board.toggle--thum .td-badge {
@@ -389,6 +390,9 @@
     margin-bottom:12px;
   }
 
+  .arko-toggle-board.toggle--thum .tr .td-media {
+    display: inline-block;
+  }
   .arko-toggle-board.toggle--thum .td-media + .td-period {
     float: right;
   }

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>공연영상화사업 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="공연영상화사업 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width:769px) {
+      .toggle--list .td-badge {width: 10%;}
+      .toggle--list .td-subject {width: 30%; flex: 1;}
+      .toggle--list .td-event {width: 15%;}
+      .toggle--list .td-group {width: 15%;}
+      .toggle--list .td-period {width: 10%;}
+      .toggle--list .td-place {width: 10%;}
+    } 
+  </style>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <div id="headerInclude"><!-- 퍼블전용::상단 영역 include용 --></div>
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <div class="contents">
+        <div class="arko-breadcrumb">
+          <div class="inner">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#;" class="txt">홈</a></li>
+                <li><a href="#;" class="txt">DA-Arts</a></li>
+                <li><a href="#;" class="txt">공연영상화사업</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+            </div>
+        </div>
+
+        <!-- 컨텐츠 영역 -->
+        <section class="arko-contents">
+          <div class="inner">
+            <div class="title-area">
+              <h1 class="h1-title">공연영상화사업</h1>
+              <p class="title-desc">공연영상화사업의 콘텐츠를 키워드와 다양한 조건으로 검색하고 영상 및 관련 정보를 확인할 수 있습니다.</p>
+            </div>
+            
+            <div class="arko-search-area">
+              <div class="sch-form-wrap">
+                <div class="sch-input">
+                  <input type="text" class="krds-input xlarge" id="searchWrd-total" placeholder="키워드를 입력하세요.">
+                  <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
+                    <span class="sr-only">검색</span>
+                    <i class="svg-icon ico-sch"></i>
+                  </button>
+                </div>
+
+                <div class="sch-checked">
+                  <!-- checkbox -->
+                  <div class="krds-check-area">
+                    <div class="krds-form-check medium pc-only">
+                      <input type="checkbox" id="chk_1-2a">
+                      <label for="chk_1-2a">결과 내 재검색</label>
+                    </div>
+                    <a href="#n" class="btn-search-help"><i class="svg-icon ico-help"></i>검색 도움말</a>
+                  </div>
+                  <!-- //checkbox -->
+                </div>
+              </div> 
+              <div class="sch-detail">
+                <h2 class="h2-title mob-only">검색 조건</h2>
+                <div class="sch-detail__row">
+                  <dl class="sch-detail__column">
+                    <dt class="sch-detail__tit">장르별</dt>
+                    <dd class="sch-detail__cont">
+                      <div class="checkbox-btn-group">
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_all">
+                          <label for="chk_btn1_all">전체</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_1">
+                          <label for="chk_btn1_1">예술일반</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_2">
+                          <label for="chk_btn1_2">문학</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_3">
+                          <label for="chk_btn1_3">시각예술</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_4">
+                          <label for="chk_btn1_4">연극·뮤지컬</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_5">
+                          <label for="chk_btn1_5">다원예술</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_6">
+                          <label for="chk_btn1_6">무용</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_7">
+                          <label for="chk_btn1_7">음악</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_8">
+                          <label for="chk_btn1_8">예술종합</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_9">
+                          <label for="chk_btn1_9">예술정책</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_10">
+                          <label for="chk_btn1_10">예술정책</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_11">
+                          <label for="chk_btn1_11">기타</label>
+                        </span>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="sch-detail__row">
+                  <dl class="sch-detail__column middle">
+                    <dt class="sch-detail__tit">공연연도</dt>
+                    <dd class="sch-detail__cont">
+                      <div class="form-period">
+                        <div class="form-group form-arko--period">
+                          <div class="form-conts">
+                            <input type="text" id="periodStart" class="krds-input medium ac" placeholder="" value="1925">
+                          </div>
+                          <span>~</span>
+                          <div class="form-conts">
+                            <input type="text" id="periodEnd" class="krds-input medium ac" placeholder="" value="1993">
+                          </div>
+                        </div>
+                        <div class="form-period-range">
+                          <!-- Slider -->
+                          <div class="period-slider" id="periodSlider" aria-label="기간 선택"></div>
+
+                          <!-- 하단 연도 -->
+                          <div class="period-years">
+                            <span>1900</span>
+                            <span>1925</span>
+                            <span>1950</span>
+                            <span>1975</span>
+                            <span>2000</span>
+                            <span>2026</span>
+                          </div>
+                        </div>
+                        <div class="krds-form-check medium">
+                          <input type="checkbox" id="chk_1-11a">
+                          <label for="chk_1-11a">미상 포함</label>
+                        </div>
+                      </div>                     
+                    </dd>
+                  </dl>                  
+                </div>
+                <div class="sch-detail__row">
+                  <dl class="sch-detail__column">
+                    <dt class="sch-detail__tit"><label for="select_1">행사</label></dt>
+                    <dd class="sch-detail__cont">
+                      <div class="form-group">
+                        <div class="form-conts">
+                          <select id="select_1" class="krds-form-select medium" title="선택">
+                            <option value="">행사 선택 및 검색</option>
+                          </select>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>               
+                </div>
+
+                <div class="sch-detail__foot mob-only">
+                  <div class="form-conts">
+                    <div class="krds-form-check medium">
+                      <input type="checkbox" id="chk_1-3a">
+                      <label for="chk_1-3a">결과 내 재검색</label>
+                    </div>
+                  </div>                 
+
+                  <div class="arko-btns">
+                    <button type="button" class="krds-btn medium tertiary">초기화</button>
+                    <button type="button" class="krds-btn medium primary">검색하기(342,560건)</button>
+                  </div>
+
+                  <button type="button" class="sch-detail-off-btn"><span class="sr-only">닫기</span></button>
+                </div>
+              </div>                   
+            </div>
+
+            <div class="arko-board-area board--video"><!-- 공연영상화사업 .board--video -->
+              <div class="arko-board-head">
+                <!-- 모바일 시 노출 : 정렬기준이 mob, pc 각각 존재하니 개발하실 때 확인 부탁드립니다. -->
+                <div class="arko-board-mob mob-only">
+                  <button type="button" class="krds-btn btn-filter">
+                    <i class="svg-icon ico-filter"></i>
+                    필터
+                  </button>
+                  <div class="form-conts">
+                    <select id="sort_12" class="krds-form-select medium" title="선택">
+                      <option value="">제목순(오름차순)</option>
+                      <option value="">제목순(내림차순)</option>
+                      <option value="">공연시작일(오름차순)</option>
+                      <option value="">공연시작일(내림차순)</option>
+                      <option value="">최신등록순</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="arko-board__count">
+                  <b>검색결과</b> 
+                  <b class="count">342,560</b>건
+                </div>
+
+                <div class="arko-board__sort"> 
+                  <div class="form-group pc-only">
+                    <div class="form-conts">
+                      <div class="form-tit">
+                        <label for="sort_1">정렬기준</label>
+                      </div>
+                      <select id="sort_1" class="krds-form-select medium" title="선택">
+                        <option value="">제목순(오름차순)</option>
+                        <option value="">제목순(내림차순)</option>
+                        <option value="">공연시작일(오름차순)</option>
+                        <option value="">공연시작일(내림차순)</option>
+                        <option value="">최신등록순</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="arko-board-type">
+                    <button type="button" class="active" data-toggle-type="list">
+                      <i class="svg-icon ico-list"></i>
+                      <span>목록형</span>
+                    </button>
+                    <button type="button" data-toggle-type="thum">
+                      <i class="svg-icon ico-thum"></i>
+                      <span>앨범형</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 검색결과 없음 -->
+              <div class="arko-board-nodata" style="display: none;">
+                <i class="svg-icon ico-nodata"></i>
+                <p class="nodata__tit">검색결과가 없습니다</p>
+                <p class="nodata__txt">다른 검색어를 입력해주세요.</p>
+              </div>
+
+              <div class="arko-board-body">
+                <!-- 목록 -->
+                <div class="arko-toggle-board toggle--list">
+                  <!-- cell width는 내부 스타일로 상단 style 참조 -->
+                  <div class="tr tr--head pc-only">
+                    <span class="td-badge">장르</span>
+                    <span class="td-subject">공연명</span>
+                    <span class="td-event">행사</span>
+                    <span class="td-group">공연단체</span>
+                    <span class="td-period">공연기간</span>
+                    <span class="td-place">공연장소</span>         
+                  </div>
+                  <div class="tr">
+                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample_video.jpg" alt=""></a>
+                    <span class="td-badge">음악</span>
+                    <a href="#n" class="td-subject al">(2025) 코리안챔버오케스트라 창단 60주년 기념 베토벤 교향곡 전곡 연주 시리</a>
+                    <span class="td-event">서울국제공연예술제(SPAF)</span>
+                    <span class="td-group">코리안챔버오케스트라</span>
+                    <span class="td-period">2025.12.13. ~ 2025.12.13.</span>
+                    <span class="td-place">(재)예술의전당</span>         
+                  </div>
+                  <div class="tr">
+                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample_video.jpg" alt=""></a>
+                    <span class="td-badge">음악</span>
+                    <a href="#n" class="td-subject al">(2025) 코리안챔버오케스트라 창단 60주년 기념 베토벤 교향곡 전곡 연주 시리</a>
+                    <span class="td-event">서울국제공연예술제(SPAF)</span>
+                    <span class="td-group">코리안챔버오케스트라</span>
+                    <span class="td-period">2025.12.13. ~ 2025.12.13.</span>
+                    <span class="td-place">(재)예술의전당</span>         
+                  </div>
+                  <div class="tr">
+                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample_video.jpg" alt=""></a>
+                    <span class="td-badge">음악</span>
+                    <a href="#n" class="td-subject al">(2025) 코리안챔버오케스트라 창단 60주년 기념 베토벤 교향곡 전곡 연주 시리</a>
+                    <span class="td-event">서울국제공연예술제(SPAF)</span>
+                    <span class="td-group">코리안챔버오케스트라</span>
+                    <span class="td-period">2025.12.13. ~ 2025.12.13.</span>
+                    <span class="td-place">(재)예술의전당</span>         
+                  </div>
+                  <div class="tr">
+                    <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample_video.jpg" alt=""></a>
+                    <span class="td-badge">음악</span>
+                    <a href="#n" class="td-subject al">(2025) 코리안챔버오케스트라 창단 60주년 기념 베토벤 교향곡 전곡 연주 시리</a>
+                    <span class="td-event">서울국제공연예술제(SPAF)</span>
+                    <span class="td-group">코리안챔버오케스트라</span>
+                    <span class="td-period">2025.12.13. ~ 2025.12.13.</span>
+                    <span class="td-place">(재)예술의전당</span>         
+                  </div>
+                </div>
+
+                <!-- 페이지네이션 -->
+                <div class="arko-pagination">
+                  <div class="page-btns">
+                    <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                    <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                  </div>                  
+
+                  <div class="page-links">
+                    <select id="select_page" class="krds-form-select medium" title="페이지 선택">
+                      <option value="">1</option>
+                      <option value="" selected>2</option>
+                    </select>
+                    <em>/</em>
+                    <span class="page-total">2</span>
+                  </div>
+
+                  <div class="page-btns">
+                    <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                    <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                  </div>                  
+                </div>
+              </div>
+              
+            </div>
+          </div>          
+        </section>
+      </div>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
+  </div>
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+  <script>
+    const buttons = document.querySelectorAll('.arko-board-type button');
+    const board = document.querySelector('.arko-toggle-board');
+    const btnFilter = document.querySelector('.btn-filter');
+    const btnFilterOff = document.querySelector('.sch-detail-off-btn');
+    const searchDetail = document.querySelector('.sch-detail');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const type = button.dataset.toggleType;
+
+        // 버튼 active 변경
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 게시판 타입 변경
+        board.classList.remove('toggle--list', 'toggle--thum');
+        board.classList.add(`toggle--${type}`);
+      });
+    });
+
+    // 모바일 시 필터 열기
+    btnFilter.addEventListener('click', () => {
+      searchDetail.classList.add('open');
+
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+
+      requestAnimationFrame(() => {
+        searchDetail.focus();
+      });
+    });
+
+    // 모바일 시 필터 닫기
+    btnFilterOff.addEventListener('click', () => {
+      searchDetail.classList.remove('open');
+
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+
+      btnFilter.focus();
+    });
+
+    // 기간 선택
+    $(function () {
+      const $slider = $('#periodSlider');
+      const $start = $('#periodStart');
+      const $end = $('#periodEnd');
+
+      const MIN = 1900;
+      const MAX = 2026;
+
+
+      /* --------------------------------
+        Slider 생성
+      -------------------------------- */
+
+      $slider.slider({
+
+        range: true,
+
+        min: MIN,
+        max: MAX,
+
+        step: 1,
+
+        values: [
+          Number($start.val()),
+          Number($end.val())
+        ],
+
+        slide: function (event, ui) {
+
+          // Slider → Input
+          $start.val(ui.values[0]);
+          $end.val(ui.values[1]);
+
+          updateTooltip(ui.values);
+        },
+
+        change: function (event, ui) {
+
+          // Slider → Input
+          $start.val(ui.values[0]);
+          $end.val(ui.values[1]);
+
+          updateTooltip(ui.values);
+        },
+
+        create: function () {
+
+          const values = $(this).slider('values');
+
+          updateTooltip(values);
+        }
+
+      });
+
+
+      /* --------------------------------
+        Tooltip
+      -------------------------------- */
+
+      function updateTooltip(values) {
+
+        const $handles = $slider.find('.ui-slider-handle');
+
+        $handles.eq(0).attr('data-value', values[0]);
+        $handles.eq(1).attr('data-value', values[1]);
+      }
+
+
+      /* --------------------------------
+        Input → Slider
+      -------------------------------- */
+
+      $start.on('change', function () {
+
+        let start = parseInt($(this).val(), 10);
+        let end = $slider.slider('values', 1);
+
+
+        // 숫자가 아니면 기존 값 유지
+        if (isNaN(start)) {
+          start = $slider.slider('values', 0);
+        }
+
+
+        // 범위 제한
+        start = Math.max(MIN, Math.min(start, MAX));
+
+
+        // 시작값이 종료값보다 클 수 없음
+        if (start > end) {
+          start = end;
+        }
+
+
+        $(this).val(start);
+
+        $slider.slider('values', 0, start);
+      });
+
+
+      $end.on('change', function () {
+
+        let start = $slider.slider('values', 0);
+        let end = parseInt($(this).val(), 10);
+
+
+        // 숫자가 아니면 기존 값 유지
+        if (isNaN(end)) {
+          end = $slider.slider('values', 1);
+        }
+
+
+        // 범위 제한
+        end = Math.max(MIN, Math.min(end, MAX));
+
+
+        // 종료값이 시작값보다 작을 수 없음
+        if (end < start) {
+          end = start;
+        }
+
+
+        $(this).val(end);
+
+        $slider.slider('values', 1, end);
+      });
+
+
+      /* --------------------------------
+        입력 중 숫자만 허용
+      -------------------------------- */
+
+      $start.add($end).on('input', function () {
+
+        this.value = this.value.replace(/[^0-9]/g, '');
+      });
+
+    });
+  </script>
+</body>
+</html>
