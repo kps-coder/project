@@ -482,6 +482,7 @@
   }
 
   .arko-toggle-board.toggle--list .td-media,
+  .arko-toggle-board.toggle--thum .td-media,
   .arko-toggle-board.toggle--list .td-period {
     display: inline-block;
   }
