@@ -276,6 +276,7 @@
   background-color: var(--arko-background-color);
 }
 
+
 /* 결과 없음 */
 .arko-board-nodata {
   display: flex;
@@ -296,6 +297,8 @@
   color: var(--arko-brand-color);
   font-weight: 500;
 }
+
+
 
 /* pc */
 @media (min-width:769px) {
@@ -344,16 +347,16 @@
     column-gap: 3%;
     row-gap: 64px;
   }
-  .arko-toggle-board.toggle--thum  .tr.tr--head {
+  .arko-toggle-board.toggle--thum .tr.tr--head {
     display: none;
   }
-  .arko-toggle-board.toggle--thum  .tr {
+  .arko-toggle-board.toggle--thum .tr {
     width: 22.75%;
     border:1px solid var(--arko-line-color-etc);
     border-radius: var(--arko-border-radius-default);
     padding-bottom: 32px;
   }
-  .arko-toggle-board.toggle--thum  .tr > *:not(.td-thum) {
+  .arko-toggle-board.toggle--thum .tr > *:not(.td-thum) {
     display: block;
     margin-inline: 24px;
   }
@@ -395,6 +398,11 @@
   }
   .arko-toggle-board.toggle--thum .td-media + .td-period {
     float: right;
+  }
+
+  /* 공연영상화 상세 */
+  .arko-toggle-board.toggle--thum.column2 .tr {
+    width: 48.5%;
   }
 }
 
@@ -696,17 +704,24 @@
 
   position: relative;
 }
-.tree-list::before {
+.tree-list > li {
+  position: relative;
+  padding-bottom: var(--tree-list-gap);
+}
+.tree-list > li::before {
   position: absolute;
   top:12px;
-  bottom:12px;
+  height: 100%;
   display: block;
   content: '';
   width: 1px;
   background-color: var(--arko-primary-color);
 }
-.tree-list > li + li {
-  margin-top: var(--tree-list-gap);
+.tree-list > li:last-child {
+  padding-bottom:0;
+}
+.tree-list > li:last-child::before {
+  display: none;
 }
 
 .tree-depth1-link {
@@ -811,7 +826,6 @@
 .arko-tab-scroll-style .tab-conts-wrap .tab-conts:focus {
   outline:none;
   box-shadow:none;
-  border:0;
 }
 
 .detail-info {
@@ -870,6 +884,7 @@
   flex: 1;
   padding:7px 0;
   text-align: left;
+  word-wrap: anywhere;
 }
 
 .detail-info-table .d__tr > dl > dt.a-center {
@@ -1148,3 +1163,22 @@
     width: 100%;
   }
 }
+
+/* 저작권 공지 */
+.copyright-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top:var(--arko-contents-gap-xlarge);
+  padding:var(--arko-contents-gap-medium);
+  border-radius: var(--arko-border-radius-default);
+  background-color: #EEF2F7;
+}
+.copyright-notice:first-child {
+  margin-top: 0;
+}
+.copyright-notice > .ico-noti {
+  flex:0 0 20px;
+  margin-top:5px;
+}
+

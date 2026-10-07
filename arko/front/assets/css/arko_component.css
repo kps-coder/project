@@ -286,3 +286,8 @@ button {
   -webkit-mask-image: url(../img/comm/ico_view.svg);
   mask-image: url(../img/comm/ico_view.svg);
 }
+.svg-icon.ico-noti {
+  width: 20px;
+  height: 20px;
+  background: url(../img/comm/ico_noti.svg) no-repeat center / contain;
+}
