@@ -291,3 +291,15 @@ button {
   height: 20px;
   background: url(../img/comm/ico_noti.svg) no-repeat center / contain;
 }
+
+.badge {
+  display: inline-block;
+  min-width: 104px;
+  padding: .4rem 1.2rem;
+  border-radius: var(--arko-border-radius-default);
+  font-size: 1.6rem;
+  color: var(--arko-brand-color-text);
+  vertical-align: middle;
+  text-align: center;
+  background-color: #F5EFE4;
+}

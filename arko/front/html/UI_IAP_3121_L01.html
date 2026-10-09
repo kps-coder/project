@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>구술채록 주제사 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="구술채록 주제사 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <div id="headerInclude"><!-- 퍼블전용::상단 영역 include용 --></div>
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <div class="contents">
+        <div class="arko-breadcrumb">
+          <div class="inner">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#;" class="txt">홈</a></li>
+                <li><a href="#;" class="txt">DA-Arts</a></li>
+                <li><a href="#;" class="txt">구술채록</a></li>
+                <li><a href="#;" class="txt">주제사</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+            </div>
+        </div>
+
+        <!-- 컨텐츠 영역 -->
+        <section class="arko-contents">
+          <div class="inner">
+            <div class="title-area">
+              <h1 class="h1-title">구술채록 주제사</h1>
+              <p class="title-desc">한국 예술사의 주요 사건과 주제를 다양한 시선의 구술 기록으로 만나보세요.</p>
+            </div>
+            
+            <div class="arko-search-area">
+              <div class="sch-form-wrap">
+                <div class="form-group">
+                  <select id="select_srh" class="krds-form-select medium" title="선택">
+                    <option value="">주제명</option>
+                    <option value="">구술자명</option>
+                  </select>
+                  <div class="sch-input">
+                    <input type="text" class="krds-input xlarge" id="searchWrd-total" placeholder="키워드를 입력하세요.">
+                    <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
+                      <span class="sr-only">검색</span>
+                      <i class="svg-icon ico-sch"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="sch-checked">
+                  <!-- checkbox -->
+                  <div class="krds-check-area">
+                    <div class="krds-form-check medium pc-only">
+                      <input type="checkbox" id="chk_1-2a">
+                      <label for="chk_1-2a">결과 내 재검색</label>
+                    </div>
+                    <a href="#n" class="btn-search-help"><i class="svg-icon ico-help"></i>검색 도움말</a>
+                  </div>
+                  <!-- //checkbox -->
+                </div>
+              </div> 
+              <div class="sch-detail">
+                <h2 class="h2-title mob-only">검색 조건</h2>
+                <div class="sch-detail__row">
+                  <dl class="sch-detail__column">
+                    <dt class="sch-detail__tit">장르</dt>
+                    <dd class="sch-detail__cont">
+                      <div class="checkbox-btn-group">
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_all">
+                          <label for="chk_btn1_all">전체</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_1">
+                          <label for="chk_btn1_1">예술일반</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_2">
+                          <label for="chk_btn1_2">문학</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_3">
+                          <label for="chk_btn1_3">시각예술</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_4">
+                          <label for="chk_btn1_4">연극·뮤지컬</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_5">
+                          <label for="chk_btn1_5">다원예술</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_6">
+                          <label for="chk_btn1_6">무용</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_7">
+                          <label for="chk_btn1_7">음악</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_8">
+                          <label for="chk_btn1_8">예술종합</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_9">
+                          <label for="chk_btn1_9">예술정책</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_10">
+                          <label for="chk_btn1_10">예술정책</label>
+                        </span>
+                        <span class="checkbox-btn">
+                          <input type="checkbox" name="chk_btn1" id="chk_btn1_11">
+                          <label for="chk_btn1_11">기타</label>
+                        </span>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+
+                <div class="sch-detail__foot mob-only">
+                  <div class="form-conts">
+                    <div class="krds-form-check medium">
+                      <input type="checkbox" id="chk_1-3a">
+                      <label for="chk_1-3a">결과 내 재검색</label>
+                    </div>
+                  </div>                 
+
+                  <div class="arko-btns">
+                    <button type="button" class="krds-btn medium tertiary">초기화</button>
+                    <button type="button" class="krds-btn medium primary">검색하기(342,560건)</button>
+                  </div>
+
+                  <button type="button" class="sch-detail-off-btn"><span class="sr-only">닫기</span></button>
+                </div>
+              </div>                   
+            </div>
+
+            <div class="arko-board-area board--da-art"><!-- DA-Art 게시판 -->
+              <div class="arko-board-head">
+                <!-- 모바일 시 노출 : 정렬기준이 mob, pc 각각 존재하니 개발하실 때 확인 부탁드립니다. -->
+                <div class="arko-board-mob mob-only">
+                  <button type="button" class="krds-btn btn-filter">
+                    <i class="svg-icon ico-filter"></i>
+                    필터
+                  </button>
+                  <div class="form-conts">
+                    <select id="sort_12" class="krds-form-select medium" title="선택">
+                      <option value="">구술연도순</option>
+                      <option value="">구술자명(오름차순)</option>
+                      <option value="">구술자명(내림차순)</option>
+                      <option value="">최근등록일순</option>
+                      <option value="">시리즈번호순(오름차순)</option>
+                      <option value="">시리즈번호순(내림차순)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="arko-board__count">
+                  <b>검색결과</b> 
+                  <b class="count">342,560</b>건
+                </div>
+
+                <div class="arko-board__sort"> 
+                  <div class="form-group pc-only">
+                    <div class="form-conts">
+                      <div class="form-tit">
+                        <label for="sort_1">정렬기준</label>
+                      </div>
+                      <select id="sort_1" class="krds-form-select medium" title="선택">
+                        <option value="">구술연도순</option>
+                        <option value="">구술자명(오름차순)</option>
+                        <option value="">구술자명(내림차순)</option>
+                        <option value="">최근등록일순</option>
+                        <option value="">시리즈번호순(오름차순)</option>
+                        <option value="">시리즈번호순(내림차순)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 검색결과 없음 -->
+              <div class="arko-board-nodata" style="display: none;">
+                <i class="svg-icon ico-nodata"></i>
+                <p class="nodata__tit">검색결과가 없습니다</p>
+                <p class="nodata__txt">다른 검색어를 입력해주세요.</p>
+              </div>
+
+              <div class="arko-board-body">
+                <!-- 목록 -->
+                <div class="arko-history-board">
+                  <!-- 
+                    .genre--perform 공연예술
+                    .genre--visual 시각예술
+                    .genre--popular 대중예술
+                    .genre--literature  문학
+                    .genre--culture 문화예술
+                  -->
+                  <a href="#n" class="history-board-box genre--perform">
+                    <dl>
+                      <dt><p>1960~1970년대 한국미술의 해외전시</p></dt>
+                      <dd>
+                        <div class="history__badge">
+                          <span class="badge">회화</span>
+                          <span class="badge">2016</span>
+                        </div>
+                        <p class="history__text">
+                          1960~1970년대는 한국미술이 해외진출을 시도했던 초창기로, 국가차원의 제도적 지원기반이 턱없이 부족했던 시기였다. 
+                        </p>
+                      </dd>
+                    </dl>
+                  </a>
+                  <a href="#n" class="history-board-box genre--visual">
+                    <dl>
+                      <dt><p>1960~1980년대 드라마센터 공연활동 연구 Ⅰ</p></dt>
+                      <dd>
+                        <div class="history__badge">
+                          <span class="badge">회화</span>
+                          <span class="badge">2016</span>
+                        </div>
+                        <p class="history__text">
+                          1960~1970년대는 한국미술이 해외진출을 시도했던 초창기로, 국가차원의 제도적 지원기반이 턱없이 부족했던 시기였다. 그럼에도 당대 몇몇 화가들의 개인적 노력으로 파리비엔날레와 같은 국제전 진출의 포문이 열린다. 그 중심에 섰던 화가이자 커미셔너, 미술행정가 등의 활동을
+                        </p>
+                      </dd>
+                    </dl>
+                  </a>
+                  <a href="#n" class="history-board-box genre--popular">
+                    <dl>
+                      <dt><p>1960~1970년대 한국미술의 해외전시</p></dt>
+                      <dd>
+                        <div class="history__badge">
+                          <span class="badge">회화</span>
+                          <span class="badge">2016</span>
+                        </div>
+                        <p class="history__text">
+                          1960~1970년대는 한국미술이 해외진출을 시도했던 초창기로, 국가차원의 제도적 지원기반이 턱없이 부족했던 시기였다. 그럼에도 당대 몇몇 화가들의 개인적 노력으로 파리비엔날레와 같은 국제전 진출의 포문이 열린다. 그 중심에 섰던 화가이자 커미셔너, 미술행정가 등의 활동을
+                        </p>
+                      </dd>
+                    </dl>
+                  </a>
+                  <a href="#n" class="history-board-box genre--literature">
+                    <dl>
+                      <dt><p>1960~1970년대 한국미술의 해외전시</p></dt>
+                      <dd>
+                        <div class="history__badge">
+                          <span class="badge">회화</span>
+                          <span class="badge">2016</span>
+                        </div>
+                        <p class="history__text">
+                          1960~1970년대는 한국미술이 해외진출을 시도했던 초창기로, 국가차원의 제도적 지원기반이 턱없이 부족했던 시기였다. 그럼에도 당대 몇몇 화가들의 개인적 노력으로 파리비엔날레와 같은 국제전 진출의 포문이 열린다. 그 중심에 섰던 화가이자 커미셔너, 미술행정가 등의 활동을
+                        </p>
+                      </dd>
+                    </dl>
+                  </a>
+                  <a href="#n" class="history-board-box genre--culture">
+                    <dl>
+                      <dt><p>베니스비엔날레 한국관 개관 및 운영 연구 Ⅱ - 한국관 건립과 리모델링 방안</p></dt>
+                      <dd>
+                        <div class="history__badge">
+                          <span class="badge">회화</span>
+                          <span class="badge">2016</span>
+                        </div>
+                        <p class="history__text">
+                          ‘20세기 후반, 참여지향의 춤흐름 재발견’이라는 주제로 1980년대 민중춤을 주도한 주요 창작인 및 비평가 구술이 진행됐다.
+                        </p>
+                      </dd>
+                    </dl>
+                  </a>
+                  <a href="#n" class="history-board-box genre--culture">
+                    <dl>
+                      <dt><p>베니스비엔날레 한국관 개관 및 운영 연구 Ⅱ - 한국관 건립과 리모델링 방안</p></dt>
+                      <dd>
+                        <div class="history__badge">
+                          <span class="badge">회화</span>
+                          <span class="badge">2016</span>
+                        </div>
+                        <p class="history__text">
+                          ‘20세기 후반, 참여지향의 춤흐름 재발견’이라는 주제로 1980년대 민중춤을 주도한 주요 창작인 및 비평가 구술이 진행됐다.
+                        </p>
+                      </dd>
+                    </dl>
+                  </a>
+                </div>
+
+                <!-- 페이지네이션 -->
+                <div class="arko-pagination">
+                  <div class="page-btns">
+                    <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                    <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                  </div>                  
+
+                  <div class="page-links">
+                    <select id="select_page" class="krds-form-select medium" title="페이지 선택">
+                      <option value="">1</option>
+                      <option value="" selected>2</option>
+                    </select>
+                    <em>/</em>
+                    <span class="page-total">2</span>
+                  </div>
+
+                  <div class="page-btns">
+                    <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                    <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                  </div>                  
+                </div>
+              </div>
+              
+            </div>
+          </div>          
+        </section>
+      </div>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
+  </div>
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+  <script>
+    const buttons = document.querySelectorAll('.arko-board-type button');
+    const board = document.querySelector('.arko-toggle-board');
+    const btnFilter = document.querySelector('.btn-filter');
+    const btnFilterOff = document.querySelector('.sch-detail-off-btn');
+    const searchDetail = document.querySelector('.sch-detail');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const type = button.dataset.toggleType;
+
+        // 버튼 active 변경
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 게시판 타입 변경
+        board.classList.remove('toggle--list', 'toggle--thum');
+        board.classList.add(`toggle--${type}`);
+      });
+    });
+
+    // 모바일 시 필터 열기
+    btnFilter.addEventListener('click', () => {
+      searchDetail.classList.add('open');
+
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+
+      requestAnimationFrame(() => {
+        searchDetail.focus();
+      });
+    });
+
+    // 모바일 시 필터 닫기
+    btnFilterOff.addEventListener('click', () => {
+      searchDetail.classList.remove('open');
+
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+
+      btnFilter.focus();
+    });
+    
+  </script>
+</body>
+</html>

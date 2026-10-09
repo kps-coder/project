@@ -80,6 +80,7 @@
   margin-bottom:var(--arko-contents-gap-xlarge)
 }
 
+
 .arko-search-area .sch-input {
   width: 100%;  
 }
@@ -171,7 +172,16 @@
   .sch-detail__column.middle {
     align-items: center;
   }
+  .sch-form-wrap .krds-form-select.medium {
+    width: 16rem;
+    height: 8rem;
+  }
+
+  .sch-form-wrap .form-group {
+    flex-direction: row;
+  }
 }
+
 
 /* pc */
 @media (max-width:1023px) {

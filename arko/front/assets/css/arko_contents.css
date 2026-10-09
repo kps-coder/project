@@ -435,7 +435,7 @@
 @media (max-width:768px) {
   .arko-toggle-board .tr {
     padding-block: 12px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-bottom:1px solid var(--arko-line-color-etc);
   }
   .arko-toggle-board .tr--head {
@@ -1184,3 +1184,68 @@
   margin-top:5px;
 }
 
+/* 주제사 */
+.arko-history-board {
+  display: flex;
+  gap:2%;
+  row-gap: var(--arko-contents-gap-xlarge);
+  flex-wrap: wrap;
+}
+
+.history-board-box {
+  display: block;
+  border-radius: var(--arko-border-radius-default);
+  border:1px solid var(--arko-line-color-etc);
+}
+.history-board-box dt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 28rem;
+  padding:2.4rem var(--arko-contents-gap-medium);
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.history-board-box dt > p {
+  min-height: 7.7rem;
+}
+
+.history-board-box.genre--perform dt {
+  background-color: #1C2033;
+}
+.history-board-box.genre--visual dt {
+  background-color: #65525C;
+}
+.history-board-box.genre--popular dt {
+  background-color: #645E50;
+}
+.history-board-box.genre--literature dt {
+  background-color: #55606E;
+}
+.history-board-box.genre--culture dt {
+  background-color: #75685A;
+}
+
+.history-board-box dd {
+  padding:2.4rem var(--arko-contents-gap-medium);
+}
+
+.history__badge {
+  margin-bottom: 2.4rem;
+}
+
+/* pc */
+@media (min-width:1025px) {
+  .history-board-box {
+    width: 32%;
+  }
+}
+
+/* mob */
+@media (max-width:767px) {
+  .history-board-box {
+    flex-direction: column;
+  }
+}
