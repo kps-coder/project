@@ -1302,6 +1302,8 @@
 }
 
 .summary__thum img {
+  display: block;
+  margin:0 auto;
   border-radius: var(--arko-border-radius-default);
 }
 
@@ -1353,7 +1355,7 @@
 }
 
 /* pc */
-@media (min-width:769px) {
+@media (min-width:1024px) {
   .recording-detail {
     display: flex;
     justify-content: space-between;
@@ -1370,8 +1372,8 @@
   }
 }
 
-/* mob */
-@media (max-width:768px) {
+/* tab */
+@media (max-width:1023px) {
   .recording-detail {
     flex-direction: column;
     gap: 4rem;
@@ -1383,6 +1385,7 @@
     flex-direction: column;
   }
 }
+
 
 .recorded-video__list {
   position: relative;
