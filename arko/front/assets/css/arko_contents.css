@@ -1457,10 +1457,22 @@
 }
 
 /* pc */
-@media (min-width:769px) {
+@media (min-width:1280px) {
   .recorded-video {
     display: flex; 
     flex-direction: row-reverse;
+    column-gap: var(--arko-contents-gap-extra-large);
+  }
+  .recorded-video__list {
+    flex:0 0 324px;
+  }
+}
+
+/* tab */
+@media (min-width:769px) and (max-width:1279px) {
+  .recorded-video {
+    display: flex; 
+    flex-direction: column;
     column-gap: var(--arko-contents-gap-extra-large);
   }
   .recorded-video__list {
