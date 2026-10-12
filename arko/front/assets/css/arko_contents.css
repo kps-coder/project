@@ -1535,3 +1535,58 @@
   color: var(--arko-brand-color-text);
   background-color: #fff3d1 ;
 }
+
+
+/* ====== 마이페이지 ====== */
+.mypage-contents {
+  display: flex;
+  gap: var(--arko-contents-gap-extra-large);
+}
+
+.mypage-conts {
+  flex: 1;
+}
+
+.agreement-list > li ~ li {
+  margin-top: var(--arko-contents-gap-large);
+}
+.agreement-list .tit {
+  font-weight: 600;
+  color: var(--arko-font-color-title);
+}
+
+/* pc */
+@media (min-width:1025px) {
+  .agreement-list > li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .agreement-list .left {
+    display: flex;
+    gap: 2.4rem;
+    flex: 0 0 70%;
+  }
+  .agreement-list .right {
+    flex: 0 0 30%;
+  }
+}
+
+/* mob */
+@media (max-width:1024px) {
+  .agreement-list > li {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .agreement-list .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .agreement-list .right > .btns {
+    text-align: center;
+  }
+}
