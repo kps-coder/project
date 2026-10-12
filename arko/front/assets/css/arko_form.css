@@ -345,3 +345,24 @@
 }
 
 /* ==== //기간 검색 Range Slider ==== */
+
+
+.search-sm {
+   display: flex;
+}
+
+.search-sm > input {
+  flex: 1;
+  padding:0 var(--arko-contents-gap-medium);
+  border: 1px solid var(--arko-primary-color);
+  border-radius: var(--arko-border-radius-default) 0 0 var(--arko-border-radius-default);
+}
+
+.search-sm > button {
+  flex: 0 0 76px;
+  height:48px;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius:0 var(--arko-border-radius-default) var(--arko-border-radius-default) 0;
+  background-color: var(--arko-primary-color);
+}

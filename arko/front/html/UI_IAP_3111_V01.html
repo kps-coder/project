@@ -23,6 +23,18 @@
   <script src="../assets/js/lib/jquery.js"></script>
   <script src="../assets/js/lib/jquery-ui.min.js"></script>
   <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width:769px) {
+      .td-badge {width: 10%;}
+      .td-subject {width: 30%;}
+      .td-code {width: 20%;}
+      .td-media {width: 10%;}
+      .td-period {width: 15%;}
+      .td-producer {width: 15%;}
+    }
+    
+  </style>
 </head>
 <body>
   <div id="wrap" class="krds-scaled-layout">
@@ -68,14 +80,14 @@
                 </div>
                 <div class="btns">
                   <button type="button" class="krds-btn medium primary open-modal" data-target="modalAdd">
-                    기록물 담기
+                    담기
                   </button>
                 </div>
               </div>
             </div>
 
             <!-- tab -->
-            <div class="krds-tab-area layer">
+            <div class="krds-tab-area layer goosul-recording">
               <!-- tab list -->
               <div class="tab line full">
                 <ul role="tablist">
@@ -94,15 +106,583 @@
 
               <!-- tab contents -->
               <div class="tab-conts-wrap">
+                <!-- tab1 -->
                 <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active" data-quick-nav="false">
-                  1
-                </section>
-                <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts" data-quick-nav="false">
-                  2
+                  <div class="recording-detail">
+                    <div class="form-group">
+                      <div class="form-conts">
+                        <select id="recordingSelect" class="krds-form-select medium" title="선택">
+                          <option value="">구술채록정보</option>
+                          <option value="">인적사항 및 활동경력(2019)</option>
+                          <option value="">제1회차 유년기와 반국전 선언 (1931~1956)(2014)</option>
+                          <option value="">제2회차 앵포르멜 운동과 파리 체류 (1956~1961)(2014)</option>
+                          <option value="">제3회차 비엔날레 참여와 앵포르멜 이후 (1962~1970)(2014)</option>
+                          <option value="">제4회차 일본미술계와의 교류와 묘법의 탄생(1971~1980)(2014)</option>
+                          <option value="">제5회차 1부: 미협활동 (1971~1980)(2014)</option>
+                          <option value="">제5회차 2부: 1980년대 안성시절(2014)</option>
+                          <option value="">제6회차 1980~1990년대 묘법작업과 2000년대 전시(2014)</option>
+                          <option value="">채록연구 후기(2014)</option>
+                          <option value="">주요 도판 모음(2014)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="recording-conts-area">
+                      <div class="recording-conts" id="gusool_data_0" style="display: block;">
+                        <div class="recording-summary">
+                          <div class="summary__thum">
+                            <img src="../assets/img/comm/img_sample_record.jpg" alt="">
+                          </div>
+                          <div class="summary__info">
+                            <div class="detail-info-table">
+                              <div class="d__tr">
+                                <dl>
+                                  <dt>출생년도</dt>
+                                  <dd>1931년</dd>
+                                </dl>
+                                 <dl>
+                                  <dt>작고년도</dt>
+                                  <dd>2023년</dd>
+                                </dl>
+                              </div>
+                              <div class="d__tr">
+                                <dl>
+                                  <dt>채록연구자</dt>
+                                  <dd>정무정</dd>
+                                </dl>
+                                 <dl>
+                                  <dt>시리즈번호</dt>
+                                  <dd>238</dd>
+                                </dl>
+                              </div>
+                              <div class="d__tr">
+                                <dl>
+                                  <dt>비고</dt>
+                                  <dd>구술채록영상이 1,2차로 분리되어 있음</dd>
+                                </dl>
+                              </div>
+                            </div>
+                            <div class="arko-btns between">
+                              <button type="button" class="krds-btn medium tertiary">인물 DB 보기</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="recording-desc">
+                          <section class="summary__sec">
+                            <h2 class="h2-title">주요 약력</h2>
+                            <h3 class="h3-title">수련과정</h3>
+                            <div class="detail-txt-box">
+                              1974년 대구 신암초등학교 졸업<br>
+                              1977년 대구 중앙중학교 졸업<br>
+                              1980년 대구 심인고등학교 졸업<br>
+                              1985년 연세대학교 경영학과 졸업<br>
+                              1990년 홍익대학교 대학원 산업디자인과 졸업                             
+                            </div>
+
+                            <div class="btns">
+                              <button type="button" class="krds-btn small text">
+                                <span>자세히보기</span>
+                                <i class="svg-icon ico-angle down"></i>
+                              </button>
+                            </div> 
+                          </section>
+                          <section class="summary__sec">
+                            <h3 class="h3-title">주요 작품</h3>
+                            <div class="detail-txt-box">
+                              1987.04.03.~04.30 	&lt;숲속의 방&gt; 강석영 작, 임영웅 연출, 산울림 소극장<br>
+                              1991.05.29.~05.30 	&lt;떠도는 혼&gt; 배정혜 안무, 오태석 연출, 세종문화회관 대강당 <br>
+                              1991.12.23.~12.30 	&lt;동지섣달  꽃 본듯이&gt; 이강백 작, 김아라 연출, 문예회관 대극장<br>
+                              1991.12.24.~1992.02.09.	&lt;엄마는 오십에 바다를 발견했다&gt; 드니즈 샤렘 작, 임영웅 연출, 산울림 소극장<br>
+                              1992 	&lt;딸에게 보내는 편지&gt; 아놀드 웨스커 작, 임영웅 연출, 산울림 소극장 <br>
+                              1992 	&lt;장보고 열리는 바다&gt; 김청일 작, 김덕남 연출, 세종문화회관 외<br>
+                              1992.04.04.~10.12 	&lt;신의 아그네스&gt; 존 필미어 작, 윤호진 연출, 실험극장<br>
+                              1993.09.10.~09.18	&lt;연변강냉이&gt; 김도향 작, 오태석 연출, 세종문화회관 소강당 <br>
+                              1993.09.14.~10.10 	&lt;여성반란&gt; 김광림 작, 이성열 연출, 산울림 소극장<br>
+                              1987.04.03.~04.30 	&lt;숲속의 방&gt; 강석영 작, 임영웅 연출, 산울림 소극장<br>
+                              1991.05.29.~05.30 	&lt;떠도는 혼&gt; 배정혜 안무, 오태석 연출, 세종문화회관 대강당 <br>
+                              1991.12.23.~12.30 	&lt;동지섣달  꽃 본듯이&gt; 이강백 작, 김아라 연출, 문예회관 대극장<br>
+                              1991.12.24.~1992.02.09.	&lt;엄마는 오십에 바다를 발견했다&gt; 드니즈 샤렘 작, 임영웅 연출, 산울림 소극장<br>
+                              1992 	&lt;딸에게 보내는 편지&gt; 아놀드 웨스커 작, 임영웅 연출, 산울림 소극장 <br>
+                              1992 	&lt;장보고 열리는 바다&gt; 김청일 작, 김덕남 연출, 세종문화회관 외<br>
+                              1992.04.04.~10.12 	&lt;신의 아그네스&gt; 존 필미어 작, 윤호진 연출, 실험극장<br>
+                              1993.09.10.~09.18	&lt;연변강냉이&gt; 김도향 작, 오태석 연출, 세종문화회관 소강당 <br>
+                              1993.09.14.~10.10 	&lt;여성반란&gt; 김광림 작, 이성열 연출, 산울림 소극장<br>
+                              1987.04.03.~04.30 	&lt;숲속의 방&gt; 강석영 작, 임영웅 연출, 산울림 소극장<br>
+                              1991.05.29.~05.30 	&lt;떠도는 혼&gt; 배정혜 안무, 오태석 연출, 세종문화회관 대강당 <br>
+                              1991.12.23.~12.30 	&lt;동지섣달  꽃 본듯이&gt; 이강백 작, 김아라 연출, 문예회관 대극장<br>
+                              1991.12.24.~1992.02.09.	&lt;엄마는 오십에 바다를 발견했다&gt; 드니즈 샤렘 작, 임영웅 연출, 산울림 소극장<br>
+                              1992 	&lt;딸에게 보내는 편지&gt; 아놀드 웨스커 작, 임영웅 연출, 산울림 소극장 <br>
+                              1992 	&lt;장보고 열리는 바다&gt; 김청일 작, 김덕남 연출, 세종문화회관 외<br>
+                              1992.04.04.~10.12 	&lt;신의 아그네스&gt; 존 필미어 작, 윤호진 연출, 실험극장<br>
+                              1993.09.10.~09.18	&lt;연변강냉이&gt; 김도향 작, 오태석 연출, 세종문화회관 소강당 <br>
+                              1993.09.14.~10.10 	&lt;여성반란&gt; 김광림 작, 이성열 연출, 산울림 소극장<br>
+                            </div>
+                            <div class="btns">
+                              <button type="button" class="krds-btn small text">
+                                <span>자세히보기</span>
+                                <i class="svg-icon ico-angle down"></i>
+                              </button>
+                            </div> 
+                          </section>                          
+                        </div>
+                      </div><!-- //recording-conts -->
+                      <div class="recording-conts" id="gusool_data_1" style="display: none;">
+                        <h2 class="h2-title">제1회차 유년시절과 학창시절, 그리고 이후 처음 작곡가로 활동을 시작한 1960년대의 삶의 기록들 (2015)</h2>
+                        <section class="summary__sec">
+                          <h3 class="h3-title">기본 내용</h3>
+                          <!-- 기본내용 테이블 -->
+                          <div class="detail-info-table">
+                            <div class="d__tr">
+                              <dl>
+                                <dt>구술일자</dt>
+                                <dd>2015. 07. 22</dd>
+                              </dl>
+                              <dl>
+                                <dt>채록연구자</dt>
+                                <dd>정무정</dd>
+                              </dl>
+                            </div>
+                            <div class="d__tr">
+                              <dl>
+                                <dt>채록문</dt>
+                                <dd>
+                                  <span class="mr-medium">(시리즈 338) 김은정_2차.pdf</span>
+                                  <a href="#n" class="krds-btn small tertiary">PDF뷰어로 보기</a>
+                                </dd>
+                              </dl>
+                            </div>
+                            <div class="d__tr">
+                              <dl>
+                                <dt>핵심어</dt>
+                                <dd>
+                                  <ul class="goosul-keyword">
+                                    <li><a href="#">박재홍</a></li>
+                                    <li><a href="#">김환기</a></li>
+                                    <li><a href="#">이응노</a></li>
+                                    <li><a href="#">김은호</a></li>
+                                    <li><a href="#">이상범</a></li>
+                                    <li><a href="#">김충선</a></li>
+                                    <li><a href="#">김영환</a></li>
+                                    <li><a href="#">김창열</a></li>
+                                    <li><a href="#">방근택</a></li>
+                                    <li><a href="#">장발</a></li>
+                                    <li><a href="#">장우성</a></li>
+                                    <li><a href="#">장욱진</a></li>
+                                    <li><a href="#">유경채</a></li>
+                                    <li><a href="#">박석호</a></li>
+                                  </ul>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </section>
+                        <section class="summary__sec">
+                          <h3 class="h3-title">채록영상</h3> 
+                          <div class="recorded-video">
+                            <div class="recorded-video__list">
+                              <ul>
+                                <li>
+                                  <a href="#n" class="recorded-video__link">
+                                    <div class="time">
+                                      <span>07:12</span>
+                                      <div class="playing">재생중</div>
+                                    </div>
+                                    <p class="title">출생과 성장환경: 경북 예천과 안성시절</p>                                    
+                                  </a>
+                                </li>
+                                <li class="on">
+                                  <a href="#n" class="recorded-video__link">
+                                    <div class="time">
+                                      <span>07:12</span>
+                                      <div class="playing">재생중</div>
+                                    </div>
+                                    <p class="title">출생과 성장환경: 경북 예천과 안성시절</p>                                    
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#n" class="recorded-video__link">
+                                    <div class="time">
+                                      <span>07:12</span>
+                                      <div class="playing">재생중</div>
+                                    </div>
+                                    <p class="title">출생과 성장환경: 경북 예천과 안성시절</p>                                    
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#n" class="recorded-video__link">
+                                    <div class="time">
+                                      <span>46:12</span>
+                                      <div class="playing">재생중</div>
+                                    </div>
+                                    <p class="title">6.25의 발발(勃發)과 북한군의 서울점령 6.25의 발발(勃發)과 북한군의 서울점령</p>                                    
+                                  </a>
+                                </li> 
+                              </ul>
+                            </div>
+                            <div class="recorded-interview">
+                              <div class="video-area">
+                                <img src="../assets/img/comm/img_video.jpg" alt="">
+                              </div>
+                              <div class="recorded-interview__head">
+                                <div class="search-sm">
+                                  <input type="text" id="recordedInterview">
+                                  <button type="button">검색</button>
+                                </div>
+                                <button type="button" class="krds-btn medium tertiary">PDF뷰어로 보기</button>
+                              </div>
+                              <div class="recorded-script">
+                                <dl>
+                                  <dt>정</dt>
+                                  <dd>
+                                    예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 <mark>한국현대미술사</mark> 자체를 대변하고 있기 때문에, 이 제한 예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 <mark>한국현대미술사</mark> 자체를 대변하고 있기 때문에,
+                                  </dd>
+                                </dl>
+                                <dl>
+                                  <dt>박</dt>
+                                  <dd>
+                                    예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 한국현대미술사 자체를 대변하고 있기 때문에, 이 제한 예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 한국현대미술사 자체를 대변하고 있기 때문에,
+                                  </dd>
+                                </dl>
+                                <dl>
+                                  <dt>정</dt>
+                                  <dd>
+                                    예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 <mark>한국현대미술사</mark> 자체를 대변하고 있기 때문에, 이 제한 예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 <mark>한국현대미술사</mark> 자체를 대변하고 있기 때문에,
+                                  </dd>
+                                </dl>
+                                <dl>
+                                  <dt>박</dt>
+                                  <dd>
+                                    예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 한국현대미술사 자체를 대변하고 있기 때문에, 이 제한 예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 한국현대미술사 자체를 대변하고 있기 때문에,
+                                  </dd>
+                                </dl>
+                                <dl>
+                                  <dt>정</dt>
+                                  <dd>
+                                    예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 <mark>한국현대미술사</mark> 자체를 대변하고 있기 때문에, 이 제한 예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 <mark>한국현대미술사</mark> 자체를 대변하고 있기 때문에,
+                                  </dd>
+                                </dl>
+                                <dl>
+                                  <dt>박</dt>
+                                  <dd>
+                                    예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 한국현대미술사 자체를 대변하고 있기 때문에, 이 제한 예, 오늘은 2014년 8월 18일입니다. 한국문화예술위원회 예술자료원에서 주관하는 한국근현대예술사 구술채록 사업으로, 박서보 선생님을 모시고 구술채록을 시작 하겠습니다. 선생님의 삶이 한국현대미술사 자체를 대변하고 있기 때문에,
+                                  </dd>
+                                </dl>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                      <div class="recording-conts" id="gusool_data_2"  style="display: none;">제2회차 앵포르멜 운동과 파리 체류 (1956~1961)(2014)</div>
+                      <div class="recording-conts" id="gusool_data_3"  style="display: none;">제3회차 비엔날레 참여와 앵포르멜 이후 (1962~1970)(2014)</div>
+                      <div class="recording-conts" id="gusool_data_4"  style="display: none;">제4회차 일본미술계와의 교류와 묘법의 탄생(1971~1980)(2014)</div>
+                      <div class="recording-conts" id="gusool_data_5" style="display: none;">제5회차 1부: 미협활동 (1971~1980)(2014)</div>
+                      <div class="recording-conts" id="gusool_data_6" style="display: none;">제5회차 2부: 1980년대 안성시절(2014)</div>
+                      <div class="recording-conts" id="gusool_data_7" style="display: none;">제6회차 1980~1990년대 묘법작업과 2000년대 전시(2014)</div>
+                      <div class="recording-conts" id="gusool_data_8" style="display: none;">채록연구 후기(2014)</div>
+                      <div class="recording-conts" id="gusool_data_9" style="display: none;">주요 도판 모음(2014)</div>
+                    </div><!-- //recording-conts-area -->
+
+                    <div class="recording-list">
+                      <h2 class="h2-title">구술채록정보</h2>
+                      <ul>
+                        <li><button type="button" class="active">인적사항 및 활동경력(2019)</button></li>
+                        <li><button type="button">제1회차 유년기와 반국전 선언 (1931~1956)(2014)</button></li>
+                        <li><button type="button">제2회차 앵포르멜 운동과 파리 체류 (1956~1961)(2014)</button></li>
+                        <li><button type="button">제3회차 비엔날레 참여와 앵포르멜 이후 (1962~1970)(2014)</button></li>
+                        <li><button type="button">제4회차 일본미술계와의 교류와 묘법의 탄생(1971~1980)(2014)</button></li>
+                        <li><button type="button">제5회차 1부: 미협활동 (1971~1980)(2014)</button></li>
+                        <li><button type="button">제5회차 2부: 1980년대 안성시절(2014)</button></li>
+                        <li><button type="button">제6회차 1980~1990년대 묘법작업과 2000년대 전시(2014)</button></li>
+                        <li><button type="button">채록연구 후기(2014)</button></li>
+                        <li><button type="button">주요 도판 모음(2014)</button></li>
+                      </ul>
+                    </div>
+                  </div>
                 </section>
 
+                <!-- tab2 -->
+                <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts" data-quick-nav="false">
+                  <div class="arko-search-area">
+                    <div class="sch-form-wrap">
+                      <div class="sch-input">
+                        <input type="text" class="krds-input xlarge" id="searchWrdTotal" placeholder="키워드를 입력하세요.">
+                        <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
+                          <span class="sr-only">검색</span>
+                          <i class="svg-icon ico-sch"></i>
+                        </button>
+                      </div>
+
+                      <div class="sch-checked">
+                        <!-- checkbox -->
+                        <div class="krds-check-area">
+                          <div class="krds-form-check medium pc-only">
+                            <input type="checkbox" id="chk_1-2a">
+                            <label for="chk_1-2a">결과 내 재검색</label>
+                          </div>
+                          <a href="#n" class="btn-search-help"><i class="svg-icon ico-help"></i>검색 도움말</a>
+                        </div>
+                        <!-- //checkbox -->
+                      </div>
+                    </div>                 
+                  </div>
+                  
+                  <div class="arko-board-area">
+                    <div class="arko-board-head">
+                      <!-- 모바일 시 노출 : 정렬기준이 mob, pc 각각 존재하니 개발하실 때 확인 부탁드립니다. -->
+                      <div class="arko-board-mob mob-only">
+                        <div class="form-conts">
+                          <select id="sort_12" class="krds-form-select medium" title="선택">
+                            <option value="">가나다순</option>
+                            <option value="">최근등록 순</option>
+                            <option value="">연대순</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="arko-board__count">
+                        <b>검색결과</b> 
+                        <b class="count">342,560</b>건
+                      </div>
+
+                      <div class="arko-board__sort"> 
+                        <div class="form-group pc-only">
+                          <div class="form-conts">
+                            <div class="form-tit">
+                              <label for="sort_1">정렬기준</label>
+                            </div>
+                            <select id="sort_1" class="krds-form-select medium" title="선택">
+                              <option value="">가나다순</option>
+                              <option value="">최근등록 순</option>
+                              <option value="">연대순</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 검색결과 없음 -->
+                    <div class="arko-board-nodata" style="display: none;">
+                      <i class="svg-icon ico-nodata"></i>
+                      <p class="nodata__tit">검색결과가 없습니다</p>
+                      <p class="nodata__txt">다른 검색어를 입력해주세요.</p>
+                    </div>
+
+                    <div class="arko-board-body">
+                      <!-- 목록 -->
+                      <div class="arko-toggle-board toggle--list">
+                        <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
+                        <div class="tr tr--head pc-only">
+                          <span class="td-badge">장르</span>
+                          <span class="td-subject">제목</span>
+                          <span class="td-code">참조코드</span>
+                          <span class="td-media">매체</span>
+                          <span class="td-period">생산일자</span>     
+                          <span class="td-producer">생산자</span>        
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961,1967</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                      </div>
+
+                      <!-- 페이지네이션 -->
+                      <div class="arko-pagination">
+                        <div class="page-btns">
+                          <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                          <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                        </div>                  
+
+                        <div class="page-links">
+                          <select id="select_page" class="krds-form-select medium" title="페이지 선택">
+                            <option value="">1</option>
+                            <option value="" selected>2</option>
+                          </select>
+                          <em>/</em>
+                          <span class="page-total">2</span>
+                        </div>
+
+                        <div class="page-btns">
+                          <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                          <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                        </div>                  
+                      </div>
+                    </div>
+                    
+                  </div>
+                </section>
+
+                <!-- tab3 -->
                 <section id="panel_login_03" aria-labelledby="tab_login_03" class="tab-conts" data-quick-nav="false">
-                  3
+                  <div class="arko-search-area">
+                    <div class="sch-form-wrap">
+                      <div class="sch-input">
+                        <input type="text" class="krds-input xlarge" id="searchWrdTotal2" placeholder="키워드를 입력하세요.">
+                        <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
+                          <span class="sr-only">검색</span>
+                          <i class="svg-icon ico-sch"></i>
+                        </button>
+                      </div>
+
+                      <div class="sch-checked">
+                        <!-- checkbox -->
+                        <div class="krds-check-area">
+                          <div class="krds-form-check medium pc-only">
+                            <input type="checkbox" id="chk_1-2a">
+                            <label for="chk_1-2a">결과 내 재검색</label>
+                          </div>
+                          <a href="#n" class="btn-search-help"><i class="svg-icon ico-help"></i>검색 도움말</a>
+                        </div>
+                        <!-- //checkbox -->
+                      </div>
+                    </div>                 
+                  </div>
+                  
+                  <div class="arko-board-area">
+                    <div class="arko-board-head">
+                      <!-- 모바일 시 노출 : 정렬기준이 mob, pc 각각 존재하니 개발하실 때 확인 부탁드립니다. -->
+                      <div class="arko-board-mob mob-only">
+                        <div class="form-conts">
+                          <select id="sort_14" class="krds-form-select medium" title="선택">
+                            <option value="">가나다순</option>
+                            <option value="">최근등록 순</option>
+                            <option value="">연대순</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="arko-board__count">
+                        <b>검색결과</b> 
+                        <b class="count">342,560</b>건
+                      </div>
+
+                      <div class="arko-board__sort"> 
+                        <div class="form-group pc-only">
+                          <div class="form-conts">
+                            <div class="form-tit">
+                              <label for="sort_13">정렬기준</label>
+                            </div>
+                            <select id="sort_13" class="krds-form-select medium" title="선택">
+                              <option value="">가나다순</option>
+                              <option value="">최근등록 순</option>
+                              <option value="">연대순</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 검색결과 없음 -->
+                    <div class="arko-board-nodata" style="display: none;">
+                      <i class="svg-icon ico-nodata"></i>
+                      <p class="nodata__tit">검색결과가 없습니다</p>
+                      <p class="nodata__txt">다른 검색어를 입력해주세요.</p>
+                    </div>
+
+                    <div class="arko-board-body">
+                      <!-- 목록 -->
+                      <div class="arko-toggle-board toggle--list">
+                        <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
+                        <div class="tr tr--head pc-only">
+                          <span class="td-badge">장르</span>
+                          <span class="td-subject">제목</span>
+                          <span class="td-code">참조코드</span>
+                          <span class="td-media">매체</span>
+                          <span class="td-period">생산일자</span>     
+                          <span class="td-producer">생산자</span>        
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">[소장기록물] 정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961,1967</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961,1967</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                        <div class="tr">
+                          <span class="td-badge">무용</span>
+                          <a href="#n" class="td-subject al">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                          <span class="td-code">MC-KSM-02082</span>
+                          <span class="td-media">사진</span>
+                          <span class="td-period">1961</span> 
+                          <span class="td-producer">홍길동</span>           
+                        </div>
+                      </div>
+
+                      <!-- 페이지네이션 -->
+                      <div class="arko-pagination">
+                        <div class="page-btns">
+                          <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                          <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                        </div>                  
+
+                        <div class="page-links">
+                          <select id="select_page2" class="krds-form-select medium" title="페이지 선택">
+                            <option value="">1</option>
+                            <option value="" selected>2</option>
+                          </select>
+                          <em>/</em>
+                          <span class="page-total">2</span>
+                        </div>
+
+                        <div class="page-btns">
+                          <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                          <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                        </div>                  
+                      </div>
+                    </div>
+                    
+                  </div>
                 </section>
               </div>
               <!-- //tab contents -->
@@ -198,7 +778,7 @@
           <div class="conts-area">
             <div class="form-group">
               <div class="form-conts">
-                <select id="select_1" class="krds-form-select medium" title="선택">
+                <select id="select_2" class="krds-form-select medium" title="선택">
                   <option value="">서재명을 선택하세요.</option>
                 </select>
               </div>
@@ -290,20 +870,85 @@
   <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
 
   <script>
-    document.querySelectorAll('.btn-tab').forEach((button) => {
-      button.addEventListener('click', () => {
-        const target = document.querySelector(button.dataset.target);
+    const recordingListBtn = document.querySelectorAll('.recording-list button');
+    const recordingConts = document.querySelectorAll('.recording-conts');
+    const recordingSelect = document.querySelector('#recordingSelect');
 
-        if (!target) return;
+    // 콘텐츠 표시 및 첫 번째 포커스 요소로 이동
+    function showRecordingCont(index) {
+      recordingConts.forEach((cont) => {
+        cont.style.display = 'none';
+      });
 
-        // 대상 영역으로 포커스 이동
-        target.focus({ preventScroll: true });  
+      if (recordingConts[index]) {
+        const target = recordingConts[index];
 
-        // 부드러운 스크롤 이동
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        target.style.display = 'block';
+
+        const firstFocusable = target.querySelector(
+          'a, button, input:not([type="hidden"]), select, textarea'
+        );
+
+        if (firstFocusable) {
+          firstFocusable.focus();
+        }
+      }
+    }
+
+    // 버튼 클릭
+    recordingListBtn.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        recordingListBtn.forEach((button) => {
+          button.classList.remove('active');
         });
+
+        btn.classList.add('active');
+
+        showRecordingCont(i);
+      });
+    });
+
+    // 셀렉트 선택
+    if (recordingSelect) {
+      recordingSelect.addEventListener('change', () => {
+        const index = recordingSelect.selectedIndex - 1;
+
+        if (index >= 0) {
+          recordingListBtn.forEach((button) => {
+            button.classList.remove('active');
+          });
+
+          if (recordingListBtn[index]) {
+            recordingListBtn[index].classList.add('active');
+          }
+
+          showRecordingCont(index);
+        }
+      });
+    }
+
+
+    document.querySelectorAll('.summary__sec').forEach((section) => {
+      const detailBox = section.querySelector('.detail-txt-box');
+      const toggleBtn = section.querySelector('.btns button');
+      const btnText = toggleBtn?.querySelector('span');
+      const btnIcon = toggleBtn?.querySelector('.ico-angle');
+
+      if (!detailBox || !toggleBtn || !btnText) return;
+
+      // 자세히보기 / 접기
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+
+        toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+        detailBox.classList.toggle('is-expanded', !isExpanded);
+
+        btnText.textContent = isExpanded ? '자세히보기' : '접기';
+
+        if (btnIcon) {
+          btnIcon.classList.toggle('up', !isExpanded);
+          btnIcon.classList.toggle('down', isExpanded);
+        }
       });
     });
   </script>
