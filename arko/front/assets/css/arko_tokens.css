@@ -8,6 +8,10 @@
   --arko-brand-color-text: #8c5e17;
   --arko-imprtant-color: #DE3412;
 
+  --arko-danger-color: #DE3412;
+  --arko-success-color: #666666;
+  --arko-information-color: #085691;
+
   --arko-font-size-base: 1.8rem;  
 
   --arko-contents-wrap-size: 1440px;

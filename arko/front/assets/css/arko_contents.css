@@ -125,6 +125,27 @@
   }
 }
 
+.title-btns-area {
+  position: relative;
+  margin-bottom:3.2rem;
+}
+.title-btns-area .title-desc {
+  padding: 0;
+  margin-bottom:3.2rem;
+}
+.title-btns-area .btns {
+  text-align: right;
+  
+}
+
+@media (min-width: 1025px) {
+  .title-btns-area .btns {
+    position: absolute;
+    right:0;
+    top:0;
+  }
+}
+
 .sec-cont ~ .sec-cont {
   margin-top:var(--arko-contents-gap-xlarge)
 }
@@ -202,6 +223,7 @@
 }
 .arko-board-head .krds-form-select.medium {
   height: 4.4rem;
+  min-width: 20rem;
 }
 
 .arko-board__sort .pc-only .krds-form-select.medium {
@@ -383,9 +405,9 @@
     margin-bottom:24px;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    max-height: calc(1.6em * 2);
+    max-height: calc(1.6em * 1);
   }
 
   .arko-toggle-board.toggle--thum .td-code,
@@ -434,6 +456,9 @@
 
 /* 모바일 */
 @media (max-width:768px) {
+  .arko-toggle-board {
+    border-top:1px solid var(--arko-line-color-etc);
+  }
   .arko-toggle-board .tr {
     padding-block: 12px;
     /* margin: 0 auto; */
@@ -442,9 +467,10 @@
   .arko-toggle-board .tr--head {
     display: none;
   }
-   .arko-toggle-board .tr > *:not(.td-thum) {
+   .arko-toggle-board .tr > *:not(.td-thum, .td-badge) {
     display: block;
    }
+  
    .arko-toggle-board.toggle--list .tr b {
     display: inline-block;
     width: 110px;
@@ -473,13 +499,13 @@
     display: block;
     font-weight: 500;
     color: #000;
-    margin-bottom:24px;
+    margin-bottom:1.6rem;
     font-size: 1.8rem;
   }
 
   .arko-toggle-board .td-code,
   .arko-toggle-board .td-collection {
-    margin-bottom:12px;
+    margin-bottom:.4rem;
   }
 
   .arko-toggle-board.toggle--list .td-media,
@@ -1589,4 +1615,19 @@
   .agreement-list .right > .btns {
     text-align: center;
   }
+}
+
+@media (max-width:767px) {
+  .arko-toggle-board.board--mypage .tr > span {
+    display: flex;
+    padding:.8rem 0;
+  }
+
+  .arko-toggle-board.board--mypage .tr > span > b {
+    flex: 0 0 10rem;
+  }
+
+  .arko-toggle-board.board--mypage .tr > .arko-btns {
+    margin-top: 2.6rem;
+  } 
 }

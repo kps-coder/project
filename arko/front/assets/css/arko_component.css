@@ -135,6 +135,29 @@ button {
   }
 }
 
+.krds-badge.xlarge {
+  height: 4rem;
+}
+.krds-badge[class*="outline-"] {
+  border-radius: 4rem;
+  min-width: 10rem;
+}
+.krds-badge.outline-danger {
+  color: var(--arko-danger-color);
+  border:1px solid var(--arko-danger-color);
+  background-color: #FBEFF0;
+}
+.krds-badge.outline-success {
+  color: var(--arko-success-color);
+  border:1px solid var(--arko-success-color);
+  background-color: #F2F3F5;
+}
+.krds-badge.outline-information {
+  color: var(--arko-information-color);
+  border:1px solid var(--arko-information-color);
+  background-color: #E5EFF5;
+}
+
 /* tab */
 .tab > ul {
   overflow: hidden;
@@ -371,7 +394,7 @@ button {
   color: var(--arko-brand-color);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1279px) {
   .krds-side-navigation {
     display: none ;
   }
