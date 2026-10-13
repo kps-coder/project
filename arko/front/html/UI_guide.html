@@ -29,7 +29,7 @@
     .arko-contents section ~ section {
       margin-top:64px;
       padding-top: 64px;
-      border-top:1px solid var(--arko-line-color-etc);
+      border-top:1px dashed var(--arko-primary-color);
     }
 
     .arko-contents section > .svg-icon {
@@ -81,6 +81,56 @@
                 <button type="button" class="krds-btn primary medium">.krds-btn.tertiary.medium</button>
                 <button type="button" class="krds-btn primary small">.krds-btn.tertiary.small</button>
               </div>
+
+              <br><br>
+              <h3 class="h3-title">버튼 정렬 .arko-cta-btns</h3>
+              <ul class="text-list dot">
+                <li>테이블 하단에 위치하며 중앙 정렬</li>
+              </ul>
+              <br>
+              <div class="arko-cta-btns">
+                <button type="button" class="krds-btn medium primary open-modal" data-target="pwCheckModal">변경</button>
+                <button type="button" class="krds-btn medium tertiary">취소</button>
+              </div>
+
+              <br><br>
+              <h3 class="h3-title">버튼 정렬 .arko-btns</h3>
+              <ul class="text-list dot">
+                <li>flex 정렬로 중앙 정렬이며 모바일 시 양쪽 정렬로 변경</li>
+              </ul>
+              <br>
+              <div class="arko-btns">
+                <button type="button" class="krds-btn medium primary open-modal" data-target="pwCheckModal">변경</button>
+                <button type="button" class="krds-btn medium tertiary">취소</button>
+              </div>
+
+              <br><br>
+              <h3 class="h3-title">버튼 정렬 .arko-btns.between</h3>
+              <ul class="text-list dot">
+                <li>flex 정렬로 between 정렬</li>
+              </ul>
+              <br>
+              <div class="arko-btns between">
+                <div class="btns">
+                  <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalURL">
+                    <i class="svg-icon ico-clip"></i>
+                    URL복사
+                  </button>
+                  <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalLike">
+                    <i class="svg-icon ico-star"></i>
+                    즐겨찾기
+                  </button>
+                  <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalQuotation">
+                    <i class="svg-icon ico-quote"></i>
+                    인용하기
+                  </button>
+                </div>
+                <div class="btns">
+                  <button type="button" class="krds-btn medium primary open-modal" data-target="modalAdd">
+                    기록물 담기
+                  </button>
+                </div>
+              </div>
             </section>
 
             <section>
@@ -110,6 +160,56 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+              <br>
+              <br>
+              <h3 class="h3-title">.detail-info-table</h3>
+              <div class="detail-info-table">
+                <div class="d__tr">
+                  <dl>
+                    <dt>분야</dt>
+                    <dd>시각예술</dd>
+                  </dl>
+                  <dl>
+                    <dt>분야</dt>
+                    <dd>시각예술</dd>
+                  </dl>
+                </div>
+                <div class="d__tr">
+                  <dl>
+                    <dt>컬렉션</dt>
+                    <dd>작가 박서보(1931) 컬렉션 > 증빙자료집 No.1</dd>
+                  </dl>
+                </div>
+              </div>
+              <br>
+              <br>
+              <h3 class="h3-title">.row-table-area</h3>
+              <div class="row-table-area">
+                <div class="row-table">
+                  <dl>
+                    <dt>아이디</dt>
+                    <dd>Arko_123</dd>
+                  </dl>
+                  <dl>
+                    <dt>이름</dt>
+                    <dd>홍길동</dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <label for="phoneInput">비밀번호</label>
+                      <span class="required-mark">*</span>
+                      <span class="sr-only">필수</span>
+                    </dt>
+                    <dd>
+                      <div class="form-group">
+                        <div class="form-conts">
+                          <input type="text" id="phoneInput" class="krds-input small" value="" placeholder="필수 입력란">
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
               </div>
             </section>
 
@@ -156,6 +256,16 @@
                   <input type="text" id="periodEnd" class="krds-input medium ac" placeholder="" value="1993">
                 </div>
               </div>
+              <br>
+              <div class="form-group group--address">
+                <div class="form-conts form-post">
+                  <input type="text" id="addrInput" class="krds-input small" value="12345" disabled>
+                  <button type="button" class="krds-btn tertiary small">주소찾기</button>
+                </div>
+                <div class="form-conts">
+                  <input type="text" id="addrInputDetail" class="krds-input small" value="주소 폼">
+                </div>
+              </div>
              </section>
 
              <section>
@@ -166,6 +276,13 @@
                   <li>.text-list.dot 도트가 있는 리스트 형식입니다.</li>
                   <li>.text-list.dot 도트가 있는 리스트 형식입니다.</li>
                   <li>.text-list.dot 도트가 있는 리스트 형식입니다.</li>
+                </ul>
+              </div>
+              <br>
+              <div class="noti-box">
+                <ul class="text-list dot">
+                  <li>bg가 있는 .noti-box 안에 있는 리스트 입니다.</li>
+                  <li>bg가 있는 .noti-box 안에 있는 리스트 입니다.</li>
                 </ul>
               </div>
              </section>
@@ -179,9 +296,12 @@
               <i class="svg-icon ico-filter"></i>
               <i class="svg-icon ico-clip"></i>
               <i class="svg-icon ico-star"></i>
-              <i class="svg-icon ico-quote"></i>
+              <i class="svg-icon ico-quote"></i>    
+              <i class="svg-icon ico-noti"></i>          
               <br><br>
               <i class="svg-icon ico-nodata"></i>
+              <i class="svg-icon ico-member"></i>
+              <i class="svg-icon ico-pw"></i>
              </section>
             
           </div>
