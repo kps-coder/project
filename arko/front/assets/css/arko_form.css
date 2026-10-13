@@ -13,6 +13,18 @@
   font-size: var(--arko-font-size-base) !important;
 }
 
+.krds-input[disabled] {
+  background-color: var(--arko-input-disabled-background-color);
+}
+
+/* 주소입력 폼 */
+.group--address .form-post {
+  flex-direction: row;
+}
+.group--address .form-post > input {
+  width: 94px;
+}
+
 .krds-form-check {
   display: inline-block;
 }

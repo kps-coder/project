@@ -187,6 +187,12 @@ button {
 }
 
 /* list */
+.noti-box {
+  padding: var(--arko-contents-gap-small) var(--arko-contents-gap-medium);
+  border-radius: var(--arko-border-radius-default);
+  background-color: var(--arko-background-color);
+}
+
 .text-list {
   display: flex;
   flex-direction: column;
@@ -196,6 +202,7 @@ button {
   position: relative;
 }
 .text-list.dot > li {
+  font-size: 1.7rem;
   padding-left: var(--arko-contents-gap-small);
 }
 .text-list.dot > li::before {
@@ -215,6 +222,13 @@ button {
 }
 
 /* modal */
+.krds-modal {
+  --krds-modal--mobile-header-padding-top: 2.4rem;
+  --krds-modal--header-padding-top: 3.2rem;
+}
+.krds-modal .modal-dialog .modal-content {
+  --krds-modal--color-text: var(--arko-font-size-base);
+}
 .krds-modal .modal-dialog .modal-btn {
   justify-content: center;
 }
@@ -296,12 +310,17 @@ button {
 .svg-icon.ico-pw {
   width: 83px;
   height: 39px;
-  background: url(../img/comm/ico_pw.svg) no-repeat center / contain;
+  background: url(../img/mypage/ico_pw.svg) no-repeat center / contain;
 }
 .svg-icon.ico-noti {
   width: 20px;
   height: 20px;
   background: url(../img/comm/ico_noti.svg) no-repeat center / contain;
+}
+.svg-icon.ico-member {
+  width: 55px;
+  height: 55px;
+  background: url(../img/mypage/ico_member.svg) no-repeat center / contain;
 }
 
 .badge {
