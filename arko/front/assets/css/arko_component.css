@@ -293,6 +293,11 @@ button {
   -webkit-mask-image: url(../img/comm/ico_view.svg);
   mask-image: url(../img/comm/ico_view.svg);
 }
+.svg-icon.ico-pw {
+  width: 83px;
+  height: 39px;
+  background: url(../img/comm/ico_pw.svg) no-repeat center / contain;
+}
 .svg-icon.ico-noti {
   width: 20px;
   height: 20px;
@@ -378,7 +383,7 @@ button {
     display: table-cell;
     width: 20rem;
     height: 6.1rem;
-    padding:1rem 4.5rem;
+    padding:1rem 1rem 1rem 4.5rem;
     vertical-align: middle;
     border-bottom:1px solid var(--arko-line-color-etc);
   }

@@ -128,11 +128,11 @@
                         <dd>Arko_123</dd>
                       </dl>
                       <dl>
-                        <dt><label for="">비밀번호</label></dt>
+                        <dt><label for="pwInput">비밀번호</label></dt>
                         <dd>
                           <div class="form-group">
                             <div class="form-conts">
-                              <input type="password" id="consult_name" class="krds-input small" placeholder="비밀번호를 입력해주세요.">
+                              <input type="password" id="pwInput" class="krds-input small" placeholder="비밀번호를 입력해주세요.">
                             </div>
                           </div>
                         </dd>
@@ -140,7 +140,7 @@
                     </div>
                   </div>
                   <div class="arko-cta-btns">
-                    <button type="button" class="krds-btn medium primary">확인</button>
+                    <button type="button" class="krds-btn medium primary open-modal" data-target="pwCheckModal">확인</button>
                   </div>
                 </section>
               </div>
@@ -154,6 +154,42 @@
 
     <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
   </div>
+
+  <!-- modal -->
+
+  <!-- 비번확인 -->
+  <section id="pwCheckModal" class="krds-modal fade" role="dialog" aria-labelledby="tit_pwCheckModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_pwCheckModal" class="modal-title"><span class="sr-only">비밀번호 확인</span></h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <i class="svg-icon ico-pw mb-large"></i>
+          <div class="conts-area">
+            비밀번호를 입력해주세요.
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <!-- <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button> -->
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+  <!-- //modal -->
 
 
   <!-- 퍼블전용:: include용 사용금지 -->
