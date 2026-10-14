@@ -1652,5 +1652,72 @@
   } 
 }
 
+.pledge-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: var(--arko-contents-gap-xlarge);
+  padding-bottom:4rem;
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
 
+/* 방문예약 */
+.visit-time-area {
+  width: fit-content;
+  margin:0 auto;
+}
+.visit-time {
+  display: flex;
+  align-items: center;
+  gap: var(--arko-contents-gap-medium);
+}
 
+.time-field {
+  display: flex;
+  align-items: center;
+  gap: var(--arko-contents-gap-medium);
+}
+
+.time-field > label {
+  color: var(--arko-font-color-title);
+  font-weight: 600;
+}
+
+@media (max-width:767px) {
+  .visit-time {
+    flex-direction: column;
+  }
+  .time-separator {
+    display: none;
+  }
+}
+
+.reservation-select-check {
+  margin-top: var(--arko-contents-gap-large);
+  padding:1.6rem 2.4rem;
+  border-radius: var(--arko-border-radius-default);
+  background-color: #F6F5F3;
+}
+
+.reservation-select-check > dl {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--arko-contents-gap-medium);
+}
+
+.reservation-select-check > dl > dt {
+  color: var(--arko-font-color-title);
+  font-weight: 600;
+}
+
+.reservation-select-check > dl > dt::before {
+  display: inline-block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-right: 1.2rem;
+  border-radius: 100%;
+  vertical-align: 2px;
+  background-color: var(--arko-font-color-title);
+}

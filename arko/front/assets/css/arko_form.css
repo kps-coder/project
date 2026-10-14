@@ -13,7 +13,8 @@
   font-size: var(--arko-font-size-base) !important;
 }
 
-.krds-input[disabled] {
+.krds-input[disabled],
+.krds-input[readonly] {
   background-color: var(--arko-input-disabled-background-color);
 }
 
@@ -31,31 +32,37 @@
 
 
 /* 버튼형 체크박스 */
-.checkbox-btn {
+.checkbox-btn,
+.radio-btn {
   display: inline-block;
 }
-.checkbox-btn input[type=checkbox] ~ label {
+.checkbox-btn input[type=checkbox] ~ label,
+.radio-btn input[type=radio] ~ label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 106px;
   height: 40px;
+  padding:0 2.4rem;
   border-radius: var(--arko-border-radius-default);
-  background-color: var(--arko-background-color);;
+  background-color: var(--arko-background-color);
 }
 
-.checkbox-btn input[type=checkbox]:checked ~ label {
+.checkbox-btn input[type=checkbox]:checked ~ label,
+.radio-btn input[type=radio]:checked ~ label {
   background-color: var(--arko-primary-color);
   color:#fff;
   text-decoration: underline;
 } 
 
-.checkbox-btn input[type=checkbox]:focus ~ label {
+.checkbox-btn input[type=checkbox]:focus ~ label,
+.radio-btn input[type=radio]:focus ~ label {
   box-shadow: var(--krds-box-shadow-outline-inset);
   outline-offset: 0.4rem;
 }
 
-.checkbox-btn-group {
+.checkbox-btn-group,
+.radio-btn-group {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
@@ -381,4 +388,179 @@
   font-size: 1.6rem;
   border-radius:0 var(--arko-border-radius-default) var(--arko-border-radius-default) 0;
   background-color: var(--arko-primary-color);
+}
+
+/* 방문예약 달력 */
+.ui-widget {
+  font-family: 'Pretendard GOV';
+}
+.reservation-calendar {
+  --arko-calendar-title-font-size : 1.8rem;
+  --arko-calendar-head-title-font-size : 2.8rem;
+  --arko-calendar-td-height: 10rem;
+  
+  position: relative;
+  margin-bottom: var(--arko-contents-gap-large);
+}
+.reservation-calendar .ui-datepicker {
+  width: 100%;
+}
+.reservation-calendar .ui-widget-header {
+  margin-bottom:var(--arko-contents-gap-medium);
+  border:0;
+  background-color: transparent;
+}
+.reservation-calendar .ui-datepicker .ui-datepicker-title {
+  color: var(--arko-font-color-title);
+  font-size: var(--arko-calendar-head-title-font-size);
+  font-weight: 600;
+}
+.reservation-calendar .ui-widget.ui-widget-content {
+  border: 0;
+}
+.reservation-calendar .ui-datepicker table {
+  font-size: var(--arko-font-size-base);
+}
+.reservation-calendar .ui-datepicker td .ui-state-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: var(--arko-calendar-td-height);
+  border: 0;
+  background-color: transparent;
+}
+
+.reservation-calendar .ui-datepicker td .ui-state-default:focus {
+  outline: 1px solid blue;
+}
+
+.reservation-calendar .ui-datepicker th {
+  font-size: var(--arko-calendar-title-font-size);
+  background-color: var(--arko-background-color);
+}
+
+.reservation-calendar .ui-datepicker tbody td {
+  border:4px solid #fff;
+}
+.reservation-calendar .ui-datepicker td.ui-datepicker-week-end {  
+  background-color: #FBEFF0;
+}
+
+.reservation-calendar .ui-datepicker td.ui-datepicker-week-end .ui-state-default {
+  color: #D63D4A;
+}
+
+.reservation-calendar .ui-datepicker td .ui-state-default.ui-state-active {
+  background-color: #F5EFE4;
+  color: #8C5E17;
+  font-weight: 600;
+}
+
+.reservation-calendar .ui-datepicker-header > a {
+  border: 1px solid #CBCCD1;
+}
+
+.reservation-calendar .ui-datepicker .ui-datepicker-prev{
+  left:calc(50% - 130px);
+  top:50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.reservation-calendar .ui-datepicker .ui-datepicker-prev .ui-icon {
+  transform: rotate(90deg);
+  background: url(../krds/img/img/component/icon/ico_angle.svg) no-repeat center / 15px 15px;
+}
+.reservation-calendar .ui-datepicker .ui-datepicker-next {
+  right:calc(50% - 130px);
+  top:50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.reservation-calendar .ui-datepicker .ui-datepicker-next .ui-icon {
+  transform: rotate(-90deg);
+  background: url(../krds/img/img/component/icon/ico_angle.svg) no-repeat center / 15px 15px;
+}
+
+.reservation-calendar .ui-datepicker td.ui-datepicker-today .ui-state-default::after {
+  content: 'TODAY';
+  font-size: var(--arko-calendar-title-font-size);
+} 
+
+.reservation-calendar .calr-legend {
+  position: absolute;
+  top:0;
+}
+.reservation-calendar .calr-legend .closed-days {
+  color: #D63D4A;
+  font-size: 1.6rem;
+}
+.reservation-calendar .calr-legend .closed-days .mark {
+  display: inline-block;
+  width: 30px;
+  height: 14px;
+  margin-right: 12px;
+  background-color: #D63D4A;
+}
+.reservation-calendar .ui-widget-content .weekend-disabled {
+  opacity: 1;
+}
+
+@media (max-width:767px) {
+  .reservation-calendar {
+    --arko-calendar-title-font-size : 1.2rem;
+    --arko-calendar-head-title-font-size : 2rem;
+    --arko-calendar-td-height: 5rem;
+  }
+
+  .reservation-calendar {
+    padding-top: 4rem;
+  }
+}
+/* //방문예약 달력 */
+
+/* 증감 input */
+.quantity-toggle-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--arko-contents-gap-medium);
+}
+.quantity-toggle {
+  display: inline-flex;
+  align-items: center;
+  height: fit-content;
+  border:1px solid var(--arko-input-border-color);
+
+}
+.quantity-toggle .count-plus-btn {
+  width: 5rem;
+  height: 5rem;
+  border-right: 1px solid var(--arko-input-border-color);
+  color: #000;
+  font-size: 3rem;
+}
+.quantity-toggle .count-minus-btn {
+  width: 5rem;
+  height: 5rem;
+  border-left: 1px solid var(--arko-input-border-color);
+  color: #000;
+  font-size: 3rem;
+}
+
+.quantity-toggle__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 5rem;
+  text-align: center;
+}
+.quantity-toggle__input input {
+  width: 3rem;
+  border: 0;
+  text-align: center;
+  color: var(--arko-placeholder-font-color);
+  background-color: transparent;
 }

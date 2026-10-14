@@ -88,6 +88,11 @@ button {
   vertical-align: middle !important;
 }
 
+/* flex */
+.j-center {
+  justify-content: center !important;
+}
+
 /* point color */
 .font-color-pri {
   color: var(--arko-primary-color) !important;
@@ -260,6 +265,9 @@ button {
   --krds-modal--mobile-header-padding-top: 2.4rem;
   --krds-modal--header-padding-top: 3.2rem;
 }
+.modal-title {
+  color: var(--arko-font-color-title);
+}
 .krds-modal .modal-dialog .modal-content {
   --krds-modal--color-text: var(--arko-font-size-base);
 }
@@ -268,6 +276,12 @@ button {
 }
 .krds-modal .modal-dialog .modal-conts .conts-area {
   align-items: center;
+}
+
+@media (max-width:767px) {
+  .krds-modal {
+    --krds-modal--mobile-padding: 1.6rem;
+  }
 }
 
 /* 아이콘 */
@@ -463,6 +477,24 @@ button {
   }
 }
 
+/* block table : 마이페이지 모달에 사용 */
+.block-table {
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
+.block-table > dl > dt {
+  font-weight: 600;
+  color: var(--arko-font-color-title);
+  padding:1.4rem;
+  text-align: center;
+  background-color: var(--arko-background-color);
+}
+
+.block-table > dl > dd {
+  padding:var(--arko-contents-gap-large) 1.4rem;
+}
+
+
+/* 상, 하단 line이 있는 박스 */
 .line-box {
   padding:var(--arko-contents-gap-large );
   border-top: 1px solid var(--arko-line-color-etc);
