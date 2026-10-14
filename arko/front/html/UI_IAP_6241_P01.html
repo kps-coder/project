@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>열람예약신청 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="열람예약신청 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width:769px) {
+      .modal-conts .arko-toggle-board .krds-form-check {width: 6%;} 
+      .modal-conts .td-records {flex: 1;}
+      .modal-conts .td-collection-name {width: 20%;}
+      .modal-conts .td-genre {width: 10%;}
+      .modal-conts .td-media {width: 10%;}
+      .modal-conts .td-sign {width: 15%;}
+      .modal-conts .td-save-date {width: 15%;}
+    }    
+  </style>
+</head>
+<body>
+  <button type="button" class="krds-btn medium primary open-modal" data-target="modalAddRecords">기록물 추가</button>
+
+  <!-- modal -->
+  <!-- 기록물 추가 -->
+  <section id="modalAddRecords" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalAddRecords">
+    <div class="modal-dialog modal-xlg">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalAddRecords" class="modal-title">기록물 등록</h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="arko-board-area widh--checkbox">
+            <div class="arko-board-head">
+              <div class="arko-board__left">
+                <!-- 모바일용 전체선택 체크박스 -->
+                <div class="krds-form-check medium mob-only">
+                  <input type="checkbox" name="checkbox01" id="chk1_all_mo">
+                  <label for="chk1_all_mo">전체선택</label>
+                </div>
+              </div>
+            </div>
+            <div class="arko-board-body">
+              <!-- 목록 -->
+              <div class="arko-toggle-board toggle--list board--mypage">
+                <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
+                <div class="tr tr--head pc-only">
+                  <!-- pc용 전체선택 체크박스 -->
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_all">
+                    <label for="chk1_all"><span class="sr-only">전체선택</span></label>
+                  </div>
+                  <span class="td-records">기록물명</span>
+                  <span class="td-collection-name">컬렉션명</span>
+                  <span class="td-genre">장르</span>
+                  <span class="td-media">매체</span>     
+                  <span class="td-sign">참조코드/구청구기호</span>  
+                  <span class="td-save-date">저장일</span>      
+                </div>
+                <div class="tr">
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_1">
+                    <label for="chk1_1"></label>
+                  </div>
+                  <span class="td-records al">
+                    <b>기록물명</b>
+                    '공정보상' 체계를 위한 기초연구 사업보고서
+                  </span>
+                  <span class="td-collection-name al">
+                    <b>컬렉션명</b>
+                    2020 연극의 해 집행위원회(2020) 컬렉션
+                  </span>
+                  <span class="td-genre">
+                    <b>장르</b>
+                    문학
+                  </span>
+                  <span class="td-media">
+                    <b>매체</b>
+                    단행본
+                  </span>     
+                  <span class="td-sign">
+                    <b>참조코드/구청구기호</b>
+                    684.07 연17ㄱ
+                  </span> 
+                  <span class="td-save-date">
+                    <b>저장일</b>
+                    2026-08-05
+                  </span>    
+                </div>
+                <div class="tr">
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_2">
+                    <label for="chk1_2"></label>
+                  </div>
+                  <span class="td-records al">
+                    <b>기록물명</b>
+                    '공정보상' 체계를 위한 기초연구 사업보고서
+                  </span>
+                  <span class="td-collection-name al">
+                    <b>컬렉션명</b>
+                    2020 연극의 해 집행위원회(2020) 컬렉션
+                  </span>
+                  <span class="td-genre">
+                    <b>장르</b>
+                    문학
+                  </span>
+                  <span class="td-media">
+                    <b>매체</b>
+                    단행본
+                  </span>     
+                  <span class="td-sign">
+                    <b>참조코드/구청구기호</b>
+                    684.07 연17ㄱ
+                  </span> 
+                  <span class="td-save-date">
+                    <b>저장일</b>
+                    2026-08-05
+                  </span>    
+                </div>
+                <div class="tr">
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_2">
+                    <label for="chk1_2"></label>
+                  </div>
+                  <span class="td-records al">
+                    <b>기록물명</b>
+                    '공정보상' 체계를 위한 기초연구 사업보고서
+                  </span>
+                  <span class="td-collection-name al">
+                    <b>컬렉션명</b>
+                    2020 연극의 해 집행위원회(2020) 컬렉션
+                  </span>
+                  <span class="td-genre">
+                    <b>장르</b>
+                    문학
+                  </span>
+                  <span class="td-media">
+                    <b>매체</b>
+                    단행본
+                  </span>     
+                  <span class="td-sign">
+                    <b>참조코드/구청구기호</b>
+                    684.07 연17ㄱ
+                  </span> 
+                  <span class="td-save-date">
+                    <b>저장일</b>
+                    2026-08-05
+                  </span>    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">저장</button>
+          <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <!-- <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button> -->
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+  <!-- //modal -->
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+  <script>
+    const modalBtn = document.querySelector('.krds-btn');
+    
+    setTimeout(function(){
+      modalBtn.click();
+    }, 10);
+    
+  </script>
+
+</body>
+</html>

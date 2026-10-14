@@ -321,6 +321,35 @@
                   <input type="text" id="addrInputDetail" class="krds-input small" value="주소 폼">
                 </div>
               </div>
+
+              <br><br>
+              <h3 class="h3-title">수량 토글</h3>
+              <div class="quantity-toggle">
+                <button type="button" class="count-plus-btn" data-step="1" aria-label="인원 증가">+</button>
+                <div class="quantity-toggle__input">
+                  <input type="number" id="personCount" value="1" min="1" max="10" aria-label="예약 인원수">
+                  <span aria-hidden="true">명</span>
+                </div>
+                <button type="button" class="count-minus-btn" data-step="-1" aria-label="인원 감소">-</button>                      
+              </div>
+              <br><br><br><br>
+
+              <h3 class="h3-title">예약시간 선택</h3>
+              <div class="visit-time">
+                <div class="time-field">
+                  <label for="startTime">시작시간</label>
+                  <select id="startTime" class="krds-form-select medium" title="선택">
+                    <option value="">10:00</option>
+                  </select>
+                </div>
+                <span class="time-separator" aria-hidden="true">~</span>
+                <div class="time-field">
+                  <label for="endTime">종료시간</label>
+                  <select id="endTime" class="krds-form-select medium" title="선택">
+                    <option value="">10:00</option>
+                  </select>
+                </div>
+              </div>
              </section>
 
              <section>
@@ -377,6 +406,19 @@
   <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
   <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
 
-   
+   <script>
+    $('.quantity-toggle').on('click', 'button', function () {
+      const $input = $('.quantity-toggle').find('input[type="number"]');
+      const min = Number($input.attr('min')) || 1;
+      const max = Number($input.attr('max')) || 10;
+      const step = Number($input.attr('step')) || 1;
+      const direction = Number($(this).data('step'));
+
+      let value = Number($input.val()) || min;
+      value = Math.max(min, Math.min(max, value + direction * step));
+
+      $input.val(value).trigger('change');
+    });
+   </script>
 </body>
 </html>

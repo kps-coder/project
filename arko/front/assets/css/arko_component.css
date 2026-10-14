@@ -284,6 +284,11 @@ button {
   }
 }
 
+.krds-modal .modal-dialog.modal-xlg {
+  max-width: 116.9rem;
+  width: 95%;
+}
+
 /* 아이콘 */
 .svg-icon.ico-sch {
   -webkit-mask-image: url(../img/comm/ico_sch.svg);

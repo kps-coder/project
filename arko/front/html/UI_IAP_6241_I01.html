@@ -34,6 +34,15 @@
       .td-media {width: 10%;}
       .td-sign {width: 20%;}
       .td-btns {width: 10%;}
+
+
+      .modal-conts .arko-toggle-board .krds-form-check {width: 6%;} 
+      .modal-conts .td-records {flex: 1;}
+      .modal-conts .td-collection-name {width: 20%;}
+      .modal-conts .td-genre {width: 10%;}
+      .modal-conts .td-media {width: 10%;}
+      .modal-conts .td-sign {width: 15%;}
+      .modal-conts .td-save-date {width: 15%;}
     }    
   </style>
 </head>
@@ -52,6 +61,7 @@
                 <li class="home"><a href="#;" class="txt">홈</a></li>
                 <li><a href="#;" class="txt">마이페이지</a></li>
                 <li><a href="#;" class="txt">예약 및 열람현황</a></li>
+                <li><a href="#;" class="txt">열람예약신청</a></li>
               </ol>
             </nav>
             <!-- breadcrumb -->
@@ -133,7 +143,7 @@
 
               <div class="mypage-conts">
                 <section class="sec-cont">
-                  <h2 class="h2-title">예약정보</h2>
+                  <h2 class="h2-title">열람예약신청</h2>
                   <div class="row-table-area">
                     <div class="row-table">
                       <dl>
@@ -400,7 +410,7 @@
                             </div>
                           </div>
                           <div class="arko-cta-btns">
-                            <button type="button" class="krds-btn medium primary">기록물 추가</button>
+                            <button type="button" class="krds-btn medium primary open-modal" data-target="modalAddRecords">기록물 추가</button>
                           </div>
                         </dd>
                       </dl>
@@ -551,6 +561,155 @@
     <div class="modal-back in"></div>
   </section>
 
+  <!-- 기록물 추가 -->
+  <section id="modalAddRecords" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalAddRecords">
+    <div class="modal-dialog modal-xlg">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalAddRecords" class="modal-title">기록물 등록</h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="arko-board-area widh--checkbox">
+            <div class="arko-board-head">
+              <div class="arko-board__left">
+                <!-- 모바일용 전체선택 체크박스 -->
+                <div class="krds-form-check medium mob-only">
+                  <input type="checkbox" name="checkbox01" id="chk1_all_mo">
+                  <label for="chk1_all_mo">전체선택</label>
+                </div>
+              </div>
+            </div>
+            <div class="arko-board-body">
+              <!-- 목록 -->
+              <div class="arko-toggle-board toggle--list board--mypage">
+                <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
+                <div class="tr tr--head pc-only">
+                  <!-- pc용 전체선택 체크박스 -->
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_all">
+                    <label for="chk1_all"><span class="sr-only">전체선택</span></label>
+                  </div>
+                  <span class="td-records">기록물명</span>
+                  <span class="td-collection-name">컬렉션명</span>
+                  <span class="td-genre">장르</span>
+                  <span class="td-media">매체</span>     
+                  <span class="td-sign">참조코드/구청구기호</span>  
+                  <span class="td-save-date">저장일</span>      
+                </div>
+                <div class="tr">
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_1">
+                    <label for="chk1_1"></label>
+                  </div>
+                  <span class="td-records al">
+                    <b>기록물명</b>
+                    '공정보상' 체계를 위한 기초연구 사업보고서
+                  </span>
+                  <span class="td-collection-name al">
+                    <b>컬렉션명</b>
+                    2020 연극의 해 집행위원회(2020) 컬렉션
+                  </span>
+                  <span class="td-genre">
+                    <b>장르</b>
+                    문학
+                  </span>
+                  <span class="td-media">
+                    <b>매체</b>
+                    단행본
+                  </span>     
+                  <span class="td-sign">
+                    <b>참조코드/구청구기호</b>
+                    684.07 연17ㄱ
+                  </span> 
+                  <span class="td-save-date">
+                    <b>저장일</b>
+                    2026-08-05
+                  </span>    
+                </div>
+                <div class="tr">
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_2">
+                    <label for="chk1_2"></label>
+                  </div>
+                  <span class="td-records al">
+                    <b>기록물명</b>
+                    '공정보상' 체계를 위한 기초연구 사업보고서
+                  </span>
+                  <span class="td-collection-name al">
+                    <b>컬렉션명</b>
+                    2020 연극의 해 집행위원회(2020) 컬렉션
+                  </span>
+                  <span class="td-genre">
+                    <b>장르</b>
+                    문학
+                  </span>
+                  <span class="td-media">
+                    <b>매체</b>
+                    단행본
+                  </span>     
+                  <span class="td-sign">
+                    <b>참조코드/구청구기호</b>
+                    684.07 연17ㄱ
+                  </span> 
+                  <span class="td-save-date">
+                    <b>저장일</b>
+                    2026-08-05
+                  </span>    
+                </div>
+                <div class="tr">
+                  <div class="krds-form-check medium">
+                    <input type="checkbox" name="checkbox01" id="chk1_2">
+                    <label for="chk1_2"></label>
+                  </div>
+                  <span class="td-records al">
+                    <b>기록물명</b>
+                    '공정보상' 체계를 위한 기초연구 사업보고서
+                  </span>
+                  <span class="td-collection-name al">
+                    <b>컬렉션명</b>
+                    2020 연극의 해 집행위원회(2020) 컬렉션
+                  </span>
+                  <span class="td-genre">
+                    <b>장르</b>
+                    문학
+                  </span>
+                  <span class="td-media">
+                    <b>매체</b>
+                    단행본
+                  </span>     
+                  <span class="td-sign">
+                    <b>참조코드/구청구기호</b>
+                    684.07 연17ㄱ
+                  </span> 
+                  <span class="td-save-date">
+                    <b>저장일</b>
+                    2026-08-05
+                  </span>    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">저장</button>
+          <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <!-- <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button> -->
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
   <!-- //modal -->
 
   <!-- 퍼블전용:: include용 사용금지 -->
