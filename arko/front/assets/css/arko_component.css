@@ -77,6 +77,12 @@ button {
 .pt-0 {
   padding-top:0 !important;
 }
+.pd-inline-0 {
+  padding-inline: 0 !important;
+}
+.pd-block-0 {
+  padding-block: 0 !important;
+}
 
 .v-mid {
   vertical-align: middle !important;
@@ -126,6 +132,7 @@ button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: var(--arko-contents-gap-extra-large);
   gap: var(--arko-contents-gap-medium);
 }
 
@@ -140,7 +147,7 @@ button {
 }
 .krds-badge[class*="outline-"] {
   border-radius: 4rem;
-  min-width: 10rem;
+  min-width: 8rem;
 }
 .krds-badge.outline-danger {
   color: var(--arko-danger-color);
@@ -407,9 +414,6 @@ button {
   background-color: var(--arko-background-color);
 }
 
-.row-table-area + .arko-cta-btns {
-  margin-top:var(--arko-contents-gap-large);
-}
 
 /* pc */
 @media (min-width: 1025px) {
