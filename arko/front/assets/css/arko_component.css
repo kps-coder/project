@@ -223,6 +223,10 @@ button {
   background-color: var(--arko-background-color);
 }
 
+.noti-box + .arko-board-area {
+  margin-top: 4rem;
+}
+
 .text-list {
   display: flex;
   flex-direction: column;

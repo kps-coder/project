@@ -248,6 +248,9 @@
 }
 
 /* 토글 게시판 */
+.arko-toggle-board .tr {
+  position: relative;
+}
 .arko-toggle-board.toggle--thum .tr {
   display: block;
 }
@@ -540,6 +543,23 @@
 
   .arko-toggle-board.toggle--thum .td-media + .td-period {
     float: right;
+  }
+
+  /* 체크박스가 있는 경우 */
+  @media (max-width:768px) {
+    .arko-board-area.widh--checkbox .tr .krds-form-check {
+      position: absolute; 
+      margin-top:.8rem;
+      left:0;
+    }
+    
+    .arko-board-area.widh--checkbox .tr {
+      padding-left: 28px;
+    }
+    .arko-board-area.widh--checkbox .krds-form-check.mob-only {
+      display: inline-flex !important;
+      color: #000;
+    }
   }
 
   /* 라이브러리 > web-DB */
@@ -1617,7 +1637,7 @@
   }
 }
 
-@media (max-width:767px) {
+@media (max-width:768px) {
   .arko-toggle-board.board--mypage .tr > span {
     display: flex;
     padding:.8rem 0;
@@ -1631,3 +1651,6 @@
     margin-top: 2.6rem;
   } 
 }
+
+
+
