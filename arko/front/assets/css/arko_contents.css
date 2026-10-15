@@ -156,7 +156,7 @@
 }
 .arko-board-type > button {
   display: block;
-  height: 4.4rem;
+  height: 4.8rem;
   padding-inline: var(--arko-contents-gap-small);  
   color: var(--arko-primary-color);  
   border:1px solid var(--arko-primary-color);
@@ -222,8 +222,8 @@
   align-items: center;
 }
 .arko-board-head .krds-form-select.medium {
-  height: 4.4rem;
   min-width: 20rem;
+  max-width: 40rem;
 }
 
 .arko-board__sort .pc-only .krds-form-select.medium {
@@ -239,8 +239,21 @@
   flex: 1;
 }
 
+.arko-board__right {
+  display: flex;
+  gap: var(--arko-contents-gap-medium);
+}
+.arko-board__right .input-group {
+  width: auto;
+}
+
+@media (max-width:768px) {
+  .arko-board__right {
+    flex-direction: column;
+  }
+}
+
 .krds-btn.btn-filter {
-  height: 4.4rem;
   padding:0;
   border: var(--arko-background-color);
   color: var(--arko-primary-color);
