@@ -181,6 +181,11 @@ button {
   border:1px solid var(--arko-information-color);
   background-color: #E5EFF5;
 }
+.krds-badge.outline-system {
+  color: var(--arko-system-color);
+  border:1px solid var(--arko-system-color);
+  background-color: #EAF6EC;
+}
 
 /* tab */
 .tab > ul {
