@@ -1739,3 +1739,9 @@
   vertical-align: 2px;
   background-color: var(--arko-font-color-title);
 }
+
+.copy-source-preview {
+  padding:var(--arko-contents-gap-medium);
+  border: 1px solid var(--arko-input-border-color);
+  border-radius: var(--arko-border-radius-default);
+}

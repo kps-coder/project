@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>서재 즐겨찾기 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="서재 즐겨찾기 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width:769px) {
+      .arko-toggle-board .krds-form-check {width: 6%;} 
+      .td-records {flex:1;}
+      .td-save-date {width: 15%;}
+      .td-study-name {width: 20%;}
+      .td-btns {width: 15%;}
+
+      /* 내 서재 관리 */
+      .krds-modal .td-study-name {flex: 1;}
+      .krds-modal .td-number-records {width:20%;}
+      .krds-modal .td-btns {width:35%;}
+    }    
+  </style>
+</head>
+<body>
+  <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalManagingMyLibrary">내서재 관리</button>
+
+  <!-- modal -->
+  <!-- 내 서재 관리 -->
+  <section id="modalManagingMyLibrary" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalManagingMyLibrary">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalManagingMyLibrary" class="modal-title">내 서재 관리</h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            <div class="arko-board-area">
+              <div class="arko-board-head">
+                <div class="arko-board__left"></div>
+                <div class="btns">
+                  <button type="button" class="krds-btn medium primary">새 서재 만들기</button>
+                </div>
+              </div>
+              <div class="arko-board-body">
+                <!-- 목록 -->
+                <div class="arko-toggle-board toggle--list board--mypage">
+                  <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
+                  <div class="tr tr--head pc-only">
+                    <span class="td-study-name">서재명</span>
+                    <span class="td-number-records">기록물수</span> 
+                    <span class="td-btns">관리</span>      
+                  </div>
+                  <div class="tr">
+                    <span class="td-study-name al">
+                      <b>서재명</b>
+                      한국근현대사
+                    </span>
+                    <span class="td-number-records">
+                      <b>기록물수</b>
+                      3건
+                    </span>  
+                    <span class="td-btns arko-btns">
+                      <button type="button" class="krds-btn small primary">수정</button>
+                      <button type="button" class="krds-btn small tertiary">삭제</button>
+                    </span>
+                  </div>
+                  <div class="tr">
+                    <span class="td-study-name al">
+                      <b>서재명</b>
+                      <div class="form-conts">
+                        <input type="text" id="phoneInput" class="krds-input small" value="한국근현대사" placeholder="">
+                      </div>
+                    </span>
+                    <span class="td-number-records">
+                      <b>기록물수</b>
+                      3건
+                    </span>  
+                    <span class="td-btns arko-btns">
+                      <button type="button" class="krds-btn small primary">취소</button>
+                      <button type="button" class="krds-btn small tertiary">저장</button>
+                    </span>
+                  </div>
+                  <div class="tr">
+                    <span class="td-study-name al">
+                      <b>서재명</b>
+                      한국근현대사
+                    </span>
+                    <span class="td-number-records">
+                      <b>기록물수</b>
+                      3건
+                    </span>  
+                    <span class="td-btns arko-btns">
+                      <button type="button" class="krds-btn small primary">수정</button>
+                      <button type="button" class="krds-btn small tertiary">삭제</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- //conts-area -->
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap"></div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+  <!-- //modal -->
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+  <script>
+    const modalBtn = document.querySelector('.krds-btn');
+    
+    setTimeout(function(){
+      modalBtn.click();
+    }, 10);
+    
+  </script>
+
+</body>
+</html>

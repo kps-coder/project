@@ -275,7 +275,7 @@ button {
 /* modal */
 .krds-modal {
   --krds-modal--mobile-header-padding-top: 2.4rem;
-  --krds-modal--header-padding-top: 3.2rem;
+  --krds-modal--header-padding-top: 3.2rem;    --krds-modal--header-pc-font-size: 3.2rem;
 }
 .modal-title {
   color: var(--arko-font-color-title);
@@ -299,6 +299,11 @@ button {
 .krds-modal .modal-dialog.modal-xlg {
   max-width: 116.9rem;
   width: 95%;
+}
+
+.krds-modal .h3-title {
+  padding-bottom:var(--arko-contents-gap-medium);
+  border-bottom: 1px solid var(--arko-line-color-etc);
 }
 
 /* 아이콘 */
