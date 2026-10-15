@@ -371,18 +371,20 @@
 
 
 .search-sm {
+  --arko-search-sm-button-width: 7.6rem;
+
    display: flex;
 }
 
 .search-sm > input {
-  flex: 1;
+  width: calc(100% - var(--arko-search-sm-button-width));
   padding:0 var(--arko-contents-gap-medium);
   border: 1px solid var(--arko-primary-color);
   border-radius: var(--arko-border-radius-default) 0 0 var(--arko-border-radius-default);
 }
 
 .search-sm > button {
-  flex: 0 0 76px;
+  flex: 0 0 var(--arko-search-sm-button-width);
   height:48px;
   color: #fff;
   font-size: 1.6rem;

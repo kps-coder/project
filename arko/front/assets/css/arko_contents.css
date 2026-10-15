@@ -1531,6 +1531,9 @@
   .recorded-video__list {
     flex:0 0 324px;
   }
+  .recorded-interview__head .search-sm {
+    flex: 1;
+  }
 }
 
 /* mob */
