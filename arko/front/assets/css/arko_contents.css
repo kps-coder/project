@@ -1515,6 +1515,10 @@
   .recorded-video__list {
     flex:0 0 324px;
   }
+
+  .recorded-interview__head .search-sm {
+    flex: 1;
+  }
 }
 
 /* tab */
@@ -1544,9 +1548,7 @@
   margin:2.4rem 0;
 }
 
-.recorded-interview__head .search-sm {
-  flex: 1;
-}
+
 
 /* mob */
 @media (max-width:768px) {
