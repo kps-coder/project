@@ -117,7 +117,7 @@
                     </div>
                     <!-- //lnb-submenu -->
                   </li>
-                  <li class="lnb-item">
+                  <li class="lnb-item active">
                     <a href="#n" class="lnb-btn">나의 알림</a>
                   </li>
                   <li class="lnb-item">
@@ -129,7 +129,7 @@
 
               <div class="mypage-conts">
                 <section class="sec-cont">
-                  <h2 class="h2-title">알림유형</h2>
+                  <h2 class="sr-only">나의 알림</h2>
 
                   <div class="arko-board-area">
                     <div class="arko-board-head">
@@ -142,7 +142,7 @@
                         <div class="form-group">
                           <div class="form-conts">
                             <div class="form-tit">
-                              <label for="sort_1"><span class="sr-only">정렬기준</span></label>
+                              <label for="sort_1">알림유형</label>
                             </div>
                             <select id="sort_1" class="krds-form-select medium" title="선택">
                               <option value="">전체상태</option>
@@ -335,13 +335,6 @@
   <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
   <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
 
-  <script>
-    const lnbClickBtn = document.querySelectorAll('.lnb-item > .lnb-btn');
-    
-    setTimeout(function(){
-      lnbClickBtn[1].click();
-    }, 100);
-  </script>
 
 </body>
 </html>

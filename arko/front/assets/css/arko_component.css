@@ -186,6 +186,18 @@ button {
   border:1px solid var(--arko-system-color);
   background-color: #EAF6EC;
 }
+.krds-badge.outline-answer {
+  border-radius: var(--arko-border-radius-default);
+  color: var(--arko-primary-color);
+  border:1px solid var(--arko-answer-color);
+  background-color: #fff;
+}
+.krds-badge.outline-answer-completed {
+  border-radius: var(--arko-border-radius-default);
+  color: var(--arko-brand-color);
+  border:1px solid var(--arko-brand-color);
+  background-color: #F6F5F3;
+}
 
 /* tab */
 .tab > ul {
@@ -526,4 +538,151 @@ button {
   padding:var(--arko-contents-gap-large );
   border-top: 1px solid var(--arko-line-color-etc);
   border-bottom: 1px solid var(--arko-line-color-etc);
+}
+
+/* 아코디언 - 1:1 문의게시판 */
+.krds-accordion.arko-qna-board {
+  --krds-accordion--padding: 1.6rem;
+  --krds-accordion--button-color-text-open: var(--arko-primary-color);
+  --krds-accordion--radius: 0;
+  --krds-accordion--padding: 2.4rem;
+  --krds-accordion--button-padding-right: 2.4rem;
+  --krds-accordion--list-margin-y: 0;
+
+  --arko-qna-head-q-left-gap: 5.6rem;
+  --arko-qna-body-padding-block: 4rem;
+  --arko-qna-body-padding-left: 8.8rem;
+  --arko-qna-body-padding-right: 7.2rem;
+
+  padding-block:0;
+  border:0;
+}
+.krds-accordion.arko-qna-board .accordion-item-head {
+  display: flex;
+  padding: 1.6rem var(--krds-accordion--button-padding-right) 1.6rem var(--krds-accordion--padding);
+  background-color: var(--arko-background-color);
+}
+
+.krds-accordion.arko-qna-board .accordion-header {
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
+.accordion-item-head > * {
+  font-weight: 600;
+  text-align: center;
+  color: var(--arko-font-color-title);
+}
+
+.arko-qna-board .btn-accordion {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+} 
+.krds-accordion.arko-qna-board .accordion-item .btn-accordion::after {
+  display: none;
+}
+.arko-qna-board .btn-accordion > * {
+  text-align: center;
+}
+.arko-qna-board .btn-accordion > .td-q-subject {
+  display: flex;
+  align-items: center;
+}
+.arko-qna-board .btn-accordion > .td-q-subject > b {
+  display: inline-block;
+  margin-right: var(--arko-qna-head-q-left-gap);
+}
+.arko-qna-board .btn-accordion > .td-q-date {
+  font-weight: 400;
+  color: var(--arko-font-color-default);
+}
+
+.krds-accordion.arko-qna-board .accordion-item .btn-accordion:hover {
+  background-color: transparent;
+}
+
+.krds-accordion.arko-qna-board .accordion-item .accordion-body {
+  position: relative;
+  background-color: var(--arko-background-color);
+  border-radius: 0;
+  padding:var(--arko-qna-body-padding-block) var(--arko-qna-body-padding-right) var(--arko-qna-body-padding-block) var(--arko-qna-body-padding-left);
+}
+.krds-accordion.arko-qna-board .accordion-item .accordion-body::before {
+  content: 'A';
+  display: block;
+  position: absolute;
+  left:var(--krds-accordion--padding);
+  font-weight: 600;
+  color: var(--arko-primary-color);
+}
+
+.krds-accordion.arko-qna-board .accordion-item .btn-accordion.active {
+  background-color: #fff;
+}
+.krds-accordion.arko-qna-board .accordion-item .btn-accordion.active > .td-q-subject > em {
+  color: var(--arko-brand-color);
+  text-decoration: underline;
+}
+
+.answer-file-list {
+  margin-top:var(--arko-contents-gap-medium);
+  padding-top:var(--arko-contents-gap-medium);
+  border-top:1px solid  var(--arko-answer-color);
+}
+.answer-file-list > .tit {
+  margin-bottom:var(--arko-contents-gap-small);
+  font-weight: 600;
+  color: var(--arko-font-color-title);
+}
+.answer-file-list > ul > li ~ li {
+  margin-top:var(--arko-contents-gap-xsmall);;
+}
+.answer-file__link,
+.answer-file__link:hover,
+.answer-file__link:active,
+.answer-file__link:focus  {
+  position: relative;
+  display: inline-block;
+  color: var(--arko-primary-color);
+  padding-left: 3rem;
+  font-size: 1.6rem;
+}
+
+.answer-file__link::before {
+  content: url(../img/comm/ico_file.svg);
+  display: inline-block;
+  position: absolute;
+  left:0;
+  top:2px;
+}
+
+@media (max-width:768px) {
+  .krds-accordion.arko-qna-board {
+    --krds-accordion--padding: 1.6rem;
+
+    --arko-qna-head-q-left-gap: 1.4rem;
+    --arko-qna-body-padding-block: 2.4rem;
+    --arko-qna-body-padding-right: 1.8rem;
+    --arko-qna-body-padding-left: 4.5rem;
+
+    border-top: 1px solid var(--arko-answer-color);
+  }
+
+  .krds-accordion.arko-qna-board .accordion-item-head ,
+  .krds-accordion.arko-qna-board .td-q-date {
+    display: none;
+  }
+
+  .arko-qna-board .btn-accordion {
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 1.6rem;
+  }
+
+  .arko-qna-board .td-q-state,
+  .arko-qna-board .krds-badge.xlarge {
+    width: 100%;
+  }
+  
 }
