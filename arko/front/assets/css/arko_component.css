@@ -627,6 +627,8 @@ button {
 
 .answer-file-list {
   margin-top:var(--arko-contents-gap-medium);
+}
+.krds-accordion.arko-qna-board .answer-file-list {
   padding-top:var(--arko-contents-gap-medium);
   border-top:1px solid  var(--arko-answer-color);
 }
