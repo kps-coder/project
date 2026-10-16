@@ -206,6 +206,13 @@ button {
   border:1px solid var(--arko-answer-color);
   background-color: #fff;
 }
+.krds-badge.outline-noshow {
+  color: var(--arko-brand-color);
+  border:1px solid var(--arko-brand-color);
+  background-color: #F6F5F3;
+}
+
+
 .krds-badge.outline-answer-completed {
   border-radius: var(--arko-border-radius-default);
   color: var(--arko-brand-color);
