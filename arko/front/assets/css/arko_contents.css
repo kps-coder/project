@@ -1802,3 +1802,90 @@
     min-width: auto;
   }
 }
+
+/* ===== 회원 ===== */
+/* 로그인 */
+.login-box {
+  --login-gap: 4rem;
+
+  max-width: 69.6rem;
+  margin:0 auto;
+  border: 1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+
+.login-conts {
+  max-width: 49.6rem;
+  margin:0 auto;
+  padding: var(--arko-contents-gap-extra-large) 2.4rem;
+}
+
+.login__input {
+  display: flex;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.login__input > label {
+  display: block;
+  width: 12rem;
+}
+
+.login-conts .btns {
+  margin-top: var(--login-gap);
+}
+.login-conts .btns > .krds-btn {
+  width: 100%;
+}
+.login-conts  .find-links {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--login-gap);
+  text-align: center;
+}
+
+@media (max-width:767px) {
+  .login-box {
+    --login-gap: 3.2rem;
+  }
+}
+
+.unlock-completed {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 37.5rem;
+  margin:0 auto;
+  padding:var(--arko-contents-gap-extra-large) 2.4rem;
+  text-align: center;
+}
+
+/* 아이디찾기, 비번찾기 */
+.find-area {
+  max-width: 94.4rem;
+  margin:0 auto;
+}
+
+.find-box {
+  width: 100%;
+  margin:0 auto;
+  padding: var(--arko-contents-gap-extra-large);
+  border: 1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+
+.find-area .text-list {
+  margin-bottom: 1.6rem;
+}
+
+
+
+
+
+
+
+

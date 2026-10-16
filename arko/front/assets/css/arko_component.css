@@ -440,6 +440,11 @@ button {
   height: 20px;
   background: url(../img/comm/ico_reset.svg) no-repeat center / contain;
 }
+.svg-icon.ico-unlock {
+  width: 86px;
+  height: 102px;
+  background: url(../img/member/ico_login.svg) no-repeat center / contain;
+}
 
 .badge {
   display: inline-block;
