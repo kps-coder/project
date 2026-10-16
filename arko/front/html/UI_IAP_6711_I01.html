@@ -111,7 +111,7 @@
                   <li class="lnb-item">
                     <a href="#n" class="lnb-btn">나의 알림</a>
                   </li>
-                  <li class="lnb-item">
+                  <li class="lnb-item active">
                     <a href="#n" class="lnb-btn">1:1 문의</a>
                   </li>
                 </ul>
@@ -171,7 +171,8 @@
                     </div>
                   </div>
                   <div class="arko-cta-btns">
-                    <button type="button" class="krds-btn medium primary open-modal" data-target="pwCheckModal">확인</button>
+                    <button type="button" class="krds-btn medium primary open-modal" data-target="modalQnaSubmitted">등록</button>
+                    <button type="button" class="krds-btn medium tertiary">취소</button>
                   </div>
                 </section>
               </div>
@@ -189,19 +190,18 @@
   <!-- modal -->
 
   <!-- 비번확인 -->
-  <section id="pwCheckModal" class="krds-modal fade" role="dialog" aria-labelledby="tit_pwCheckModal">
+  <section id="modalQnaSubmitted" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalQnaSubmitted">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <!-- modal title -->
         <div class="modal-header">
-          <h2 id="tit_pwCheckModal" class="modal-title"><span class="sr-only">비밀번호 확인</span></h2>
+          <h2 id="tit_modalQnaSubmitted" class="modal-title"><span class="sr-only">비밀번호 확인</span></h2>
         </div>
         <!-- //modal title -->
         <!-- modal contents -->
         <div class="modal-conts">
-          <i class="svg-icon ico-pw mb-large"></i>
           <div class="conts-area">
-            비밀번호를 입력해주세요.
+            1:1 문의가 등록되었습니다.
           </div>
         </div>
         <!-- //modal contents -->
@@ -230,13 +230,6 @@
   <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
   <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
 
-  <script>
-    const lnbClickBtn = document.querySelectorAll('.lnb-item > .lnb-btn');
-    
-    setTimeout(function(){
-      lnbClickBtn[0].click();
-    }, 100);
-  </script>
 
 </body>
 </html>
