@@ -123,6 +123,15 @@ button {
   background-color: var(--arko-primary-color);
 }
 
+.krds-btn.btn-reset {
+  color: var(--arko-imprtant-color);
+}
+
+.krds-btn.btn-reset .svg-icon.ico-reset-arko {
+  margin-left: .8rem;
+  background-color: transparent;
+}
+
 .arko-btns {
   display: flex;
   justify-content: center;
@@ -414,6 +423,12 @@ button {
   width: 55px;
   height: 55px;
   background: url(../img/mypage/ico_member.svg) no-repeat center / contain;
+}
+
+.svg-icon.ico-reset-arko {
+  width: 20px;
+  height: 20px;
+  background: url(../img/comm/ico_reset.svg) no-repeat center / contain;
 }
 
 .badge {
