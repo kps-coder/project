@@ -360,6 +360,7 @@
     height:51px;
     border:1px solid transparent;
     font-size: 1.8rem;
+    color: var(--arko-font-color-title);
     background-color: transparent;
   }
 

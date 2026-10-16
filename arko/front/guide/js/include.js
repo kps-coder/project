@@ -272,7 +272,42 @@ window.addEventListener('DOMContentLoaded', function() {
                   <li><a href="#n" class="depth2-link">조직도 및 연락처</a></li>
                   <li><a href="#n" class="depth2-link">찾아오시는 길</a></li>
                 </ul>
-              </li>  
+              </li> 
+              <li><a href="#n" class="depth1-link">마이페이지</a>
+                <ul class="sitemap__depth2">
+                  <li><a href="#n" class="depth2-link">내정보</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">회원정보 수정</a></li>
+                      <li><a href="#n" class="depth3-link">비밀번호 변경</a></li>
+                      <li><a href="#n" class="depth3-link">개인화 서비스 동의 관리</a></li>
+                      <li><a href="#n" class="depth3-link">회원탈퇴</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">예약 및 열람현황</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">열람 신청 내역</a></li>
+                      <li><a href="#n" class="depth3-link">담은 기록물</a></li>
+                      <li><a href="#n" class="depth3-link">열람 이력</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">최근 검색</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">최근 검색어</a></li>
+                      <li><a href="#n" class="depth3-link">최근 검색 자료</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">서재 즐겨찾기</a></li>
+                  <li><a href="#n" class="depth2-link">맞춤 설정</a>
+                    <ul class="sitemap__depth3">
+                      <li><a href="#n" class="depth3-link">알림 설정</a></li>
+                      <li><a href="#n" class="depth3-link">맞춤 추천 설정</a></li>
+                      <li><a href="#n" class="depth3-link">추천 콘텐츠</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#n" class="depth2-link">나의 알림</a></li>
+                  <li><a href="#n" class="depth2-link">1:1 문의</a></li>
+                </ul>
+              </li>   
             </ul>
 
             <div class="sitemp-moblie-foot">
