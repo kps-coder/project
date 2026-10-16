@@ -87,6 +87,22 @@
   background-color: var(--arko-primary-color);
 } */
 
+/* 토글 스위치 */
+.krds-form-toggle-switch {
+  --krds-form-toggle-switch--button-size-width-large: 7.9rem;
+  --krds-form-toggle-switch--button-size-height-large: 3rem;
+}
+.switch-toggle::before {
+  display: inline-block;
+  content: 'OFF';
+  margin-left:2.4rem;
+  color: #fff;
+  transition: .3s all;
+}
+.krds-form-toggle-switch [type=checkbox]:checked ~ label .switch-toggle::before {
+  content: 'ON';
+  margin-left:-2.4rem;
+}
 
 /* 검색 */
 .krds-form-check input[type=checkbox]:checked ~ label:before {

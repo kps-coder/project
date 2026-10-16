@@ -360,7 +360,7 @@
 
   .arko-toggle-board.toggle--list .tr > * {
     text-align: center;
-    padding:0 .4rem;
+    padding-inline:.4rem;
   }
 
   .arko-toggle-board.toggle--list .tr.tr--head > * {
@@ -1744,4 +1744,10 @@
   padding:var(--arko-contents-gap-medium);
   border: 1px solid var(--arko-input-border-color);
   border-radius: var(--arko-border-radius-default);
+}
+
+/* 맞춤설정 */
+.krds-table-wrap.table--settings .tbl.data tbody td:first-child {
+  padding-left: var(--arko-contents-gap-large);
+  padding-right:0;
 }

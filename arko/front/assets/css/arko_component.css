@@ -10,6 +10,11 @@ button {
   vertical-align: middle;
 }
 
+.str-txt {
+  font-weight: 600;
+  color: var(--arko-font-color-title);
+}
+
 .ml-xlarge {
   margin-left: var(--arko-contents-gap-xlarge) !important;
 }
@@ -244,6 +249,7 @@ button {
   height: 6rem;
   text-align: center;
   border-bottom: 0;
+  font-size: var(--arko-font-size-base);
   background-color: var(--arko-background-color);
 }
 .krds-table-wrap .tbl.data tbody td {
