@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>맞춤 설정 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="맞춤 설정 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width: 769px) {
+      .td-recom-records-id {width: 17%;}
+      .td-recom-records-name {flex:1;}
+      .td-recom-genre {width: 12%;}
+      .td-recom-date {width: 12%;}
+      .td-recom-collection {width: 25%;}
+
+      /* 지난주 많이 본 기록물 */
+      .td-number {width: 7%;} 
+      .td-records {flex:1;}
+      .td-collection-name {width: 25%;}
+      .td-genre {width: 10%;}
+      .td-media {width: 10%;}
+      .td-sign {width: 20%;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <div id="headerInclude"><!-- 퍼블전용::상단 영역 include용 --></div>
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <div class="contents">
+        <div class="arko-breadcrumb">
+          <div class="inner">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#;" class="txt">홈</a></li>
+                <li><a href="#;" class="txt">마이페이지</a></li>
+                <li><a href="#;" class="txt">맞춤 설정</a></li>
+                <li><a href="#;" class="txt">추천 콘텐츠</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+          </div>
+        </div>
+
+        <!-- 컨텐츠 영역 -->
+        <section class="arko-contents">
+          <div class="inner">
+            <div class="title-area">
+              <h1 class="h1-title">맞춤 설정</h1>
+            </div>
+
+            <div class="mypage-contents">
+              <nav class="krds-side-navigation">
+                <h2 class="lnb-tit">마이페이지</h2>
+                <!-- lnb-list -->
+                <ul class="lnb-list">
+                  <li class="lnb-item">
+                    <button type="button" class="lnb-btn lnb-toggle" aria-expanded="true">내정보</button>
+                    <!-- lnb-submenu -->
+                    <div class="lnb-submenu">
+                      <ul>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">회원정보 수정</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">비밀번호 변경</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">개인화 서비스 동의 관리</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">회원탈퇴</a></li>
+                      </ul>
+                    </div>
+                    <!-- //lnb-submenu -->
+                  </li>
+                  <li class="lnb-item">
+                    <button type="button" class="lnb-btn lnb-toggle" aria-expanded="false">예약 및 열람현황</button>
+                    <!-- lnb-submenu -->
+                    <div class="lnb-submenu">
+                      <ul>
+                        <li class="lnb-subitem active"><a href="#n" class="lnb-btn lnb-link">열람 신청 내역</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">담은 기록물</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">열람 이력</a></li>
+                      </ul>
+                    </div>
+                    <!-- //lnb-submenu -->
+                  </li>
+                  <li class="lnb-item">
+                    <button type="button" class="lnb-btn lnb-toggle" aria-expanded="false">최근 검색</button>
+                    <!-- lnb-submenu -->
+                    <div class="lnb-submenu">
+                      <ul>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">최근 검색어</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">최근 검색 자료</a></li>
+                      </ul>
+                    </div>
+                    <!-- //lnb-submenu -->
+                  </li>
+                  <li class="lnb-item">
+                    <a href="#n" class="lnb-btn">서재 즐겨찾기</a>
+                  </li>
+                  <li class="lnb-item">
+                    <button type="button" class="lnb-btn lnb-toggle" aria-expanded="false">맞춤 설정</button>
+                    <!-- lnb-submenu -->
+                    <div class="lnb-submenu">
+                      <ul>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">알림 설정</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">맞춤 추천 설정</a></li>
+                        <li class="lnb-subitem active"><a href="#n" class="lnb-btn lnb-link">추천 콘텐츠</a></li>
+                      </ul>
+                    </div>
+                    <!-- //lnb-submenu -->
+                  </li>
+                  <li class="lnb-item">
+                    <a href="#n" class="lnb-btn">나의 알림</a>
+                  </li>
+                  <li class="lnb-item">
+                    <a href="#n" class="lnb-btn">1:1 문의</a>
+                  </li>
+                </ul>
+                <!-- //lnb-list -->
+              </nav>
+
+              <div class="mypage-conts">
+                <section class="sec-cont">
+                  <div class="title-btns-area">
+                    <h2 class="h2-title">추천 콘텐츠</h2>
+                    <p class="title-desc">설정한 관심 장르를 기준으로 추천 콘텐츠를 확인할 수 있습니다.</p>
+                    <div class="btns arko-btns nowrap">
+                      <button type="button" class="krds-btn medium primary">알림 설정 바로가기</button>
+                      <button type="button" class="krds-btn medium tertiary">알림 설정 바로가기</button>
+                    </div>
+                  </div>
+
+                  <!-- tab -->
+                  <div class="krds-tab-area layer">
+                    <!-- tab list -->
+                    <div class="tab line full">
+                      <ul role="tablist">
+                        <li id="tab_login_01" role="tab" aria-selected="true" aria-controls="panel_login_01" class="active">
+                          <button type="button" class="btn-tab" data-target="#panel_login_01">최근 업데이트된 기록물 <i class="sr-only created"> 선택됨</i></button>
+                        </li>
+                        <li id="tab_login_02" role="tab" aria-selected="false" aria-controls="panel_login_02">
+                          <button type="button" class="btn-tab" data-target="#panel_login_02">지난주 많이 본 기록물</button>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- //tab list -->
+
+                    <!-- tab contents -->
+                    <div class="tab-conts-wrap">
+                      <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active" data-quick-nav="false" tabindex="-1">
+                        
+                        <!-- 검색결과 없음 -->
+                        <div class="arko-board-nodata" style="display: none;">
+                          <i class="svg-icon ico-nodata"></i>
+                          <p class="nodata__tit">설정된 장르가 없습니다.</p>
+                          <p class="nodata__txt">장르를 설정해주세요.</p>
+                        </div>
+
+                        <!-- 목록 -->
+                        <div class="arko-toggle-board toggle--list board--mypage" >
+                          <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
+                          <div class="tr tr--head pc-only">
+                            <span class="td-recom-records-id">기록물ID</span>
+                            <span class="td-recom-records-name">기록물명</span>                            
+                            <span class="td-recom-genre">장르분류</span>
+                            <span class="td-recom-date">생산일자</span>                            
+                            <span class="td-recom-collection">컬렉션</span>    
+                          </div>
+                          <div class="tr">
+                            <span class="td-recom-records-id">
+                              <b>기록물ID</b>
+                              ARC-2024-0100
+                            </span>
+                            <span class="td-recom-records-name al">
+                              <b>기록물명</b>
+                              <a href="#n">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                            </span>
+                            <span class="td-recom-genre">
+                              <b>장르분류</b>
+                              연극·뮤지컬
+                            </span>
+                            <span class="td-recom-date">
+                              <b>생산일자</b>
+                              1961,1967
+                            </span>
+                            <span class="td-recom-collection al">
+                              <b>컬렉션</b>
+                              작곡가 정회갑(1923) 컬렉션 
+                            </span> 
+                          </div>
+                          <div class="tr">
+                            <span class="td-recom-records-id">
+                              <b>기록물ID</b>
+                              ARC-2024-0100
+                            </span>
+                            <span class="td-recom-records-name al">
+                              <b>기록물명</b>
+                              <a href="#n">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                            </span>
+                            <span class="td-recom-genre">
+                              <b>장르분류</b>
+                              연극·뮤지컬
+                            </span>
+                            <span class="td-recom-date">
+                              <b>생산일자</b>
+                              1961,1967
+                            </span>
+                            <span class="td-recom-collection al">
+                              <b>컬렉션</b>
+                              작곡가 정회갑(1923) 컬렉션 
+                            </span> 
+                          </div>
+                          <div class="tr">
+                            <span class="td-recom-records-id">
+                              <b>기록물ID</b>
+                              ARC-2024-0100
+                            </span>
+                            <span class="td-recom-records-name al">
+                              <b>기록물명</b>
+                              <a href="#n">정회갑 가야고와 관현악을 위한 주제와 변주 , 한국무곡</a>
+                            </span>
+                            <span class="td-recom-genre">
+                              <b>장르분류</b>
+                              연극·뮤지컬
+                            </span>
+                            <span class="td-recom-date">
+                              <b>생산일자</b>
+                              1961
+                            </span>
+                            <span class="td-recom-collection al">
+                              <b>컬렉션</b>
+                              임성남 컬렉션
+                            </span> 
+                          </div>
+                        </div>
+
+                        <!-- 페이지네이션 -->
+                        <div class="arko-pagination">
+                          <div class="page-btns">
+                            <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                            <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                          </div>                  
+
+                          <div class="page-links">
+                            <select id="select_page" class="krds-form-select medium" title="페이지 선택">
+                              <option value="">1</option>
+                              <option value="" selected>2</option>
+                            </select>
+                            <em>/</em>
+                            <span class="page-total">2</span>
+                          </div>
+
+                          <div class="page-btns">
+                            <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                            <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                          </div>                  
+                        </div>
+                        <!-- //페이지네이션 -->
+                      </section>
+
+                      <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts" data-quick-nav="false" tabindex="-1">
+                        <!-- 검색결과 없음 -->
+                        <div class="arko-board-nodata" style="display: none;">
+                          <i class="svg-icon ico-nodata"></i>
+                          <p class="nodata__tit">정보가 없습니다.</p>
+                        </div>
+
+                        <!-- 목록 -->
+                        <div class="arko-toggle-board toggle--list board--mypage">
+                          <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
+                          <div class="tr tr--head pc-only">
+                            <span class="td-number">순위</span>
+                            <span class="td-records">기록물명</span>
+                            <span class="td-collection-name">컬렉션명</span>
+                            <span class="td-genre">장르</span>
+                            <span class="td-media">매체</span>     
+                            <span class="td-sign">참조코드/구청구기호</span>        
+                          </div>
+                          <div class="tr">
+                            <span class="td-number">
+                              <b>순위</b>
+                              1
+                            </span>
+                            <span class="td-records al">
+                              <b>기록물명</b>
+                              <a href="#n">'공정보상' 체계를 위한 기초연구 사업보고서</a>
+                            </span>
+                            <span class="td-collection-name al">
+                              <b>컬렉션명</b>
+                              2020 연극의 해 집행위원회(2020) 컬렉션
+                            </span>
+                            <span class="td-genre">
+                              <b>장르</b>
+                              문학
+                            </span>
+                            <span class="td-media">
+                              <b>매체</b>
+                              단행본
+                            </span>     
+                            <span class="td-sign">
+                              <b>참조코드/<br>구청구기호</b>
+                              684.07 연17ㄱ
+                            </span>    
+                          </div>
+                          <div class="tr">
+                            <span class="td-number">
+                              <b>순위</b>
+                              2
+                            </span>
+                            <span class="td-records al">
+                              <b>기록물명</b>
+                              <a href="#n">'공정보상' 체계를 위한 기초연구 사업보고서</a>
+                            </span>
+                            <span class="td-collection-name al">
+                              <b>컬렉션명</b>
+                              2020 연극의 해 집행위원회(2020) 컬렉션
+                            </span>
+                            <span class="td-genre">
+                              <b>장르</b>
+                              문학
+                            </span>
+                            <span class="td-media">
+                              <b>매체</b>
+                              단행본
+                            </span>     
+                            <span class="td-sign">
+                              <b>참조코드/<br>구청구기호</b>
+                              MC-PSB-00001
+                            </span>    
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <!-- //tab contents -->
+                  </div>
+                  <!-- //tab -->
+                </section>
+              </div>
+            </div>
+          </div>          
+        </section>
+      </div>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
+  </div>
+
+  <!-- modal -->
+  <!-- 알림 설정 완료 -->
+  <section id="modalSettingsGenre" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalSettingsGenre">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalSettingsGenre" class="modal-title"><span class="sr-only">맞춤 추천 설정 완료</span></h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area ac">
+            맞춤 추천 설정이 완료되었습니다.
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <!-- <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button> -->
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+  <!-- //modal -->
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+  <script>
+    const lnbClickBtn = document.querySelectorAll('.lnb-item > .lnb-btn');
+    
+    setTimeout(function(){
+      lnbClickBtn[4].click();
+    }, 100);
+  </script>
+
+</body>
+</html>

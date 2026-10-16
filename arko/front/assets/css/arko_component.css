@@ -214,6 +214,9 @@ button {
 }
 
 /* tab */
+.tab {
+  --krds-tab--full-button-mobile-font-size: 1.6rem;
+}
 .tab > ul {
   overflow: hidden;
 }
