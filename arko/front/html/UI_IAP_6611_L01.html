@@ -63,7 +63,11 @@
 
             <div class="mypage-contents">
               <nav class="krds-side-navigation">
-                <h2 class="lnb-tit">마이페이지</h2>
+                <h2 class="lnb-tit">마이페이지 <span>메뉴</span></h2>
+                <div class="lnb-mob-head">
+                  <button type="button" class="btn-mob-lnb">마이페이지</button>
+                </div>
+
                 <!-- lnb-list -->
                 <ul class="lnb-list">
                   <li class="lnb-item">
@@ -84,7 +88,7 @@
                     <!-- lnb-submenu -->
                     <div class="lnb-submenu">
                       <ul>
-                        <li class="lnb-subitem active"><a href="#n" class="lnb-btn lnb-link">열람 신청 내역</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">열람 신청 내역</a></li>
                         <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">담은 기록물</a></li>
                         <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">열람 이력</a></li>
                       </ul>
@@ -335,6 +339,30 @@
   <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
   <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
 
+  <script>
+    // LNB 모바일 토글
+    const lnbMobBtn = document.querySelector('.btn-mob-lnb');
+    const lnbWrap = document.querySelector('.krds-side-navigation');
+    const lnbList = document.querySelector('.lnb-list');
+    const lnbActive = lnbList.querySelectorAll('.active');
 
+    lnbMobBtn.addEventListener('click', function () {
+      const isOpen = lnbWrap.classList.toggle('open');
+
+      if (isOpen) {
+        setTimeout(function () {
+          lnbList.style.maxHeight = '100vh';
+        }, 10);
+      } else {
+        lnbList.style.maxHeight = '0px';
+      }
+    });
+    
+    lnbActive.forEach(function(btn){
+      const btnInnerText = btn.children[0].innerText;
+      console.log(btnInnerText);
+      lnbMobBtn.innerHTML = btnInnerText;
+    });
+  </script>
 </body>
 </html>

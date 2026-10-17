@@ -54,7 +54,11 @@
 
             <div class="mypage-contents">
               <nav class="krds-side-navigation">
-                <h2 class="lnb-tit">마이페이지</h2>
+                <h2 class="lnb-tit">마이페이지 <span>메뉴</span></h2>
+                <div class="lnb-mob-head">
+                  <button type="button" class="btn-mob-lnb">마이페이지</button>
+                </div>
+
                 <!-- lnb-list -->
                 <ul class="lnb-list">
                   <li class="lnb-item">
@@ -62,7 +66,7 @@
                     <!-- lnb-submenu -->
                     <div class="lnb-submenu">
                       <ul>
-                        <li class="lnb-subitem active"><a href="#n" class="lnb-btn lnb-link">회원정보 수정</a></li>
+                        <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">회원정보 수정</a></li>
                         <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">비밀번호 변경</a></li>
                         <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">개인화 서비스 동의 관리</a></li>
                         <li class="lnb-subitem"><a href="#n" class="lnb-btn lnb-link">회원탈퇴</a></li>
@@ -146,12 +150,12 @@
                         </dd>
                       </dl>
                       <dl>
-                        <dt><label for="qngFileInput">첨부파일</label></dt>
+                        <dt>첨부파일</dt>
                         <dd>
                           <div class="file-upload">
                             <div class="file-upload-btn-wrap">
-                              <input type="file" name="myFile" id="fileu-upload" hidden>
-                              <label for="fileu-upload">
+                              <input type="file" name="myFile" id="qngFileInput" hidden>
+                              <label for="qngFileInput">
                                 <button type="button" class="krds-btn medium tertiary">파일선택</button>
                               </label>
                             </div>
@@ -230,6 +234,31 @@
   <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
   <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
 
+  <script>
+    // LNB 모바일 토글
+    const lnbMobBtn = document.querySelector('.btn-mob-lnb');
+    const lnbWrap = document.querySelector('.krds-side-navigation');
+    const lnbList = document.querySelector('.lnb-list');
+    const lnbActive = lnbList.querySelectorAll('.active');
 
+    lnbActive.forEach(function(btn){
+      const btnInnerText = btn.children[0].innerText;
+      console.log(btnInnerText);
+      lnbMobBtn.innerHTML = btnInnerText;
+    });
+
+    lnbMobBtn.addEventListener('click', function () {
+      const isOpen = lnbWrap.classList.toggle('open');
+
+      if (isOpen) {
+        setTimeout(function () {
+          lnbList.style.maxHeight = '100vh';
+        }, 10);
+      } else {
+        lnbList.style.maxHeight = '0px';
+      }
+    });
+
+  </script>
 </body>
 </html>
