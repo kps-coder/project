@@ -567,6 +567,7 @@ button {
   }
 
   .lnb-mob-head .btn-mob-lnb {
+    position: relative;
     display: block;
     width: 100%;
     height: 5.8rem;
@@ -575,13 +576,29 @@ button {
     border: 1px solid var(--arko-line-color-etc);
     border-radius: var(--arko-border-radius-default);
     font-weight: 600;
-    color: var(--arko-font-color-title);
-    background: url(../krds/img/img/component/icon/ico_angle.svg) no-repeat right 1.6rem center / 2rem;
+    color: var(--arko-font-color-title);    
   }
+
+   .lnb-mob-head .btn-mob-lnb::after {
+    position: absolute;
+    top:calc(50% - 10px);
+    right:1.6rem;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../krds/img/img/component/icon/ico_angle.svg) no-repeat center / 2rem;
+    transition: .3s transform ease-in-out;
+    transform: rotate(0deg);
+   }
 
   .krds-side-navigation.open .lnb-mob-head .btn-mob-lnb {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  .krds-side-navigation.open .lnb-mob-head .btn-mob-lnb::after {
+    transform: rotate(180deg);
   }
   .krds-side-navigation.open .lnb-list {
     display: block;
