@@ -147,7 +147,12 @@
 }
 
 .sec-cont ~ .sec-cont {
-  margin-top:var(--arko-contents-gap-xlarge)
+  margin-top:var(--arko-contents-gap-xlarge);
+}
+
+.tab-conts .sec-cont ~ .sec-cont {
+  padding-top:var(--arko-contents-gap-xlarge);
+  border-top: 1px solid #7E818F;
 }
 
 /* === 목록 === */
@@ -222,12 +227,12 @@
   align-items: center;
 }
 .arko-board-head .krds-form-select.medium {
-  min-width: 15rem;
+  /* min-width: 15rem; */
   max-width: 40rem;
 }
 
 .arko-board__sort .pc-only .krds-form-select.medium {
-  width: 230px;
+  width: auto;
 }
 
 .arko-board-mob {
@@ -254,6 +259,7 @@
 }
 
 .krds-btn.btn-filter {
+  height: 4.8rem;
   padding:0;
   border: var(--arko-background-color);
   color: var(--arko-primary-color);
@@ -309,10 +315,37 @@
 .arko-toggle-board.toggle--thum .tr .mark  {
   display: inline-block;
   font-size: 1.4rem;
-  padding: .2rem 2.4rem;
+  padding: .2rem 1.2rem;
   border-radius: var(--arko-border-radius-default);
   color: var(--arko-primary-color);
   background-color: var(--arko-background-color);
+}
+
+.arko-toggle-board .tr p + p {
+  margin-top:var(--arko-contents-gap-small);
+}
+
+.arko-board-simple {
+  position: relative;
+}
+ 
+
+
+@media (min-width: 768px) {
+  .arko-board-simple .arko-toggle-board.toggle--thum > .tr {
+    flex: 1;
+  }
+  .arko-board-simple .arko-btns {
+    position: absolute;
+    top:0;
+    transform: translateY(calc(-100% - var(--arko-contents-gap-large)));
+    right:0;
+  }
+}
+@media (max-width: 767px) {
+  .arko-board-simple .arko-btns {
+    margin-top:var(--arko-contents-gap-medium);
+  }
 }
 
 
@@ -974,7 +1007,7 @@
     flex: 1;
   }
 
-  .detail-cont .tab-conts {
+  .detail-cont .arko-tab-scroll-style .tab-conts {
     padding-right: var(--arko-contents-gap-extra-large);
   }
 
@@ -1379,11 +1412,13 @@
   border-top:1px solid var(--arko-line-color-etc);
 }
 
-.summary__sec .detail-txt-box {
+.summary__sec .detail-txt-box,
+.detail-txt-box.get--folded {
   max-height: 17.5rem;
   overflow: hidden;
 }
-.summary__sec .detail-txt-box.is-expanded {
+.summary__sec .detail-txt-box.is-expanded,
+.detail-txt-box.get--folded.is-expanded {
   max-height: none;
   overflow: visible;
 }
@@ -2023,3 +2058,4 @@
     width: calc(50% - .6rem);
   }
 }
+

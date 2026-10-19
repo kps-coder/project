@@ -257,11 +257,13 @@ button {
   .tab.full {
     overflow-x: auto;
   }
-  .arko-tab-scroll-style .tab.full > ul {
+  .arko-tab-scroll-style .tab.full > ul,
+  .tab.full > ul.nowrap {
     width: fit-content;
     flex-wrap: nowrap;
   }
-  .arko-tab-scroll-style .tab.full > ul > li {
+  .arko-tab-scroll-style .tab.full > ul > li,
+  .tab.full > ul.nowrap > li {
     flex:none;
   }
 }

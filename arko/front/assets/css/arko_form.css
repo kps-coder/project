@@ -208,7 +208,7 @@
 
 
 /* pc */
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .sch-detail__column.middle {
     align-items: center;
   }
@@ -216,7 +216,6 @@
     width: 16rem;
     height: 8rem;
   }
-
   .sch-form-wrap .form-group {
     flex-direction: row;
   }
