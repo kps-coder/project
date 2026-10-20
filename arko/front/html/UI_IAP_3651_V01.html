@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>전시자료 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="전시자료 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width: 769px) {
+      .td-db-records-id {width: 17%;}
+      .td-db-records-name {flex:1;}
+      .td-db-media {width: 12%;}
+      .td-db-genre {width: 12%;}
+      .td-db-date {width: 12%;}
+      .td-db-collection {width: 20%;}
+    }
+    @media (max-width: 768px) {
+      .td-db-records-name {color: var(--arko-font-color-title); font-weight: 600;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <div id="headerInclude"><!-- 퍼블전용::상단 영역 include용 --></div>
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <div class="contents">
+        <div class="arko-breadcrumb">
+          <div class="inner">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#;" class="txt">홈</a></li>
+                <li><a href="#;" class="txt">DA-Arts</a></li>
+                <li><a href="#;" class="txt">기획 콘텐츠</a></li>
+                <li><a href="#;" class="txt">전시자료</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+            </div>
+        </div>
+
+        <!-- 컨텐츠 영역 -->
+        <section class="arko-contents">
+          <div class="inner">
+            <div class="title-area"> 
+              <p class="title-category">대중예술</p>            
+              <h1 class="h1-title">연극 &lt;고도를 기다리며&gt;</h1>
+
+              <div class="arko-btns between">
+                <div class="btns">
+                  <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalURL">
+                    <i class="svg-icon ico-clip"></i>
+                    URL복사
+                  </button>
+                  <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalLike">
+                    <i class="svg-icon ico-star"></i>
+                    즐겨찾기
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cont-column">
+              <div class="detail-info">
+                <div class="detail-info__thum">
+                  <img src="../assets/img/comm/img_sample_one_table.jpg" alt="">
+                </div>
+                
+                <h2 class="h2-title">기본정보</h2>
+                <div class="detail-info-table">
+                  <div class="d__tr">
+                    <dl>
+                      <dt>공연단체</dt>
+                      <dd>음성군</dd>
+                    </dl>
+                  </div>
+                  <div class="d__tr">
+                    <dl>
+                      <dt>공연장소</dt>
+                      <dd>음성문화예술회관 대공연장</dd>
+                    </dl>
+                  </div>
+                  <div class="d__tr">
+                    <dl>
+                      <dt>공연날짜</dt>
+                      <dd>2025.07.04. ~ 2025.07.05.</dd>
+                    </dl>
+                  </div>
+                  <div class="d__tr">
+                    <dl>
+                      <dt>장르</dt>
+                      <dd>연극</dd>
+                    </dl>
+                  </div>
+                  <div class="d__tr">
+                    <dl>
+                      <dt>연출</dt>
+                      <dd>오경택</dd>
+                    </dl>
+                  </div>
+                  <div class="d__tr">
+                    <dl>
+                      <dt>작성자</dt>
+                      <dd>음성문화예술회관</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail-cont">
+                <!-- tab -->
+                <div class="krds-tab-area layer arko-tab-scroll-style">
+                  <!-- tab list -->
+                  <div class="tab line full">
+                    <ul role="tablist" class="block">
+                      <li id="tab_login_01" role="tab" aria-selected="true" aria-controls="panel_login_01" class="active">
+                        <button type="button" class="btn-tab" data-target="#panel_login_01">개요 <i class="sr-only created"> 선택됨</i></button>
+                      </li>
+                      <li id="tab_login_02" role="tab" aria-selected="false" aria-controls="panel_login_02">
+                        <button type="button" class="btn-tab" data-target="#panel_login_02">멀티미디어 (2)</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //tab list -->
+
+                  <!-- tab contents -->
+                  <div class="tab-conts-wrap">
+                    <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active" data-quick-nav="false">
+                      <section class="sec-cont">
+                        <h2 class="h2-title">공연설명</h2>
+                        <div class="detail-txt-box">
+                          앙상한 나무 아래.<br>
+                          두 사람은 '고도'를 기다린다.<br>
+                          그들은 고도가 누구인지 그리고 왜 기다리는지도 알지 못한다.<br>
+                          때로는 우스꽝스럽고, 한편으로는 슬픈 이야기는 어느새 우리에게 묻는다.<br>
+                          당신이 기다리는 '고도'는 무엇이냐고.                  
+                        </div>
+                      </section>
+                      <section class="sec-cont">
+                        <h2 class="h2-title">출연진</h2>
+                        <div class="detail-txt-box">
+                          신구(에스트라공(고고)), 박근형(블라디미르(디디)), 김학철(포조), 조달환(럭키), 이시목(소년)                     
+                        </div>
+                      </section>
+                    </section>
+
+                    <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts" data-quick-nav="false">
+                      <h2 class="h2-title">멀티미디어</h2>
+
+                      <div class="arko-board-area">
+                        <div class="arko-board-state">
+                          <ul>
+                            <li class="state__all">
+                              <em>전체</em>
+                              <span class="count">5</span>
+                            </li>
+                            <li>
+                              <em>포스터</em>
+                              <span class="count">1</span>
+                            </li>
+                            <li>
+                              <em>사진</em>
+                              <span class="count">4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="arko-board-head">
+                          <div class="arko-board__count">
+                            <b>총</b> 
+                            <b class="count">342,560</b>건
+                          </div>
+                        </div>
+
+                        <div class="arko-board-body">
+                          <div class="photo-board">
+                            <ul class="photo-list">
+                              <li>
+                                <a href="#n" class="photo-box">
+                                  <img src="../assets/img/temp/img_plan_sample_1.jpg" alt="이미지 설명">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#n" class="photo-box">
+                                  <img src="../assets/img/temp/img_plan_sample_2.jpg" alt="이미지 설명">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#n" class="photo-box">
+                                  <img src="../assets/img/temp/img_plan_sample_3.jpg" alt="이미지 설명">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#n" class="photo-box">
+                                  <img src="../assets/img/temp/img_plan_sample_4.jpg" alt="이미지 설명">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#n" class="photo-box">
+                                  <img src="../assets/img/temp/img_plan_sample_5.jpg" alt="이미지 설명">
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>      
+
+                    </section>
+                  </div>
+                  <!-- //tab contents -->
+                </div>
+                <!-- //tab -->
+              </div>
+            </div>
+          </div>          
+        </section>
+      </div>
+      <!-- //컨텐츠 영역 -->
+
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
+  </div>
+
+  <!-- modal -->
+  <!-- 담기 -->
+  <section id="modalAdd" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalAdd">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalAdd" class="modal-title"><span class="sr-only">담기</span></h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            선택한 기록물을 담았습니다.
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+
+  <!-- url 복사 -->
+  <section id="modalURL" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalURL">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalURL" class="modal-title"><span class="sr-only">URL 복사</span></h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            URL을 복사했습니다.
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+
+  <!-- 즐겨찾기 -->
+  <section id="modalLike" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalLike">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalLike" class="modal-title">즐겨찾기</h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            <div class="form-group">
+              <div class="form-conts">
+                <select id="select_1" class="krds-form-select medium" title="선택">
+                  <option value="">서재명을 선택하세요.</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+  <!-- //modal -->
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+  
+  <script>
+    document.querySelectorAll('.btn-tab').forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = document.querySelector(button.dataset.target);
+
+        if (!target) return;
+
+        // 대상 영역으로 포커스 이동
+        target.focus({ preventScroll: true });  
+
+        // 부드러운 스크롤 이동
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

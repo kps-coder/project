@@ -18,6 +18,12 @@
   content: '# ';
 }
 
+.detail-info .hashtag {
+  margin-bottom: 2.4rem;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid #7E818F;
+}
+
 
 /* contents */
 .arko-contents {
@@ -90,6 +96,11 @@
   font-size: var(--arko-title-desc-size);
 }
 
+.category-group {
+  display: flex;
+  gap: var(--arko-contents-gap-medium);
+}
+
 .title-category {
   font-size: 1.6rem;
   color: var(--arko-brand-color-text);
@@ -155,6 +166,33 @@
   border-top: 1px solid #7E818F;
 }
 
+/* 넒은 타이틀 영역 - 기획콘텐츠 */
+.title-wide-area {
+  padding:var(--arko-contents-gap-extra-large) 0;
+  background-color: var(--arko-primary-color);
+}
+
+.title-wide-area * {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .title-wide-area > .inner {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--arko-contents-gap-xlarge);
+  }
+  .title-wide-area .h1-title {
+    width: 30%;
+    max-width: 45.3rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .title-wide-area .title-desc {
+    padding-top:0;
+  }
+}
+
 /* === 목록 === */
 .arko-board-type {
   display: flex;
@@ -196,6 +234,42 @@
     white-space: nowrap;
     border: 0;
   }
+}
+
+.arko-board-state > ul {
+  display: flex;
+  margin-bottom:var(--arko-contents-gap-large);
+}
+
+.arko-board-state > ul > li ~ li::before {
+  display: inline-block;
+  content: '|';
+  margin:0 var(--arko-contents-gap-medium);
+  font-size: 1.4rem;
+  vertical-align: middle;
+  color: var(--arko-line-color-etc);
+}
+
+.arko-board-state em {
+  font-size: 2rem;
+}
+
+.arko-board-state .count {
+  display: inline-block;
+  padding:0 1.2rem;
+  border-radius: 2.4rem;
+  line-height: 2.4rem;
+  background-color: var(--arko-background-color);
+}
+
+.arko-board-state .state__all em {
+  font-weight: 600;
+  color: var(--arko-primary-color);
+}
+
+.arko-board-state .state__all .count {
+  color: #fff;
+  background-color: var(--arko-primary-color);
 }
 
 .arko-board-head {
@@ -451,12 +525,12 @@
     font-weight: 500;
     color: #000;
     font-size: 24px;
-    margin-bottom:24px;
+    margin-bottom:.8rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    max-height: calc(1.6em * 1);
+    height: calc(1.6em * 2);
   }
 
   .arko-toggle-board.toggle--thum .td-code,
@@ -475,6 +549,11 @@
   /* 공연영상화 상세 */
   .arko-toggle-board.toggle--thum.column2 .tr {
     width: 48.5%;
+  }
+
+  /* 인물단체DB 상세 */
+  .arko-toggle-board.toggle--thum.column3 .tr {
+    width: 31.3333%;
   }
 }
 
@@ -593,16 +672,16 @@
 
   /* 체크박스가 있는 경우 */
   @media (max-width:768px) {
-    .arko-board-area.widh--checkbox .tr .krds-form-check {
+    .arko-board-area.with--checkbox .tr .krds-form-check {
       position: absolute; 
       margin-top:.8rem;
       left:0;
     }
     
-    .arko-board-area.widh--checkbox .tr {
+    .arko-board-area.with--checkbox .tr {
       padding-left: 28px;
     }
-    .arko-board-area.widh--checkbox .krds-form-check.mob-only {
+    .arko-board-area.with--checkbox .krds-form-check.mob-only {
       display: inline-flex !important;
       color: #000;
     }
@@ -2057,5 +2136,81 @@
   .join-info .text-list > li {
     width: calc(50% - .6rem);
   }
+}
+
+/* ===== 기획콘텐츠 ===== */
+.planned-list {
+  display: flex;
+  gap: 3%;
+  row-gap: 4rem;
+  flex-wrap: wrap;
+}
+.planned-box {
+  border:1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+.planned__thum {
+  overflow: hidden;
+  height: 31.1rem;
+}
+
+.planned__thum > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 center;
+}
+
+.planned__info {
+  position: relative;
+  padding:var(--arko-contents-gap-medium);
+}
+
+.planned__info > dd {
+  margin-top: 2.4rem;
+  text-align: right;
+}
+
+@media (min-width:768px) {
+  .planned-box {
+    flex: 0 0 31.3333%
+  }
+  .planned__info .str-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: calc(1.6em * 3);
+  }
+}
+
+@media (max-width:767px) {
+  .planned-list {
+    flex-direction: column;
+  }
+}
+
+/* ===== 전시자료 ===== */
+.photo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  row-gap: var(--arko-contents-gap-large);
+}
+.photo-list > li {
+  width: 31.333%;
+}
+
+.photo-box {
+  display: block;
+  height: 32.4rem;
+}
+
+.photo-box > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 center;
+  border-radius: var(--arko-border-radius-default);
 }
 

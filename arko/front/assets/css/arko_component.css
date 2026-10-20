@@ -253,6 +253,8 @@ button {
 }
 
 
+
+
 @media (max-width:500px) {
   .tab.full {
     overflow-x: auto;
@@ -265,6 +267,13 @@ button {
   .arko-tab-scroll-style .tab.full > ul > li,
   .tab.full > ul.nowrap > li {
     flex:none;
+  }
+
+  .arko-tab-scroll-style .tab.full > ul.block {
+    width: 100%;
+  }
+  .arko-tab-scroll-style .tab.full > ul.block > li {
+    flex: 1;
   }
 }
 
