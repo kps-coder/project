@@ -166,6 +166,17 @@
   border-top: 1px solid #7E818F;
 }
 
+.left-cont .sec-cont {
+  margin-top:0;
+  padding-bottom: var(--arko-contents-gap-extra-large);
+}
+
+@media (min-width:1025px) {
+  .left-cont .sec-cont {
+    padding-right: var(--arko-contents-gap-extra-large);
+  }
+}
+
 /* 넒은 타이틀 영역 - 기획콘텐츠 */
 .title-wide-area {
   padding:var(--arko-contents-gap-extra-large) 0;
@@ -2216,7 +2227,7 @@
   }
 }
 
-/* ===== 전시자료 ===== */
+/*  전시자료  */
 .photo-list {
   display: flex;
   flex-wrap: wrap;
@@ -2247,4 +2258,59 @@
   .photo-list > li {
     width: 100%;
   }
+}
+
+/* 한구현대음악 */
+.music-group-intro {
+  --music-group-padding-block: 6.4rem;
+  --music-group-padding-inline: 6.4rem;
+  --music-group-title-size: 4.4rem;
+  --music-group-font-size: 2rem;
+
+  display: flex;
+  gap: var(--arko-contents-gap-xlarge);
+  margin-bottom:var(--arko-contents-gap-xlarge);
+  padding:var(--music-group-padding-block) var(--music-group-padding-inline);
+  background-color: var(--arko-background-color);
+}
+
+.music-group__dl > dt {
+  font-size: var(--music-group-title-size);
+  color: var(--arko-font-color-title);
+  font-weight: 700;
+}
+
+.music-group__dl > dd {
+  margin-top: var(--arko-contents-gap-large);
+  font-size: var(--music-group-font-size);
+  text-align: justify;
+  word-break: normal;
+}
+
+.music-group__thum {
+  flex: 0 0 40%;
+  max-width: 373px;
+}
+
+.music-group__thum > img {
+  border-radius: var(--arko-border-radius-default);
+}
+
+@media (max-width: 1024px) {
+  .music-group-intro {
+    --music-group-padding-block: 2.4rem;
+    --music-group-padding-inline: 1.6rem;
+    --music-group-title-size: 2.6rem;
+    --music-group-font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .music-group-intro {
+    flex-direction: column;
+  }
+
+  .music-group__thum {
+    align-self: center;
+  }
+
 }
