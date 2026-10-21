@@ -15,6 +15,10 @@ button {
   color: var(--arko-font-color-title);
 }
 
+.err-msg {
+  color: var(--arko-brand-color);
+}
+
 .ml-xlarge {
   margin-left: var(--arko-contents-gap-xlarge) !important;
 }

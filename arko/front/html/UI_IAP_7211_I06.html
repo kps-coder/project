@@ -63,6 +63,16 @@
                     <label for="loginPw" class="str-txt">비밀번호</label>
                     <input type="text" id="loginPw" class="krds-input small" value="" placeholder="">
                   </div>
+
+                  <!-- 20261021 추가 : SB v0.83 로그인 불가 케이스 추가 -->
+                  <div class="noti-box">
+                    <p class="err-msg">아이디 또는 비밀번호가 잘못되었습니다.</p>
+                  </div>
+
+                  <div class="noti-box">
+                    <p class="err-msg">로그인 실패 5회 초과로 계정이 잠겼습니다. <b class="font-color-danger">10분</b> 이후에 다시 시도해주세요</p>
+                  </div>
+
                   <div class="btns">
                     <button type="button" class="krds-btn medium primary">확인</button>
                   </div>

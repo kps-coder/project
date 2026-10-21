@@ -1961,6 +1961,11 @@
   text-align: center;
 }
 
+.login-conts .noti-box {
+  text-align: center;
+  margin-top: var(--arko-contents-gap-large);
+}
+
 @media (max-width:767px) {
   .login-box {
     --login-gap: 3.2rem;
