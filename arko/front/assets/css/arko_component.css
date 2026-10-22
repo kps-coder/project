@@ -213,13 +213,17 @@ button {
 
 @media (max-width:767px) {
   .arko-btns > button,
-  .arko-btns > a {
+  .arko-btns > a,
+  .arko-btns.between .btns > * {
     flex: 1;
   }
-
-  .arko-btns .btns {
+  .arko-btns.between {
+    flex-direction: column;
+  }
+  .arko-btns.between .btns {
     width: 100%;
   }
+  
 }
 
 .krds-badge.xlarge {
