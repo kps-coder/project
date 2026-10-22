@@ -216,6 +216,10 @@ button {
   .arko-btns > a {
     flex: 1;
   }
+
+  .arko-btns .btns {
+    width: 100%;
+  }
 }
 
 .krds-badge.xlarge {
