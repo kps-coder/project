@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>예술가의 공간 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="예술가의 공간 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <div id="headerInclude"><!-- 퍼블전용::상단 영역 include용 --></div>
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <div class="contents">
+        <div class="arko-breadcrumb">
+          <div class="inner">
+            <!-- breadcrumb -->
+            <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="home"><a href="#;" class="txt">홈</a></li>
+                <li><a href="#;" class="txt">DA-Arts</a></li>
+                <li><a href="#;" class="txt">예술가의 공간</a></li>
+              </ol>
+            </nav>
+            <!-- breadcrumb -->
+            </div>
+        </div>
+
+        <div class="title-wide-area">
+          <div class="inner">
+            <h1 class="h1-title">예술가의 공간</h1>
+            <p class="title-desc">
+              예술가의 공간은 중요한 예술사적 장소들을 언제 어디서나 체험할 수 있도록, 공간을 기록으로 남기고, 기록 속의 공간을 입체로 재구성하는 아르코예술기록원의 프로젝트입니다.<br>
+              예술가의 창작 활동과 삶의 흔적이 남아 있는 공간을 기록하고, 이를 3D·VR 등 디지털 기술을 활용해 입체적으로 재구성합니다.<br>
+              공간과 관련된 기록물을 함께 살펴보며 예술가의 활동과 시대적 배경을 보다 생생하게 이해할 수 있습니다.<br>
+              기록 속 공간을 통해 한국 예술의 역사와 가치를 새롭게 경험해 보세요.
+            </p>
+          </div>          
+        </div>
+
+        <!-- 컨텐츠 영역 -->
+        <section class="arko-contents">
+          <div class="inner">
+            <h2 class="sr-only">예술가의 공간 사업소개</h2>
+            <div class="artist-space">
+              <ul class="artist-space-list">
+                <li class="artist-space__box">
+                  <div class="artist-space__thum">
+                    <img src="../assets/img/da_arts/img_artist_1.jpg" alt="나운영">
+                  </div>
+                  <dl class="artist-space__info">
+                    <dt>나운영 서재</dt>
+                    <dd>방대한 한국근현대음악 컬렉션이 소장된 작곡가 나운영의 서재를 3D-VR로 체험하실 수 있습니다.</dd>
+                  </dl>
+                  <div class="arko-btns">
+                    <button type="button" class="krds-btn small tertiary">내용보기</button>
+                  </div>
+                </li>
+                <li class="artist-space__box">
+                  <div class="artist-space__thum">
+                    <img src="../assets/img/da_arts/img_artist_2.jpg" alt="베니스비엔날래 한국관 전경">
+                  </div>
+                  <dl class="artist-space__info">
+                    <dt>베니스비엔날래 한국관</dt>
+                    <dd>베니스비엔날레 자르디니 공원에 자리한 한국관의 설계 과정을, 공동설계자 프랑코 만쿠조가 기증한 기록에 근거한 3D 모델로 체험하실 수 있습니다.</dd>
+                  </dl>
+                  <div class="arko-btns">
+                    <button type="button" class="krds-btn small tertiary">내용보기</button>
+                  </div>
+                </li>
+              </ul>
+            </div>   
+          </div>          
+        </section>
+      </div>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
+  </div>
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+  <script>
+    const buttons = document.querySelectorAll('.arko-board-type button');
+    const board = document.querySelector('.arko-toggle-board');
+    const btnFilter = document.querySelector('.btn-filter');
+    const btnFilterOff = document.querySelector('.sch-detail-off-btn');
+    const searchDetail = document.querySelector('.sch-detail');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const type = button.dataset.toggleType;
+
+        // 버튼 active 변경
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 게시판 타입 변경
+        board.classList.remove('toggle--list', 'toggle--thum');
+        board.classList.add(`toggle--${type}`);
+      });
+    });
+
+    // 모바일 시 필터 열기
+    btnFilter.addEventListener('click', () => {
+      searchDetail.classList.add('open');
+
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+
+      requestAnimationFrame(() => {
+        searchDetail.focus();
+      });
+    });
+
+    // 모바일 시 필터 닫기
+    btnFilterOff.addEventListener('click', () => {
+      searchDetail.classList.remove('open');
+
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+
+      btnFilter.focus();
+    });
+
+    // 기간 선택
+    $(function () {
+      const $slider = $('#periodSlider');
+      const $start = $('#periodStart');
+      const $end = $('#periodEnd');
+
+      const MIN = 1900;
+      const MAX = 2026;
+
+
+      /* --------------------------------
+        Slider 생성
+      -------------------------------- */
+
+      $slider.slider({
+
+        range: true,
+
+        min: MIN,
+        max: MAX,
+
+        step: 1,
+
+        values: [
+          Number($start.val()),
+          Number($end.val())
+        ],
+
+        slide: function (event, ui) {
+
+          // Slider → Input
+          $start.val(ui.values[0]);
+          $end.val(ui.values[1]);
+
+          updateTooltip(ui.values);
+        },
+
+        change: function (event, ui) {
+
+          // Slider → Input
+          $start.val(ui.values[0]);
+          $end.val(ui.values[1]);
+
+          updateTooltip(ui.values);
+        },
+
+        create: function () {
+
+          const values = $(this).slider('values');
+
+          updateTooltip(values);
+        }
+
+      });
+
+
+      /* --------------------------------
+        Tooltip
+      -------------------------------- */
+
+      function updateTooltip(values) {
+
+        const $handles = $slider.find('.ui-slider-handle');
+
+        $handles.eq(0).attr('data-value', values[0]);
+        $handles.eq(1).attr('data-value', values[1]);
+      }
+
+
+      /* --------------------------------
+        Input → Slider
+      -------------------------------- */
+
+      $start.on('change', function () {
+
+        let start = parseInt($(this).val(), 10);
+        let end = $slider.slider('values', 1);
+
+
+        // 숫자가 아니면 기존 값 유지
+        if (isNaN(start)) {
+          start = $slider.slider('values', 0);
+        }
+
+
+        // 범위 제한
+        start = Math.max(MIN, Math.min(start, MAX));
+
+
+        // 시작값이 종료값보다 클 수 없음
+        if (start > end) {
+          start = end;
+        }
+
+
+        $(this).val(start);
+
+        $slider.slider('values', 0, start);
+      });
+
+
+      $end.on('change', function () {
+
+        let start = $slider.slider('values', 0);
+        let end = parseInt($(this).val(), 10);
+
+
+        // 숫자가 아니면 기존 값 유지
+        if (isNaN(end)) {
+          end = $slider.slider('values', 1);
+        }
+
+
+        // 범위 제한
+        end = Math.max(MIN, Math.min(end, MAX));
+
+
+        // 종료값이 시작값보다 작을 수 없음
+        if (end < start) {
+          end = start;
+        }
+
+
+        $(this).val(end);
+
+        $slider.slider('values', 1, end);
+      });
+
+
+      /* --------------------------------
+        입력 중 숫자만 허용
+      -------------------------------- */
+
+      $start.add($end).on('input', function () {
+
+        this.value = this.value.replace(/[^0-9]/g, '');
+      });
+
+    });
+  </script>
+</body>
+</html>

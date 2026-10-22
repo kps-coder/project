@@ -19,6 +19,16 @@ button {
   color: var(--arko-brand-color);
 }
 
+.noti-txt {
+  display: inline-flex;
+  gap: 1rem;
+}
+.noti-txt::before {
+  content: url(../img/comm/ico_noti.svg);
+  display: inline-block;
+  margin-top:4px;
+}
+
 .ml-xlarge {
   margin-left: var(--arko-contents-gap-xlarge) !important;
 }
@@ -83,6 +93,9 @@ button {
   margin-bottom: var(--arko-contents-gap-xsmall) !important;
 }
 
+.pd-0 {
+  padding:0 !important;
+}
 .pt-0 {
   padding-top:0 !important;
 }
@@ -96,10 +109,16 @@ button {
 .v-mid {
   vertical-align: middle !important;
 }
+.v-0 {
+  vertical-align: 0 !important;
+}
 
 /* flex */
 .j-center {
   justify-content: center !important;
+}
+.a-center {
+  align-items: center !important;
 }
 
 /* point color */
@@ -120,6 +139,16 @@ button {
 }
 
 /* btn */
+.btn-link,
+.btn-link:hover,
+.btn-link:active,
+.btn-link:visited {
+  color: var(--arko-primary-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  vertical-align: 0;
+}
+
 .krds-btn {
   --krds-button--radius-medium: var(--arko-border-radius-default);
 
@@ -129,6 +158,7 @@ button {
 .krds-btn.tertiary {
   border-color: var(--arko-primary-color);
   color: var(--arko-primary-color);
+  background-color: #fff;
 }
 
 .krds-btn.primary {
@@ -154,6 +184,7 @@ button {
 .arko-btns.between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .arko-btns .btns {
   display: flex;
@@ -181,7 +212,8 @@ button {
 }
 
 @media (max-width:767px) {
-  .arko-btns > button {
+  .arko-btns > button,
+  .arko-btns > a {
     flex: 1;
   }
 }
