@@ -2578,3 +2578,44 @@ dl.video-recording-noti > dd > small {
     flex-direction: column;
   }
 }
+
+
+/* 공지사항 */
+.notice-badge {
+  display: inline-block;
+  max-width: 10.4rem;
+  padding-inline:var(--arko-contents-gap-medium);
+  color: var(--arko-brand-color-text);
+  text-align: center;
+  line-height: 3.4rem;
+  border-radius: var(--arko-border-radius-default);
+  background-color: #F5EFE4;
+}
+
+.notice-head-fixed .notice-badge {
+  color: #fff;
+  background-color: var(--arko-brand-color);
+}
+.notice-head-fixed .td-notice-subject {
+  color: var(--arko-font-color-title);
+}
+
+
+@media (min-width: 769px) {
+  .td-notice-badge {width: 8%;}
+  .td-notice-subject {flex: 1; padding-left:2.4rem !important}
+  .td-notice-date {width: 20%;}
+  .td-notice-file {width: 10%;}
+}
+@media (max-width: 768px) {
+  .td-notice-subject {
+    margin:1.2rem 0 2.4rem;
+  }
+  .td-notice-file {
+    position: absolute;
+    right: 1.6rem;
+    bottom: 1.2rem;
+  }
+}
+
+
