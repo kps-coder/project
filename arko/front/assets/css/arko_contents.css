@@ -552,7 +552,7 @@
     text-align: center;
     color: var(--arko-brand-color-text);
     border-radius: var(--arko-border-radius-default);
-    background-color: #F5EFE4;
+    background-color: var(--arko-background-color-brand);
   }
 
   .arko-toggle-board.toggle--thum .td-subject {
@@ -655,7 +655,7 @@
     text-align: center;
     color: var(--arko-brand-color-text);
     border-radius: var(--arko-border-radius-default);
-    background-color: #F5EFE4;
+    background-color: var(--arko-background-color-brand);
   }
 
   .arko-toggle-board .td-subject {
@@ -1354,7 +1354,7 @@
   text-align: right;
   padding: 1.2rem;
   border-radius: var(--arko-border-radius-default);
-  background-color: #F5EFE4;
+  background-color: var(--arko-background-color-brand);
 }
 
 .download-list > li.all .krds-btn.small {
@@ -1650,7 +1650,7 @@
   color: #333;
 }
 .recorded-video__list li.on .recorded-video__link {
-  background-color: #F5EFE4;
+  background-color: var(--arko-background-color-brand);
 }
 .recorded-video__list li.on .recorded-video__link::before {
   border-color: var(--arko-brand-color);
@@ -2589,7 +2589,7 @@ dl.video-recording-noti > dd > small {
   text-align: center;
   line-height: 3.4rem;
   border-radius: var(--arko-border-radius-default);
-  background-color: #F5EFE4;
+  background-color: var(--arko-background-color-brand);
 }
 
 .notice-head-fixed .notice-badge {

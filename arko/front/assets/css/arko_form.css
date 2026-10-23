@@ -470,7 +470,7 @@
 }
 
 .reservation-calendar .ui-datepicker td .ui-state-default.ui-state-active {
-  background-color: #F5EFE4;
+  background-color: var(--arko-background-color-brand);
   color: #8C5E17;
   font-weight: 600;
 }
