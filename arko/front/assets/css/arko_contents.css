@@ -2618,4 +2618,28 @@ dl.video-recording-noti > dd > small {
   }
 }
 
+.detail-view-board {
+  margin-bottom: var(--arko-contents-gap-xlarge);
+  border-bottom:1px solid #7E818F;
+}
 
+.detail-view__head {
+  padding-bottom:4rem;
+  border-bottom:1px solid #7E818F;
+}
+
+.detail-view__badge,
+.detail-view__subject {
+  margin-bottom: 2rem;
+}
+.detail-view__subject .h2-title {
+  margin-bottom: 0;
+}
+
+.detail-view__body {
+  padding-block:var(--arko-contents-gap-xlarge);
+}
+
+.detail-view__foot {
+  margin-bottom:var(--arko-contents-gap-xlarge);
+}
