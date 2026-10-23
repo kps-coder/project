@@ -35,10 +35,10 @@
       .td-manage {width: 10%;}
 
       /* 열람 현황 테이블 */
-      .td-view-records {width: 35%;}
+      .td-view-records {flex: 1;}
       .td-view-date {width: 15%;}
-      .td-expected-date {width: 15%;}
-      .td-return-date {width: 15%;}
+      /* .td-expected-date {width: 15%;}
+      .td-return-date {width: 15%;} */
       .td-view-status {width: 20%;}
     }    
   </style>
@@ -261,14 +261,15 @@
                     <p class="nodata__tit">대출·반납 정보가 없습니다.</p>
                   </div>
 
+                  <!-- 20261023 v0.86 반납예정일, 반납일 숨김 -->
                   <!-- 목록 -->
                   <div class="arko-toggle-board toggle--list board--mypage">
                     <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
                     <div class="tr tr--head pc-only">
                       <span class="td-view-records">기록물명</span>
                       <span class="td-view-date">열람일</span>
-                      <span class="td-expected-date">반납예정일</span>
-                      <span class="td-return-date">반납일</span>
+                     <!-- <span class="td-expected-date">반납예정일</span>
+                      <span class="td-return-date">반납일</span>-->
                       <span class="td-view-status">처리상태</span>    
                     </div>
                     <div class="tr">
@@ -280,17 +281,18 @@
                         <b>열람일</b>
                         2026-08-25
                       </span>
-                      <span class="td-expected-date">
+                      <!-- <span class="td-expected-date">
                         <b>반납예정일</b>
                         2026-09-10
                       </span>
                       <span class="td-return-date">
                         <b>반납일</b>
                         -
-                      </span>
+                      </span> -->
+                      <!-- 20261023 v0.86 대출중을 이용중으로 변경 -->
                       <span class="td-view-status">
                         <b>처리상태</b>
-                        <span class="krds-badge xlarge outline-information">대출중</span>
+                        <span class="krds-badge xlarge outline-information">이용중</span>
                       </span> 
                     </div>
                     <div class="tr">
@@ -302,17 +304,18 @@
                         <b>열람일</b>
                         2026-08-25
                       </span>
-                      <span class="td-expected-date">
+                      <!--<span class="td-expected-date">
                         <b>반납예정일</b>
                         2026-09-10
                       </span>
                       <span class="td-return-date">
                         <b>반납일</b>
                         2026-09-10
-                      </span>
+                      </span> -->
                       <span class="td-view-status">
                         <b>처리상태</b>
-                        <span class="krds-badge xlarge outline-success">반납완료</span>
+                        <!-- 20261023 v0.86 반납완료를 이용완료로 변경 -->
+                        <span class="krds-badge xlarge outline-success">이용완료</span>
                       </span> 
                     </div>
                     <div class="tr">
@@ -324,17 +327,18 @@
                         <b>열람일</b>
                         2026-08-25
                       </span>
-                      <span class="td-expected-date">
+                     <!-- <span class="td-expected-date">
                         <b>반납예정일</b>
                         2026-09-10
                       </span>
                       <span class="td-return-date">
                         <b>반납일</b>
                         -
-                      </span>
+                      </span>-->
                       <span class="td-view-status">
                         <b>처리상태</b>
-                        <span class="krds-badge xlarge outline-danger">연체</span>
+                        <!-- 20261023 v0.86 연체를 유지로 변경 -->
+                        <span class="krds-badge xlarge outline-danger">유지</span>
                       </span> 
                     </div>
                   </div>
@@ -350,75 +354,6 @@
 
     <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
   </div>
-
-  <!-- modal -->
-  <!-- 탈퇴확인 -->
-  <section id="pwCheckModal" class="krds-modal fade" role="dialog" aria-labelledby="tit_pwCheckModal">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <!-- modal title -->
-        <div class="modal-header">
-          <h2 id="tit_pwCheckModal" class="modal-title"><span class="sr-only">회원탈퇴</span></h2>
-        </div>
-        <!-- //modal title -->
-        <!-- modal contents -->
-        <div class="modal-conts">
-          <div class="conts-area ac">
-            회원탈퇴를 진행하시겠습니까?<br>
-            탈퇴 후에는 회원정보 및 일부 서비스 이용 이력을 복구 할 수 없습니다
-          </div>
-        </div>
-        <!-- //modal contents -->
-        <!-- modal btn -->
-        <div class="modal-btn btn-wrap">
-          <button type="button" class="krds-btn medium primary close-modal">회원탈퇴</button>
-          <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
-        </div>
-        <!-- //modal btn -->
-        <!-- close button -->
-        <!-- <button type="button" class="krds-btn medium icon btn-close close-modal">
-          <span class="sr-only">닫기</span>
-          <i class="svg-icon ico-popup-close"></i>
-        </button> -->
-        <!-- //close button -->
-      </div>
-    </div>
-    <div class="modal-back in"></div>
-  </section>
-
-  <!-- 탈퇴완료 -->
-  <section id="modalCancellationComplete" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalCancellationComplete">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <!-- modal title -->
-        <div class="modal-header">
-          <h2 id="tit_modalCancellationComplete" class="modal-title"><span class="sr-only">회원탈퇴</span></h2>
-        </div>
-        <!-- //modal title -->
-        <!-- modal contents -->
-        <div class="modal-conts">
-          <div class="conts-area ac">
-            회원탈퇴가 완료되었습니다.<br>
-            아르코예술기록원을 이용해 주셔서 감사합니다.
-          </div>
-        </div>
-        <!-- //modal contents -->
-        <!-- modal btn -->
-        <div class="modal-btn btn-wrap">
-          <button type="button" class="krds-btn medium primary close-modal">확인</button>
-        </div>
-        <!-- //modal btn -->
-        <!-- close button -->
-        <!-- <button type="button" class="krds-btn medium icon btn-close close-modal">
-          <span class="sr-only">닫기</span>
-          <i class="svg-icon ico-popup-close"></i>
-        </button> -->
-        <!-- //close button -->
-      </div>
-    </div>
-    <div class="modal-back in"></div>
-  </section>
-  <!-- //modal -->
 
 
   <!-- 퍼블전용:: include용 사용금지 -->

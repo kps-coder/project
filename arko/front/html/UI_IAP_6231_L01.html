@@ -27,10 +27,10 @@
   <style>
     @media (min-width:769px) {
       /* 열람 현황 테이블 */
-      .td-view-records {width: 35%;}
+      .td-view-records {flex: 1;}
       .td-view-date {width: 15%;}
-      .td-expected-date {width: 15%;}
-      .td-return-date {width: 15%;}
+      /* .td-expected-date {width: 15%;}
+      .td-return-date {width: 15%;} */
       .td-view-status {width: 20%;}
     }    
   </style>
@@ -156,9 +156,10 @@
                             <div class="form-tit sr-only">
                               <label for="sort_1">정렬기준</label>
                             </div>
+                            <!-- 20261023 v0.86 대출중을 이용중으로 변경 -->
                             <select id="sort_1" class="krds-form-select medium" title="선택">
                               <option value="">전체상태</option>
-                              <option value="">대출중</option>
+                              <option value="">이용중</option>
                               <option value="">반납완료</option>
                               <option value="">연체</option>
                             </select>
@@ -168,13 +169,14 @@
                     </div>
                     <div class="arko-board-body">
                       <!-- 목록 -->
+                       <!-- 20261023 v0.86 반납예정일, 반납일 숨김 -->
                       <div class="arko-toggle-board toggle--list board--mypage">
                         <!-- cell width 값은 내부 스타일로 조정합니다. 상단 style 확인 -->
                         <div class="tr tr--head pc-only">
                           <span class="td-view-records">기록물명</span>
                           <span class="td-view-date">열람일</span>
-                          <span class="td-expected-date">반납예정일</span>
-                          <span class="td-return-date">반납일</span>
+                          <!-- <span class="td-expected-date">반납예정일</span>
+                          <span class="td-return-date">반납일</span> -->
                           <span class="td-view-status">처리상태</span>    
                         </div>
                         <div class="tr">
@@ -186,17 +188,18 @@
                             <b>열람일</b>
                             2026-08-25
                           </span>
-                          <span class="td-expected-date">
+                          <!-- <span class="td-expected-date">
                             <b>반납예정일</b>
                             2026-09-10
                           </span>
                           <span class="td-return-date">
                             <b>반납일</b>
                             -
-                          </span>
+                          </span> -->
+                          <!-- 20261023 v0.86 대출중을 이용중으로 변경 -->
                           <span class="td-view-status">
                             <b>처리상태</b>
-                            <span class="krds-badge xlarge outline-information">대출중</span>
+                            <span class="krds-badge xlarge outline-information">이용중</span>
                           </span> 
                         </div>
                         <div class="tr">
@@ -208,17 +211,18 @@
                             <b>열람일</b>
                             2026-08-25
                           </span>
-                          <span class="td-expected-date">
+                          <!-- <span class="td-expected-date">
                             <b>반납예정일</b>
                             2026-09-10
                           </span>
                           <span class="td-return-date">
                             <b>반납일</b>
                             2026-09-10
-                          </span>
+                          </span> -->
                           <span class="td-view-status">
                             <b>처리상태</b>
-                            <span class="krds-badge xlarge outline-success">반납완료</span>
+                            <!-- 20261023 v0.86 반납완료을 이용완료으로 변경 -->
+                            <span class="krds-badge xlarge outline-success">이용완료</span>
                           </span> 
                         </div>
                         <div class="tr">
@@ -230,17 +234,18 @@
                             <b>열람일</b>
                             2026-08-25
                           </span>
-                          <span class="td-expected-date">
+                          <!-- <span class="td-expected-date">
                             <b>반납예정일</b>
                             2026-09-10
                           </span>
                           <span class="td-return-date">
                             <b>반납일</b>
                             -
-                          </span>
+                          </span> -->
                           <span class="td-view-status">
                             <b>처리상태</b>
-                            <span class="krds-badge xlarge outline-danger">연체</span>
+                            <!-- 20261023 v0.86 연체을 유지으로 변경 -->
+                            <span class="krds-badge xlarge outline-danger">유지</span>
                           </span> 
                         </div>
                       </div>
