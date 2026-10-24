@@ -343,6 +343,19 @@ button {
   height: 6rem;
 }
 
+.krds-table-wrap .tbl.type--line tbody td {
+  text-align: center;
+}
+.krds-table-wrap .tbl.type--line tbody td,
+.krds-table-wrap .tbl.type--line thead th {
+  border-right:1px solid var(--arko-line-color-etc);
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
+.krds-table-wrap .tbl.type--line td:last-child,
+.krds-table-wrap .tbl.type--line thead th:last-child {
+  border-right:0;
+}
+
 /* list */
 .noti-box {
   padding: var(--arko-contents-gap-small) var(--arko-contents-gap-medium);
