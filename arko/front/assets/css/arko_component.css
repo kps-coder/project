@@ -410,6 +410,18 @@ button {
   background-color: var(--arko-font-color-title);
 }
 
+.text-list.dash > li {
+  padding-left: var(--arko-contents-gap-medium);
+}
+.text-list.dash > li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '-';
+  display: inline-block;
+}
+
+
 .title-area .text-list {
   margin-top: var(--arko-contents-gap-large);
 }
@@ -559,6 +571,18 @@ button {
   width: 106px;
   height: 100px;
   background: url(../img/member/ico_join.svg) no-repeat center / contain;
+}
+.svg-icon.ico-dona-step1 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_dona_step1.svg);
+  mask-image: url(../img/guide/ico_dona_step1.svg);
+}
+.svg-icon.ico-dona-step2 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_dona_step2.svg);
+  mask-image: url(../img/guide/ico_dona_step2.svg);
 }
 
 .badge {

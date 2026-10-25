@@ -508,10 +508,15 @@
 .reservation-calendar .calr-legend {
   position: absolute;
   top:0;
+  display: flex;
+  gap: var(--arko-contents-gap-small);
+  max-height: 44.7rem;
+  width: 40%;
 }
 .reservation-calendar .calr-legend .closed-days {
   color: #D63D4A;
   font-size: 1.6rem;
+  white-space: nowrap;
 }
 .reservation-calendar .calr-legend .closed-days .mark {
   display: inline-block;
@@ -520,20 +525,39 @@
   margin-right: 12px;
   background-color: #D63D4A;
 }
+.reservation-calendar .calr-legend .colsed-list {
+  font-size: 1.6rem;
+}
+.reservation-calendar .calr-legend .colsed-list > span {
+  display: inline-block;
+  padding-inline: var(--arko-contents-gap-xsmall);
+}
+
 .reservation-calendar .ui-widget-content .weekend-disabled {
   opacity: 1;
 }
 
-@media (max-width:767px) {
+@media (max-width:1023px) {
   .reservation-calendar {
     --arko-calendar-title-font-size : 1.2rem;
     --arko-calendar-head-title-font-size : 2rem;
     --arko-calendar-td-height: 5rem;
   }
 
-  .reservation-calendar {
-    padding-top: 4rem;
+  .reservation-calendar .calr-legend {
+    position: relative;
+    flex-direction: column;
+    gap: var(--arko-contents-gap-xsmall);
+    width: 100%;
+    max-width: 100%;
   }
+}
+
+.reservation-calendar.open--guide {
+  margin-top:var(--arko-contents-gap-xlarge);
+}
+.reservation-calendar.open--guide .ui-datepicker-calendar {
+  pointer-events: none;
 }
 /* //방문예약 달력 */
 

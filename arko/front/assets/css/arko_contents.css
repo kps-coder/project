@@ -2763,3 +2763,129 @@ dl.video-recording-noti > dd > small {
     width: 50%;
   }
 }
+
+.adress-box {
+  overflow: hidden;
+  border:1px solid #E8DFD1;
+  border-radius: var(--arko-border-radius-default);
+}
+.adress-box > dl > dt {
+  padding-block: var(--arko-contents-gap-medium);
+  font-weight: 600;
+  color: var(--arko-brand-color-text);
+  text-align: center;
+  background-color: var(--arko-background-color-brand);
+}
+.adress-box > dl > dd {
+  padding: var(--arko-contents-gap-medium);
+  color: var(--arko-font-color-title);
+}
+.adress-box > dl ~ dl {
+  border-top: 1px solid #E8DFD1;
+}
+
+@media (min-width:768px) {
+  .adress-box > dl {
+    display: flex;
+  }
+  .adress-box > dl > dt {
+    flex: 0 0 16rem;
+  }
+}
+
+.step-list {
+  margin-bottom:var(--arko-contents-gap-large);
+}
+.step-list > ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--arko-contents-gap-extra-large);
+}
+.step-list > ol > li {
+  display: flex;
+  gap: var(--arko-contents-gap-large);
+  flex-direction: column;
+  flex: 1;
+  padding:var(--arko-contents-gap-medium);
+  border:1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+.step-list > ol > li .step {
+  text-align: center;
+}
+.step-list > ol > li .step > span {
+  display: block;
+  font-weight: 600;
+  color: var(--arko-brand-color-text);
+}
+.step-list > ol > li .noti-box {
+  height: 100%;
+}
+
+@media (max-width:767px) {
+  .step-list > ol {
+    flex-direction: column;
+  }
+}
+
+/* 운영시간 */
+.open-hours {
+  display: flex;
+  gap: var(--arko-contents-gap-extra-large);
+}
+.open-hours__time {
+  max-width: 324px;
+  width: 40%;
+}
+.open-hours__closed {
+  flex: 1;
+}
+.open-hours dl {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border:1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+
+.open-hours dl > dt {
+  padding-block: var(--arko-contents-gap-small);
+  font-size: var(--arko-h3-font-size);
+  font-weight: var(--arko-h3-font-weight);
+  color: var(--arko-h3-font-color);
+  text-align: center;
+  background-color: var(--arko-background-color);
+}
+
+.open-hours dl > dd {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.open-hours dl > dd .col {
+  flex: 1;
+  padding-block:var(--arko-contents-gap-extra-large)
+}
+
+@media (max-width: 1024px) {
+  .open-hours {
+    flex-direction: column;
+  }
+  .open-hours__time {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width:767px) {
+  .open-hours dd {
+    flex-direction: column;
+    padding-inline: 1.6rem;
+  }
+  .open-hours dd .col ~ .col {
+    width: 100%;
+    border-top:1px solid var(--arko-line-color-etc);
+  }
+}
