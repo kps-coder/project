@@ -1092,6 +1092,9 @@
 .detail-txt-box {
   margin-bottom: var(--arko-contents-gap-large)
 }
+.detail-txt-box:last-child {
+  margin-bottom: 0;
+}
 
 .detail-cont-padding {
   display: flex;
