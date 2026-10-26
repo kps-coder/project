@@ -20,7 +20,7 @@ button {
 }
 
 .noti-txt {
-  display: inline-flex;
+  display: flex;
   gap: 1rem;
 }
 .noti-txt::before {
@@ -93,6 +93,8 @@ button {
   margin-bottom: var(--arko-contents-gap-xsmall) !important;
 }
 
+
+
 .pd-0 {
   padding:0 !important;
 }
@@ -104,6 +106,70 @@ button {
 }
 .pd-block-0 {
   padding-block: 0 !important;
+}
+
+.pl-xlarge {
+  padding-left: var(--arko-contents-gap-xlarge) !important;
+}
+.pl-large {
+  padding-left: var(--arko-contents-gap-large) !important;
+}
+.pl-medium {
+  padding-left: var(--arko-contents-gap-medium) !important;
+}
+.pl-small {
+  padding-left: var(--arko-contents-gap-small) !important;
+}
+.pl-xsmall {
+  padding-left: var(--arko-contents-gap-xsmall) !important;
+}
+
+.pr-xlarge {
+  padding-right: var(--arko-contents-gap-xlarge) !important;
+}
+.pr-large {
+  padding-right: var(--arko-contents-gap-large) !important;
+}
+.pr-medium {
+  padding-right: var(--arko-contents-gap-medium) !important;
+}
+.pr-small {
+  padding-right: var(--arko-contents-gap-small) !important;
+}
+.pr-xsmall {
+  padding-right: var(--arko-contents-gap-xsmall) !important;
+}
+
+.pt-xlarge {
+  padding-top: var(--arko-contents-gap-xlarge) !important;
+}
+.pt-large {
+  padding-top: var(--arko-contents-gap-large) !important;
+}
+.pt-medium {
+  padding-top: var(--arko-contents-gap-medium) !important;
+}
+.pt-small {
+  padding-top: var(--arko-contents-gap-small) !important;
+}
+.pt-xsmall {
+  padding-top: var(--arko-contents-gap-xsmall) !important;
+}
+
+.pb-xlarge {
+  padding-bottom: var(--arko-contents-gap-xlarge) !important;
+}
+.pb-large {
+  padding-bottom: var(--arko-contents-gap-large) !important;
+}
+.pb-medium {
+  padding-bottom: var(--arko-contents-gap-medium) !important;
+}
+.pb-small {
+  padding-bottom: var(--arko-contents-gap-small) !important;
+}
+.pb-xsmall {
+  padding-bottom: var(--arko-contents-gap-xsmall) !important;
 }
 
 .v-mid {
@@ -284,6 +350,10 @@ button {
 }
 
 /* tab */
+.krds-tab-area {
+  gap: var(--arko-contents-gap-xlarge);
+}
+
 .tab {
   --krds-tab--full-button-mobile-font-size: 1.6rem;
 }
@@ -305,8 +375,6 @@ button {
   font-weight: 600;
   color: var(--arko-brand-color);
 }
-
-
 
 
 @media (max-width:500px) {
@@ -337,6 +405,18 @@ button {
     }
 }
 
+@media (max-width:500px) {
+  /* 자료열람 탭 */
+  .tab.full.tab--data-access > ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .tab.full.tab--data-access > ul > li {
+    flex:0 0 auto;
+  }
+}
+
+
 /* table */
 .krds-table-wrap .tbl.data thead th {
   height: 6rem;
@@ -354,12 +434,17 @@ button {
 }
 .krds-table-wrap .tbl.type--line tbody td,
 .krds-table-wrap .tbl.type--line thead th {
+  border-left:1px solid var(--arko-line-color-etc);
   border-right:1px solid var(--arko-line-color-etc);
   border-bottom:1px solid var(--arko-line-color-etc);
 }
 .krds-table-wrap .tbl.type--line td:last-child,
 .krds-table-wrap .tbl.type--line thead th:last-child {
   border-right:0;
+}
+.krds-table-wrap .tbl.type--line td:first-child,
+.krds-table-wrap .tbl.type--line thead th:first-child {
+  border-left:0;
 }
 
 /* list */
@@ -583,6 +668,42 @@ button {
   height: 60px;
   -webkit-mask-image: url(../img/guide/ico_dona_step2.svg);
   mask-image: url(../img/guide/ico_dona_step2.svg);
+}
+.svg-icon.ico-step1 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_step_1.svg);
+  mask-image: url(../img/guide/ico_step_1.svg);
+}
+.svg-icon.ico-step2 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_step_2.svg);
+  mask-image: url(../img/guide/ico_step_2.svg);
+}
+.svg-icon.ico-step3 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_step_3.svg);
+  mask-image: url(../img/guide/ico_step_3.svg);
+}
+.svg-icon.ico-step4 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_step_4.svg);
+  mask-image: url(../img/guide/ico_step_4.svg);
+}
+.svg-icon.ico-step5 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_step_5.svg);
+  mask-image: url(../img/guide/ico_step_5.svg);
+}
+.svg-icon.ico-step6 {
+  width: 60px;
+  height: 60px;
+  -webkit-mask-image: url(../img/guide/ico_step_6.svg);
+  mask-image: url(../img/guide/ico_step_6.svg);
 }
 
 .badge {
