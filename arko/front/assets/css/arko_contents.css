@@ -2321,7 +2321,7 @@
   }
 }
 
-/* 한구현대음악 */
+/* 한국현대음악 */
 .music-group-intro {
   --music-group-padding-block: 6.4rem;
   --music-group-padding-inline: 6.4rem;
@@ -2332,6 +2332,7 @@
   gap: var(--arko-contents-gap-xlarge);
   margin-bottom:var(--arko-contents-gap-xlarge);
   padding:var(--music-group-padding-block) var(--music-group-padding-inline);
+  border-radius: var(--arko-border-radius-default);
   background-color: var(--arko-background-color);
 }
 
