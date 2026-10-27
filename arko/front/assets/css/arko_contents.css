@@ -1077,6 +1077,13 @@
   margin-bottom:var(--arko-contents-gap-large);
 }
 
+.detail-info .arko-btns:last-child {
+  margin-top:var(--arko-contents-gap-extra-large);
+}
+.detail-info .arko-btns:last-child > * {
+  flex: 1;
+}
+
 .detail-info-table th {
   height: 4rem;
   padding: 7px 0;
@@ -2341,6 +2348,11 @@
   color: var(--arko-font-color-title);
   font-weight: 700;
 }
+.music-group__dl > dt > small {
+  display: block;
+  font-size: var(--arko-h2-font-size);
+  font-weight: 500;
+}
 
 .music-group__dl > dd {
   margin-top: var(--arko-contents-gap-large);
@@ -2742,10 +2754,14 @@ dl.video-recording-noti > dd > small {
   display: flex;
   gap: var(--arko-contents-gap-extra-large);
 }
+
 @media (min-width:769px) {
   .multi-column__img {
     flex:0 0 40%;
     max-width: 42.8rem;
+  }
+  .multi-column.reverse {
+    flex-direction: row-reverse;
   }
 }
 @media (max-width:768px) {
@@ -2939,7 +2955,7 @@ dl.video-recording-noti > dd > small {
   }
 }
 
-/* 길찾기 */
+/* 찾아오시는 길 */
 .map-area {
   --map-info-font-size: 2rem;
   --map-info-padding-inline: 4.8rem;
@@ -2996,4 +3012,116 @@ dl.video-recording-noti > dd > small {
   .map-area .detail-info-table dl {
     flex-direction: column;
   }
+}
+
+/* 기록원 활동 */
+.activity-board-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4.8rem;
+  row-gap: 4rem;
+}
+
+.activity-board-list > li {
+  display: flex;
+  flex: 0 0 calc(50% - 2.4rem);
+  column-gap: var(--arko-contents-gap-extra-large);
+  row-gap: 2.4rem;
+  padding: var(--arko-contents-gap-medium);
+  border:1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+.activity-board__thum {
+  flex:0 0 27.7rem;
+  text-align: center;
+}
+.activity-board__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.activity-board__info .row-badge {
+  margin-bottom: var(--arko-contents-gap-medium);
+}
+.activity-board__info .title {
+  flex: 1;
+  margin-bottom: var(--arko-contents-gap-large);
+  font-size: var(--arko-h2-font-size);
+  color: var(--arko-h2-font-color);
+  font-weight: var(--arko-h2-font-weight);
+}
+.activity-board__info .arko-btns {
+  justify-content: flex-end;
+  margin-top:var(--arko-contents-gap-large);
+}
+
+@media (max-width:1279px) {
+  .activity-board-list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:767px) {
+  .activity-board-list > li {
+    flex-direction: column;
+  }
+}
+
+/* 소개 */
+.arko-introduction {
+  --arko-introduction-title-size: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--arko-contents-gap-xlarge);
+  text-align: center;
+}
+.arko-introduction .title {
+  font-size: var(--arko-introduction-title-size);
+  font-weight: 600;
+  color: var(--arko-font-color-title);    
+}
+.arko-intro__img {
+  display: flex;
+  gap: var(--arko-contents-gap-extra-large);
+}
+.arko-intro__img > img {
+  display: block;
+}
+.arko-introduction .detail-txt-box {
+  max-width: 920px;
+  margin:0 auto;
+}
+@media (max-width:767px) {
+  .arko-introduction {
+  --arko-introduction-title-size: 2.4rem;
+  
+  }
+  .arko-intro__img {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:400px) {
+  .tab.tab--intro > ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .tab.tab--intro > ul > li {
+    flex: 0 0 auto;
+  }
+}
+
+/* 소개 영상 */
+.arko-introduction-video .multi-column__video {
+  flex:0 0 50%;
+  max-width: 69.6rem;
+}
+.arko-introduction-video .multi-column__video iframe {
+  width: 100%;  
+  aspect-ratio: 696 / 299;
+  border-radius: var(--arko-border-radius-default);
+}
+.arko-introduction-video .multi-column + .multi-column {
+  margin-top:4rem;
 }
