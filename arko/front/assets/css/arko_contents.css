@@ -2939,3 +2939,61 @@ dl.video-recording-noti > dd > small {
   }
 }
 
+/* 길찾기 */
+.map-area {
+  --map-info-font-size: 2rem;
+  --map-info-padding-inline: 4.8rem;
+}
+.map-area .root_daum_roughmap {
+  width: 100%;
+}
+
+.map-area .root_daum_roughmap .cont {
+  display: none;
+}
+.map-info {
+  padding: 1.2rem var(--map-info-padding-inline);
+  color: var(--arko-font-color-title);
+  font-size: var(--map-info-font-size);
+  background-color: var(--arko-background-color);
+}
+.map-info > p {
+  padding-block:1.2rem;
+}
+.map-info > p ~ p {
+  border-top:1px solid var(--arko-line-color-etc);
+}
+
+.map-form {
+  display: flex;
+  gap: var(--krds-gap-5);
+  margin-bottom:4rem;
+  padding: 2.4rem var(--map-info-padding-inline);
+  border:1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+.map-form .input-group label {
+  font-size: 2rem;
+  color: var(--arko-font-color-title);
+}
+.map-form .input-group .form-conts {
+  flex: 1;
+}
+
+@media (max-width:767px) {
+  .map-area {
+    --map-info-font-size: 1.8rem;
+    --map-info-padding-inline: 1.6rem;
+  }
+  .map-form {
+    flex-direction: column;
+  }
+  .map-form .ico-right-arr,
+  .map-form .input-group label {
+    display: none;
+  }
+
+  .map-area .detail-info-table dl {
+    flex-direction: column;
+  }
+}
