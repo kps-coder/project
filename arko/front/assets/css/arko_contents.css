@@ -3230,3 +3230,82 @@ dl.video-recording-noti > dd > small {
     flex-direction: column;
   }
 }
+
+/* 아카이브현황 */
+.chart-column-area {
+  position: relative;
+  height: 300px;
+}
+.chart-column-area::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top:0;
+  bottom: 0;
+  z-index: -1;
+  transform: translateX(-100vw);
+  width: 200vw;
+  height: 100%;
+  background-color: var(--arko-background-color);
+}
+
+@media (max-width:1439px) {
+  .chart-column-area::before {
+    width: 100vw;
+    transform: translateX(calc(var(--krds-contents-padding-x) * -1));
+  }
+}
+
+/* 아카이브 한눈에 */
+.archive-status {
+  --archive-status-count-cont-size: 4.4rem;
+
+  display: flex;
+  gap: var(--arko-contents-gap-large);
+  margin-bottom:var(--arko-contents-gap-large);
+}
+.archive-status__box {
+  flex: 1;
+  padding:var(--arko-contents-gap-medium);
+  border: 1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+.archive-status__box > dl > dt {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom:var(--arko-contents-gap-medium);
+}
+
+.archive-status__box > dl > dd {
+  color: var(--arko-font-color-title);
+  font-weight: 600;
+}
+.archive-status__box > dl > dd > strong {
+  font-size: var(--archive-status-count-cont-size);  
+}
+
+.archive-status__box > p {
+  margin-top:1.2rem;
+  font-size: 1.4rem;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .archive-status {
+    --archive-status-count-cont-size: 2.4rem;
+
+    flex-wrap: wrap;
+  }
+
+  .archive-status__box {
+    flex: 0 0 calc(50% - var(--arko-contents-gap-large) /2);
+  }
+}
+@media (max-width:767px) {
+  .archive-status {
+    --archive-status-count-cont-size: 2.4rem;
+
+    flex-direction: column;
+  }
+}
