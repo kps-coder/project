@@ -418,32 +418,54 @@ button {
 
 
 /* table */
-.krds-table-wrap .tbl.data thead th {
+.krds-table-wrap .tbl.data thead th,
+.krds-table-wrap .tbl.data tfoot th {
   height: 6rem;
   text-align: center;
   border-bottom: 0;
   font-size: var(--arko-font-size-base);
+  color: var(--arko-font-color-title);
   background-color: var(--arko-background-color);
 }
-.krds-table-wrap .tbl.data tbody td {
+.krds-table-wrap .tbl.data tbody th {
+  text-align: center;
+  font-size: var(--arko-font-size-base);
+  color: var(--krds-table--data-thead-color-text);
+  font-weight: var(--krds-font-weight-bold);
+}
+.krds-table-wrap .tbl.data tbody td,
+.krds-table-wrap .tbl.data tfoot td {
+  height: 6rem;
+}
+.krds-table-wrap .tbl.data tfoot td {
   height: 6rem;
 }
 
 .krds-table-wrap .tbl.type--line tbody td {
   text-align: center;
 }
+.krds-table-wrap .tbl.type--line tfoot td {
+  text-align: center;
+  font-size: var(--arko-font-size-base);
+  color: var(--krds-table--data-thead-color-text);
+  font-weight: var(--krds-font-weight-bold);
+}
 .krds-table-wrap .tbl.type--line tbody td,
-.krds-table-wrap .tbl.type--line thead th {
+.krds-table-wrap .tbl.type--line thead th,
+.krds-table-wrap .tbl.type--line tfoot td,
+.krds-table-wrap .tbl.type--line tfoot th  {
   border-left:1px solid var(--arko-line-color-etc);
   border-right:1px solid var(--arko-line-color-etc);
   border-bottom:1px solid var(--arko-line-color-etc);
 }
 .krds-table-wrap .tbl.type--line td:last-child,
-.krds-table-wrap .tbl.type--line thead th:last-child {
+.krds-table-wrap .tbl.type--line thead th:last-child,
+.krds-table-wrap .tbl.type--line tfoot td:last-child {
   border-right:0;
 }
 .krds-table-wrap .tbl.type--line td:first-child,
-.krds-table-wrap .tbl.type--line thead th:first-child {
+.krds-table-wrap .tbl.type--line thead th:first-child,
+.krds-table-wrap .tbl.type--line tfoot th:first-child {
   border-left:0;
 }
 
@@ -711,17 +733,47 @@ button {
   -webkit-mask-image: url(../img/guide/ico_arr.svg);
   mask-image: url(../img/guide/ico_arr.svg);
 }
+.svg-icon.ico-house {
+  width: 28px;
+  height: 28px;
+  -webkit-mask-image: url(../img/intro/ico_house.svg);
+  mask-image: url(../img/intro/ico_house.svg);
+}
+.svg-icon.ico-web {
+  width: 28px;
+  height: 28px;
+  -webkit-mask-image: url(../img/intro/ico_web.svg);
+  mask-image: url(../img/intro/ico_web.svg);
+}
+.svg-icon.ico-paper {
+  width: 28px;
+  height: 28px;
+  -webkit-mask-image: url(../img/intro/ico_paper.svg);
+  mask-image: url(../img/intro/ico_paper.svg);
+}
+.svg-icon.ico-video {
+  width: 28px;
+  height: 28px;
+  -webkit-mask-image: url(../img/intro/ico_video.svg);
+  mask-image: url(../img/intro/ico_video.svg);
+}
 
 .badge {
   display: inline-block;
   min-width: 104px;
-  padding: .4rem 1.2rem;
+  padding: 0 1.2rem;
   border-radius: var(--arko-border-radius-default);
   font-size: 1.6rem;
   color: var(--arko-brand-color-text);
   vertical-align: middle;
   text-align: center;
+  white-space: nowrap;
+  line-height: 3.4rem;
   background-color: var(--arko-background-color-brand);
+}
+.badge.bg-gray {
+  color: var(--arko-primary-color);
+  background-color: var(--arko-background-color);
 }
 
 /* == lnb == */
