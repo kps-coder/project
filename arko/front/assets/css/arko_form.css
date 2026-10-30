@@ -2,6 +2,10 @@
 
 
 /* ===== form ===== */
+.form-list li ~ li {
+  margin-top:var(--arko-contents-gap-small);
+}
+
 .krds-form-select {
   --krds-form-select--radius-small: var(--arko-border-radius-default);
   border-color: var(--arko-input-border-color);

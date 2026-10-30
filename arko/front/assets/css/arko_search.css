@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+@media (min-width:769px) {
+  .integrated-search .search-detail-btns .krds-btn.medium {
+    height: 8rem;
+  }
+}
+
+.integrated-search .krds-tag-wrap {
+  margin-top: var(--arko-contents-gap-medium);
+  margin-bottom: var(--arko-contents-gap-xlarge);
+}
+
+.integrated-search .arko-search-area {
+  border-bottom: 1px solid var(--arko-line-color-etc);
+}
+.integrated-search .sch-detail__row {
+  gap: var(--arko-contents-gap-medium);
+  margin-bottom:var(--arko-contents-gap-medium);
+  padding-bottom:var(--arko-contents-gap-medium);
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
+.integrated-search .sch-detail__row ~ .sch-detail__row {
+  margin-top:0;
+}
+
+.integrated-search .sch-detail__row .form-conts:nth-child(2) {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .integrated-search .sch-form-wrap {
+    flex-direction: row;
+    align-items: center;
+  }
+  .integrated-search .sch-detail {
+    display: none;
+    margin-block:var(--arko-contents-gap-xlarge);
+    padding:var(--arko-contents-gap-extra-large);
+    border-radius: var(--arko-border-radius-default);
+    background-color: var(--arko-background-color);
+  }
+  .integrated-search .sch-detail__row {
+    flex-direction: row;
+  }
+}
+
+.integrated-search-column {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: var(--arko-contents-gap-extra-large);
+}
+.integrated-search-column .tab-conts-wrap {
+  flex: 1;
+}
+
+@media (min-width:768px) and (max-width:1280px) {
+  .integrated-search-column {
+    flex-direction: column;
+  }
+} 
+
+@media (max-width:820px) {
+  .integrated-search .tab > ul {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  .integrated-search .tab > ul > li {
+    flex: 0 0 auto;
+  }
+}
+@media (max-width:767px) {
+  .integrated-search .sch-form-wrap {
+    flex-direction: column;
+  }
+  .integrated-search .search-detail-btns {
+    display: flex;
+    width: 100%;
+    gap: 1.6rem;
+  }
+  .integrated-search .search-detail-btns > * {
+    flex: 1;
+  }
+}
+
+
+.integrated-search-filter {
+  flex:0 0 32.4rem;
+  padding: 2.4rem;
+  border: 1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+@media (max-width:767px) {
+  .integrated-search-filter {
+    display: none;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 99;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+  }
+  .integrated-search-filter.open {
+    display: block;
+  }
+}
+
+.integrated-search-filter .h2-title {
+  margin-bottom:0;
+  padding-bottom: 2rem;
+  border-bottom:1px solid var(--arko-primary-color);
+}
+.integrated-search-filter > .arko-btns {
+  margin-top: 2.4rem;
+}
+
+
+
+/* 필터 아코디언 */
+.accordion-search-filter {
+  --accordion-search-filter-padding-inline:.8rem;  
+}
+
+.accordion-filter-item {
+  border-bottom:1px solid var(--arko-line-color-etc);
+}
+.accordion-filter-item:last-child {
+  border-bottom: 0;
+}
+.btn-accordion-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;  
+  padding:1.6rem var(--accordion-search-filter-padding-inline);
+  font-size: 1.8rem;
+  text-align: left;
+  color: var(--arko-font-color-title);
+  font-weight: 600;
+}
+
+.btn-accordion-filter::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: url(../krds/img/component/icon/ico_angle.svg) no-repeat center / contain;
+}
+
+.btn-accordion-filter.active::after {
+  transform: rotate(180deg);
+} 
+
+.accordion-filter-body {
+  padding: .8rem var(--accordion-search-filter-padding-inline) 1.6rem;
+}
+
+.accordion-filter-body .form-period {
+  flex-direction: column;
+  gap: var(--arko-contents-gap-medium);
+}
+
+.accordion-filter-body .form-period-range {
+  height: 50px;
+}
+
+.accordion-filter-body .form-period-range .ui-slider-handle::before,
+.accordion-filter-body .form-period-range .period-years {
+  display: none;
+}
+.accordion-filter-body .form-period-range .period-slider {
+  top: 50%;
+  left:0;
+  right:0;
+}
+
+.accordion-filter-body .arko-btns {
+  margin-top: 1.6rem;
+}
+.accordion-filter-body .arko-btns .krds-btn.primary {
+  flex: 1;
+}
+
+
+/* 검색결과 리스트 */
+.search-result {
+  --search-result-row-gap:1.6rem;
+}
+.search-result__list > li {
+  display: flex;
+  gap: var(--arko-contents-gap-medium);
+  margin-bottom:4rem;
+}
+.search-result__thum {
+ flex: 0 0 25%; 
+ max-width: 20rem;
+}
+
+.search-result__thum > img {
+  border-radius: var(--arko-border-radius-default);
+}
+
+.search-result__info {
+  flex: 1;
+}
+.sr__title {
+  display: flex;
+  align-items: center;
+  gap: var(--arko-contents-gap-medium);
+  margin-bottom:var(--search-result-row-gap);
+}
+.sr__title > b {
+  color: var(--arko-font-color-title);
+  font-size: var(--arko-h3-font-size);
+  vertical-align: middle;
+}
+.sr__badge {
+  margin-top:var(--search-result-row-gap);
+}
+
+.small-thum .sr__mob-thum {
+  display: none;
+}
+
+.sr__meta + .sr__txt,
+.sr__txt + .sr__meta {
+  margin-top: var(--arko-contents-gap-small);
+}
+
+.sr__flex {
+  display: flex;
+  align-items: center;
+  gap: var(--arko-contents-gap-small);
+}
+
+.sr__flex > * {
+  margin: 0;
+}
+
+@media (max-width:767px) {
+  .search-result {
+    --search-result-row-gap:1.2rem;
+  }
+
+  .search-result__list > li {
+    flex-direction: column;
+  }
+
+  .sr__title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sr__cont {
+    display: flex;
+    gap: 1.6rem;
+  }
+   .sr__flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-result__thum {
+    flex: 1;
+    max-width: 100%;
+  }
+  .small-thum .search-result__thum {
+    display: none;
+  }
+  .small-thum .sr__mob-thum {
+    display: block;
+    flex:0 0 40%;
+  }  
+}
+
+/* 인물 검색 결과 */
+.person-search {
+  padding-bottom:var(--arko-contents-gap-xlarge);
+  border-bottom: 1px solid var(--arko-line-color-etc);
+}
+.person-search-head {
+  --person-search-head-info-gap:2.4rem;
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom:var(--arko-contents-gap-extra-large);
+}
+
+.person-search-head .h2-title {
+  margin-bottom: 0;
+}
+.person__info {
+  display: flex;
+  align-items: center;
+  gap: var(--person-search-head-info-gap);
+}
+.person__txt {
+  color: var(--arko-font-color-title);
+}
+.person__badge {
+  white-space: nowrap;
+}
+
+.person-search-body .search-result__thum {
+  flex:0 0 40%;
+  max-width: 32.4rem;
+}
+
+@media (max-width:767px) {
+  .person-search-head {
+    --person-search-head-info-gap:.8rem;
+  }
+  .person__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .person-search-head .btns {
+    position: absolute;
+    right:0;
+    top: -8px;
+  }
+  .person-search-body .search-result__thum {
+    max-width: 100%;
+  }
+}
+
+.integrated-search .hashtag > a {
+  height: 3.8rem;
+  line-height: 3.8rem;
+  padding-inline:2.4rem;
+  border-radius: 3.8rem;
+  color: var(--arko-font-color-title);
+  background-color: var(--arko-background-color);
+}
+
+.integrated-search  .img-list {
+  gap: var(--arko-contents-gap-xsmall);
+}
+
+.integrated-search  .img-list img {
+  border-radius: var(--arko-border-radius-default);
+}
+
+@media (max-width:767px) {
+  .integrated-search  .img-list {
+    gap: 1.6rem;
+  }
+  .integrated-search  .img-list > li {
+    flex: 0 0 calc(50% - .8rem);
+  }
+}
+
+/* 더보기 버튼 */
+.btn-search-more {
+  width: 100%;
+  padding:1.2rem;
+  border-radius: var(--arko-border-radius-default);
+  color: var(--arko-brand-color);
+  background-color: var(--arko-background-color-brand);
+}
+
+
+/* 더보기 화면 */
+.integrated-search .arko-board__sort .krds-form-select {
+  width: auto;
+}
+
+@media (max-width:767px) {
+  .integrated-search .arko-board__sort {
+    width: 100%;
+  }
+  .integrated-search .arko-board__sort .form-conts {
+    display: flex;
+    width: 100%;
+    gap: 1.6rem;
+  }
+  .integrated-search .arko-board__sort .krds-form-select {
+    flex: 1;
+  }
+}

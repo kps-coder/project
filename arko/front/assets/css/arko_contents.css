@@ -12,6 +12,7 @@
 }
 
 .hashtag > a {
+  display: inline-block;
   color: #757575;
 }
 .hashtag > a::before {
@@ -778,7 +779,7 @@
     right:0;
     bottom:0;
     left:0;
-    padding:64px 16px;
+    padding:24px 16px 64px;
     overflow-y: auto;
     background-color: #fff;
   }
@@ -806,7 +807,7 @@
 
   .sch-detail-off-btn {
     position: absolute;
-    top:64px;
+    top:24px;
     right: 16px;
     width: 30px;
     height: 30px;
@@ -1166,7 +1167,11 @@
   }
 }
 
-
+@media (max-width:767px) {
+  .detail-info-table .d__tr.block > dl {
+    flex-direction: column;
+  }
+}
 
 
 /* 관련 컬렉션 */
@@ -3309,3 +3314,4 @@ dl.video-recording-noti > dd > small {
     flex-direction: column;
   }
 }
+

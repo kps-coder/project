@@ -760,7 +760,7 @@ button {
 
 .badge {
   display: inline-block;
-  min-width: 104px;
+  min-width: 10.4rem;
   padding: 0 1.2rem;
   border-radius: var(--arko-border-radius-default);
   font-size: 1.6rem;
@@ -774,6 +774,12 @@ button {
 .badge.bg-gray {
   color: var(--arko-primary-color);
   background-color: var(--arko-background-color);
+}
+.badge.small {
+  min-width: 8.4rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  font-size: 1.4rem;
 }
 
 /* == lnb == */
@@ -1262,4 +1268,18 @@ button {
   .inquiry-link .arko-btns {
     margin-top:2.4rem;
   }
+}
+
+/* 태그 */
+.krds-tag-wrap .krds-btn-tag {
+  border-color: var(--arko-line-color-etc);
+  color: var(--arko-primary-color);
+}
+
+.krds-tag-wrap.large .krds-btn-tag {
+  gap:.4rem;
+}
+.krds-tag-wrap.large .krds-btn-tag .btn-delete {
+  background-image: url(../img/comm/ico_delete_fill.svg);
+  background-size: 16px 16px;
 }
