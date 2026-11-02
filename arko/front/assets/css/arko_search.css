@@ -58,6 +58,10 @@
   .integrated-search-column {
     flex-direction: column;
   }
+
+  .integrated-search-filter {
+    width: 100%;
+  }
 } 
 
 @media (max-width:820px) {
