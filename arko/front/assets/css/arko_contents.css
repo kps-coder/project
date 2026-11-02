@@ -3239,7 +3239,10 @@ dl.video-recording-noti > dd > small {
 /* 아카이브현황 */
 .chart-column-area {
   position: relative;
-  height: 300px;
+  display: flex;
+  gap: var(--arko-contents-gap-extra-large);
+  padding-block: var(--arko-contents-gap-large);
+  margin-bottom:var(--arko-contents-gap-large)
 }
 .chart-column-area::before {
   content: '';
@@ -3254,11 +3257,46 @@ dl.video-recording-noti > dd > small {
   height: 100%;
   background-color: var(--arko-background-color);
 }
+.chart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chart-head .h3-title {
+  margin-bottom: 0;
+}
+.chart-head > p {
+  font-size: 1.4rem;
+}
+.chart-call {
+  flex: 1;
+  padding:2.4rem var(--arko-contents-gap-medium);
+  border: 1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+  background-color: #fff;
+}
+
+.chart-body {
+  height: 25.4rem;
+}
+
+.chart-body canvas {
+  width: 100% !important;
+}
+
+.chart-area .chart-call .chart-body {
+  height: 36.5rem;
+}
 
 @media (max-width:1439px) {
   .chart-column-area::before {
     width: 100vw;
     transform: translateX(calc(var(--krds-contents-padding-x) * -1));
+  }
+}
+@media (max-width:768px) {
+  .chart-column-area {
+    flex-direction: column;
   }
 }
 
@@ -3294,6 +3332,7 @@ dl.video-recording-noti > dd > small {
 .archive-status__box > p {
   margin-top:1.2rem;
   font-size: 1.4rem;
+  color: var(--arko-placeholder-font-color);
 }
 
 @media (min-width:768px) and (max-width:1024px) {

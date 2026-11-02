@@ -23,6 +23,7 @@
   <script src="../assets/js/lib/jquery.js"></script>
   <script src="../assets/js/lib/jquery-ui.min.js"></script>
   <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><!-- chart js -->
 </head>
 <body>
   <div id="wrap" class="krds-scaled-layout">
@@ -88,7 +89,7 @@
 
               <!-- tab contents -->
               <div class="tab-conts-wrap">
-                <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts" data-quick-nav="false">
+                <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active" data-quick-nav="false">
                   <div class="arko-introduction">
                     <p class="title">
                       한국 근현대 예술의<br>
@@ -116,7 +117,7 @@
                   </div>
                 </section><!-- //tab-conts -->
 
-                <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts active" data-quick-nav="true">
+                <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts" data-quick-nav="true">
                   <section class="sec-cont">
                     <h2 class="h2-title">아카이브 한눈에</h2>
                     <div class="archive-status">
@@ -151,7 +152,36 @@
                     </div>
 
                     <div class="chart-column-area">
+                      <div class="chart-call">
+                        <div class="chart-head">
+                          <h3 class="h3-title">예술 분야별 분포</h3>
+                          <p class="chart-caption">중복 포함</p>
+                        </div>
+                        <div class="chart-body">
+                          <canvas id="artChart" role="img" aria-label="예술 분야별 분포 가로 막대그래프"></canvas>
+                        </div>
+                      </div>
+                      <div class="chart-call">
+                        <div class="chart-head">
+                          <h3 class="h3-title">자료 유형별 분포</h3>
+                          <p class="chart-caption">중복 포함</p>
+                        </div>
+                        <div class="chart-body">
+                          <canvas id="typeChart" role="img" aria-label="자료 유형별 분포 가로 막대그래프"></canvas>
+                        </div>
+                      </div>
+                    </div>
 
+                    <div class="chart-area">
+                      <div class="chart-call">
+                        <div class="chart-head">
+                          <h3 class="h3-title">생산 시기별 자료 분포</h3>
+                          <p class="chart-caption">자료 생산 연도 기준</p>
+                        </div>
+                        <div class="chart-body">
+                          <canvas id="productionPeriodChart" role="img" aria-label="생산 시기별 자료 분포 가로 막대그래프"></canvas>
+                        </div>
+                      </div>
                     </div>
 
                     <div class="copyright-notice">
@@ -596,7 +626,201 @@
   <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
   <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><!-- chart js -->
+  <script>
+    function createHorizontalChart(canvasId, labels, values, displayValues, maxValue, padding) {
+      const canvas = document.getElementById(canvasId);
+
+      const valuePlugin = {
+        id: 'fixedValueLabels',
+        afterDatasetsDraw(chart) {
+          const { ctx, chartArea } = chart;
+          const meta = chart.getDatasetMeta(0);
+          ctx.save();
+          ctx.font = 'bold 16px "Pretendard GOV", sans-serif';
+          ctx.fillStyle = '#09102A';
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'middle';
+          meta.data.forEach((bar, index) => {
+            ctx.fillText(displayValues[index], chartArea.right + 12, bar.y);
+          });
+          ctx.restore();
+        }
+      };
+
+      return new Chart(canvas, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            data: labels.map(() => maxValue),
+            backgroundColor: '#F2F3F5',
+            borderRadius: 10,
+            borderSkipped: false,
+            barThickness: 8,
+            maxBarThickness: 8,
+            grouped: false,
+            order: 2
+          },
+          {
+            data: values,
+            backgroundColor: '#09102A',
+            borderRadius: 10,
+            borderSkipped: false,
+            barThickness: 8,
+            maxBarThickness: 8,
+            grouped: false,
+            order: 1
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          layout: {
+            padding: padding
+          },
+          plugins: { legend: { display: false }, tooltip: { enabled: false } },
+          scales: {
+            x: {
+              display: false, min: 0, max: maxValue,
+              grid: { display: false }, border: { display: false }
+            },
+            y: {
+              grid: { display: false }, border: { display: false },
+              ticks: { color: '#666', font: { size: 16 }, padding: 10 }
+            }
+          },
+          onResize(chart, size) {
+            const isMobile = size.width < 400;
+
+            // 배경 막대 (datasets[0])
+            chart.data.datasets[0].backgroundColor =
+              isMobile ? 'transparent' : '#F2F3F5';
+            chart.data.datasets[1].backgroundColor =
+              isMobile ? 'transparent' : '#09102A';
+
+            chart.data.datasets[0].barThickness = 7;
+
+            // 애니메이션 없이 갱신
+            chart.update('none');
+          }
+        },
+        plugins: [valuePlugin]
+      });
+    }
+
+    createHorizontalChart(
+      'artChart',
+      ['연극', '시각예술', '무용', '음악', '전통예술', '다원예술', '문학'],
+      [28.4, 22.2, 17.5, 15.8, 10.3, 7.8, 5.2],
+      ['28.4%', '22.2%', '17.5%', '15.8%', '10.3%', '7.8%', '5.2%'],
+      30,
+      { right: 58, left: 0, top: 2, bottom: 2 }
+    );
+
+    // 자료 유형별 막대 길이는 참고 이미지에 맞춘 임시값입니다.
+    // 실제 통계값이 있으면 values와 displayValues를 교체하세요.
+    createHorizontalChart(
+      'typeChart',
+      ['도서/간행물류', '문서류', '사진/필름류', '음향/영상류', '홍보인쇄물류', '박물류'],
+      [100, 78, 62, 56, 36, 27],
+      ['00,000건', '00,000건', '00,000건', '00,000건', '00,000건', '00,000건'],
+      105,
+      { right: 78, left: 0, top: 2, bottom: 2 }
+    );
+    
+
+    // 생산 시기별 자료 분포
+    const periodCanvas = document.getElementById('productionPeriodChart');
+
+    const periodValuePlugin = {
+      id: 'periodValueLabels',
+      afterDatasetsDraw(chart) {
+        const { ctx } = chart;
+        const meta = chart.getDatasetMeta(0);
+        const isMobile = chart.width < 500;
+
+        ctx.save();
+        ctx.font = `bold ${isMobile ? 11 : 16}px "Pretendard GOV", sans-serif`;
+        ctx.fillStyle = '#10172f';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+
+        meta.data.forEach((bar, index) => {
+          const value = chart.data.datasets[0].data[index];
+          ctx.fillText(value.toLocaleString('ko-KR'), bar.x, bar.y - 7);
+        });
+
+        ctx.restore();
+      }
+    };
+
+    new Chart(periodCanvas, {
+      type: 'bar',
+      data: {
+        labels: ['~1940', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s~'],
+        datasets: [{
+          data: [2140, 8420, 24830, 52180, 98420, 132640, 142810, 88460, 31520],
+          backgroundColor: [
+            '#E3E4E8', '#CBCCD1', '#B1B4BD', '#7E818F',
+            '#4A4F62', '#30364C', '#09102A', '#636878', '#979AA5'
+          ],
+          borderRadius: {
+            topLeft: 5,
+            topRight: 5,
+            bottomLeft: 0,
+            bottomRight: 0
+          },
+          borderSkipped: false,
+          barThickness: context => context.chart.width <= 500 ? 12 : undefined,
+          barPercentage: 0.82,
+          categoryPercentage: 0.9
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: { top: 22, right: 4, left: 4, bottom: 0 }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: context => `${context.parsed.y.toLocaleString('ko-KR')}건`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            border: { color: '#aeb2bb' },
+            ticks: {
+              color: '#666',
+              font: {
+                family: '"Pretendard GOV", sans-serif',
+                size: window.innerWidth < 500 ? 11 : 16
+              },
+              maxRotation: 0,
+              minRotation: 0
+            }
+          },
+          y: {
+            display: false,
+            beginAtZero: true,
+            suggestedMax: 160000,
+            grid: { display: false },
+            border: { display: false }
+          }
+        }
+      },
+      onResize(chart, size) {
+        // 애니메이션 없이 갱신
+        chart.update('none');
+      },
+      plugins: [periodValuePlugin]
+    });
+  </script>
 
 </body>
 </html>
