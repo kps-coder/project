@@ -251,6 +251,13 @@ button {
   background-color: transparent;
 }
 
+.krds-btn.text.small {
+  font-size: 1.6rem;
+}
+.krds-btn.text.medium {
+  font-size: var(--arko-font-size-base);
+}
+
 .arko-btns {
   display: flex;
   justify-content: center;
@@ -416,6 +423,36 @@ button {
   }
 }
 
+.tab-sub  {
+  margin-bottom:var(--arko-contents-gap-large);
+}
+
+.tab-sub > ul {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.btn-tab-sub {
+  display: block;
+  height: 4rem;
+  padding:0 1.2rem;
+  color: #464C53;
+  border-radius: var(--arko-border-radius-default);
+}
+
+.tab-sub > ul > li.active .btn-tab-sub {
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--arko-brand-color);
+}
+
+.tab-sub-conts {
+  display: none;
+}
+.tab-sub-conts.active {
+  display: block;
+}
 
 /* table */
 .krds-table-wrap .tbl.data thead th,
@@ -757,7 +794,41 @@ button {
   -webkit-mask-image: url(../img/intro/ico_video.svg);
   mask-image: url(../img/intro/ico_video.svg);
 }
+.svg-icon.ico-m-status1 {
+  width: 74px;
+  height: 70px;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/main/ico_status_1.svg) no-repeat center / contain;
+}
+.svg-icon.ico-m-status2 {
+  width: 74px;
+  height: 70px;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/main/ico_status_2.svg) no-repeat center / contain;
+}
+.svg-icon.ico-m-status3 {
+  width: 74px;
+  height: 70px;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/main/ico_status_3.svg) no-repeat center / contain;
+}
+.svg-icon.ico-m-status4 {
+  width: 74px;
+  height: 70px;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/main/ico_status_4.svg) no-repeat center / contain;
+}
+.svg-icon.ico-play {
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: transparent url(../img/comm/ico_play.svg) no-repeat center / contain !important;
+}
 
+/* 배지 */
 .badge {
   display: inline-block;
   min-width: 10.4rem;

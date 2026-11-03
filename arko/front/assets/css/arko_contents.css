@@ -19,6 +19,16 @@
   content: '# ';
 }
 
+.hashtag.type--bg > a {
+  padding:0 var(--arko-contents-gap-medium);
+  border-radius: 3.8rem;
+  line-height: 3.8rem;
+  white-space: nowrap;
+  color: var(--arko-font-color-title);
+  font-size: 1.6rem;
+  background-color: var(--arko-background-color);
+}
+
 .detail-info .hashtag {
   margin-bottom: 2.4rem;
   padding-bottom: 2.4rem;
@@ -200,6 +210,17 @@
     right:0;
     top:0;
   }
+}
+
+.title-flex-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom:var(--arko-contents-gap-large);
+}
+
+.title-flex-area * {
+  margin-bottom:0;
 }
 
 .sec-cont ~ .sec-cont {
@@ -397,6 +418,7 @@
 
 /* 토글 게시판 */
 .arko-toggle-board .tr {
+  display: block;
   position: relative;
 }
 .arko-toggle-board.toggle--thum a.tr {
@@ -3351,6 +3373,31 @@ dl.video-recording-noti > dd > small {
     --archive-status-count-cont-size: 2.4rem;
 
     flex-direction: column;
+  }
+}
+
+
+/* 소장기록물 상세 디지털원문 테이블 */
+@media (max-width:768px) {
+  .arko-toggle-board.list--digital .td-no {
+    font-weight: 600;
+    color: var(--arko-font-color-title);
+    float: left;
+    padding-right: .8rem;
+  }
+  .arko-toggle-board.list--digital .td-type {
+    font-weight: 600;
+    color: var(--arko-font-color-title);
+  }
+  .arko-toggle-board.list--digital .td-item,
+  .arko-toggle-board.list--digital .td-media {
+    float: left;
+    padding-right: .8rem;
+  }
+
+  .arko-toggle-board.list--digital .krds-btn {
+    position: absolute;
+    right:0;
   }
 }
 

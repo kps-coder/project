@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+.arko-main-head {
+  --arko-main-h1-size:5.8rem;
+  --arko-main-h1-line-height:1.6;
+  --arko-main-head-padding-block: 9.3rem;
+  --arko-main-head-desc-font-size: 2.8rem;
+
+  padding-block: var(--arko-main-head-padding-block);
+}
+.arko-main-sec {
+  --arko-main-sec-padding-block: 7rem;
+
+  padding-block: var(--arko-main-sec-padding-block);
+}
+
+.h1-main {
+  color: var(--arko-primary-color);
+  text-align: center;
+  font-size: var(--arko-main-h1-size);
+  
+}
+
+.h1-main > span {
+  display: inline-block;
+  
+}
+
+.h1-main em {
+  position: relative;
+  font-size: 1.26em;
+  line-height: var(--arko-main-h1-line-height);
+}
+
+.h1-main em::after {
+  content: '\00B7';
+  position: absolute;
+  top:-50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.main-title-desc {
+  margin-top: 1.5rem;
+  font-size: var(--arko-main-head-desc-font-size);
+  text-align: center;
+  color: #09102ACC;
+}
+
+@media (max-width:768px) {
+  .arko-main-head {
+    --arko-main-h1-size:3.3rem;
+    --arko-main-h1-line-height: 1.3;
+    --arko-main-head-padding-block: 3rem;
+    --arko-main-head-desc-font-size: 1.7rem;
+  }
+
+  .h1-main em::after {
+    display: none;
+  }
+}
+
+/* 통합검색영역 */
+.arko-main-search {
+  margin-bottom: 14rem;
+}
+.arko-main-search .inner {
+  max-width: 1690px;
+}
+
+.main-integrated-search {
+  --main-integrated-search-padding-block: 6.5rem;
+  --main-integrated-search-input-height: 8rem;
+
+  padding:var(--main-integrated-search-padding-block) 1.6rem;
+  border: 1px solid var(--arko-line-color-etc);
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 30px 10px #00000033;
+}
+
+@media (max-width:768px) {
+  .main-integrated-search {
+    --main-integrated-search-padding-block: 2.4rem;
+    --main-integrated-search-input-height: 6rem;
+  }
+}
+
+.main-integrated-search .arko-search-area {
+  max-width: 1120px;
+  margin: 0 auto var(--arko-contents-gap-xlarge);
+}
+
+.main-integrated-search .arko-search-area .sch-input .krds-input.xlarge {
+  height: var(--main-integrated-search-input-height);
+  border-radius: var(--main-integrated-search-input-height);
+  border-width: 5px;
+}
+.main-integrated-search .arko-search-area .search-detail-btns .krds-btn {
+  height: var(--main-integrated-search-input-height);
+  padding-inline: 2.4rem;
+  border-radius: var(--main-integrated-search-input-height);
+}
+.main-integrated-search .arko-search-area .search-detail-btns .krds-btn > .svg-icon {
+  margin-left: 3rem;
+}
+
+.arko-search-area .hashtag {
+  justify-content: center;
+  margin-top: var(--arko-contents-gap-large);
+}
+
+/* 기록물 현황 */
+.main-records-status {
+  --main-records-status-title-size: 2.5rem;
+  --main-records-status-count-size: 3.5rem;
+
+  max-width: 1440px;
+  margin:0 auto;
+}
+.main-records-status > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-records-status > ul > li {
+  flex: 1;
+  text-align: center;
+}
+
+.main-records-status > ul > li ~ li {
+  border-left:1px solid var(--arko-line-color-etc);
+}
+
+.main-records-status dl > dt {
+  color: var(--arko-font-color-title);
+  font-weight: 600;
+  font-size: var(--main-records-status-title-size);
+}
+.main-records-status dl > dd.txt {
+  font-size: 2rem;
+}
+.main-records-status dl > dd.count {
+  font-weight: 600;
+  color: var(--arko-brand-color);
+  font-size: var(--main-records-status-count-size);
+}
+
+@media (max-width:1024px) {
+  .main-records-status {
+    --main-records-status-title-size: 1.8rem;
+    --main-records-status-count-size: 2.1rem;
+  }
+  .main-records-status dl > dd.txt {
+    display: none;
+  }
+
+  .sch-form-wrap {
+    flex-direction: row;
+  }
+}
+
+@media (max-width:768px) {
+  .main-records-status > ul > li {
+    flex :0 0 50%;
+  }
+
+  .main-records-status > ul > li:nth-child(1),
+  .main-records-status > ul > li:nth-child(2) {
+    padding-bottom: 2rem;
+  }
+  .main-records-status > ul > li:nth-child(3) {
+    border-left: 0;
+  }
+  .main-records-status > ul > li:nth-child(n+3) {
+    padding-top: 2rem;
+    border-top:1px solid var(--arko-line-color-etc);
+  }
+}

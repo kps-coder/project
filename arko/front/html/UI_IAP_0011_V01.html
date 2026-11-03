@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>아르코예술기록원</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  <link rel="stylesheet" href="../assets/css/arko_main.css"><!-- 메인 개별 css -->
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div id="wrap" class="krds-scaled-layout">
+    <div id="headerInclude"><!-- 퍼블전용::상단 영역 include용 --></div>
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <div class="contents">
+        <!-- 컨텐츠 영역 -->
+        <section class="arko-main-head">
+          <div class="inner">
+            <h1 class="h1-main">
+              <span>예술의 시간을 <em>기</em><em>록</em>하고,</span> 
+              <span>지금을 <em>연</em><em>결</em>합니다.</span>
+            </h1>
+            <p class="main-title-desc">아르코예술기록원이 보유한 방대한 예술기록물을 통합 검색하고, 다양한 방식으로 자유롭게 만나보세요</p>
+          </div>            
+        </section>
+        <section class="arko-main-search">
+          <div class="inner">
+            <h2 class="sr-only">통합검색</h2>
+            <div class="main-integrated-search">
+              <div class="arko-search-area">
+                <div class="sch-form-wrap">
+                  <div class="sch-input">
+                    <input type="text" class="krds-input xlarge" id="searchWrdTotal" placeholder="인물,단체,작품 등 키워드를 입력하세요.">
+                    <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
+                      <span class="sr-only">검색</span>
+                      <i class="svg-icon ico-sch"></i>
+                    </button>
+                  </div>
+
+                  <div class="search-detail-btns">
+                    <button type="button" class="krds-btn medium primary" id="btnDetailSearch">
+                      상세검색
+                      <i class="svg-icon ico-filter"></i>
+                    </button>
+                  </div>
+                </div> 
+
+                <div class="hashtag type--bg">
+                  <a href="#n">이미원</a>
+                  <a href="#n">올해의 신작</a>
+                  <a href="#n">윤심덕</a>
+                  <a href="#n">이미원</a>
+                </div>
+              </div>
+
+              <div class="main-records-status">
+                <ul>
+                  <li>
+                    <i class="svg-icon ico-m-status1"></i>
+                    <dl>
+                      <dt>전체 기록물</dt>
+                      <dd class="txt">예술기록원에 보존된 기록물 합계</dd>
+                      <dd class="count">581,420 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <i class="svg-icon ico-m-status2"></i>
+                    <dl>
+                      <dt>수집기록물</dt>
+                      <dd class="txt">다양한 기록을 발굴·수집하여 보존</dd>
+                      <dd class="count">421,820 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <i class="svg-icon ico-m-status3"></i>
+                    <dl>
+                      <dt>생산기록물</dt>
+                      <dd class="txt">구술채록사업, 공연영상화사업</dd>
+                      <dd class="count">84,200 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <i class="svg-icon ico-m-status4"></i>
+                    <dl>
+                      <dt>일반자료</dt>
+                      <dd class="txt">텍스트·음향영상 자료</dd>
+                      <dd class="count">80,320 건</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>          
+        </section>
+      </div>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <div id="footerInclude"><!-- 퍼블전용::하단 푸터 include용 --></div>
+  </div>
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+</body>
+</html>

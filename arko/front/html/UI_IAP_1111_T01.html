@@ -23,6 +23,25 @@
   <script src="../assets/js/lib/jquery.js"></script>
   <script src="../assets/js/lib/jquery-ui.min.js"></script>
   <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width:769px) {
+      /* 디지털원문 */
+      .td-no {width: 10%;}
+      .td-type {width: 18%;}
+      .td-item {width: 18%;}
+      .td-media {width: 18%;}
+      .td-playtime {width: 18%;}
+      .td-scope {width: 25%;}
+
+      /* 추천기록물 */
+      .td-badge {width: 15%;}
+      .td-subject {flex: 1;}
+      .td-recom-collection {width: 25%;}
+      .td-recom-scope {width: 15%;}
+      .td-recom-date {width: 12%;}
+    }
+  </style>
 </head>
 <body>
   <div id="wrap" class="krds-scaled-layout">
@@ -161,6 +180,7 @@
                   </div>
                 </div>
 
+                <!-- 20261102 v0.87 명칭변경 및 탭 추가 -->
                 <div class="detail-cont">
                   <!-- tab -->
                   <div class="krds-tab-area layer arko-tab-scroll-style">
@@ -171,13 +191,16 @@
                           <button type="button" class="btn-tab" data-target="#panel_login_01">기록물 정보 <i class="sr-only created"> 선택됨</i></button>
                         </li>
                         <li id="tab_login_02" role="tab" aria-selected="false" aria-controls="panel_login_02">
-                          <button type="button" class="btn-tab" data-target="#panel_login_02">멀티미디어 정보</button>
+                          <button type="button" class="btn-tab" data-target="#panel_login_02">디지털원문</button>
                         </li>
                         <li id="tab_login_03" role="tab" aria-selected="false" aria-controls="panel_login_03">
-                          <button type="button" class="btn-tab" data-target="#panel_login_03">관련 컬렉션</button>
+                          <button type="button" class="btn-tab" data-target="#panel_login_03">컬렉션 정보</button>
                         </li>
                         <li id="tab_login_04" role="tab" aria-selected="false" aria-controls="panel_login_04">
-                          <button type="button" class="btn-tab" data-target="#panel_login_04">관련 소장물</button>
+                          <button type="button" class="btn-tab" data-target="#panel_login_04">연계 데이터</button>
+                        </li>
+                        <li id="tab_login_05" role="tab" aria-selected="false" aria-controls="panel_login_05">
+                          <button type="button" class="btn-tab" data-target="#panel_login_05">추천 기록물</button>
                         </li>
                       </ul>
                     </div>
@@ -233,76 +256,67 @@
                           </div>
                         </div>
                       </section>
+
+                      <!-- 20261102 v0.87 명칭 변경 및 항목 추가 -->
                       <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts" data-quick-nav="false" tabindex="-1">
                         <h2 class="h2-title">
-                          멀티미디어 정보 
+                          디지털원문
                           <small class="count">100<em>건</em></small>
                         </h2>
-                        <!-- table -->
-                        <div class="krds-table-wrap">
-                          <table class="tbl col data" style="min-width: 100%;">
-                            <caption>000에 대한 표로 제목1,제목2에 대한 내용으로 구성되어 있으며 제목1은 제목1-1,제목1-2,제목1-3으로 구성되어있다.</caption>
-                            <colgroup>
-                              <col>
-                              <col style="width: 30%;">
-                            </colgroup>
-                            <thead>
-                              <tr>
-                                <th scope="col">멀티미디어명</th>
-                                <th scope="col">자료유형</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td><a href="#n">미술 전시 리플렛</a></td>
-                                <td class="ac">이미지</td>
-                              </tr>
-                              <tr>
-                                <td><a href="#n">전시 관련 문서</a></td>
-                                <td class="ac">문서</td>
-                              </tr>
-                              <tr>
-                                <td><a href="#n">미술 전시 리플렛</a></td>
-                                <td class="ac">이미지</td>
-                              </tr>
-                              <tr>
-                                <td><a href="#n">미술 전시 리플렛</a></td>
-                                <td class="ac">이미지</td>
-                              </tr>
-                              <tr>
-                                <td><a href="#n">미술 전시 리플렛</a></td>
-                                <td class="ac">이미지</td>
-                              </tr>
-                              <tr>
-                                <td><a href="#n">미술 전시 리플렛</a></td>
-                                <td class="ac">이미지</td>
-                              </tr>
-                            </tbody>
-                          </table>
-
-                          <!-- 페이지네이션 -->
-                          <div class="arko-pagination">
-                            <div class="page-btns">
-                              <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
-                              <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
-                            </div>                  
-
-                            <div class="page-links">
-                              <select id="select_page" class="krds-form-select medium" title="페이지 선택">
-                                <option value="">1</option>
-                                <option value="" selected>2</option>
-                              </select>
-                              <em>/</em>
-                              <span class="page-total">2</span>
-                            </div>
-
-                            <div class="page-btns">
-                              <button type="button" class="page-next"><span class="sr-only">다음</span></button>
-                              <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
-                            </div>                  
+                        <!-- 목록 -->
+                        <div class="arko-toggle-board toggle--list list--digital">
+                          <div class="tr tr--head pc-only">
+                            <span class="td-no">연번</span>
+                            <span class="td-type">유형</span>
+                            <span class="td-item">항목</span>
+                            <span class="td-media">매체</span>
+                            <span class="td-playtime">재생시간</span>
+                            <span class="td-scope">서비스범위</span>         
                           </div>
+                          <a href="#n" class="tr">
+                            <span class="td-no">1</span>
+                            <span class="td-type">동영상</span>
+                            <span class="td-item">공연전체</span>
+                            <span class="td-media">비디오테이프</span>
+                            <span class="td-playtime">01:24:30</span>
+                            <span class="td-scope">관내열람</span>         
+                          </a> 
+                          <a href="#n" class="tr">
+                            <span class="td-no">2</span>
+                            <span class="td-type">음원</span>
+                            <span class="td-item">공연실황</span>
+                            <span class="td-media">오디오테이프</span>
+                            <span class="td-playtime">-</span>
+                            <span class="td-scope">
+                              디지털원문
+                              <button class="krds-btn icon medium ml-xsmall">
+                                <i class="svg-icon ico-play"></i>
+                              </button>
+                            </span>         
+                          </a>                          
                         </div>
-                        <!-- //table -->
+
+                        <!-- 페이지네이션 -->
+                        <div class="arko-pagination">
+                          <div class="page-btns">
+                            <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                            <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                          </div>                  
+
+                          <div class="page-links">
+                            <select id="select_page" class="krds-form-select medium" title="페이지 선택">
+                              <option value="">1</option>
+                              <option value="" selected>2</option>
+                            </select>
+                            <em>/</em>
+                            <span class="page-total">2</span>
+                          </div>
+
+                          <div class="page-btns">
+                            <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                            <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                          </div>                  
+                        </div>
                       </section>
 
                       <section id="panel_login_03" aria-labelledby="tab_login_03" class="tab-conts" data-quick-nav="false" tabindex="-1">
@@ -310,7 +324,7 @@
                           <div class="related-collection__head">
                             <h2 class="h2-title">
                               <span>작가 박서보(1931) 컬렉션</span>  
-                              <small>관련 컬렉션</small>
+                              <small>컬렉션 정보</small><!-- 20261102 v0.87 명칭변경 -->
                             </h2>
 
                             <!-- 버튼 pc일때 노출 (pc, mob 각각이라 개발 시 유의) -->
@@ -397,76 +411,286 @@
                         </div>
                       </section>
 
+                      <!-- 20261102 v0.87 관련 소장물 삭제 및 해당 영역 내 연계 데이터 영역 신설 -->
                       <section id="panel_login_04" aria-labelledby="tab_login_04" class="tab-conts" data-quick-nav="false" tabindex="-1">
-                        <h2 class="h2-title">
-                          관련 소장물
-                          <small class="count">99<em>건</em></small>
-                        </h2>
-
-                        <div class="related-material">
-                          <ul class="related-material__list">
-                            <li class="related-material__item">
-                              <dl class="related-material__info">
-                                <dt>
-                                  (1968) 세계무대속의 한국미술 : 변천하는 그 흐름과 우리의 자세
-                                </dt>
-                                <dd>
-                                  <span>박서보</span>
-                                  <span>1968기사(신문·잡지 등)</span>
-                                  <span>관내열람</span>
-                                </dd>
-                              </dl>
-                              <button type="button" class="krds-btn tertiary small open-modal" data-target="modalAdd">담기</button>
-                            </li>
-                            <li class="related-material__item">
-                              <dl class="related-material__info">
-                                <dt>
-                                  (1968) 세계무대속의 한국미술 : 변천하는 그 흐름과 우리의 자세
-                                </dt>
-                                <dd>
-                                  <span>박서보</span>
-                                  <span>1968기사(신문·잡지 등)</span>
-                                  <span>관내열람</span>
-                                </dd>
-                              </dl>
-                              <button type="button" class="krds-btn tertiary small open-modal" data-target="modalAdd">담기</button>
-                            </li>
-                            <li class="related-material__item">
-                              <dl class="related-material__info">
-                                <dt>
-                                  (1968) 세계무대속의 한국미술 : 변천하는 그 흐름과 우리의 자세
-                                </dt>
-                                <dd>
-                                  <span>박서보</span>
-                                  <span>1968기사(신문·잡지 등)</span>
-                                  <span>관내열람</span>
-                                </dd>
-                              </dl>
-                              <button type="button" class="krds-btn tertiary small open-modal" data-target="modalAdd">담기</button>
-                            </li>
-                          </ul>
-
-                          <!-- 페이지네이션 -->
-                          <div class="arko-pagination">
-                            <div class="page-btns">
-                              <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
-                              <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
-                            </div>                  
-
-                            <div class="page-links">
-                              <select id="select_page" class="krds-form-select medium" title="페이지 선택">
-                                <option value="">1</option>
-                                <option value="" selected>2</option>
-                              </select>
-                              <em>/</em>
-                              <span class="page-total">2</span>
-                            </div>
-
-                            <div class="page-btns">
-                              <button type="button" class="page-next"><span class="sr-only">다음</span></button>
-                              <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
-                            </div>                  
+                        <div class="title-flex-area">
+                          <h2 class="h2-title">연계 데이터</h2>
+                          <div class="btns">
+                            <a href="#n" class="krds-btn text small">
+                              <i class="svg-icon ico-help v-0"></i>
+                              도움말
+                            </a>                
                           </div>
+                        </div>
+
+                        <div class="tab-sub-area">
+                          <div class="tab-sub">
+                            <ul role="tablist">
+                              <li id="tab_sub_01" role="tab" aria-selected="true" aria-controls="panel_sub_01" class="active">
+                                <button type="button" class="btn-tab-sub">인물 <i class="sr-only created"> 선택됨</i></button>
+                              </li>
+                              <li id="tab_sub_02" role="tab" aria-selected="false" aria-controls="panel_sub_02">
+                                <button type="button" class="btn-tab-sub">단체</button>
+                              </li>
+                              <li id="tab_sub_03" role="tab" aria-selected="false" aria-controls="panel_sub_03">
+                                <button type="button" class="btn-tab-sub">이벤트</button>
+                              </li>
+                              <li id="tab_sub_04" role="tab" aria-selected="false" aria-controls="panel_sub_04">
+                                <button type="button" class="btn-tab-sub">작품정보</button>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="tab-sub-conts-wrap">
+                            <section id="panel_sub_01" aria-labelledby="tab_sub_01" class="tab-sub-conts active" data-quick-nav="false">
+                              <div class="krds-table-wrap">
+                                <table class="tbl col data" style="min-width: 100%;">
+                                  <caption>연계 데이터에 대한 표로 인물대표명, 직업유형, 생몰일자(출생일), 장르분류에 대한 내용으로 구성되어있다.</caption>
+                                  <colgroup>
+                                    <col style="width: 25%;" span="4">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">인물대표명</th>
+                                      <th scope="col">직업유형</th>
+                                      <th scope="col">생몰일자(출생일)</th>
+                                      <th scope="col">장르분류</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="ac"><a href="#n">김수현</a></td>
+                                      <td class="ac">연출가</td>
+                                      <td class="ac">1942</td>
+                                      <td class="ac">연극</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!-- 페이지네이션 -->
+                              <div class="arko-pagination">
+                                <div class="page-btns">
+                                  <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                                  <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                                </div>                  
+
+                                <div class="page-links">
+                                  <select id="select_sub_page1" class="krds-form-select medium" title="페이지 선택">
+                                    <option value="">1</option>
+                                    <option value="" selected>2</option>
+                                  </select>
+                                  <em>/</em>
+                                  <span class="page-total">2</span>
+                                </div>
+
+                                <div class="page-btns">
+                                  <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                                  <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                                </div>                  
+                              </div>
+                            </section>
+                            <section id="panel_sub_02" aria-labelledby="tab_sub_02" class="tab-sub-conts" data-quick-nav="false">
+                              <div class="krds-table-wrap">
+                                <table class="tbl col data" style="min-width: 100%;">
+                                  <caption>연계 데이터에 대한 표로 단체대표명, 단체유형, 존속일자(설립일), 장르분류에 대한 내용으로 구성되어있다.</caption>
+                                  <colgroup>
+                                    <col style="width: 25%;" span="4">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">단체대표명</th>
+                                      <th scope="col">단체유형</th>
+                                      <th scope="col">존속일자(설립일)</th>
+                                      <th scope="col">장르분류</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="ac"><a href="#n">김수현</a></td>
+                                      <td class="ac">연출가</td>
+                                      <td class="ac">1942</td>
+                                      <td class="ac">연극</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!-- 페이지네이션 -->
+                              <div class="arko-pagination">
+                                <div class="page-btns">
+                                  <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                                  <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                                </div>                  
+
+                                <div class="page-links">
+                                  <select id="select_sub_page2" class="krds-form-select medium" title="페이지 선택">
+                                    <option value="">1</option>
+                                    <option value="" selected>2</option>
+                                  </select>
+                                  <em>/</em>
+                                  <span class="page-total">2</span>
+                                </div>
+
+                                <div class="page-btns">
+                                  <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                                  <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                                </div>                  
+                              </div>
+                            </section>
+                            <section id="panel_sub_03" aria-labelledby="tab_sub_03" class="tab-sub-conts" data-quick-nav="false">
+                              <div class="krds-table-wrap">
+                                <table class="tbl col data" style="min-width: 100%;">
+                                  <caption>연계 데이터에 대한 표로 이벤트유형, 이벤트대표명, 기간(시작일),이벤트자/단체, 장르분류에 대한 내용으로 구성되어있다.</caption>
+                                  <colgroup>
+                                    <col style="width: 20%;" span="5">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">이벤트유형</th>
+                                      <th scope="col">이벤트대표명</th>
+                                      <th scope="col">기간(시작일)</th>
+                                      <th scope="col">이벤트자/단체</th>
+                                      <th scope="col">장르분류</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="ac"><a href="#n">김수현</a></td>
+                                      <td class="ac">연출가</td>
+                                      <td class="ac">1942</td>
+                                      <td class="ac">이벤트자</td>
+                                      <td class="ac">연극</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!-- 페이지네이션 -->
+                              <div class="arko-pagination">
+                                <div class="page-btns">
+                                  <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                                  <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                                </div>                  
+
+                                <div class="page-links">
+                                  <select id="select_sub_page3" class="krds-form-select medium" title="페이지 선택">
+                                    <option value="">1</option>
+                                    <option value="" selected>2</option>
+                                  </select>
+                                  <em>/</em>
+                                  <span class="page-total">2</span>
+                                </div>
+
+                                <div class="page-btns">
+                                  <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                                  <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                                </div>                  
+                              </div>
+                            </section>
+                            <section id="panel_sub_04" aria-labelledby="tab_sub_04" class="tab-sub-conts" data-quick-nav="false">
+                              <div class="krds-table-wrap">
+                                <table class="tbl col data" style="min-width: 100%;">
+                                  <caption>연계 데이터에 대한 표로 작품대표명, 창작일자, 창작자, 장르분류에 대한 내용으로 구성되어있다.</caption>
+                                  <colgroup>
+                                    <col style="width: 25%;" span="4">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">작품대표명</th>
+                                      <th scope="col">창작일자</th>
+                                      <th scope="col">창작자</th>
+                                      <th scope="col">장르분류</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="ac"><a href="#n">김수현</a></td>
+                                      <td class="ac">연출가</td>
+                                      <td class="ac">1942</td>
+                                      <td class="ac">연극</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!-- 페이지네이션 -->
+                              <div class="arko-pagination">
+                                <div class="page-btns">
+                                  <button type="button" class="page-first"><span class="sr-only">처음으로</span></button>
+                                  <button type="button" class="page-prev"><span class="sr-only">이전</span></button>
+                                </div>                  
+
+                                <div class="page-links">
+                                  <select id="select_sub_page4" class="krds-form-select medium" title="페이지 선택">
+                                    <option value="">1</option>
+                                    <option value="" selected>2</option>
+                                  </select>
+                                  <em>/</em>
+                                  <span class="page-total">2</span>
+                                </div>
+
+                                <div class="page-btns">
+                                  <button type="button" class="page-next"><span class="sr-only">다음</span></button>
+                                  <button type="button" class="page-last"><span class="sr-only">마지막으로</span></button>
+                                </div>                  
+                              </div>
+                            </section>
+                          </div>
+                        </div>
+                                                
+                      </section>
+                      <section id="panel_login_05" aria-labelledby="tab_login_05" class="tab-conts" data-quick-nav="false" tabindex="-1">
+                        <div class="title-flex-area">
+                          <h2 class="h2-title">추천기록물</h2>
+                          <div class="btns">
+                            <a href="#n" class="krds-btn text small">
+                              <i class="svg-icon ico-help v-0"></i>
+                              도움말
+                            </a>                
+                          </div>
+                        </div>
+                        
+                        <!-- 목록 -->
+                        <div class="arko-toggle-board toggle--list">
+                          <div class="tr tr--head pc-only">
+                            <span class="td-badge">장르</span>
+                            <span class="td-subject">제목</span>
+                            <span class="td-recom-collection">컬렉션</span>
+                            <span class="td-recom-scope">서비스범위</span>
+                            <span class="td-recom-date">생산일자</span>    
+                          </div>
+                          <a href="#n" class="tr">
+                            <span class="td-badge">시각예술</span>
+                            <span class="td-subject al">(1953.05.) 「주태백」, 『연합신문』 : 원화</span>
+                            <span class="td-recom-collection">만화가 신동헌(1927) 컬렉션</span>
+                            <span class="td-recom-scope">관내열람</span>
+                            <span class="td-recom-date">1953.05</span>            
+                          </a> 
+                          <a href="#n" class="tr">
+                            <span class="td-badge">시각예술</span>
+                            <span class="td-subject al">(1953.05.) 「주태백」, 『연합신문』 : 원화</span>
+                            <span class="td-recom-collection">만화가 신동헌(1927) 컬렉션</span>
+                            <span class="td-recom-scope">관내열람</span>
+                            <span class="td-recom-date">1953.05</span>            
+                          </a>   
+                          <a href="#n" class="tr">
+                            <span class="td-badge">시각예술</span>
+                            <span class="td-subject al">(1953.05.) 「주태백」, 『연합신문』 : 원화</span>
+                            <span class="td-recom-collection">만화가 신동헌(1927) 컬렉션</span>
+                            <span class="td-recom-scope">관내열람</span>
+                            <span class="td-recom-date">1953.05</span>            
+                          </a>   
+                          <a href="#n" class="tr">
+                            <span class="td-badge">시각예술</span>
+                            <span class="td-subject al">(1953.05.) 「주태백」, 『연합신문』 : 원화</span>
+                            <span class="td-recom-collection">만화가 신동헌(1927) 컬렉션</span>
+                            <span class="td-recom-scope">관내열람</span>
+                            <span class="td-recom-date">1953.05</span>            
+                          </a>   
+                          <a href="#n" class="tr">
+                            <span class="td-badge">시각예술</span>
+                            <span class="td-subject al">(1953.05.) 「주태백」, 『연합신문』 : 원화</span>
+                            <span class="td-recom-collection">만화가 신동헌(1927) 컬렉션</span>
+                            <span class="td-recom-scope">관내열람</span>
+                            <span class="td-recom-date">1953.05</span>            
+                          </a>                        
                         </div>
                       </section>
                     </div>
@@ -703,7 +927,7 @@
           block: 'start'
         });
       });
-    });
+    });    
   </script>
    
 </body>

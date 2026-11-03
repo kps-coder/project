@@ -23,6 +23,15 @@
   <script src="../assets/js/lib/jquery.js"></script>
   <script src="../assets/js/lib/jquery-ui.min.js"></script>
   <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+
+  <style>
+    @media (min-width:769px) {
+    .arko-toggle-board.toggle--list .td-badge {width: 10%;}
+    .arko-toggle-board.toggle--list .td-subject {flex: 1;}
+    .arko-toggle-board.toggle--list .td-code {width: 20%;}
+    .arko-toggle-board.toggle--list .td-period {width: 15%;}
+    }
+  </style>
 </head>
 <body>
   <div id="wrap" class="krds-scaled-layout">
@@ -139,6 +148,20 @@
                 </div>
                 
                 <div class="arko-board-area board--records"><!-- 소장기록물 .board--records -->
+
+                  <!-- 20261102 v0.87 검색 영역 추가 -->
+                  <div class="arko-search-area">
+                    <div class="sch-form-wrap">
+                      <div class="sch-input">
+                        <input type="text" class="krds-input xlarge" id="searchWrd-total" placeholder="기록물을 검색해주세요.">
+                        <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
+                          <span class="sr-only">검색</span>
+                          <i class="svg-icon ico-sch"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="arko-board-body">
                     <!-- 목록 -->
                     <div class="arko-toggle-board toggle--list">
@@ -146,82 +169,19 @@
                         <span class="td-badge">장르</span>
                         <span class="td-subject">제목</span>
                         <span class="td-code">참조코드</span>
-                        <span class="td-collection">컬렉션</span>
-                        <span class="td-media">매체</span>
                         <span class="td-period">시기분류</span>         
                       </div>
                       <div class="tr">
-                        <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
                         <span class="td-badge">무용</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진 &lt;백조의 호수&gt; 공연사진&lt;백조의 호수&gt; 공연사진&lt;백조의 호수&gt; 공연사진</a>
+                        <a href="#n" class="td-subject al">평론가 이미원 컬렉션</a>
                         <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션임성남 컬렉션임성남 컬렉션임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1961, 1967</span>         
+                        <span class="td-period">1952</span>      
                       </div>
                       <div class="tr">
-                        <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                        <span class="td-badge">연극·뮤지컬</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                        <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1984</span>         
-                      </div>
-                      <div class="tr">
-                        <a href="#n" class="td-thum"></a>
                         <span class="td-badge">무용</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
+                        <a href="#n" class="td-subject al">작가 박서보 컬렉션</a>
                         <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1984</span>         
-                      </div>
-                      <div class="tr">
-                        <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                        <span class="td-badge">무용</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                        <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1984</span>         
-                      </div>
-
-                      <div class="tr">
-                        <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                        <span class="td-badge">무용</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                        <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1984</span>         
-                      </div>
-                      <div class="tr">
-                        <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                        <span class="td-badge">무용</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                        <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1984</span>         
-                      </div>
-                      <div class="tr">
-                        <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                        <span class="td-badge">무용</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                        <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1984</span>         
-                      </div>
-                      <div class="tr">
-                        <a href="#n" class="td-thum"><img src="../assets/img/comm/img_sample.jpg" alt=""></a>
-                        <span class="td-badge">무용</span>
-                        <a href="#n" class="td-subject al">&lt;백조의 호수&gt; 공연사진</a>
-                        <span class="td-code">MC-KSM-02082</span>
-                        <span class="td-collection">임성남 컬렉션</span>
-                        <span class="td-media">사진</span>
-                        <span class="td-period">1984</span>         
+                        <span class="td-period">1952</span>      
                       </div>
                     </div>
 
