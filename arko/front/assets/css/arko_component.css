@@ -258,6 +258,10 @@ button {
   font-size: var(--arko-font-size-base);
 }
 
+.krds-btn.radius {
+  border-radius: 100px;
+}
+
 .arko-btns {
   display: flex;
   justify-content: center;
