@@ -613,6 +613,9 @@
     width: 13rem;
     height: 13rem;
   }
+  .da-arts__item > dl {
+    gap:1.5rem;
+  }
   .da-arts__item > dl > dd.txt {
     display: none;
   }
