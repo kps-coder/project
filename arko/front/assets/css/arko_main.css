@@ -25,6 +25,12 @@
     --arko-main-section-padding-block: 3rem;
     --arko-main-section-gap-large: 3rem;
   }
+
+  .krds-btn.large {
+    height: 4rem;
+    font-size: 1.3rem;
+    padding-inline: 1.5rem;
+  }
 }
 
 .h2-main {
@@ -527,9 +533,11 @@
   }
 }
 
+/* DA-Arts */
 .main-DA-Arts {
   --main-DA-Arts-margin-top:8.5rem;
   --main-DA-Arts-padding-block: 7rem;
+  --main-DA-Arts-dt-font-size: 2.7rem;
 
   max-width: 169rem;
   margin: var(--main-DA-Arts-margin-top) auto 0;
@@ -539,12 +547,17 @@
 }
 .main-DA-Arts-list > ul {
   display: flex;
+  column-gap: var(--arko-contents-gap-extra-large);
 }
 .da-arts__item {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: var(--arko-contents-gap-medium);
   text-align: center;
+  padding:var(--arko-contents-gap-large);
+  border-radius: 70px 0 70px 0;
   background-color: #FFFDF7;
 }
 .da-arts__thum {
@@ -559,14 +572,48 @@
   object-position: center center;
 }
 
+.da-arts__item > dl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.da-arts__item > dl > dt {
+  font-weight: 600;
+  color: var(--arko-brand-color);
+  font-size: var(--main-DA-Arts-dt-font-size);
+}
+.da-arts__item > dl > dd.txt {
+  margin-bottom: var(--arko-contents-gap-medium);
+}
+.da-arts__item > dl > dd.btns {
+  margin-top:auto;
+}
+
 @media (max-width:768px) {
   .main-DA-Arts {
     --main-DA-Arts-margin-top:6rem;
     --main-DA-Arts-padding-block: 2rem;
+    --main-DA-Arts-dt-font-size: 2.4rem;
 
     border-radius: 0;
   }
   .main-DA-Arts-list > ul {
     flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .da-arts__item {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 1.5rem;
+  }
+  .da-arts__thum {
+    flex: 0 0 13rem;
+    width: 13rem;
+    height: 13rem;
+  }
+  .da-arts__item > dl > dd.txt {
+    display: none;
   }
 }
