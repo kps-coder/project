@@ -433,10 +433,10 @@
   .swiper-genre .swiper-foot .swiper-pagination {
     display: none;
   }
-  .swiper-genre .swiper-button-prev {
+  .swiper-button-prev {
     left: 3.2rem;
   }
-  .swiper-genre .swiper-button-next{
+  .swiper-button-next{
     right: 3.2rem;
   }
 }
@@ -540,7 +540,7 @@
   --main-DA-Arts-dt-font-size: 2.7rem;
 
   max-width: 169rem;
-  margin: var(--main-DA-Arts-margin-top) auto 0;
+  margin: var(--main-DA-Arts-margin-top) auto var(--arko-main-section-padding-block);
   padding-block:var(--main-DA-Arts-padding-block);
   border-radius: 70px 0 70px 0;
   background-color: #AA8B6F;
@@ -627,5 +627,176 @@
 @media (max-width:767px) {
   .main-DA-Arts {
     border-radius: 0;
+  }
+}
+
+/* 추천 컨텐츠 */
+.main-recomend-records {
+  --main-recomend-records-title-size :2.2rem;
+
+  padding:var(--arko-main-section-padding-block) 0;
+}
+
+.swiper-recomend {
+  margin-top: 3rem;
+}
+.recommend-item {
+  display: block;
+}
+
+.recommend-item__thum {
+  aspect-ratio: 324 / 420;
+}
+.recommend-item__thum > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+.recommend-item__info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding:var(--arko-contents-gap-medium);
+  border-radius: 1.5rem;
+  background-color: #F6F5F3;
+}
+.recommend-item__info .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: calc(1.6em * 2);
+  margin-bottom: var(--arko-contents-gap-medium);
+  text-overflow: ellipsis;
+  font-weight: 500;
+  color: var(--arko-font-color-title);
+  font-size: var(--main-recomend-records-title-size);
+}
+.recommend-item__info .date {
+  display: flex;
+  align-items: center;
+  padding-block: .4rem;
+  padding-top:var(--arko-contents-gap-medium);
+  font-size: 1.8rem;
+  background: url(../img/main/border_dashed.svg) repeat-x 0 top;
+}
+.recommend-item__info .date > .svg-icon {
+  margin-right: 1.2rem;
+}
+.recommend-item__info .media {
+  position: absolute;
+  right:var(--arko-contents-gap-medium);
+  bottom: var(--arko-contents-gap-medium);
+}
+
+
+@media (min-width:1024px) {
+  .main-recomend-records {
+    --main-recomend-records-title-size :2rem;
+  }
+  .swiper-foot {
+    display: none;
+  }
+}
+
+/* 안내, 지원센터 */
+.main-cscenter-conts {
+  display: flex;
+  column-gap: var(--arko-contents-gap-extra-large);
+}
+.main-cscenter__contact {
+  flex:0 0 31%;
+  padding: var(--arko-contents-gap-large) var(--arko-contents-gap-medium);
+  color: #fff;
+  border-radius: 15px;
+  background-color: #AA8B6F;
+}
+
+.main-cscenter__contact .svg-icon {
+  flex: 0 0 28px;
+  margin-top:5px;
+  background-color: #fff;
+}
+.main-cscenter-conts ul > li {
+  display: flex;
+  gap: 1.2rem;
+  flex: 1;
+}
+.main-cscenter__contact > ul > li + li {
+  margin-top:var(--arko-contents-gap-large);
+  padding-top:var(--arko-contents-gap-large);
+  border-top: 1px solid rgba(255,255,255,.3)
+}
+
+.main-cscenter-conts dl > dt {
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.main-cscenter__operation {
+  flex: 1;
+  padding: var(--arko-contents-gap-large) var(--arko-contents-gap-medium);
+  border-radius: 15px;
+  background-color: #F5EFE4;
+}
+
+.main-cscenter__operation > ul {
+  display: flex;
+  gap: var(--arko-contents-gap-large);
+}
+.main-cscenter__operation > ul > li + li {
+  padding-left:var(--arko-contents-gap-large);
+  border-left:1px solid var(--arko-line-color-etc);  
+}
+.main-cscenter__operation dl > dt {
+  margin-bottom: var(--arko-contents-gap-small);
+  color: var(--arko-brand-color-text);
+}
+.main-cscenter__operation .svg-icon {
+  flex: 0 0 30px;
+  margin-top:5px;
+  background-color: var(--arko-brand-color-text);
+}
+
+.main-cscenter__operation .str-txt {
+  font-size: 2.1rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+}
+
+@media (max-width:1023px) and (min-width:768px) {
+  .main-cscenter-conts {
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+
+  .main-cscenter__contact > ul {
+    display: flex;
+  }
+  .main-cscenter__contact > ul > li + li {
+    margin:0;
+    padding:0;
+    border: 0;
+    margin-left: var(--arko-contents-gap-large);
+    padding-left: var(--arko-contents-gap-large);
+    border-left: 1px solid rgba(255, 255, 255, .3);
+  }
+}
+
+@media (max-width:767px) {
+  .main-cscenter-conts {
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+  .main-cscenter__operation > ul {
+    flex-direction: column;
+  }
+  .main-cscenter__operation > ul > li + li {
+    margin:0;
+    padding:0;
+    border: 0;
+    padding-top: var(--arko-contents-gap-large);
+    border-top: 1px solid var(--arko-line-color-etc);
   }
 }

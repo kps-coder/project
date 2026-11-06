@@ -831,6 +831,54 @@ button {
   mask-image: none;
   background: transparent url(../img/comm/ico_play.svg) no-repeat center / contain !important;
 }
+.svg-icon.ico-m-tel {
+  width: 28px;
+  height: 28px;
+  -webkit-mask-image: url(../img/main/ico_m_tel.svg);
+  mask-image: url(../img/main/ico_m_tel.svg);
+}
+.svg-icon.ico-m-email {
+  width: 28px;
+  height: 28px;
+  -webkit-mask-image: url(../img/main/ico_m_email.svg);
+  mask-image: url(../img/main/ico_m_email.svg);
+}
+
+.svg-icon.ico-m-time {
+  width: 30px;
+  height: 30px;
+  -webkit-mask-image: url(../img/main/ico_m_time.svg);
+  mask-image: url(../img/main/ico_m_tel.svg);
+}
+.svg-icon.ico-m-location {
+  width: 30px;
+  height: 30px;
+  -webkit-mask-image: url(../img/main/ico_m_location.svg);
+  mask-image: url(../img/main/ico_m_location.svg);
+}
+.svg-icon.ico-instagram {
+  width: 38px;
+  height: 38px;
+  vertical-align: top;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/main/ico_instagram.svg) no-repeat center / contain;
+}
+.svg-icon.ico-facebook {
+  width: 38px;
+  height: 38px;
+  vertical-align: top;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/main/ico_facebook.svg) no-repeat center / contain;
+}
+.svg-icon.ico-m-calendar {
+  width: 20px;
+  height: 20px;
+  -webkit-mask-image: url(../img/main/ico_m_calendar.svg);
+  mask-image: url(../img/main/ico_m_calendar.svg);
+  background-color: #939393;
+}
 
 /* 배지 */
 .badge {

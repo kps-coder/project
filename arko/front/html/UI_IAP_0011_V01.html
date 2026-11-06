@@ -329,6 +329,153 @@
               </div>
             </div>
           </div>
+
+          <div class="main-recomend-records">
+            <div class="inner">
+              <h2 class="h2-main">추천 콘텐츠</h2>
+              <div class="swiper-recomend">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#n" class="recommend-item">
+                        <div class="recommend-item__thum">
+                          <img src="../assets/img/comm/img_sample_one_table.jpg" alt="이미지설명">
+                        </div>
+                        <div class="recommend-item__info">
+                          <p class="title">원 테이블 : 7. PAPER TO SPACE, 한국관</p>
+                          <p class="date">
+                            <i class="svg-icon ico-m-calendar"></i>
+                            2026-05-29
+                          </p>
+                          <div class="media">                              
+                            <i class="svg-icon ico-instagram">
+                              <span class="sr-only">인스타그램</span>
+                            </i>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#n" class="recommend-item">
+                        <div class="recommend-item__thum">
+                          <img src="../assets/img/comm/img_sample_one_table.jpg" alt="이미지설명">
+                        </div>
+                        <div class="recommend-item__info">
+                          <p class="title">공연예술창작산실 컬쳐인컴퍼니〈오셀로의 재심〉</p>
+                          <p class="date">
+                            <i class="svg-icon ico-m-calendar"></i>
+                            2026-05-29
+                          </p>
+                          <div class="media">                              
+                            <i class="svg-icon ico-instagram">
+                              <span class="sr-only">인스타그램</span>
+                            </i>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#n" class="recommend-item">
+                        <div class="recommend-item__thum">
+                          <img src="../assets/img/comm/img_sample_one_table.jpg" alt="이미지설명">
+                        </div>
+                        <div class="recommend-item__info">
+                          <p class="title">원 테이블 : 7. PAPER TO SPACE, 한국관</p>
+                          <p class="date">
+                            <i class="svg-icon ico-m-calendar"></i>
+                            2026-05-29
+                          </p>
+                          <div class="media">                              
+                            <i class="svg-icon ico-facebook">
+                              <span class="sr-only">페이스북</span>
+                            </i>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#n" class="recommend-item">
+                        <div class="recommend-item__thum">
+                          <img src="../assets/img/comm/img_sample_one_table.jpg" alt="이미지설명">
+                        </div>
+                        <div class="recommend-item__info">
+                          <p class="title">원 테이블 : 7. PAPER TO SPACE, 한국관</p>
+                          <p class="date">
+                            <i class="svg-icon ico-m-calendar"></i>
+                            2026-05-29
+                          </p>
+                          <div class="media">
+                            <i class="svg-icon ico-facebook">
+                              <span class="sr-only">페이스북</span>
+                            </i>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-foot">
+                    <button type="button" class="swiper-button-prev">
+                      <span class="sr-only">이전</span>
+                    </button>
+                    <button type="button" class="swiper-button-next">
+                      <span class="sr-only">다음</span>
+                    </button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="arko-main-sec">
+          <h2 class="sr-only">안내·지원센터</h2>
+          <div class="inner">
+            <div class="main-cscenter-conts">
+              <div class="main-cscenter__contact">
+                <ul>
+                  <li>
+                    <i class="svg-icon ico-m-tel"></i>
+                    <dl>
+                      <dt>대표전화</dt>
+                      <dd>02-760-4750</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <i class="svg-icon ico-m-email"></i>
+                    <dl>
+                      <dt>이메일</dt>
+                      <dd>artsarchive@arko.or.kr</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-cscenter__operation">
+                <ul>
+                  <li>
+                    <i class="svg-icon ico-m-time"></i>
+                    <dl>
+                      <dt>운영시간</dt>
+                      <dd>
+                        <p class="str-txt">월-금 10:00~17:30</p>
+                        <p>매주 토·일 정기 휴관</p>
+                        <p>7월 휴관일 : 4, 5, 11, 12, 17, 18, 19, 25, 26</p>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <i class="svg-icon ico-m-location"></i>
+                    <dl>
+                      <dt>오시는 길</dt>
+                      <dd>
+                        <p>본원(서초동)<br>지하철 3호선 남부터미널 5번출구</p>
+                        <p class="mt-small">분원(대학로)<br>지하철 4호선 혜화역 2번출구</p>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <!-- //컨텐츠 영역 -->
@@ -378,6 +525,44 @@
     menuSwiperInit();
     window.addEventListener("resize", () => {
       menuSwiperInit();
+    });
+
+    // 추천콘텐츠
+    let recomSwiper = undefined;
+    function recomSwiperInit() {
+      const $page = document.querySelector(".swiper-recomend");
+      menuSwiper = new Swiper('.swiper-recomend .swiper', {
+        slidesPerView: 4,
+        centeredSlides: false,
+        loop: false,
+        speed: 400,
+        breakpoints: {
+          0: {
+            spaceBetween: 0,
+            slidesPerView: 1,
+          },
+          500: {
+            spaceBetween: 24,
+            slidesPerView: 2,
+          },
+          1024: {
+            spaceBetween: 24,
+            slidesPerView: 4,
+          },
+          1280: {
+            spaceBetween: 48,
+            slidesPerView: 4,
+          },
+        },
+        navigation: {
+          nextEl: '.swiper-recomend .swiper-button-next',
+          prevEl: '.swiper-recomend .swiper-button-prev',
+        },
+      });
+    }
+    recomSwiperInit();
+    window.addEventListener("resize", () => {
+      recomSwiperInit();
     });
   </script>
 
