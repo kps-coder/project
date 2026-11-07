@@ -428,6 +428,103 @@
         </section>
 
         <section class="arko-main-sec">
+          <h2 class="sr-only">공지사항</h2>
+          <div class="inner">
+            <div class="main-notice">
+              <div class="main-notice__list">
+                <div class="main-tab-area">
+                  <ul>
+                    <li class="active"><button type="button" class="btn-mn-genre">전체</button></li>
+                    <li><button type="button" class="btn-mn-genre">공지</button></li>
+                    <li><button type="button" class="btn-mn-genre">점검</button></li>
+                    <li><button type="button" class="btn-mn-genre">안내</button></li>
+                    <li><button type="button" class="btn-mn-genre">기타</button></li>
+                  </ul>
+                </div>
+
+                <div class="main-notice-list">
+                  <ul>
+                    <li>
+                      <a href="#n" class="main-notice-list__link important">
+                        <span class="notice-badge">공지</span>
+                        <div class="cont">
+                          <b>점검으로 인한 홈페이지 접속 일시단절 안내(6월 24일(수)/12:00~13:00)</b>
+                          <p>아르코예술기록원 서버 점검으로 인하여, 안내드리는 페이지의 접속이 불가능할 아르코예술기록원 서버 점검으로 인하여, 안내드리는 페이지의 접속이 불가능할</p>
+                        </div>                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#n" class="main-notice-list__link">
+                        <span class="notice-badge">공지</span>
+                        <b>아르코예술기록원이 보유한 방대한 예술기록물을 통합 검색하고, 다양한 방식으로 자유롭게 만나보세요</b>
+                        <em>2026.06.23</em>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#n" class="main-notice-list__link">
+                        <span class="notice-badge">점검</span>
+                        <b>2026년 한국예술디지털아카이브 홈페이지 이용자 설문 2026년 한국예술디지털아카이브 홈페이지 이용자 설문</b>
+                        <em>2026.06.23</em>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#n" class="main-notice-list__link">
+                        <span class="notice-badge">기타</span>
+                        <b>2026년 한국예술디지털아카이브 홈페이지 이용자 설문 2026년 한국예술디지털아카이브 홈페이지 이용자 설문</b>
+                        <em>2026.06.23</em>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="btns ar">
+                  <a href="#n" class="krds-btn large primary radius">
+                    VIEW MORE
+                    <i class="svg-icon ico-more"></i>
+                  </a>
+                </div>                
+              </div>
+              <div class="main-notice__pop">
+                <div class="swiper-notice">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a href="#n" class="notice-pop-item">
+                          <img src="../assets/img/main/img_notice_pop.jpg" alt="연계 프로그램 '사의 찬미' 100년 남은 노래와 이야기 진행 이준희(대중음악 연구자)">
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#n" class="notice-pop-item">
+                          <img src="../assets/img/main/img_notice_pop.jpg" alt="연계 프로그램 '사의 찬미' 100년 남은 노래와 이야기 진행 이준희(대중음악 연구자)">
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#n" class="notice-pop-item">
+                          <img src="../assets/img/main/img_notice_pop.jpg" alt="연계 프로그램 '사의 찬미' 100년 남은 노래와 이야기 진행 이준희(대중음악 연구자)">
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="#n" class="notice-pop-item">
+                          <img src="../assets/img/main/img_notice_pop.jpg" alt="연계 프로그램 '사의 찬미' 100년 남은 노래와 이야기 진행 이준희(대중음악 연구자)">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-foot">
+                      <button type="button" class="swiper-button-prev">
+                        <span class="sr-only">이전</span>
+                      </button>
+                      <button type="button" class="swiper-button-next">
+                        <span class="sr-only">다음</span>
+                      </button>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="arko-main-sec">
           <h2 class="sr-only">안내·지원센터</h2>
           <div class="inner">
             <div class="main-cscenter-conts">
@@ -523,9 +620,6 @@
       menuSwiper.slideToLoop(0, 0);
     }
     menuSwiperInit();
-    window.addEventListener("resize", () => {
-      menuSwiperInit();
-    });
 
     // 추천콘텐츠
     let recomSwiper = undefined;
@@ -561,8 +655,30 @@
       });
     }
     recomSwiperInit();
+
+    // 공지사항 슬라이드 팝업
+    let noticeSwiper = undefined;
+    function noticeSwiperInit() {
+      const $page = document.querySelector(".swiper-notice");
+      noticeSwiper = new Swiper('.swiper-notice .swiper', {
+        slidesPerView: 1,
+        centeredSlides: false,
+        loop: false,
+        speed: 400,
+        spaceBetween: 24,
+        navigation: {
+          nextEl: '.swiper-notice .swiper-button-next',
+          prevEl: '.swiper-notice .swiper-button-prev',
+        },
+      });
+    }
+    noticeSwiperInit();
+
+
     window.addEventListener("resize", () => {
       recomSwiperInit();
+      noticeSwiperInit();
+      menuSwiperInit();
     });
   </script>
 
