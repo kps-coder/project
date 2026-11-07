@@ -139,6 +139,10 @@
   height: var(--main-integrated-search-input-height);
   border-radius: var(--main-integrated-search-input-height);
   border-width: 5px;
+  color: var(--arko-primary-color);
+}
+.main-integrated-search .arko-search-area .sch-input .krds-input.xlarge::placeholder {
+  color: var(--arko-primary-color);
 }
 .main-integrated-search .arko-search-area .search-detail-btns .krds-btn {
   height: var(--main-integrated-search-input-height);
