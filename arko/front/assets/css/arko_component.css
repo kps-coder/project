@@ -879,6 +879,20 @@ button {
   mask-image: url(../img/main/ico_m_calendar.svg);
   background-color: #939393;
 }
+.svg-icon.ico-page-err {
+  width: 86px;
+  height: 102px;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/comm/ico_page_err.svg) no-repeat center / contain;
+}
+.svg-icon.ico-system-err {
+  width: 86px;
+  height: 102px;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: url(../img/comm/ico_system_err.svg) no-repeat center / contain;
+}
 
 /* 배지 */
 .badge {
@@ -1405,4 +1419,36 @@ button {
 .krds-tag-wrap.large .krds-btn-tag .btn-delete {
   background-image: url(../img/comm/ico_delete_fill.svg);
   background-size: 16px 16px;
+}
+
+/* 에러페이지 */
+.error-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-inline: var(--krds-contents-padding-x);
+  text-align: center;
+}
+
+.error-msg {
+  width: 100%;
+  max-width: 696px;
+  padding: var(--arko-contents-gap-extra-large);
+  border-radius: var(--arko-border-radius-default);
+  border: 1px solid var(--arko-line-color-etc);
+}
+
+.error-title {
+  font-size: var(--arko-h2-font-size);
+  color: var(--arko-h2-font-color);
+  font-weight: var(--arko-h2-font-weight);
+}
+
+.error-title + .error-txt,
+.error-msg + .arko-btns,
+.svg-icon + .error-title {
+  margin-top:var(--arko-contents-gap-large);
 }
