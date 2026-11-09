@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Admin LIST : : ARKO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" /> 
+    <link rel="stylesheet" href="guide/css/default.css">
+    
+
+    <!-- 가이드용 -->
+    <link rel="stylesheet" href="guide/css/guide.css">
+    <!-- <script src="guide/asset/js/ui-guide.js"></script> -->
+    <!-- //가이드용 -->
+
+    <style>
+      body {background-color: #fff; font-weight: 500;}
+      .fa-solid {color:inherit} 
+
+      .fixed-head {position:fixed; top:0; width:100%; z-index:10}
+      
+      h2.bg_green {background-color:#00A684}
+      table {width:100%; line-height:1.3; margin-top:-2px; border-collapse: separate;}
+      table * {font-size:14px}
+      table thead th {height:25px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; line-height:1.3; vertical-align: middle; text-align: center; color:#333; background-color: #ddd}
+      table thead th > span {letter-spacing: -1px;}
+      table tbody th {height:35px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:1px solid #ccc; line-height:1.3; padding-left:20px; line-height:1.3; vertical-align: middle; text-align:left; letter-spacing: -1px; color:#333; background-color: #eee;}
+      table td {height:37px; padding:5px 10px; line-height:1.3; border-right:1px solid #ccc; border-bottom:1px solid #f1f1f1; vertical-align: middle; color:#333}
+      table tr:nth-child(odd) {background-color:rgba(245,245,245, .7);}
+      .no {text-align:center; font-weight:bold}
+      .date {text-align:center}
+      table .file {text-align:center; color:#bbb}
+      .plan {text-align: center; color:#999}
+      .file > a {color:#333}
+      .status {position:absolute; right:20px; top:10px; display: flex; align-items: center; gap: 10px;}
+      .status .sec {display:inline-block; padding:7px 10px; border-radius: 10px; font-weight: bold; font-size:14px; color:#333; background-color: rgba(255,255,255, .7);}
+      .status #finish {padding:0 10px; border-radius: 20px; font-weight:bold; background-color:#fff}
+      .etc {vertical-align: top;}
+
+      .btn-toggle {padding:3px 10px; border:1px solid #fff; border-radius: 10px; color:#004d40; font-size:12px; background-color: #fff;}
+      h2 .btn-toggle {position:absolute; right:20px; top:6px;}
+
+      th .layer, a.layer {color:green !important}
+      th .get, a.get {color:blue !important}
+      th .mobile, a.mobile {color:blue !important}
+      th .comm, a.comm {color:red !important}
+
+      .f-org {color:orange !important}
+
+      table tr.del {text-decoration: line-through; opacity: 0.5}
+
+      [class^="btn-"] > i {margin:0}
+
+      .fc-pri2 {color:green !important;}
+      .fc-point1 {color:blue}
+      .fc-point2 {color:red}
+
+      tr.web td {background-color: rgba(179, 255, 179, 0.2);}
+      tr.app td {background-color: rgba(255, 179, 179, 0.2);}
+
+      tr.thick-line td {border-top: 2px solid #ccc;}
+    </style>
+  </head>
+  <body>
+    <div class="g_wrap html_list">
+      <div class="fixed-head">
+        <header>
+          <h1>Admin HTML List : : 아르코예술기록원 </h1>
+          <!-- <a href="guide/guide.html" class="g-btn-gnb">&lt; Guide 보기</a> -->
+        </header>
+        <nav class="g-gnb-wrap">
+          <div class="gnb-container">
+            <div class="gnb-head"></div>
+            <ul>
+              <li><a href="index.html">Admin HTML List</a></li>
+              <li><a href="guide/guide.html">UI/UX Guide</a>
+                <ul>
+                  <li class="active"><a href="guide/guide.html"><i class="fa-solid fa-minus-circle"></i>  Guide</a></li>
+                  <li><a href="guide/component.html"><i class="fa-solid fa-minus-circle"></i>  Component</a></li>
+                  <li><a href="guide/button.html"><i class="fa-solid fa-minus-circle"></i> Button</a></li>
+                  <li><a href="guide/form.html"><i class="fa-solid fa-minus-circle"></i> Form</a></li>
+                  <li><a href="guide/modal.html"><i class="fa-solid fa-minus-circle"></i> Modal</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="gnb-close"><button type="button"><i class="fa-solid fa-times"></i></button></div>
+          </div>
+        </nav>
+        <div class="status">
+          <div class="sec">진행현황 : <span id="finish">0</span> / <span id="total"></span></div>
+          <div class="sec">진척률 : <span id="progress"></span> %</div>
+        </div>
+        <table class="ls-head">
+          <colgroup>
+            <col style="width:5%">
+            <col style="width:10%">
+            <col style="width:12%">
+            <col style="width:15%">
+            <col style="width:13%">
+            <col style="width:10%">
+            <col style="width:10%">
+            <col style="width:auto">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">No</th>
+              <th scope="col" colspan="3">화면</th>
+              <th scope="col" rowspan="2">화면ID</th>
+              <th scope="col" rowspan="2">퍼블일정</th>
+              <th scope="col" rowspan="2"><span class="fc-pri2">수정일</span><br>완료일</th>
+              <th scope="col" rowspan="2">비고<br><span class="fc-pri2">수정내용</span> / <span class="fc-point1">참고</span> / <span class="fc-point2">중요</span></th>
+            </tr>
+            <tr>
+              <th scope="col">중메뉴</th>
+              <th scope="col">소메뉴</th>
+              <th scope="col">기능명</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:10%">
+          <col style="width:12%">
+          <col style="width:15%">
+          <col style="width:13%">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">레이아웃</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file"><a href="html/UI_DAS_layout.html" target="_blank">UI_DAS_layout</a></td>
+            <td class="plan">2026-11-16</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">스타일 가이드</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">UI_guide</td>
+            <td class="plan">2026-11-30</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">대시보드</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1011-V01</td>
+            <td class="plan">2026-11-30</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="menu-01">사이트관리</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:10%">
+          <col style="width:12%">
+          <col style="width:15%">
+          <col style="width:13%">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">DA-Arts 관리</td>
+            <td class="2dep">기획 콘텐츠</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1021-L02</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1021-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록</td>
+            <td class="file">UI-DAS-1021-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 기록물 조회 및 선택</td>
+            <td class="file">UI-DAS-1021-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">구술채록</td>
+            <td class="3dep"></td>
+            <td class="file"></td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">└ 생애사(회차관리)</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1022-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1022-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록 - 채록등록</td>
+            <td class="file">UI-DAS-1022-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록 - 회차등록</td>
+            <td class="file">UI-DAS-1022-I02</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 채록물 검색(P)</td>
+            <td class="file">UI-DAS-1022-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 채록영상 검색(P)</td>
+            <td class="file">UI-DAS-1022-P02</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">└ 주제사(주제)</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1023-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록</td>
+            <td class="file">UI-DAS-1023-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 구술자 직접입력</td>
+            <td class="file">UI-DAS-1023-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">└ 주제사(회차관리)</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1024-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1024-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록 - 회차등록</td>
+            <td class="file">UI-DAS-1024-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 채록물 검색(P)</td>
+            <td class="file">UI-DAS-1024-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 채록영상 검색(P)</td>
+            <td class="file">UI-DAS-1024-P02</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 스크립트 보기(P)</td>
+            <td class="file">UI-DAS-1024-P03</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 상세목차 보기(P)</td>
+            <td class="file">UI-DAS-1024-P04</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">원테이블</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1025-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1025-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1025-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 관련기록물 검색(P)</td>
+            <td class="file">UI-DAS-1025-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">메인화면관리</td>
+            <td class="2dep">Hero 영역 관리</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1031-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1031-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1031-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">키워드관리</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1032-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1032-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1032-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">주요 아카이브 관리</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1033-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1033-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1033-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 기록물 조회 및 선택(P)</td>
+            <td class="file">UI-DAS-1033-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">원테이블 관리</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1034-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1034-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1034-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 원테이블 등록(P)</td>
+            <td class="file">UI-DAS-1034-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">구술채록·공연영상화 관리</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1035-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1035-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1035-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 구술채록 등록(P)</td>
+            <td class="file">UI-DAS-1035-P01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">└ 공연영상화 등록(P)</td>
+            <td class="file">UI-DAS-1035-P02</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">추천 콘텐츠 관리</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1036-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">기록원 소식 관리</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1037-L02</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">팝업배너 관리</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1038-L03</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1038-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1038-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">안내·지원센터</td>
+            <td class="2dep">FAQ</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1041-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1041-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1041-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">1:1 문의</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1042-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1042-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1042-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">공지사항</td>
+            <td class="3dep">목록</td>
+            <td class="file">UI-DAS-1043-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">상세</td>
+            <td class="file">UI-DAS-1043-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">등록/수정</td>
+            <td class="file">UI-DAS-1043-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">기록원 활동관리</td>
+            <td class="2dep">목록</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1051-L01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1051-V01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">등록/수정</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1051-I01</td>
+            <td class="plan">2026-11-23</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-02">회원관리</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:10%">
+          <col style="width:12%">
+          <col style="width:15%">
+          <col style="width:13%">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">일반회원</td>
+            <td class="2dep">목록</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-0961-L01</td>
+            <td class="plan">2026-11-24</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">상세</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-0961-V01</td>
+            <td class="plan">2026-11-24</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep"></td>
+            <td class="3dep">대출·반납 이력(P)</td>
+            <td class="file">UI-DAS-0961-P03</td>
+            <td class="plan">2026-11-24</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">휴면회원</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-0962-L01</td>
+            <td class="plan">2026-11-24</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">탈퇴회원</td>
+            <td class="2dep"></td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-0963-L02</td>
+            <td class="plan">2026-11-24</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="menu-03">통계</h2>
+      <table>
+        <colgroup>
+          <col style="width:5%">
+          <col style="width:10%">
+          <col style="width:12%">
+          <col style="width:15%">
+          <col style="width:13%">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">검색 통계</td>
+            <td class="2dep">검색 통계</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1171-V01</td>
+            <td class="plan">2026-11-26</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">검색 로그</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1171-V02</td>
+            <td class="plan">2026-11-26</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep">사이트 통계</td>
+            <td class="2dep">접속 통계</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1172-V03</td>
+            <td class="plan">2026-11-26</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+          <tr>
+            <td class="no"></td>
+            <td class="1dep"></td>
+            <td class="2dep">접속 로그</td>
+            <td class="3dep"></td>
+            <td class="file">UI-DAS-1172-V04</td>
+            <td class="plan">2026-11-26</td>
+            <td class="date"></td>
+            <td class="etc"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <p>copyright 2026. ARKO all rights reserved.</p>
+    </footer>
+
+    <script>
+      let elemNo = document.querySelectorAll(".no");
+      let elemTable = document.querySelectorAll("table");
+      let elemDate = document.querySelectorAll(".date");
+      const fixedHead = document.querySelector(".fixed-head");
+      let elemDel = document.querySelectorAll(".del");
+
+      let count = 0;
+      
+      /* elemNo.forEach(function(obj, i){
+        obj.innerHTML= i + 1;
+      }); */
+
+      elemTable.forEach(function(obj){
+        const no =  obj.querySelectorAll(".no");
+        console.log(no);
+        no.forEach(function(obj, i){
+          obj.innerHTML= i + 1;
+        });
+      });
+      console.log(elemDel.length);
+
+      total.innerHTML = elemNo.length - elemDel.length;
+
+      // 완료건 count 및 진척률
+      elemDate.forEach(function(obj, i){
+        //console.log(elemDate);
+        if(obj.hasChildNodes()){
+          count = count + 1;
+          finish.innerHTML = count;
+          console.log(obj.hasChildNodes());
+        }
+
+        let progr = ( count / (elemNo.length - elemDel.length) ) * 100;
+        progress.innerHTML = Math.floor(progr);
+      });
+
+      //공통 아이콘
+      const comIcon = document.querySelectorAll(".comm");
+      comIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-plug"></i> ');
+      });
+
+      //상단 fixed
+      const htmlWrap = document.querySelector(".html_list");
+      htmlWrap.style.paddingTop = fixedHead.clientHeight + "px";
+      //alert(fixedHead.clientHeight);
+
+      //레이어 아이콘
+      const layerIcon = document.querySelectorAll(".layer");
+      layerIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-clone"></i> ');
+      });
+
+      //모바일 아이콘
+      const mobileIcon = document.querySelectorAll(".mobile");
+      mobileIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-mobile-alt"></i> ');
+      });
+
+      //팝업 아이콘
+      const winPopIcon = document.querySelectorAll(".get");
+      winPopIcon.forEach(function(obj){
+        obj.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-arrow-up-right-from-square"></i> ');
+      });
+
+      //열기닫기
+      const btnTbToggle = document.querySelectorAll(".btn-toggle");
+      btnTbToggle.forEach(function(obj, i){
+        obj.addEventListener('click', function(){
+          const nextTable = obj.closest("h2").nextElementSibling;
+          
+          if (obj.classList.contains("open")){
+            nextTable.style.display = "none";
+            obj.classList.remove("open");
+            obj.innerHTML = "<i class='fa-solid fa-chevron-down'></i>";
+          } else {
+            nextTable.removeAttribute("style");
+            obj.classList.add("open");
+            obj.innerHTML = "<i class='fa-solid fa-chevron-up'></i>";
+          } 
+        });
+      });
+      
+     // gnbControlGuide();
+    </script>
+  </body>
+</html>
