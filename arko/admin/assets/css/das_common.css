@@ -1,6 +1,7 @@
 @charset "utf-8";
 
+@import url("./das_tokens.css");
 @import url("./reset.css");
-@import url("./arko_admin_layout.css");
-@import url("./arko_admin_component.css");
+@import url("./das_layout.css");
+@import url("./das_component.css");
 

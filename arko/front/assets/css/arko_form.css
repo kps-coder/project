@@ -269,7 +269,7 @@
 .form-period-range {
   --period-active: var(--arko-primary-color);
   --period-track: var(--arko-background-color);
-  --period-text: #8C8C8C;
+  --period-text: var(--arko-sub-text-color);
   --period-tooltip: var(--arko-background-color);
 
   position: relative;

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14 28">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-2 {
+        stroke: #1b2236;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.17px;
+      }
+
+      .cls-3 {
+        stroke: #5a87d9;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" y="0" width="14" height="14"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" y="14" width="14" height="14"/>
+    </clipPath>
+  </defs>
+  <g class="cls-5">
+    <g>
+      <path class="cls-3" d="M9.33,12.25v-1.17c0-.62-.25-1.21-.68-1.65-.44-.44-1.03-.68-1.65-.68h-3.5c-.62,0-1.21.25-1.65.68-.44.44-.68,1.03-.68,1.65v1.17"/>
+      <path class="cls-3" d="M7.58,4.08c0,1.29-1.04,2.33-2.33,2.33s-2.33-1.04-2.33-2.33,1.04-2.33,2.33-2.33,2.33,1.04,2.33,2.33Z"/>
+      <path class="cls-3" d="M12.83,12.25v-1.17c0-.52-.17-1.02-.49-1.43-.32-.41-.76-.7-1.26-.83"/>
+      <path class="cls-3" d="M9.33,1.83c.5.13.95.42,1.26.83.32.41.49.91.49,1.43s-.17,1.02-.49,1.43c-.32.41-.76.7-1.26.83"/>
+    </g>
+  </g>
+  <g class="cls-4">
+    <g>
+      <path class="cls-2" d="M9.33,26.25v-1.17c0-.62-.25-1.21-.68-1.65-.44-.44-1.03-.68-1.65-.68h-3.5c-.62,0-1.21.25-1.65.68-.44.44-.68,1.03-.68,1.65v1.17"/>
+      <path class="cls-2" d="M7.58,18.08c0,1.29-1.04,2.33-2.33,2.33s-2.33-1.04-2.33-2.33,1.04-2.33,2.33-2.33,2.33,1.04,2.33,2.33Z"/>
+      <path class="cls-2" d="M12.83,26.25v-1.17c0-.52-.17-1.02-.49-1.43-.32-.41-.76-.7-1.26-.83"/>
+      <path class="cls-2" d="M9.33,15.83c.5.13.95.42,1.26.83.32.41.49.91.49,1.43s-.17,1.02-.49,1.43c-.32.41-.76.7-1.26.83"/>
+    </g>
+  </g>
+</svg>

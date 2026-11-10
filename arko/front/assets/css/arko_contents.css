@@ -137,6 +137,12 @@
   line-height: 1.6;
 }
 
+.h3-title > small {
+  font-size: var(--arko-font-size-base);
+  color: var(--arko-sub-text-color);
+  font-weight: 400;
+}
+
 .h4-title {
   margin-bottom: var(--arko-contents-gap-small);
   font-size: var(--arko-h4-font-size);
@@ -2808,6 +2814,12 @@ dl.video-recording-noti > dd > small {
   justify-content: center;
 }
 
+.img-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width:768px) {
   .img-list {
     flex-wrap: wrap;
@@ -3111,7 +3123,8 @@ dl.video-recording-noti > dd > small {
 
 /* 소개 */
 .arko-introduction {
-  --arko-introduction-title-size: 4rem;
+  --arko-introduction-title-size: 4.4rem;
+  --arko-introduction-title-small-size: 2.8rem;
 
   display: flex;
   flex-direction: column;
@@ -3121,7 +3134,8 @@ dl.video-recording-noti > dd > small {
 .arko-introduction .title {
   font-size: var(--arko-introduction-title-size);
   font-weight: 600;
-  color: var(--arko-font-color-title);    
+  color: var(--arko-font-color-title); 
+  text-align: center;   
 }
 .arko-intro__img {
   display: flex;
@@ -3133,10 +3147,12 @@ dl.video-recording-noti > dd > small {
 .arko-introduction .detail-txt-box {
   max-width: 920px;
   margin:0 auto;
+  text-align: center;
 }
 @media (max-width:767px) {
   .arko-introduction {
-  --arko-introduction-title-size: 2.4rem;
+  --arko-introduction-title-size: 2.6rem;
+  --arko-introduction-title-small-size: 2rem;
   
   }
   .arko-intro__img {
@@ -3151,6 +3167,137 @@ dl.video-recording-noti > dd > small {
   }
   .tab.tab--intro > ul > li {
     flex: 0 0 auto;
+  }
+}
+
+/* 20261110 SB 0.87v 기록원소개 수정 */
+.arko-introduction.v2 {
+  text-align: left;
+}
+.arko-introduction .title > small {
+  font-size: var(--arko-introduction-title-small-size);
+}
+
+.intro-box {
+  padding:4rem;
+  border:1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+}
+.intro-box .img-list,
+.intro-cont .img-list {
+  margin-top:var(--arko-contents-gap-large);
+  gap: var(--arko-contents-gap-xsmall);
+}
+
+.intro-box .img-list img,
+.intro-cont .img-list img {
+  border-radius: var(--arko-border-radius-default);
+}
+
+.intro-box .txt + .h4-title {
+  margin-top:var(--arko-contents-gap-large);
+  padding-top:var(--arko-contents-gap-large);
+  border-top:1px solid var(--arko-line-color-etc);
+}
+
+.intro-box ~ .intro-box {
+  margin-top:4rem;
+}
+@media (min-width:1280px) {
+  .intro-box {
+    display: flex;
+    gap: 4.8rem;
+  }
+  .intro-box .title-flex-area {
+    flex:0 0 28.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom:0;
+  }
+}
+@media (width:768px) {
+  .intro-box .img-list,
+  .intro-cont .img-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width:767px) {
+  .intro-box {
+    padding: 2.4rem 1.6rem;
+  }
+  .intro-box .title-flex-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+  }
+  .intro-box .title-flex-area > * {
+    width: 100%;
+  }
+  .intro-box .img-list > li,
+  .intro-cont .img-list > li {
+    width: 100%;
+  }
+  .intro-box ~ .intro-box {
+    margin-top:3.2rem;
+  }
+  .intro-box .h3-title > small {
+    display: none;
+  }
+}
+
+.intro-table-box {
+  overflow: hidden;
+  border: 1px solid var(--arko-line-color-etc);
+  border-radius: var(--arko-border-radius-default);
+  margin-top:4rem;
+  padding: 4rem;
+}
+@media (max-width:1280px) {
+  .intro-table-box .krds-table-wrap {
+    overflow-x:auto;
+    width: auto;
+  }
+}
+@media (max-width:767px) {
+  .intro-table-box {
+    margin-top:3.2rem;
+    padding: 2.4rem 1.6rem;
+  }
+  
+  .intro-table-box .title-flex-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .intro-table-box .title-flex-area > p {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.intro-cont + .intro-cont {
+  margin-top: 4rem;
+}
+.intro-cont .line-box {
+  margin-block:var(--arko-contents-gap-large);
+  padding-inline: 0;
+}
+.intro-cont .detail-info-table dt {
+  width: 28.3rem;
+}
+@media (max-width:819px) {
+  .intro-cont .detail-info-table .d__tr > dl {
+    flex-direction: column;
+  }
+}
+@media (max-width:768px) {
+  .intro-cont + .intro-cont {
+    margin-top: 3.2rem;
+  }
+}
+@media (max-width:767px) {
+  .intro-cont + .intro-cont {
+    margin-top: 3.2rem;
   }
 }
 

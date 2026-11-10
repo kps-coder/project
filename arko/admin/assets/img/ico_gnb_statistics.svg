@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 28">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #1b2236;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.17px;
+      }
+
+      .cls-2 {
+        stroke: #5a87d9;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M10.5,11.67v-5.83"/>
+  <path class="cls-2" d="M7,11.67V2.33"/>
+  <path class="cls-2" d="M3.5,11.67v-3.5"/>
+  <path class="cls-1" d="M10.5,25.67v-5.83"/>
+  <path class="cls-1" d="M7,25.67v-9.33"/>
+  <path class="cls-1" d="M3.5,25.67v-3.5"/>
+</svg>
