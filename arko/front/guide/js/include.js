@@ -70,8 +70,13 @@ window.addEventListener('DOMContentLoaded', function() {
               </div>
               <!-- //resize -->
             </li>
-            <li><button type="button">로그아웃</button></li>
-            <li><button type="button">마이페이지</button></li>
+            <!-- 로그인 전 -->
+            <li><button type="button">로그인</button></li>
+            <li><button type="button">회원가입</button></li>
+
+            <!-- 로그인 후 -->
+            <!-- <li><button type="button">로그아웃</button></li>
+            <li><button type="button">마이페이지</button></li> -->
           </ul>
           <a href="https://www.arko.or.kr/main/arko" target="_blank" rel="noopener noreferrer" title="새창 열림" class="arko-logo"><span class="sr-only">한국문화예술위원회</span></a>
         </div>
@@ -184,14 +189,22 @@ window.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
 
+      <!-- 사이트맵 -->
       <div class="sitemap-wrap">
         <div class="sitemap-container">
           <div class="sitemap-head">
             <div class="sitemap-logo"><span class="sr-only">아르코예술기록원</span></div>
+            <!-- 로그인 전 -->
             <ul class="sitemap-mobile-menu">
               <li><button type="button">로그인</button></li>
               <li><button type="button">회원가입</button></li>
             </ul>
+
+            <!-- 로그인 후 -->
+            <!-- <ul class="sitemap-mobile-menu">
+              <li><button type="button">모바일 회원증</button></li>
+              <li><button type="button">로그아웃</button></li>
+            </ul> -->
           </div>         
 
           <nav class="sitemap">
@@ -307,7 +320,7 @@ window.addEventListener('DOMContentLoaded', function() {
                   <li><a href="#n" class="depth2-link">나의 알림</a></li>
                   <li><a href="#n" class="depth2-link">1:1 문의</a></li>
                 </ul>
-              </li>   
+              </li>  
             </ul>
 
             <div class="sitemp-moblie-foot">
@@ -330,6 +343,20 @@ window.addEventListener('DOMContentLoaded', function() {
           </dl>
           <button type="button" class="header-notice__btn"><span class="sr-only">닫기</span></button>
         </div>
+      </div>
+
+      <!-- 통합검색 -->
+      <div class="header-integrated">
+        <div class="inner">
+          <div class="sch-input">
+            <input type="text" class="krds-input medium" id="headSearchWrdTotal" placeholder="키워드를 입력하세요.">
+            <button type="button" class="krds-btn icon xlarge ico-search" id="btn-search-total">
+              <span class="sr-only">검색</span>
+              <i class="svg-icon ico-sch"></i>
+            </button>
+          </div>
+          <button type="button" class="btn-head-search-close"></button>
+        </div>        
       </div>
     </header><!-- // header -->`;
 

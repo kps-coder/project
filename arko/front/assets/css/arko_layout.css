@@ -200,6 +200,42 @@
   }
 }
 
+/* 통합검색 */
+.header-integrated {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding-block:2rem;
+  background-color: var(--arko-input-disabled-background-color);
+}
+.header-integrated .inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+.header-integrated .sch-input {
+  flex: 1;
+  max-width: 922px;
+}
+.header-integrated .sch-input .krds-input {
+  
+  height: 6rem;
+  border-width: 2px;
+  border-color: var(--arko-input-border-color-search);
+}
+
+.btn-head-search-close {
+  width: 2.6rem;
+  height: 2.6rem;
+  background: url(../img/comm/ico_search_close.svg) no-repeat center / 1rem 1rem;
+}
+
+.header-integrated.open {
+  display: block;
+}
+
 /* 사이트맵 */
 /* pc */
 @media (min-width: 1025px) {

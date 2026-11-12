@@ -30,3 +30,166 @@ button {
   background: url(../img/ico_gnb_statistics.svg) no-repeat 0 bottom / 14px auto;
 }
 
+/* btn */
+.btn-primary {
+  display: inline-block;
+  height: 30px;
+  padding-inline: 14px;
+  border:1px solid var(--das-primary-color);
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 30px;
+  white-space: nowrap;
+  color: #fff;
+  background-color: var(--das-primary-color);
+}
+.btn-secondary {
+  display: inline-block;
+  height: 30px;
+  padding-inline: 14px;
+  border:1px solid var(--das-primary-color);
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 30px;
+  white-space: nowrap;
+  color: var(--das-primary-color);
+  background-color: #fff;
+}
+.btn-default {
+  display: inline-block;
+  height: 30px;
+  padding-inline: 14px;
+  border:1px solid #CFCFCF;
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 30px;
+  white-space: nowrap;
+  color: #333;
+  background-color: #fff;
+}
+.btn-danger {
+  display: inline-block;
+  height: 30px;
+  padding-inline: 14px;
+  border:1px solid #E5483F;
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 30px;
+  white-space: nowrap;
+  color: #E5483F;
+  background-color: #fff;
+}
+
+.btn-primary.small,
+.btn-secondary.small,
+.btn-default.small,
+.btn-danger.small {
+  height: 24px;
+  line-height: 24px;
+}
+
+.btn-cta-primary {
+  display: inline-block;
+  height: 36px;
+  padding-inline: 14px;
+  border:1px solid var(--das-primary-color);
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 36px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 14px;
+  background-color: var(--das-primary-color);
+}
+.btn-cta-secondary {
+  display: inline-block;
+  height: 36px;
+  padding-inline: 14px;
+  border:1px solid var(--das-primary-color);
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 36px;
+  white-space: nowrap;
+  color: var(--das-primary-color);
+  font-size: 14px;
+  background-color: #fff;
+}
+.btn-cta-default {
+  display: inline-block;
+  height: 36px;
+  padding-inline: 14px;
+  border:1px solid #CFCFCF;
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 36px;
+  white-space: nowrap;
+  color: #333;
+  font-size: 14px;
+  background-color: #fff;
+}
+.btn-cta-danger {
+  display: inline-block;
+  height: 36px;
+  padding-inline: 14px;
+  border:1px solid #E5483F;
+  border-radius: var(--das-btn-border-radius-dfault);
+  line-height: 36px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 14px;
+  background-color: #E5483F;
+}
+
+
+/* badge */
+.das-badge {
+  display: inline-block;
+  height: 17px;
+  line-height: 17px;
+  padding-inline: 8px;
+  border-radius: var(--das-btn-border-radius-dfault);
+  font-size: 11px;
+}
+.das-badge.success {
+  color: var(--das-success-color);
+  background-color: var(--das-success-bg-color);
+}
+.das-badge.info {
+  color: var(--das-info-color);
+  background-color: var(--das-info-bg-color);
+}
+.das-badge.warning {
+  color: var(--das-warning-color);
+  background-color: var(--das-warning-bg-color);
+}
+.das-badge.error {
+  color: var(--das-error-color);
+  background-color: var(--das-error-bg-color);
+}
+.das-badge.neutral {
+  color: var(--das-neutral-color);
+  background-color: var(--das-neutral-bg-color);
+}
+
+.das-badge-doc {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  padding-inline: 8px;
+  border-radius: var(--das-btn-border-radius-dfault);
+  color: #fff;
+}
+.das-badge-doc.img {
+  background-color: #2563EB;
+}
+.das-badge-doc.pdf {
+  background-color: #DC2626;
+}
+.das-badge-doc.hwp {
+  background-color: #0F766E;
+}
+.das-badge-doc.docx {
+  background-color: #1D4ED8;
+}
+.das-badge-doc.xlsx {
+  background-color: #16A34A;
+}
+.das-badge-doc.video {
+  background-color: #7C3AED;
+}
+.das-badge-doc.etc {
+  background-color: #4B5563;
+}

@@ -2,11 +2,11 @@
 
 // ==================================================
 // Header Controller
-// GNB + Sitemap
+// GNB + Sitemap + search
 // ==================================================
 const headerCtrl = {
-  
-  // 요소  
+
+  // 요소
   gnb: {
     wrap: null,
     depth1Btn: null,
@@ -20,17 +20,24 @@ const headerCtrl = {
     closeBtn: null
   },
 
-  
-  // 초기화  
+  search: {
+    wrap: null,
+    openBtn: null,
+    closeBtn: null,
+    input: null
+  },
+
+
+  // 초기화
   init() {
     this.gnbInit();
     this.sitemapInit();
+    this.searchInit();
     this.eventInit();
   },
 
 
- 
-  // GNB 
+  // GNB
   gnbInit() {
     const gnbWrap = document.querySelector('.gnb');
 
@@ -41,14 +48,14 @@ const headerCtrl = {
     this.gnb.depth1Item = gnbWrap.querySelectorAll('.gnb__depth > li');
     this.gnb.depth2 = gnbWrap.querySelectorAll('.gnb__depth2');
 
-   
-    // 2depth ID 설정   
-    this.gnb.depth2.forEach(function (elm, i) {
+
+    // 2depth ID 설정
+    this.gnb.depth2.forEach((elm, i) => {
       elm.setAttribute('id', `gnbSub${i}`);
     });
 
-   
-    // 1depth 설정   
+
+    // 1depth 설정
     this.gnb.depth1Btn.forEach((btn, i) => {
 
       btn.setAttribute('aria-controls', `gnbSub${i}`);
@@ -60,14 +67,13 @@ const headerCtrl = {
         const parent = btn.parentElement;
         const isOpen = parent.classList.contains('gnb-open');
 
-        // 모든 GNB 닫기
+        // 모든 레이어 닫기
         this.gnbClose();
-
-        // 이미 열려 있던 메뉴라면 여기서 종료
-        if (isOpen) return;
-
-        // 사이트맵 닫기
         this.sitemapClose();
+        this.searchClose();
+
+        // 이미 열려 있던 메뉴라면 종료
+        if (isOpen) return;
 
         // 선택한 GNB 열기
         this.gnb.wrap.classList.add('active');
@@ -75,60 +81,82 @@ const headerCtrl = {
 
         btn.setAttribute('aria-expanded', 'true');
 
-        // Body 스크롤 잠금
         this.updateBodyScroll();
       });
     });
   },
 
 
- 
-  // Sitemap 
+  // Sitemap
   sitemapInit() {
     const sitemapWrap = document.querySelector('.sitemap-wrap');
 
     if (!sitemapWrap) return;
 
     this.sitemap.wrap = sitemapWrap;
-    this.sitemap.openBtn =
-      document.querySelector('.btn-head-sitemap');
-    this.sitemap.closeBtn =
-      document.querySelector('.btn-sitemap-off');
+    this.sitemap.openBtn = document.querySelector('.btn-head-sitemap');
+    this.sitemap.closeBtn = document.querySelector('.btn-sitemap-off');
 
-   
-    // 사이트맵 열기 버튼   
+
+    // 사이트맵 열기 버튼
     if (this.sitemap.openBtn) {
       this.sitemap.openBtn.addEventListener('click', (event) => {
-          event.preventDefault();
-
-          this.sitemapOpen();
-        }
-      );
+        event.preventDefault();
+        this.sitemapOpen();
+      });
     }
 
-   
-    // 사이트맵 닫기 버튼   
+
+    // 사이트맵 닫기 버튼
     if (this.sitemap.closeBtn) {
-      this.sitemap.closeBtn.addEventListener(
-        'click',
-        () => {
-          this.sitemapClose();
-        }
-      );
+      this.sitemap.closeBtn.addEventListener('click', () => {
+        this.sitemapClose();
+      });
     }
   },
- 
-  // 공통 이벤트 
-  eventInit() {   
-    // GNB 외부 클릭   
+
+
+  // Search
+  searchInit() {
+    const searchWrap = document.querySelector('.header-integrated');
+
+    if (!searchWrap) return;
+
+    this.search.wrap = searchWrap;
+    this.search.openBtn = document.querySelector('.btn-head-search');
+    this.search.closeBtn = searchWrap.querySelector('.btn-head-search-close');
+    this.search.input = searchWrap.querySelector('input');
+
+
+    // 검색 열기 버튼
+    if (this.search.openBtn) {
+      this.search.openBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.searchOpen();
+      });
+    }
+
+
+    // 검색 닫기 버튼
+    if (this.search.closeBtn) {
+      this.search.closeBtn.addEventListener('click', () => {
+        this.searchClose(true);
+      });
+    }
+  },
+
+
+  // 공통 이벤트
+  eventInit() {
+
+    // GNB 외부 클릭
     document.addEventListener('click', (event) => {
 
       if (!this.gnb.wrap) return;
 
-      const isGnbButton =
-        Array.from(this.gnb.depth1Btn).some((btn) => {
-          return btn.contains(event.target);
-        });
+      const isGnbButton = Array.from(this.gnb.depth1Btn).some((btn) => {
+        return btn.contains(event.target);
+      });
 
       if (!isGnbButton) {
         this.gnbClose();
@@ -136,48 +164,39 @@ const headerCtrl = {
     });
 
 
-   
-    // ESC   
+    // ESC
     document.addEventListener('keydown', (event) => {
 
       if (event.key !== 'Escape') return;
 
       this.gnbClose();
       this.sitemapClose();
+      this.searchClose(true);
     });
 
 
-   
-    // 검색 버튼 / 로고 포커스   
-    const btnHeadSearch = document.querySelector('.btn-head-search');
-
+    // 로고 포커스
     const h1LogoLink = document.querySelector('.h1-logo > a');
-
-
-    if (btnHeadSearch) {
-      btnHeadSearch.addEventListener('focusin', () => {
-          this.gnbClose();
-        }
-      );
-    }
 
     if (h1LogoLink) {
       h1LogoLink.addEventListener('focusin', () => {
-          this.gnbClose();
-        }
-      );
+        this.gnbClose();
+      });
     }
   },
- 
-  // GNB 열기 
+
+
+  // GNB 열기
   gnbOpen() {
     if (!this.gnb.wrap) return;
+
     this.gnb.wrap.classList.add('active');
 
     this.updateBodyScroll();
   },
- 
-  // GNB 닫기 
+
+
+  // GNB 닫기
   gnbClose() {
     if (!this.gnb.wrap) return;
 
@@ -193,24 +212,25 @@ const headerCtrl = {
 
     this.updateBodyScroll();
   },
-  
- 
-  // Sitemap 열기 
+
+
+  // Sitemap 열기
   sitemapOpen() {
     if (!this.sitemap.wrap) return;
 
-    // GNB 닫기
+    // GNB 및 검색 닫기
     this.gnbClose();
+    this.searchClose();
 
     // Sitemap 열기
     this.sitemap.wrap.classList.add('open');
 
     this.updateBodyScroll();
   },
- 
-  // Sitemap 닫기 
-  sitemapClose() {
 
+
+  // Sitemap 닫기
+  sitemapClose() {
     if (!this.sitemap.wrap) return;
 
     this.sitemap.wrap.classList.remove('open');
@@ -218,19 +238,68 @@ const headerCtrl = {
     this.updateBodyScroll();
   },
 
-  // Body Scroll 제어
-  updateBodyScroll() { 
-    const isGnbOpen = this.gnb.wrap && this.gnb.wrap.classList.contains('active'); 
-    const isSitemapOpen = this.sitemap.wrap && this.sitemap.wrap.classList.contains('open'); 
 
-    // GNB 또는 Sitemap이 열려 있으면 스크롤 잠금 
-    if (isGnbOpen || isSitemapOpen) { 
-      document.body.style.overflow = 'hidden'; 
-    } else { 
-      document.body.style.overflow = ''; 
-    } 
+  // Search 열기
+  searchOpen() {
+    if (!this.search.wrap) return;
+
+    // GNB 닫기
+    this.gnbClose();
+
+    // Sitemap 닫기
+    this.sitemapClose();
+
+    // 검색 레이어 열기
+    this.search.wrap.classList.add('open');
+
+    if (this.search.openBtn) {
+      this.search.openBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    // 검색창 포커스
+    if (this.search.input) {
+      this.search.input.focus();
+    }
+  },
+
+
+  // Search 닫기
+  searchClose(restoreFocus = false) {
+    if (!this.search.wrap) return;
+
+    const isOpen = this.search.wrap.classList.contains('open');
+
+    this.search.wrap.classList.remove('open');
+
+    if (this.search.openBtn) {
+      this.search.openBtn.setAttribute('aria-expanded', 'false');
+
+      // 닫기 후 검색 버튼으로 포커스 복귀
+      if (restoreFocus && isOpen) {
+        this.search.openBtn.focus();
+      }
+    }
+  },
+
+
+  // Body Scroll 제어
+  updateBodyScroll() {
+
+    const isGnbOpen = this.gnb.wrap &&
+      this.gnb.wrap.classList.contains('active');
+
+    const isSitemapOpen = this.sitemap.wrap &&
+      this.sitemap.wrap.classList.contains('open');
+
+    // GNB 또는 Sitemap이 열려 있으면 스크롤 잠금
+    if (isGnbOpen || isSitemapOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   }
-}
+
+};
 
 /* === 모바일 GNB === */
 const arko_mobile_gnb = {

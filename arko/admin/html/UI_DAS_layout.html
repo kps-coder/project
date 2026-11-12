@@ -41,19 +41,171 @@
 
       <nav class="das-gnb-wrap">
         <ul class="das-gnb-list">
-          <li><a href="#n" class="btn-das-gnb"><i class="ico14-gnb-site"></i> 사이트관리</a></li>
-          <li><a href="#n" class="btn-das-gnb"><i class="ico14-gnb-member"></i> 회원관리</a></li>
-          <li><a href="#n" class="btn-das-gnb"><i class="ico14-gnb-statistics"></i> 통계</a></li>
+          <li class="active">
+            <a href="#n" class="btn-das-gnb"><i class="ico14-gnb-site"></i> 사이트관리</a>
+          </li>
+          <li>
+            <a href="#n" class="btn-das-gnb"><i class="ico14-gnb-member"></i> 회원관리</a>
+          </li>
+          <li>
+            <a href="#n" class="btn-das-gnb"><i class="ico14-gnb-statistics"></i> 통계</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <div class="das-container">
       <aside class="das-lnb-wrap">
-
+        <h2 class="h2-lnb">사이트관리</h2>
+        <ul class="das-lnb-list">
+          <li>
+            <a href="#n" class="btn-lnb-depth1">Dashboard</a>
+            <ul class="lnb-depth2">
+              <li>
+                <a href="#n" class="btn-lnb-depth2">대시보드 홈</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">최근변경사항</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="btn-lnb-depth1">DA-Arts 관리</a>
+            <ul class="lnb-depth2">
+              <li>
+                <a href="#n" class="btn-lnb-depth2">기획 콘텐츠</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">인기 자료</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">구술채록</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">원테이블</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="btn-lnb-depth1">메인화면관리</a>
+            <ul class="lnb-depth2">
+              <li>
+                <a href="#n" class="btn-lnb-depth2">Hero 영역 관리</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">키워드관리</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">주요 아카이브 콘텐츠 관리</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">원테이블 관리</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">구술채록·공연영상화 관리</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">추천 콘텐츠 관리</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">기록원 소식 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="btn-lnb-depth1">안내·지원센터</a>
+            <ul class="lnb-depth2">
+              <li>
+                <a href="#n" class="btn-lnb-depth2">FAQ</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">1:1 문의</a>
+              </li>
+              <li>
+                <a href="#n" class="btn-lnb-depth2">공지사항</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n" class="btn-lnb-depth1">팝업관리</a>
+          </li>
+        </ul>
       </aside>
-      <div class="das-contents">
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li>
+              <button type="button" class="btn-page-open">기획 콘텐츠</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+            <li class="active">
+              <button type="button" class="btn-page-open">Hero 영역 관리</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+            <li>
+              <button type="button" class="btn-page-open">일반회원</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
 
+        <div class="das-contents">
+          <div class="breadcrumb">
+            <ol>
+              <li>사이트 관리</li>
+              <li>메인화면관리</li>
+              <li>Hero 영역 관리</li>
+            </ol>
+          </div>
+
+          <div class="contents">
+            <div class="contents-area">
+              <div class="conts-head">
+                <h2 class="h2-title">DAS Guide</h2>
+              </div>
+              <div class="conts-body">
+                <button class="btn-primary">h30 .btn-primary</button>
+                <button class="btn-secondary">.btn-secondary</button>
+                <button class="btn-default">.btn-default</button>
+                <button class="btn-danger">.btn-danger</button>
+
+                <br><br>
+                <button class="btn-primary small">h24 .btn-primary.small</button>
+                <button class="btn-secondary small">.btn-secondary.small</button>
+                <button class="btn-default small">.btn-default.small</button>
+                <button class="btn-danger small">.btn-danger.small</button>
+
+                <br><br>
+                <button class="btn-cta-primary">h36 .btn-cta-primary</button>
+                <button class="btn-cta-secondary">.btn-cta-secondary</button>
+                <button class="btn-cta-default">.btn-cta-default</button>
+                <button class="btn-cta-danger">.btn-cta-danger</button>
+
+                <br><br>
+                <span class="das-badge success">승인됨</span>
+                <span class="das-badge info">검토중</span>
+                <span class="das-badge warning">보류</span>
+                <span class="das-badge error">반려</span>
+                <span class="das-badge neutral">초안</span>
+
+                <br><br>
+                <span class="das-badge-doc img">JPG</span>
+                <span class="das-badge-doc img">PNG</span>
+                <span class="das-badge-doc pdf">PDF</span>
+                <span class="das-badge-doc hwp">HWP</span>
+                <span class="das-badge-doc docx">DOCX</span>
+                <span class="das-badge-doc xlsx">XLSX</span>
+                <span class="das-badge-doc video">MP4</span>
+                <span class="das-badge-doc etc">ZIP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="das-footer">
+          <p>&copy; 아르코예술기록원. All rights reserved.</p>
+        </footer>
       </div>
     </div>
   </div>
