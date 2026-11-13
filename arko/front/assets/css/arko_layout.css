@@ -588,7 +588,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 20px;
-  padding-block: 40px;
+  padding-block: var(--arko-contents-gap-large);
 }
 
 .arko-foot-utility {
@@ -624,6 +624,26 @@
   height: 48px;
   margin-left: 20px;
   background: url(../img/comm/sns_Instagram.svg) no-repeat center / contain;
+}
+.arko-foot-conts {
+  display: flex;
+  align-items: center;
+  gap: var(--arko-contents-gap-large);
+}
+.arko-foot-logo {
+  width: 100px;
+  height: 40px;
+  background: url(../img/comm/foot_logo_arko.svg) no-repeat center / contain;
+}
+@media (max-width:819px) {
+  .arko-foot-conts {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .arko-foot-logo {
+    flex:0 0 6rem;
+    height: 2.4rem;
+  }
 }
 
 .arko-foot-body {
@@ -665,7 +685,7 @@
   font-size: var(--fontsize-body4, 16px);
   color: #fff;
   width: 100%;
-  padding: 15px 24px;
+  padding: 15px 50px 15px 24px;
   cursor: pointer;
   border: none;
 }
