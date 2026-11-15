@@ -3,6 +3,7 @@
 .das-wrapper {
   display: flex;
   flex-direction: column;
+  min-width: 1280px;
   height: 100%;
 }
 .das-header {
@@ -180,7 +181,8 @@
 
 /* contents */
 .das-contents {
-  flex: 1;
+  overflow-y:auto;
+  flex: 0 0 calc(100vh - 188px);
   background-color: #f5f6fb;
 }
 
@@ -221,11 +223,6 @@
 .conts-head {
   padding:15px;
   border-bottom: 1px solid #EBEBEB;
-}
-.h2-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #111;
 }
 .conts-body {
   padding: 15px;

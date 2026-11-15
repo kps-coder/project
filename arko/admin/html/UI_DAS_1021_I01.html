@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 기획 콘텐츠</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">기획 콘텐츠</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <div class="breadcrumb">
+            <ol>
+              <li>사이트 관리</li>
+              <li>DA-Arts 관리</li>
+              <li>기획 콘텐츠</li>
+            </ol>
+          </div>
+
+          <div class="contents">
+            <section class="contents-area">
+              <div class="conts-head">
+                <h2 class="h2-title">기획 콘텐츠</h2>
+              </div>
+              <div class="conts-body">
+                <div class="view-head">
+                  <button type="button" class="btn-default"><i class="ico14-prev"></i>목록</button>
+                  <h3 class="h3-title">기획 콘텐츠 [등록]</h3>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span> 
+                          <label for="dasInputName">기획 콘텐츠명</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text block" id="dasInputName" value="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <label for="dasTextareaDes">설명</label>
+                        </th>
+                        <td>
+                          <textarea class="das-textarea block" id="dasTextareaDes" rows="3"></textarea>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span> 
+                          <label for="dasInputName">이미지</label>
+                        </th>
+                        <td>
+                          <div class="attach-file">
+                            <div class="file-find">
+                              <input type="file" id="dasfileFind" hidden>
+                              <label for="dasfileFind">
+                                <i class="ico22-clip"></i>                          
+                              </label>                              
+                            </div>
+                            <dl>
+                              <dt>이미지 파일을 드래그 하거나 클릭하여 파일을 선택하세요.</dt>
+                              <dd>권장 사이즈 : 1920*780px / 파일형식 : JPG, PNG / 최대용량 : 5MB</dd>
+                            </dl>
+                          </div>
+                          <div class="image-preview" style="display: none;">
+                            <div class="image-preview__img">
+                              <img src="../assets/img/img_sample.png" alt="">
+                            </div>
+                            <div class="image-preview__info">
+                              <dl>
+                                <dt>파일명</dt>
+                                <dd>hero_20260901.png</dd>
+                              </dl>
+                              <dl>
+                                <dt>이미지 크기</dt>
+                                <dd>1920 * 780 px</dd>
+                              </dl>
+                              <dl>
+                                <dt>파일 용량</dt>
+                                <dd>1.24 MB</dd>
+                              </dl>
+                              <dl>
+                                <dt>파일 형식</dt>
+                                <dd>
+                                  <span class="das-badge-doc img">PNG</span>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+                          <div class="noti-box" style="display: none;">
+                            <i class="ico14-noti"></i>
+                            <p>권장 이미지 크기 : 1920*780px / 파일형식 : JPG, PNG / 최대용량 : 5MB</p>
+                          </div>
+                          <div class="image-alt-input">
+                            <dl>
+                              <dt>이미지 대체 텍스트</dt>
+                              <dd>
+                                <input type="text" class="das-input-text block" placeholder="이미지 대체 텍스트를 입력해주세요.">
+                              </dd>
+                            </dl>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <section class="lower-sec">
+                  <div class="lower-title-area">
+                    <h4 class="h4-title">연계 정보</h4>
+                    <div class="btns">
+                      <button type="button" class="btn-secondary" onclick="modalCtrl.modalOpen('modalRecordsSelect');"><i class="ico14-plus-b"></i>컬렉션 추가</button>
+                      <button type="button" class="btn-secondary"><i class="ico14-plus-b"></i>시리즈 추가</button>
+                      <button type="button" class="btn-secondary"><i class="ico14-plus-b"></i>서브 시리즈 추가</button>
+                      <button type="button" class="btn-secondary"><i class="ico14-plus-b"></i>폴더 추가</button>
+                      <button type="button" class="btn-secondary"><i class="ico14-plus-b"></i>아이템 추가</button>
+                    </div>
+                  </div>
+
+                  <div class="das-grid">
+                    <div class="grid__head">
+                      <div class="count">
+                        연계된 기록물 전체 <strong>0</strong> 건 
+                        <small class="sub-text" style="display: none;">(컬렉션 1 · 폴더 1 · 아이템 1)</small>
+                      </div>
+                    </div>
+                    <div class="grid__body">
+                      <div class="das-grid-table">
+                        <table>
+                          <colgroup>
+                            <col style="width: 5%;">
+                            <col style="width: 10%;">
+                            <col style="width: 20%;">
+                            <col style="width: 10%;">
+                            <col style="width: auto;">
+                            <col style="width: 80px;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="row">번호</th>
+                              <th scope="row">계층구조</th>
+                              <th scope="row">기록물명</th>
+                              <th scope="row">참조코드</th>
+                              <th scope="row">기록물 경로</th>
+                              <th scope="row">관리</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td colspan="6">연계 기록물이 없습니다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="lower-sec">
+                  <div class="lower-title-area">
+                    <h4 class="h4-title">운영정보</h4>
+                  </div>
+
+                  <div class="row-table">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <span class="required-mark">*</span>
+                            <label for="dasRadio1">상태</label>
+                          </th>
+                          <td>
+                            <span class="das-radio">
+                              <input type="radio" name="dasRadio1" id="dasRadio1" checked>
+                              <label for="dasRadio1">공개</label>
+                            </span>   
+                            <span class="das-radio">
+                              <input type="radio" name="dasRadio1" id="dasRadio1_1">
+                              <label for="dasRadio1_1">비공개</label>
+                            </span>  
+                          </td>
+                          <th scope="row">
+                            <span class="required-mark">*</span>
+                            <label for="dasInputRanking">공개순서</label>
+                          </th>
+                          <td>
+                            <input type="text" class="das-input-text" id="dasInputRanking" value="">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                <div class="das-cta-btns">
+                  <div class="left">
+                    <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>목록</button>
+                    <button type="button" class="btn-cta-default">다시쓰기</button>
+                    <button type="button" class="btn-cta-primary"><i class="ico14-save"></i>저장</button>
+                  </div>
+                </div>
+              </div><!-- //conts-body -->
+            </section>
+          </div>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <!-- modal -->
+  <div class="das-modal" id="modalRecordsSelect">
+    <section class="das-modal-wrap large">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">기록물 조회 및 선택</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-title">
+          <h2 class="h4-title">조회 범위</h2>
+          <p class="sub-text">상세 화면에서 설정한 계층구조 범위에 해당하는 자료만 조회됩니다.</p>
+        </div>
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 124px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasSelectGenre">장르</label></th>
+                <td>
+                  <select class="das-select" id="dasSelectGenre">
+                    <option>전체</option>
+                    <option>무용</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="dasSelectTree">계층구조</label></th>
+                <td>
+                  <select class="das-select" id="dasSelectTree">
+                    <option>박서보 컬렉션</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree1">
+                    <option>전시자료 시리즈</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree2">
+                    <option>1985년 전시자료</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree3">
+                    <option>하위 폴더 일괄 조회</option>
+                  </select>
+                  <button type="button" class="btn-secondary green">기록물 불러오기</button>
+                  <p class="sub-danger mt-xsmall">※ 컬렉션 선택은 필수입니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="inputSearch01">기록물명</label></th>
+                <td>
+                  <div class="input-search">
+                    <input type="text" class="das-input-text" id="inputSearch01">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="count"></div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table">
+              <table>
+                <colgroup>
+                  <col style="width: 5%;">
+                  <col style="width: 10%;">
+                  <col style="width: 15%;">
+                  <col style="width: 25%;">
+                  <col style="width: 10%;">
+                  <col style="width: auto;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">계층구조</th>
+                  <th scope="col">장르</th>
+                  <th scope="col">기록물명</th>
+                  <th scope="col">참조코드</th>
+                  <th scope="col">기록물 경로</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">컬렉션</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">컬렉션</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션 &gt; 전시자료 &gt; 1985년 전시자료</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">아이템</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션 &gt; 전시자료 &gt; 1985년 전시자료</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">컬렉션</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">컬렉션</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션 &gt; 전시자료 &gt; 1985년 전시자료</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">아이템</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션 &gt; 전시자료 &gt; 1985년 전시자료</td>
+                  </tr><tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">컬렉션</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">컬렉션</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션 &gt; 전시자료 &gt; 1985년 전시자료</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">아이템</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션 &gt; 전시자료 &gt; 1985년 전시자료</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td><span class="das-badge neutral">아이템</span></td>
+                    <td>공연예술</td>
+                    <td class="al">박서보 컬렉션</td>
+                    <td>C00005</td>
+                    <td class="al">박서보 컬렉션 &gt; 전시자료 &gt; 1985년 전시자료</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="grid__foot">
+            <!-- pagenation -->
+            <div class="das-pagenation">
+              <div class="pagenation__list">
+                <button type="button" class="btn-page-first" disabled>
+                  <span class="blind">처음으로</span>
+                </button>
+                <button type="button" class="btn-page-prev" disabled>
+                  <span class="blind">이전</span>
+                </button>
+                <div class="page__number">
+                  <button type="button" class="btn-page-num active">1</button>
+                  <button type="button" class="btn-page-num">2</button>
+                  <button type="button" class="btn-page-num">3</button>
+                  <button type="button" class="btn-page-num">4</button>
+                  <button type="button" class="btn-page-num">5</button>
+                  <span>&middot;&middot;&middot;</span>
+                  <button type="button" class="btn-page-num">9</button>
+                </div>
+                <button type="button" class="btn-page-next">
+                  <span class="blind">다음</span>
+                </button>
+                <button type="button" class="btn-page-last">
+                  <span class="blind">마지막으로</span>
+                </button>
+              </div>
+              <div class="pagenation__select">
+                <select class="das-select">
+                  <option>10 / page</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+            </div>
+            <!-- //pagenation -->
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close" onclick="modalCtrl.modalClose('modalRecordsSelect');"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+</body>
+</html>
