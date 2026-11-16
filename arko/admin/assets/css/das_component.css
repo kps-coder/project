@@ -47,43 +47,43 @@ button {
 
 /* === 간격 === */
 .mt-medium {
-  margin-top: var(--das-gap-medium);
+  margin-top: var(--das-gap-medium) !important;
 }
 .mt-small {
-  margin-top: var(--das-gap-small);
+  margin-top: var(--das-gap-small) !important;
 }
 .mt-xsmall {
-  margin-top: var(--das-gap-xsmall);
+  margin-top: var(--das-gap-xsmall) !important;
 }
 
 .mb-medium {
-  margin-bottom: var(--das-gap-medium);
+  margin-bottom: var(--das-gap-medium) !important;
 }
 .mb-small {
-  margin-bottom: var(--das-gap-small);
+  margin-bottom: var(--das-gap-small) !important;
 }
 .mb-xsmall {
-  margin-bottom: var(--das-gap-xsmall);
+  margin-bottom: var(--das-gap-xsmall) !important;
 }
 
 .ml-medium {
-  margin-left: var(--das-gap-medium);
+  margin-left: var(--das-gap-medium) !important;
 }
 .ml-small {
-  margin-left: var(--das-gap-small);
+  margin-left: var(--das-gap-small) !important;
 }
 .ml-xsmall {
-  margin-left: var(--das-gap-xsmall);
+  margin-left: var(--das-gap-xsmall) !important;
 }
 
 .mr-medium {
-  margin-right: var(--das-gap-medium);
+  margin-right: var(--das-gap-medium) !important;
 }
 .mr-small {
-  margin-right: var(--das-gap-small);
+  margin-right: var(--das-gap-small) !important;
 }
 .mr-xsmall {
-  margin-right: var(--das-gap-xsmall);
+  margin-right: var(--das-gap-xsmall) !important;
 }
 
 
@@ -139,6 +139,9 @@ button {
 }
 .ico14-up {
   background-image: url(../img/ico14_up.svg);
+}
+.ico14-write {
+  background-image: url(../img/ico14_write.svg);
 }
 
 [class^="ico22-"] {
@@ -623,6 +626,7 @@ button {
 }
 .row-table {
   overflow: hidden;
+  margin-bottom:var(--das-gap-medium);
   border: 1px solid var(--das-border-color);
   border-radius: var(--das-input-border-radius);
 }
@@ -766,7 +770,7 @@ button {
   flex-direction: column;
   width: 758px;
   max-height: 90vh;
-  min-height: 300px;
+  min-height: 100px;
   border: 1px solid var(--das-border-color);
   border-radius: var(--das-border-radius-large);
   background-color: #fff;

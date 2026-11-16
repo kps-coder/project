@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 기록물 조회 및 선택 팝업</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <button type="button" class="btn-secondary" onclick="modalCtrl.modalOpen('modalEnterInput')">채록영상 검색</button>
+
+  <!-- modal -->
+  <!-- 직접입력 -->
+  <div class="das-modal" id="modalEnterInput">
+    <section class="das-modal-wrap small">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">인물검색</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 110px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <span class="required-mark">*</span>
+                  <label for="dasInputPersonName">인물명</label>
+                </th>
+                <td>
+                  <input type="text" id="dasInputPersonName" class="das-input-text block">               
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="required-mark">*</span>
+                  <label for="dasSelectGenre11">장르</label>
+                </th>
+                <td>
+                  <select class="das-select" id="dasSelectGenre11">
+                    <option>회화</option>
+                    <option>공연예술</option>
+                    <option>무용</option>
+                  </select>             
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-dtns ac">
+          <button type="button" class="btn-default">취소</button>
+          <button type="button" class="btn-primary">저장</button>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <script>
+    modalCtrl.modalOpen('modalEnterInput');
+  </script>
+</body>
+</html>

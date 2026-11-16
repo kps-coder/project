@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 구술채록</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">구술채록</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>DA-Arts 관리</li>
+                  <li>구술채록</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">구술채록</h2>
+            </div>
+            <div class="conts-body">
+              <div class="view-head">
+                <h3 class="h3-title">구술채록 주제사 [등록]</h3>
+              </div>
+               <div class="row-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 120px;">
+                    <col>
+                    <col style="width: 120px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span>
+                        <label for="dasInputSubject">주제사명</label> 
+                      </th>
+                      <td colspan="3">
+                        <input type="text" class="das-input-text block" id="dasInputSubject" value="1960~1970년대 한국미술의 해외전시">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span>
+                        <label for="dasInputDate">사업년도</label> 
+                      </th>
+                      <td>
+                        <input type="text" class="das-input-text" value="2016" id="dasInputDate">
+                      </td>
+                      <th scope="row">
+                        <span class="required-mark">*</span>
+                        <label for="dasSelectGenre">장르</label> 
+                      </th>
+                      <td>
+                        <select class="das-select" id="dasSelectGenre">
+                          <option>회화</option>
+                          <option>공연예술</option>
+                          <option>무용</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span>
+                        <label for="dasTextareaConts">내용</label> 
+                      </th>
+                      <td colspan="3">
+                        <textarea class="das-textarea block" rows="5" id="dasTextareaConts">1960~1970년대는 한국미술이 해외진출을 시도했던 초창기로, 국가차원의 제도적 지원기반이 턱없이 부족했던 시기였다. 그럼에도 당대 몇몇 화가들의 개인적 노력으로 파리비엔날레와 같은 국제전 진출의 포문이 열린다. 그 중심에 섰던 화가이자 커미셔너, 미술행정가 등의 활동을 병행했던 김창열(1929), 조용익(1934), 윤명로(1936)와 당시 미술 분야 취재기자이자 미술평론가로 활동했던 이구열(1932)의 주제사 구술이 진행되었다.</textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="das-btns">
+                <button type="button" class="btn-default" onclick="modalCtrl.modalOpen('modalPersonSearch');"><i class="ico14-search-bk"></i>인물 검색</button>
+                <button type="button" class="btn-default" onclick="modalCtrl.modalOpen('modalEnterInput');"><i class="ico14-write"></i>직접 입력</button>
+              </div>
+              <div class="row-table mb-xsmall">
+                <table>
+                  <colgroup>
+                    <col style="width: 120px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">인물</th>
+                      <td>
+                        이건용,  Lee Geonyong, 李建鏞, 가브리엘(세레명), 지언(吱彦)
+                        <span class="das-badge neutral">인물DB</span>
+                        <button type="button" class="btn-danger small ml-small">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">장르</th>
+                      <td>공연예술</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">생몰년도</th>
+                      <td>1947-2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row-table mb-xsmall">
+                <table>
+                  <colgroup>
+                    <col style="width: 120px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">인물</th>
+                      <td>
+                        이건용,  Lee Geonyong, 李建鏞, 가브리엘(세레명), 지언(吱彦)
+                        <span class="das-badge neutral">인물DB</span>
+                        <button type="button" class="btn-danger small ml-small">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">장르</th>
+                      <td>공연예술</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">생몰년도</th>
+                      <td>1947-2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 120px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">인물</th>
+                      <td>
+                        특별좌담(홍길동, 김길동)
+                        <span class="das-badge neutral">직접입력</span>
+                        <button type="button" class="btn-danger small ml-small">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">장르</th>
+                      <td>공연예술</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">생몰년도</th>
+                      <td>1947-2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="das-cta-btns">
+                <div class="left">
+                  <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>취소</button>
+                  <button type="button" class="btn-cta-secondary"><i class="ico14-right-arr"></i>저장 후 회차등록</button>
+                  <button type="button" class="btn-cta-primary"><i class="ico14-save"></i>저장</button>
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <!-- modal -->
+  <div class="das-modal" id="modalPersonSearch">
+    <section class="das-modal-wrap small">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">인물검색</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 110px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasInputPersonSearch">인물명</label></th>
+                <td>
+                  <div class="input-search">
+                    <input type="text" id="dasInputPersonSearch" class="das-input-text">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="count"></div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table scroll">
+              <table>
+                <colgroup>
+                  <col style="width: 10%;">
+                  <col style="width: 10%;">
+                  <col style="width: 15%;">
+                  <col style="width: auto;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">장르</th>
+                  <th scope="col">인물명(국문)</th>
+                  <th scope="col">인물명(외국어)</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td><span class="das-badge neutral">등록</span></td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td><span class="das-badge neutral">등록</span></td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td><span class="das-badge neutral">등록</span></td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td>전인평</td>
+                    <td class="al">Chun In Pyong, 全仁平</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <!-- 직접입력 -->
+  <div class="das-modal" id="modalEnterInput">
+    <section class="das-modal-wrap small">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">인물검색</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 110px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <span class="required-mark">*</span>
+                  <label for="dasInputPersonName">인물명</label>
+                </th>
+                <td>
+                  <input type="text" id="dasInputPersonName" class="das-input-text block">               
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="required-mark">*</span>
+                  <label for="dasSelectGenre11">장르</label>
+                </th>
+                <td>
+                  <select class="das-select" id="dasSelectGenre11">
+                    <option>회화</option>
+                    <option>공연예술</option>
+                    <option>무용</option>
+                  </select>             
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-dtns ac">
+          <button type="button" class="btn-default">취소</button>
+          <button type="button" class="btn-primary">저장</button>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+</body>
+</html>

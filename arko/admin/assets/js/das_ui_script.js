@@ -23,11 +23,19 @@ const modalCtrl = {
     });
   },
 
-  modalOpen(openModalId){
+  modalOpen(openModalId) {
     const modalWrap = document.getElementById(openModalId);
 
     if (!modalWrap) return;
+
     modalWrap.classList.add('open');
+
+    // 첫 번째 포커스 요소 찾기
+    const firstFocus = modalWrap.querySelector(
+      'button, input, select, textarea, a[href]'
+    );
+
+    if (firstFocus) firstFocus.focus();
   },
   modalClose(closeModalId){
     const modalWrap  = document.getElementById(closeModalId);
