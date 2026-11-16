@@ -8,7 +8,19 @@ const modalCtrl = {
   },
 
   modalInit() {
+    const btnModalClose = document.querySelectorAll('.btn-modal-close');
 
+    if (btnModalClose.length === 0) return;
+
+    btnModalClose.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const modalWrap = btn.closest('.das-modal');
+
+        if (!modalWrap) return;
+
+        modalWrap.classList.remove('open');
+      });
+    });
   },
 
   modalOpen(openModalId){
@@ -75,6 +87,7 @@ const tooltipCtrl = {
 
 // 초기 이벤트
 window.addEventListener("DOMContentLoaded", () => {
+  modalCtrl.modalInit()
   tooltipCtrl.init();
 });
 

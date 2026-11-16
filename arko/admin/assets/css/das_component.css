@@ -41,6 +41,10 @@ button {
   text-underline-offset: 2px;
 }
 
+.font-color-error {
+  color: var(--das-error-color);
+}
+
 /* === 간격 === */
 .mt-medium {
   margin-top: var(--das-gap-medium);
@@ -61,6 +65,27 @@ button {
 .mb-xsmall {
   margin-bottom: var(--das-gap-xsmall);
 }
+
+.ml-medium {
+  margin-left: var(--das-gap-medium);
+}
+.ml-small {
+  margin-left: var(--das-gap-small);
+}
+.ml-xsmall {
+  margin-left: var(--das-gap-xsmall);
+}
+
+.mr-medium {
+  margin-right: var(--das-gap-medium);
+}
+.mr-small {
+  margin-right: var(--das-gap-small);
+}
+.mr-xsmall {
+  margin-right: var(--das-gap-xsmall);
+}
+
 
 /* === icon === */
 [class^="ico14-"] {
@@ -102,6 +127,18 @@ button {
 }
 .ico14-noti {
   background-image: url(../img/ico14_noti.svg);
+}
+.ico14-right-arr {
+  background-image: url(../img/ico14_right_arr.svg);
+}
+.ico14-search-bk {
+  background-image: url(../img/ico14_search_bk.svg);
+}
+.ico14-down {
+  background-image: url(../img/ico14_down.svg);
+}
+.ico14-up {
+  background-image: url(../img/ico14_up.svg);
 }
 
 [class^="ico22-"] {
@@ -197,6 +234,21 @@ button {
   line-height: var(--das-btn-small-height);
 }
 
+.btn-primary.icon,
+.btn-secondary.icon,
+.btn-default.icon,
+.btn-danger.icon {
+  padding-inline: 0;
+  width: 30px;
+}
+
+.btn-primary.icon > i,
+.btn-secondary.ico > in,
+.btn-default.icon > i,
+.btn-danger.icon > i {
+  margin-right:0;
+}
+
 .btn-cta-primary {
   display: inline-block;
   height: var(--das-btn-cta-height);
@@ -251,7 +303,11 @@ button {
   text-underline-offset: 3px;
   font-size: 12px;
 }
-.btn-text-link {
+.btn-text-link,
+.btn-text-link:hover,
+.btn-text-link:active,
+.btn-text-link:visited,
+.btn-text-link:focus {
   color: #2F5BB8;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -337,6 +393,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  vertical-align: middle;
 }
 .das-radio ~ .das-radio {
   margin-left:20px;
@@ -354,6 +411,14 @@ button {
   border-radius: var(--das-input-border-radius);
   color: var(--das-font-color-base);
   background-color: #fff;
+}
+.das-input-date {
+  height: var(--das-input-height);
+  padding:0 var(--das-input-padding-inline);
+  border:1px solid var(--das-input-border-color);
+  border-radius: var(--das-input-border-radius);
+  color: var(--das-font-color-base);
+  background: #fff url(../img/ico14_calendar.svg) no-repeat right 12px center / 14px 14px;
 }
 .das-select {
   min-width: 120px;
@@ -394,10 +459,11 @@ button {
   background-color: #F8FAFC;
 }
 .das-search-optin > table tbody th {
-  padding:6px 12px;
+  padding:15px 12px 6px 12px;
   font-weight: 600;
   color: #333;
   text-align: left;
+  vertical-align: top;
 }
 .das-search-optin > table tbody td {
   padding:6px 12px;
@@ -412,6 +478,10 @@ button {
   margin-right: 8px;
 }
 
+/* grid */
+.row-table + .das-grid {
+  margin-top:var(--das-gap-medium);
+}
 .grid__head {
   display: flex;
   justify-content: space-between;
@@ -439,6 +509,19 @@ button {
   background-color: #6B7079;
   border-radius: 5px;
 }
+.das-grid-table::-webkit-scrollbar-track {
+  background-color: #F7F7F7;
+}
+.das-grid-table.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 415px;
+}
+.das-grid-table.scroll > table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 /* .das-grid-table::before {
   content: '';
   display: block;
@@ -454,11 +537,7 @@ button {
   top:1px;
 } */
 
-.das-grid-table > table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
+
 .das-grid-table > table thead th {
   height: 40px;
   border-bottom: 1px solid var(--das-border-color);
@@ -565,6 +644,10 @@ button {
 .row-table > table tbody tr:nth-child(n+2) td {
   border-top:1px solid var(--das-border-color);
 }
+
+.das-btns + .row-table {
+  margin-top:14px;
+} 
 
 /* 이미지 미리보기 */
 .image-preview {
@@ -814,4 +897,30 @@ button {
   text-align: left;
 }
 
-
+/* file list */
+.file-list {
+  border:1px solid #DFDFDF;
+  border-radius: var(--das-border-radius-dfault);
+}
+.file-list > li {
+  display: flex;
+  gap: var(--das-gap-small);
+  padding: var(--das-gap-xsmall) var(--das-gap-small);
+}
+.file-list > li ~ li {
+  border-top:1px solid #DFDFDF;
+}
+.file__name > .name {
+  margin-right: var(--das-gap-xsmall);
+}
+.file-list dl {
+  display: flex;
+  gap: var(--das-gap-xsmall);
+}
+.file-list dl > dt {
+  font-weight: 600;
+  line-height: 1.6;
+}
+.file-list dl > dd {
+  line-height: 1.6;
+}

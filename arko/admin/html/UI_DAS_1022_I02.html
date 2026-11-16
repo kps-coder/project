@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 구술채록</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">구술채록</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>DA-Arts 관리</li>
+                  <li>구술채록</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">구술채록</h2>
+            </div>
+            <div class="conts-body">
+              <div class="view-head">
+                <h3 class="h3-title">구술채록 생애사 회차 [등록]</h3>
+              </div>
+
+              <div class="row-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 120px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span>
+                        <label for="dasInputName">회차명</label>
+                      </th>
+                      <td>
+                        <input type="text" class="das-input-text block" id="dasInputName" value="제1차 작곡가가 되기까지(최초의 기억~1970년대)(2023)">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span>
+                        <label for="dasInputDate">구술일자</label>
+                      </th>
+                      <td>
+                        <input type="text" class="das-input-date" id="dasInputDate" value="2015-08-29">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span> 채록문<br><br>
+                        <button type="button" class="btn-default" onclick="modalCtrl.modalOpen('modalRecordsSearch');"><i class="ico14-search-bk"></i>검색</button>
+                      </th>
+                      <td>
+                        <ul class="file-list">
+                          <li>
+                            <span class="das-badge-doc pdf">PDF</span>
+                            <div class="file__info">
+                              <div class="file__name">
+                                <span class="name">OOOOOOO 아이템 &gt; 1회차_전무송_2015 주제사_01.pdf</span>
+                                <button type="button" class="btn-default small">Pdf 보기</button>
+                                <button type="button" class="btn-danger small">삭제</button>
+                              </div>
+                              <dl>
+                                <dt>채록연구자 :</dt>
+                                <dd>김지영</dd>
+                              </dl>
+                              <dl>
+                                <dt>핵심어 :</dt>
+                                <dd>오사량, 이진순, 유치진, 신구, 민지환, 드라마센터, 서울예술대학, &lt;햄릿&gt;, &lt;소&gt;, &lt;춘향전&gt;, &lt;수치&gt;, &lt;마의태자&gt;</dd>
+                              </dl>
+                            </div>
+                          </li>
+                          <li>
+                            <span class="das-badge-doc pdf">PDF</span>
+                            <div class="file__info">
+                              <div class="file__name">
+                                <span class="name">OOOOOOO 아이템 &gt; 1회차_전무송_2015 주제사_01.pdf</span>
+                                <button type="button" class="btn-default small">Pdf 보기</button>
+                                <button type="button" class="btn-danger small">삭제</button>
+                              </div>
+                              <dl>
+                                <dt>채록연구자 :</dt>
+                                <dd>김지영</dd>
+                              </dl>
+                              <dl>
+                                <dt>핵심어 :</dt>
+                                <dd>오사량, 이진순, 유치진, 신구, 민지환, 드라마센터, 서울예술대학, &lt;햄릿&gt;, &lt;소&gt;, &lt;춘향전&gt;, &lt;수치&gt;, &lt;마의태자&gt;</dd>
+                              </dl>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span> 채록영상<br><br>
+                        <button type="button" class="btn-default" onclick="modalCtrl.modalOpen('modalRecordsVideoSearch');"><i class="ico14-search-bk"></i>검색</button>
+                      </th>
+                      <td>
+                        <ul class="file-list">
+                          <li>
+                            <span class="das-badge-doc video">MP4</span>
+                            <div class="file__info">
+                              <div class="file__name">
+                                <span class="name">OOOOOOO 아이템 &gt; 공연 주제사3_드라마센터2_전무송1_편집본HD.mp4</span>
+                                <button type="button" class="btn-default small">상세목차 보기</button>
+                                <button type="button" class="btn-default small">영상스크립트 보기</button>
+                                <button type="button" class="btn-danger small">삭제</button>
+                              </div>
+                              <dl>
+                                <dt>재생시간 :</dt>
+                                <dd>1:57:08</dd>
+                              </dl>
+                              <dl>
+                                <dt>핵심어 :</dt>
+                                <dd>오사량, 이진순, 유치진, 신구, 민지환, 드라마센터, 서울예술대학, &lt;햄릿&gt;, &lt;소&gt;, &lt;춘향전&gt;, &lt;수치&gt;, &lt;마의태자&gt;</dd>
+                              </dl>
+                            </div>
+                          </li>
+                          <li>
+                            <span class="das-badge-doc video">MP4</span>
+                            <div class="file__info">
+                              <div class="file__name">
+                                <span class="name">OOOOOOO 아이템 &gt; 공연 주제사3_드라마센터2_전무송1_편집본HD.mp4</span>
+                                 <button type="button" class="btn-default small">상세목차 보기</button>
+                                <button type="button" class="btn-default small">영상스크립트 보기</button>
+                                <button type="button" class="btn-danger small">삭제</button>
+                              </div>
+                              <dl>
+                                <dt>재생시간 :</dt>
+                                <dd>1:57:08</dd>
+                              </dl>
+                              <dl>
+                                <dt>핵심어 :</dt>
+                                <dd>오사량, 이진순, 유치진, 신구, 민지환, 드라마센터, 서울예술대학, &lt;햄릿&gt;, &lt;소&gt;, &lt;춘향전&gt;, &lt;수치&gt;, &lt;마의태자&gt;</dd>
+                              </dl>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">운영정보</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasRadio1">상태</label>
+                        </th>
+                        <td colspan="5">
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1" checked>
+                            <label for="dasRadio1">공개</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1_1">
+                            <label for="dasRadio1_1">비공개</label>
+                          </span>
+                        </td>                        
+                      </tr>
+                      <tr>
+                        <th scope="row">등록일</th>
+                        <td>2025-10-28</td>
+                        <th scope="row">수정일</th>
+                        <td>2025-10-28</td>
+                        <th scope="row">수정자</th>
+                        <td>admin@arko.or.kr</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="das-cta-btns">
+                <div class="left">
+                  <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>목록</button>
+                  <button type="button" class="btn-cta-default">미리보기</button>
+                  <button type="button" class="btn-cta-primary"><i class="ico14-save"></i>저장</button>
+                </div>
+                <div class="right">
+                  <button type="button" class="btn-cta-danger"><i class="ico14-del"></i>삭제</button>
+                  <button type="button" class="btn-cta-secondary"><i class="ico14-return"></i>복구하기</button>
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <!-- modal -->
+  <!-- 채록문 검색 -->
+  <div class="das-modal" id="modalRecordsSearch">
+    <section class="das-modal-wrap large">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">채록문 검색</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 124px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasSelectTree">계층구조</label></th>
+                <td>
+                  <select class="das-select" id="dasSelectTree">
+                    <option>박서보 컬렉션</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree1">
+                    <option>전시자료 시리즈</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree2">
+                    <option>1985년 전시자료</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree3">
+                    <option>하위 폴더 일괄 조회</option>
+                  </select>
+                  <p class="sub-danger mt-xsmall">※ 컬렉션 선택은 필수입니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="dasSelect01">장르</label></th>
+                <td>
+                  <div class="input-search">
+                    <select class="das-select" id="dasSelect01">
+                      <option>전체</option>
+                      <option>무용</option>
+                    </select>
+                    <select class="das-select" id="dasSelect02">
+                      <option>아이템명</option>
+                      <option>컴포넌트명</option>
+                    </select>
+                    <input type="text" class="das-input-text" id="inputSearch01">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="sub-danger">※ 컴포넌트 중 pdf 파일만 검색됩니다.</div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table">
+              <table>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: 120px;">
+                  <col style="width: 30%;">
+                  <col style="width: 50%;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">장르</th>
+                  <th scope="col">아이템명</th>
+                  <th scope="col">컴포넌트명</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">1회차_전무송_2015 주제사_01.pdf</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">1회차_전무송_2015 주제사_01.pdf</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">1회차_전무송_2015 주제사_01.pdf</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">1회차_전무송_2015 주제사_01.pdf</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">1회차_전무송_2015 주제사_01.pdf</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="grid__foot">
+            <!-- pagenation -->
+            <div class="das-pagenation">
+              <div class="pagenation__list">
+                <button type="button" class="btn-page-first" disabled>
+                  <span class="blind">처음으로</span>
+                </button>
+                <button type="button" class="btn-page-prev" disabled>
+                  <span class="blind">이전</span>
+                </button>
+                <div class="page__number">
+                  <button type="button" class="btn-page-num active">1</button>
+                  <button type="button" class="btn-page-num">2</button>
+                  <button type="button" class="btn-page-num">3</button>
+                  <button type="button" class="btn-page-num">4</button>
+                  <button type="button" class="btn-page-num">5</button>
+                  <span>&middot;&middot;&middot;</span>
+                  <button type="button" class="btn-page-num">9</button>
+                </div>
+                <button type="button" class="btn-page-next">
+                  <span class="blind">다음</span>
+                </button>
+                <button type="button" class="btn-page-last">
+                  <span class="blind">마지막으로</span>
+                </button>
+              </div>
+              <div class="pagenation__select">
+                <select class="das-select">
+                  <option>10 / page</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+            </div>
+            <!-- //pagenation -->
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <!-- 채록영상 검색 -->
+  <div class="das-modal" id="modalRecordsVideoSearch">
+    <section class="das-modal-wrap large">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">채록영상 검색</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 124px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasSelectTree">계층구조</label></th>
+                <td>
+                  <select class="das-select" id="dasSelectTree02">
+                    <option>박서보 컬렉션</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree12">
+                    <option>전시자료 시리즈</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree22">
+                    <option>1985년 전시자료</option>
+                  </select>
+                  <select class="das-select" id="dasSelectTree32">
+                    <option>하위 폴더 일괄 조회</option>
+                  </select>
+                  <p class="sub-danger mt-xsmall">※ 컬렉션 선택은 필수입니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="dasSelect01">장르</label></th>
+                <td>
+                  <div class="input-search">
+                    <select class="das-select" id="dasSelect012">
+                      <option>전체</option>
+                      <option>무용</option>
+                    </select>
+                    <select class="das-select" id="dasSelect022">
+                      <option>아이템명</option>
+                      <option>컴포넌트명</option>
+                    </select>
+                    <input type="text" class="das-input-text" id="inputSearch012">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="sub-danger">※ 컴포넌트 중 영상파일만 검색됩니다. </div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table">
+              <table>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: 120px;">
+                  <col style="width: 30%;">
+                  <col style="width: 50%;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">장르</th>
+                  <th scope="col">아이템명</th>
+                  <th scope="col">컴포넌트명</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">공연 주제사3_드라마센터2_전무송1_편집본HD.mp4</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">공연 주제사3_드라마센터2_전무송1_편집본HD.mp4</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">공연 주제사3_드라마센터2_전무송1_편집본HD.mp4</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">공연 주제사3_드라마센터2_전무송1_편집본HD.mp4</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="das-checkbox">
+                        <input type="checkbox" name="dasCheckbox1">
+                      </span>   
+                    </td>
+                    <td>공연예술</td>
+                    <td class="al">아이템1</td>
+                    <td class="al">공연 주제사3_드라마센터2_전무송1_편집본HD.mp4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="grid__foot">
+            <!-- pagenation -->
+            <div class="das-pagenation">
+              <div class="pagenation__list">
+                <button type="button" class="btn-page-first" disabled>
+                  <span class="blind">처음으로</span>
+                </button>
+                <button type="button" class="btn-page-prev" disabled>
+                  <span class="blind">이전</span>
+                </button>
+                <div class="page__number">
+                  <button type="button" class="btn-page-num active">1</button>
+                  <button type="button" class="btn-page-num">2</button>
+                  <button type="button" class="btn-page-num">3</button>
+                  <button type="button" class="btn-page-num">4</button>
+                  <button type="button" class="btn-page-num">5</button>
+                  <span>&middot;&middot;&middot;</span>
+                  <button type="button" class="btn-page-num">9</button>
+                </div>
+                <button type="button" class="btn-page-next">
+                  <span class="blind">다음</span>
+                </button>
+                <button type="button" class="btn-page-last">
+                  <span class="blind">마지막으로</span>
+                </button>
+              </div>
+              <div class="pagenation__select">
+                <select class="das-select">
+                  <option>10 / page</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+            </div>
+            <!-- //pagenation -->
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <script>
+    /* $(function () {
+      $('#datepicker').datepicker({
+        dateFormat: 'yy.mm.dd',  // 날짜 형식
+        firstDay: 0,             // 일요일부터 시작
+        showOtherMonths: true,   // 이전·다음 달 날짜 표시
+        selectOtherMonths: false,
+        minDate: 0,              // 오늘 이전 날짜 선택 불가
+        changeMonth: true,       // 월 선택
+        changeYear: true,        // 연도 선택
+        yearRange: 'c-10:c+10',  // 연도 범위
+
+        // 한글 설정
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        monthNames: [
+          '1월', '2월', '3월', '4월', '5월', '6월',
+          '7월', '8월', '9월', '10월', '11월', '12월'
+        ],
+        monthNamesShort: [
+          '1월', '2월', '3월', '4월', '5월', '6월',
+          '7월', '8월', '9월', '10월', '11월', '12월'
+        ]
+      });
+    }); */
+  </script>
+</body>
+</html>
