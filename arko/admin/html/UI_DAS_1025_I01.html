@@ -77,12 +77,12 @@
                     <tr>
                       <th scope="row">
                         <span class="required-mark">*</span>
-                        <label for="dasInputDate">사업년도</label>
+                        <label for="dasInputDate1">사업년도</label>
                       </th>
                       <td>
-                        <input type="text" class="das-input-date" id="dasInputDate" value="2015-08-29"> 
+                        <input type="text" class="das-input-date" id="dasInputDate1" value="2015-08-29"> 
                         ~ 
-                        <input type="text" class="das-input-date" id="dasInputDate" value="2015-08-29">
+                        <input type="text" class="das-input-date" id="dasInputDate2" value="2015-08-29">
                       </td>
                     </tr>
                     <tr>
@@ -508,5 +508,44 @@
       </div>      
     </section>
   </div>
+
+  <script>
+    $(function () {
+      // 공통 옵션
+      const dateOptions = {
+        dateFormat: 'yy-mm-dd',
+        firstDay: 0,
+        showOtherMonths: true,
+        selectOtherMonths: false,
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true,
+        yearRange: 'c-10:c+10',
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+      };
+
+      // 시작일
+      $('#dasInputDate1').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate2').datepicker('option', 'minDate', date);
+        }
+      });
+
+      // 종료일
+      $('#dasInputDate2').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate1').datepicker('option', 'maxDate', date);
+        }
+      });
+    });    
+
+    $('.das-contents').on('scroll', function () {
+      $('.hasDatepicker').datepicker('widget').hide();
+    });
+  </script>
 </body>
 </html>

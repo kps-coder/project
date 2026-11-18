@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 주요 아카이브 관리</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">주요 아카이브 관리</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>메인화면관리</li>
+                  <li>주요 아카이브 관리</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">주요 아카이브 관리</h2>
+            </div>
+            <div class="conts-body">
+              <div class="das-search-optin">
+                <table>
+                  <colgroup>
+                    <col style="width: 100px;">
+                    <col style="width: 150px;">
+                    <col style="width: 100px;">
+                    <col style="width: 150px;">
+                    <col style="width: auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><label for="selectSearch01">장르</label></th>
+                      <td>
+                        <select class="das-select block" id="selectSearch01">
+                          <option>전체</option>
+                          <option>예술일반</option>
+                          <option>문학</option>
+                          <option>시각예술</option>
+                          <option>연극·뮤지컬</option>
+                          <option>무용</option>
+                          <option>음악</option>
+                          <option>예술종합</option>
+                          <option>예술정책</option>
+                          <option>기타</option>
+                          <option>다원예술</option>
+                        </select>
+                      </td>
+                      <th scope="row"><label for="selectSearch02">공개여부</label></th>
+                      <td>
+                        <select class="das-select block" id="selectSearch02">
+                          <option>전체</option>
+                          <option>공개</option>
+                          <option>비공개</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="input-search">
+                          <select class="das-select" id="selectSearch03">
+                            <option>아카이브명</option>
+                          </select>
+                          <input type="text" class="das-input-text" id="inputSearch01">
+                          <button type="button" class="btn-default">초기화</button>
+                          <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div class="das-grid">
+                <div class="grid__head">
+                  <div class="count">전체 <strong>1,123</strong>건</div>
+                  <div class="sort">
+                    <select class="das-select">
+                      <option>등록일</option>
+                    </select>
+                    <select class="das-select">
+                      <option>내림차순</option>
+                      <option>오름차순</option>
+                    </select>
+                    <select class="das-select">
+                      <option>10개씩 보기</option>
+                      <option>20개씩 보기</option>
+                      <option>50개씩 보기</option>
+                    </select>
+                    <button type="button" class="btn-primary"><i class="ico14-plus"></i>신규</button>
+                  </div>
+                </div>
+
+                <div class="grid__body">
+                  <div class="das-grid-table">
+                    <table>
+                      <colgroup>
+                        <col style="width: 80px;">
+                        <col style="width: 100px;">
+                        <col style="width: auto;">
+                        <col style="width: 100px;">
+                        <col style="width: 200px;">
+                        <col style="width: 110px;">
+                        <col style="width: 110px;">
+                      </colgroup>
+                      <thead>
+                        <th scope="col">No</th>
+                        <th scope="col">장르</th>
+                        <th scope="col">아카이브명</th>
+                        <th scope="col">공개순서</th>
+                        <th scope="col">게시 기간</th>
+                        <th scope="col">상태</th>
+                        <th scope="col">등록일</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge success">공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge success">공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge success">공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge success">공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge success">공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>시각예술</td>
+                          <td class="al"><a href="#n" class="btn-text-link">조선미술전람회(1922~1944) 컬렉션</a></td>   
+                          <td>1</td>       
+                          <td>2026-08-01 ~ 2026-12-31</td>                
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>                          
+                          <td>2026-08-10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="grid__foot">
+                  <!-- pagenation -->
+                  <div class="das-pagenation">
+                    <div class="pagenation__list">
+                      <button type="button" class="btn-page-first" disabled>
+                        <span class="blind">처음으로</span>
+                      </button>
+                      <button type="button" class="btn-page-prev" disabled>
+                        <span class="blind">이전</span>
+                      </button>
+                      <div class="page__number">
+                        <button type="button" class="btn-page-num active">1</button>
+                        <button type="button" class="btn-page-num">2</button>
+                        <button type="button" class="btn-page-num">3</button>
+                        <button type="button" class="btn-page-num">4</button>
+                        <button type="button" class="btn-page-num">5</button>
+                        <span>&middot;&middot;&middot;</span>
+                        <button type="button" class="btn-page-num">9</button>
+                      </div>
+                      <button type="button" class="btn-page-next">
+                        <span class="blind">다음</span>
+                      </button>
+                      <button type="button" class="btn-page-last">
+                        <span class="blind">마지막으로</span>
+                      </button>
+                    </div>
+                    <div class="pagenation__select">
+                      <select class="das-select">
+                        <option>10 / page</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- //pagenation -->
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+</body>
+</html>
