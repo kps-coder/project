@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 구술채록</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">구술채록</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>DA-Arts 관리</li>
+                  <li>구술채록</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">구술채록</h2>
+            </div>
+            <div class="conts-body">
+              <div class="view-head">
+                <h3 class="h3-title">구술채록 주제사 회차관리 [상세]</h3>
+              </div>
+
+              <div class="row-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 140px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span>
+                        <label for="">주제사 선택/조회</label>
+                      </th>
+                      <td>
+                        <div class="input-search">
+                          <select class="das-select">
+                            <option>제1차 작곡가가 되기까지(최초의 기억~1970년대)(2023)</option>
+                          </select>
+                          <button type="button" class="btn-default"><i class="ico14-search-bk"></i>조회</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="das-grid">
+                <div class="grid__head">
+                  <div class="count"></div>
+                  <div class="sort">
+                    <span class="das-checkbox">
+                      <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                      <label for="dasCheckbox1">목록에서 삭제항목 보기</label>
+                    </span> 
+                    <span class="das-checkbox">
+                      <input type="checkbox" name="dasCheckbox2" id="dasCheckbox2">
+                      <label for="dasCheckbox2">목록에서 비공개 숨기기</label>
+                    </span> 
+                    <button type="button" class="btn-primary"><i class="ico14-plus"></i>추가</button>
+                  </div>
+                </div>
+
+                <div class="grid__body">
+                  <div class="das-grid-table">
+                    <table>
+                      <colgroup>
+                        <col style="width: 60px;">
+                        <col style="width: 100px;"> 
+                        <col style="width: 150px;"> 
+                        <col style="width: auto;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                      </colgroup>
+                      <thead>
+                        <th scope="col" colspan="2">순서</th>
+                        <th scope="col">구술자</th>
+                        <th scope="col">회차명</th>
+                        <th scope="col">채록문</th>
+                        <th scope="col">채록영상</th>
+                        <th scope="col">상태</th>
+                        <th scope="col">수정일</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>홍길동</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td>
+                            <span class="das-badge success">공개</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>특별대담</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>홍길동, 김길동</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge error">삭제</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>특별대담</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>홍길동, 김길동</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge error">삭제</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>특별대담</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>홍길동, 김길동</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge error">삭제</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>특별대담</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge neutral">비공개</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>홍길동, 김길동</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge error">삭제</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-down"></i>
+                              <span class="blind">아래</span>
+                            </button>
+                            <button type="button" class="btn-default icon">
+                              <i class="ico14-up"></i>
+                              <span class="blind">위</span>
+                            </button>
+                          </td>
+                          <td>홍길동, 김길동</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">인적사항 및 활동경력</a>
+                          </td>
+                          <td>
+                            <a href="#n" class="btn-text-link">등록</a>
+                          </td>
+                          <td><span class="font-color-error">미등록</span></td>
+                          <td>
+                            <span class="das-badge error">삭제</span>
+                          </td>
+                          <td>2026-08-10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">운영정보</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasRadio1">상태</label>
+                        </th>
+                        <td colspan="5">
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1" checked>
+                            <label for="dasRadio1">공개</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1_1">
+                            <label for="dasRadio1_1">비공개</label>
+                          </span> 
+                          
+                          <span class="sub-danger ml-small">※ 공개상태 회차가 없으면 구술채록을 공개로 설정할 수 없습니다.</span>
+                        </td>                        
+                      </tr>
+                      <tr>
+                        <th scope="row">등록일</th>
+                        <td>2025-10-28</td>
+                        <th scope="row">수정일</th>
+                        <td>2025-10-28</td>
+                        <th scope="row">수정자</th>
+                        <td>admin@arko.or.kr</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="das-cta-btns">
+                <div class="left">
+                  <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>목록</button>
+                  <button type="button" class="btn-cta-default">미리보기</button>
+                  <button type="button" class="btn-cta-primary"><i class="ico14-save"></i>저장</button>
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+</body>
+</html>

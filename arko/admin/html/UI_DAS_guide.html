@@ -170,7 +170,9 @@
               <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
               <button type="button" class="btn-primary"><i class="ico14-plus"></i>등록</button>
               <button type="button" class="btn-default"><i class="ico14-prev"></i>목록</button>
+              <button type="button" class="btn-default"><i class="ico14-search-bk"></i>검색</button>
               <button type="button" class="btn-primary"><i class="ico14-save"></i>저장</button>
+              <button class="btn-secondary"><i class="ico14-plus-b"></i>추가</button>
 
               <br><br>
               <button class="btn-primary small">h24 .btn-primary.small</button>
@@ -247,6 +249,7 @@
 
               <br><br>
               <input type="text" class="das-input-text" placeholder="input">
+              <input type="text" class="das-input-text error" placeholder="input error">
 
               <br><br>
               <select class="das-select">
@@ -255,9 +258,30 @@
                 <option>select box</option>
               </select>
 
+              <select class="das-select error">
+                <option>select box error</option>
+                <option>select box</option>
+                <option>select box</option>
+              </select>
+
               <br><br>
               <textarea class="das-textarea">textarea</textarea>
-                 
+              <textarea class="das-textarea error">textarea  error</textarea>  
+              
+               <br><br><br><br>
+               <button type="button" class="btn-secondary" onclick="modalCtrl.modalOpen('modalLarge');">modal large</button>
+               <button type="button" class="btn-secondary" onclick="modalCtrl.modalOpen('modalMedium');">modal medium</button>
+               <button type="button" class="btn-secondary" onclick="modalCtrl.modalOpen('modalSmall');">modal small</button>
+
+               <br><br><br><br>
+               <button type="button" class="btn-default" onclick="modalCtrl.modalOpen('modalAlert');">modal alert</button>
+
+               <br><br>
+               <i class="ico38-alert-warning"></i>
+               <i class="ico38-alert-success"></i>
+               <i class="ico38-alert-confirm"></i>
+               <i class="ico38-alert-info"></i>
+               <i class="ico38-alert-error"></i>
             </div>
           </div>
         </div>
@@ -267,6 +291,79 @@
         </footer>
       </div>
     </div>
+  </div>
+
+  <!-- modal -->
+  <!-- modal large -->
+  <div class="das-modal" id="modalLarge">
+    <section class="das-modal-wrap large">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">modal large</h1>
+      </div>
+      <div class="das-modal-body">
+        width : 998px<br><br>
+        컨텐츠 영역<br>
+        컨텐츠 영역<br>
+        컨텐츠 영역<br>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <!-- modal medium -->
+  <div class="das-modal" id="modalMedium">
+    <section class="das-modal-wrap">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">modal medium</h1>
+      </div>
+      <div class="das-modal-body">
+        width : 758px<br><br>
+        컨텐츠 영역<br>
+        컨텐츠 영역<br>
+        컨텐츠 영역<br>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <!-- modal small -->
+  <div class="das-modal" id="modalSmall">
+    <section class="das-modal-wrap small">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">modal small</h1>
+      </div>
+      <div class="das-modal-body">
+        width : 598px<br><br>
+        컨텐츠 영역<br>
+        컨텐츠 영역<br>
+        컨텐츠 영역<br>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <!-- 필수값 입력 안내 -->
+  <div class="das-modal" id="modalAlert">
+    <section class="das-modal-wrap alert">
+      <div class="das-modal-body">
+        <div class="modal-alert-msg">
+          <i class="ico38-alert-warning"></i>
+          <p class="text">${항목명}을(를) 입력해주세요.</p>
+        </div>        
+      </div><!-- //das-modal-body -->   
+      <div class="das-modal-foot">
+        <button type="button" class="btn-primary" onclick="modalCtrl.modalClose('modalAlert');">확인</button>
+      </div>
+    </section>
   </div>
 </body>
 </html>

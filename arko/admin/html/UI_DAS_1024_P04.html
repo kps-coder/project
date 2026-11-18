@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 기록물 조회 및 선택 팝업</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <button type="button" class="btn-secondary" onclick="modalCtrl.modalOpen('modalViewIndex')">상세목차 보기</button>
+
+  <!-- modal -->
+  <!-- 상세목차 보기 -->
+  <div class="das-modal" id="modalViewIndex">
+    <section class="das-modal-wrap">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">상세목차 보기</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="view-box">
+          <table class="view-index">
+            <colgroup>
+              <col style="width:50px">
+              <col >
+              <col style="width:110px">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>출생과 성장환경: 경북 예천과 안성시절</td>
+                <td class="time">07:12</td>
+              </tr>
+               <tr>
+                <th scope="row">2</th>
+                <td>글과 노래에 대한 재능, 영화에 대한 관심</td>
+                <td class="time">24:32</td>
+              </tr>
+               <tr>
+                <th scope="row">3</th>
+                <td>홍익대 미대 진학</td>
+                <td class="time">35:02</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>출생과 성장환경: 경북 예천과 안성시절</td>
+                <td class="time">07:12</td>
+              </tr>
+               <tr>
+                <th scope="row">5</th>
+                <td>글과 노래에 대한 재능, 영화에 대한 관심</td>
+                <td class="time">24:32</td>
+              </tr>
+               <tr>
+                <th scope="row">6</th>
+                <td>홍익대 미대 진학</td>
+                <td class="time">35:02</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>출생과 성장환경: 경북 예천과 안성시절</td>
+                <td class="time">07:12</td>
+              </tr>
+               <tr>
+                <th scope="row">8</th>
+                <td>글과 노래에 대한 재능, 영화에 대한 관심</td>
+                <td class="time">24:32</td>
+              </tr>
+               <tr>
+                <th scope="row">9</th>
+                <td>홍익대 미대 진학</td>
+                <td class="time">35:02</td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>출생과 성장환경: 경북 예천과 안성시절</td>
+                <td class="time">07:12</td>
+              </tr>
+               <tr>
+                <th scope="row">11</th>
+                <td>글과 노래에 대한 재능, 영화에 대한 관심</td>
+                <td class="time">24:32</td>
+              </tr>
+               <tr>
+                <th scope="row">12</th>
+                <td>홍익대 미대 진학</td>
+                <td class="time">35:02</td>
+              </tr>
+              <tr>
+                <th scope="row">13</th>
+                <td>출생과 성장환경: 경북 예천과 안성시절</td>
+                <td class="time">07:12</td>
+              </tr>
+               <tr>
+                <th scope="row">14</th>
+                <td>글과 노래에 대한 재능, 영화에 대한 관심</td>
+                <td class="time">24:32</td>
+              </tr>
+               <tr>
+                <th scope="row">15</th>
+                <td>홍익대 미대 진학</td>
+                <td class="time">35:02</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <script>
+    modalCtrl.modalOpen('modalViewIndex');
+  </script>
+</body>
+</html>
