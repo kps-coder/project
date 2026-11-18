@@ -144,6 +144,9 @@ button {
 .ico14-write {
   background-image: url(../img/ico14_write.svg);
 }
+.ico14-list {
+  background-image: url(../img/ico14_list.svg);
+}
 
 [class^="ico22-"] {
   display: inline-block;
@@ -320,6 +323,11 @@ button {
 [class^="btn-"] > i {
   margin-right: 4px;
   vertical-align: -2px;
+}
+
+[class^="btn-"]:disabled {
+  opacity: .5;
+  cursor: default;
 }
 
 .das-cta-btns {
@@ -687,6 +695,7 @@ button {
   padding: var(--das-gap-xsmall) var(--das-gap-small);
 }
 .image-preview__info {
+  position: relative;
   display: flex;
   padding: var(--das-gap-small);
   border-top: 1px solid var(--das-border-color);
@@ -708,6 +717,12 @@ button {
   height: 10px;
   margin:0 10px;
   background-color: #D9D9D9;
+}
+.image-preview__info .btn-text-danger {
+  position: absolute;
+  right: var(--das-gap-small);
+  top:50%;
+  transform: translateY(-50%);
 }
 .noti-box {
   display: flex;

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 구술채록·공연영상화 관리</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">구술채록·공연영상화 관리</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>메인화면관리</li>
+                  <li>구술채록·공연영상화 관리</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">구술채록·공연영상화 관리</h2>
+            </div>
+            <div class="conts-body">
+              <div class="view-head">
+                <button type="button" class="btn-default"><i class="ico14-prev"></i>목록</button>
+                <h3 class="h3-title">구술채록·공연영상화 관리 [등록]</h3>
+              </div>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">연계 기록물 정보</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 137px;">
+                      <col style="width: 120px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" rowspan="3">
+                          <img src="../assets/img/img_none.png" alt="" class="archive-img">
+                        </th>
+                        <th scope="row">
+                          <span class="required-mark">*</span> 
+                          <label for="dasInput01">구분</label>
+                        </th>
+                        <td>
+                          <select class="das-select" id="dasInput01">
+                            <option>전체</option>
+                            <option>구술채록</option>
+                            <option>공연영상화</option>
+                          </select>
+                          <button type="button" class="btn-secondary green">연계 콘텐츠 불러오기</button>
+                          <span class="sub-text ml-xsmall">구분 값을 선택 후 연계 콘텐츠 불러오기를 선택해주세요.</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span> 
+                          <label for="dasInputRecords">기록물명</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text block" id="dasInputRecords" value="" disabled>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <label for="dasInputGenre">분야</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text" id="dasInputGenre" value="" disabled>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">등록정보</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasRadio1">적용방식</label>
+                        </th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio2" id="dasRadio2" checked>
+                            <label for="dasRadio2">기존 기록물 정보 사용</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio2" id="dasRadio3_1">
+                            <label for="dasRadio3_1">정보 수정하여 등록</label>
+                          </span>  
+                          <span class="sub-text ml-medium">※ '정보 수정하여 등록' 선택 시, 원본과 무관하게 아래 직접 입력한 정보로 노출됩니다.</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <label for="dasInputCategory">분야</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text" id="dasInputCategory" value="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasInputRecords2">기록물명</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text block" id="dasInputRecords2" value="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasInputRecordsURL">URL</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text block" id="dasInputRecordsURL" value="">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">운영정보</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasRadio1">상태</label>
+                        </th>
+                        <td colspan="5">
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1" checked>
+                            <label for="dasRadio1">공개</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1_1">
+                            <label for="dasRadio1_1">비공개</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasInputRanking">공개순서</label>
+                        </th>
+                        <td colspan="5">
+                          <input type="text" class="das-input-text" id="dasInputRanking" value="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasInputDate1">게시기간</label>
+                        </th>
+                        <td colspan="5">
+                          <input type="text" class="das-input-date" id="dasInputDate1" value="">
+                          ~
+                          <input type="text" class="das-input-date" id="dasInputDate2" value="">
+                          <span class="das-checkbox ml-medium">
+                            <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                            <label for="dasCheckbox1">상시</label>
+                          </span>   
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="das-cta-btns">
+                <div class="left">
+                  <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>목록</button>
+                  <button type="button" class="btn-cta-default">다시쓰기</button>
+                  <button type="button" class="btn-cta-primary"><i class="ico14-save"></i>저장</button>
+                </div>
+                <div class="right">
+                  <button type="button" class="btn-cta-danger"><i class="ico14-del"></i>삭제</button>
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <!-- modal -->
+  <!-- 구술채록 등록 -->
+  <div class="das-modal" id="modalGusulSearch">
+    <section class="das-modal-wrap">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">구술채록 등록</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 110px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasInputGusulSearch">인물명</label></th>
+                <td>
+                  <div class="input-search">
+                    <input type="text" id="dasInputGusulSearch" class="das-input-text">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="count"></div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table scroll">
+              <table>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: 80px;">
+                  <col style="width: 80px;">
+                  <col style="width: 120px;">
+                  <col style="width: auto;">
+                  <col style="width: 80px;">
+                  <col style="width: 100px;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">장르</th>
+                  <th scope="col">인물명(국문)</th>
+                  <th scope="col">인물명(외국어)</th>
+                  <th scope="col">공개여부</th>
+                  <th scope="col">등록일</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Jang Han Sung</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Lee Geonyong, 李建鏞, 가브리엘(세레명), 지언(吱彦)</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Jang Han Sung</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Lee Geonyong, 李建鏞, 가브리엘(세레명), 지언(吱彦)</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Jang Han Sung</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Lee Geonyong, 李建鏞, 가브리엘(세레명), 지언(吱彦)</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Jang Han Sung</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Lee Geonyong, 李建鏞, 가브리엘(세레명), 지언(吱彦)</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Jang Han Sung</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>구술채록</td>
+                    <td>대중예술</td>
+                    <td>장한성</td>
+                    <td>Lee Geonyong, 李建鏞, 가브리엘(세레명), 지언(吱彦)</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>             
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <!-- 공연영상화 등록 -->
+  <div class="das-modal" id="modalArtVideoSearch">
+    <section class="das-modal-wrap">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">공연영상화 등록</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 110px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasInputArtVideoSearch">기록물명</label></th>
+                <td>
+                  <div class="input-search">
+                    <input type="text" id="dasInputArtVideoSearch" class="das-input-text">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="count"></div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table scroll">
+              <table>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: 80px;">
+                  <col style="width: 80px;">
+                  <col style="width: auto;">
+                  <col style="width: 80px;">
+                  <col style="width: 100px;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">장르</th>
+                  <th scope="col">아카이브명</th>
+                  <th scope="col">공개여부</th>
+                  <th scope="col">등록일</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>대중예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 김효영의 생황 &lt;숨x굿&gt;</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>공연예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 쌍향수</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>    
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>대중예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 김효영의 생황 &lt;숨x굿&gt;</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>공연예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 쌍향수</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>    
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>대중예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 김효영의 생황 &lt;숨x굿&gt;</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>공연예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 쌍향수</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>    
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>대중예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 김효영의 생황 &lt;숨x굿&gt;</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>공연예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 쌍향수</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>    
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>대중예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 김효영의 생황 &lt;숨x굿&gt;</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr> 
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td>공연영상화</td>
+                    <td>공연예술</td>
+                    <td class="al">(2025) 공연예술 창작산실 &lt;올해의 신작&gt; : 쌍향수</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>       
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <script>
+    $(function () {
+      // 공통 옵션
+      const dateOptions = {
+        dateFormat: 'yy-mm-dd',
+        firstDay: 0,
+        showOtherMonths: true,
+        selectOtherMonths: false,
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true,
+        yearRange: 'c-10:c+10',
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+      };
+
+      // 시작일
+      $('#dasInputDate1').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate2').datepicker('option', 'minDate', date);
+        }
+      });
+
+      // 종료일
+      $('#dasInputDate2').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate1').datepicker('option', 'maxDate', date);
+        }
+      });
+    });
+
+    $('.das-contents').on('scroll', function () {
+      $('.hasDatepicker').datepicker('widget').hide();
+    });
+  </script>
+</body>
+</html>

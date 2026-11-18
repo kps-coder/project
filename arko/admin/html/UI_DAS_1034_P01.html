@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 기록물 조회 및 선택 팝업</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <button type="button" class="btn-secondary" onclick="modalCtrl.modalOpen('modalOneTableSearch')">원테이블 불러오기</button>
+
+  <!-- modal -->
+  <!-- 원테이블 등록 -->
+  <div class="das-modal" id="modalOneTableSearch">
+    <section class="das-modal-wrap large">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">원테이블 등록</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 110px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasInputOneTableSearch">원테이블명</label></th>
+                <td>
+                  <div class="input-search">
+                    <input type="text" id="dasInputPersonSearch" class="das-input-text">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="count"></div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table scroll">
+              <table>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: auto;">
+                  <col style="width: 200px;">
+                  <col style="width: 150px;">
+                  <col style="width: 80px;">
+                  <col style="width: 100px;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">원테이블명</th>
+                  <th scope="col">기간</th>
+                  <th scope="col">장소</th>
+                  <th scope="col">상태</th>
+                  <th scope="col">등록일</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <script>
+    modalCtrl.modalOpen('modalOneTableSearch');
+  </script>
+</body>
+</html>

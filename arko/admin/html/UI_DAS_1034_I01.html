@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 원테이블 관리</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">원테이블 관리</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>메인화면관리</li>
+                  <li>원테이블 관리</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">원테이블 관리</h2>
+            </div>
+            <div class="conts-body">
+              <div class="view-head">
+                <button type="button" class="btn-default"><i class="ico14-prev"></i>목록</button>
+                <h3 class="h3-title">원테이블 관리 [등록]</h3>
+              </div>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">원테이블 정보</h4>
+                  <div class="btns">
+                    <button type="button" class="btn-default" onclick="modalCtrl.modalOpen('modalOneTableSearch');"><i class="ico14-list"></i>원테이블 불러오기</button>
+                  </div>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span> 
+                          <label for="dasInputName">제목</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text block" id="dasInputName" value="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span> 
+                          <label for="dasinputURL">링크URL</label>
+                        </th>
+                        <td>
+                          <input type="text" class="das-input-text block" id="dasinputURL" value="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span> 
+                          <label for="dasInputName">이미지</label>
+                        </th>
+                        <td>
+                          <div class="attach-file">
+                            <p class="sub-text">원테이블 불러오기 시 이미지가 자동 노출됩니다.</p>
+                          </div>
+                          <div class="image-preview" style="display: none;">
+                            <div class="image-preview__img">
+                              <img src="../assets/img/img_sample.png" alt="">
+                            </div>
+                            <div class="image-preview__info">
+                              <dl>
+                                <dt>파일명</dt>
+                                <dd>hero_20260901.png</dd>
+                              </dl>
+                              <dl>
+                                <dt>이미지 크기</dt>
+                                <dd>1920 * 780 px</dd>
+                              </dl>
+                              <dl>
+                                <dt>파일 용량</dt>
+                                <dd>1.24 MB</dd>
+                              </dl>
+                              <dl>
+                                <dt>파일 형식</dt>
+                                <dd>
+                                  <span class="das-badge-doc img">PNG</span>
+                                </dd>
+                              </dl>
+                              <button type="button" class="btn-text-danger">삭제</button>
+                            </div>
+                          </div>
+                          <div class="noti-box" style="display: none;">
+                            <i class="ico14-noti"></i>
+                            <p>권장 이미지 크기 : 1920*780px / 파일형식 : JPG, PNG / 최대용량 : 5MB</p>
+                          </div>
+                          <div class="image-alt-input" style="display: none;">
+                            <dl>
+                              <dt>이미지 대체 텍스트</dt>
+                              <dd>
+                                <input type="text" class="das-input-text block">
+                              </dd>
+                            </dl>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">운영정보</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasRadio1">상태</label>
+                        </th>
+                        <td colspan="5">
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1" checked>
+                            <label for="dasRadio1">공개</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1_1">
+                            <label for="dasRadio1_1">비공개</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasInputRanking">공개순서</label>
+                        </th>
+                        <td colspan="5">
+                          <input type="text" class="das-input-text" id="dasInputRanking" value="" placeholder="순서를 입력하세요">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="required-mark">*</span>
+                          <label for="dasInputDate1">게시기간</label>
+                        </th>
+                        <td colspan="5">
+                          <input type="text" class="das-input-date" id="dasInputDate1" value="2026-08-01">
+                          ~
+                          <input type="text" class="das-input-date" id="dasInputDate2" value="2026-08-01">
+                          <span class="das-checkbox ml-medium">
+                            <input type="checkbox" name="dasCheckbox1" id="dasCheckbox1">
+                            <label for="dasCheckbox1">상시</label>
+                          </span>   
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">등록일</th>
+                        <td>2026-08-23</td>
+                        <th scope="row">수정일</th>
+                        <td>2026-08-23</td>
+                        <th scope="row">수정자</th>
+                        <td>admin@arko.or.kr</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="das-cta-btns">
+                <div class="left">
+                  <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>목록</button>
+                  <button type="button" class="btn-cta-default">다시쓰기</button>
+                  <button type="button" class="btn-cta-primary"><i class="ico14-save"></i>저장</button>
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <!-- modal -->
+  <!-- 원테이블 등록 -->
+  <div class="das-modal" id="modalOneTableSearch">
+    <section class="das-modal-wrap large">
+      <div class="das-modal-head">
+        <h1 class="h1-modal">원테이블 등록</h1>
+      </div>
+      <div class="das-modal-body">
+        <div class="das-search-optin">
+          <table>
+            <colgroup>
+              <col style="width: 110px;">
+              <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><label for="dasInputOneTableSearch">원테이블명</label></th>
+                <td>
+                  <div class="input-search">
+                    <input type="text" id="dasInputPersonSearch" class="das-input-text">
+                    <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                  </div>                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="das-grid">
+          <div class="grid__head">
+            <div class="count"></div>
+            <div class="btns">
+              <button type="button" class="btn-primary">선택</button>
+            </div>
+          </div>
+
+          <div class="grid__body">
+            <div class="das-grid-table scroll">
+              <table>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: auto;">
+                  <col style="width: 200px;">
+                  <col style="width: 150px;">
+                  <col style="width: 80px;">
+                  <col style="width: 100px;">
+                </colgroup>
+                <thead>
+                  <th scope="col">선택</th>
+                  <th scope="col">원테이블명</th>
+                  <th scope="col">기간</th>
+                  <th scope="col">장소</th>
+                  <th scope="col">상태</th>
+                  <th scope="col">등록일</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>   
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge success">공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>  
+                  <tr>
+                    <td>
+                      <span class="das-radio">
+                        <input type="radio" name="dasRadio1">
+                      </span>   
+                    </td>
+                    <td class="al">원 테이블 : 7. PAPER TO SPACE, 한국관</td>
+                    <td>2026년 08월 12일 (수) ~ 2026년 11월 30일 (월)</td>
+                    <td>서초본원</td>
+                    <td><span class="das-badge neutral">비공개</span></td>
+                    <td>2026-08-01</td>
+                  </tr>                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div><!-- //das-modal-body -->
+      
+      <div class="modal-close">
+        <button type="button" class="btn-modal-close"><span class="blind">닫기</span></button>
+      </div>      
+    </section>
+  </div>
+
+  <script>
+    $(function () {
+      // 공통 옵션
+      const dateOptions = {
+        dateFormat: 'yy-mm-dd',
+        firstDay: 0,
+        showOtherMonths: true,
+        selectOtherMonths: false,
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true,
+        yearRange: 'c-10:c+10',
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+      };
+
+      // 시작일
+      $('#dasInputDate1').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate2').datepicker('option', 'minDate', date);
+        }
+      });
+
+      // 종료일
+      $('#dasInputDate2').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate1').datepicker('option', 'maxDate', date);
+        }
+      });
+    });
+
+    $('.das-contents').on('scroll', function () {
+      $('.hasDatepicker').datepicker('widget').hide();
+    });
+  </script>
+</body>
+</html>
