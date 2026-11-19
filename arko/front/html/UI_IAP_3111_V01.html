@@ -78,11 +78,12 @@
                     즐겨찾기
                   </button>
                 </div>
+                <!-- 20261119 SB v.84 삭제
                 <div class="btns">
                   <button type="button" class="krds-btn medium primary open-modal" data-target="modalAdd">
                     담기
                   </button>
-                </div>
+                </div>-->
               </div>
             </div>
 
@@ -161,8 +162,10 @@
                                 </dl>
                               </div>
                             </div>
-                            <div class="arko-btns between">
+                            <!-- 20261119 SB v0.84 전체 채록문 보기 버튼 추가 -->
+                            <div class="btns">
                               <button type="button" class="krds-btn medium tertiary">인물 DB 보기</button>
+                              <button type="button" class="krds-btn medium tertiary">전체 채록문 보기</button>
                             </div>
                           </div>
                         </div>
@@ -276,7 +279,16 @@
                           </div>
                         </section>
                         <section class="summary__sec">
-                          <h3 class="h3-title">채록영상</h3> 
+                          <div class="title-flex-area">
+                            <h3 class="h3-title">채록영상</h3> 
+                            <div class="inputs">
+                              <div class="krds-form-check medium">
+                                <input type="checkbox" name="checkbox01" id="chkTimestamp">
+                                <label for="chkTimestamp">타임스탭프 숨기기</label>
+                              </div>
+                            </div>
+                          </div>
+                          
                           <div class="recorded-video">
                             <div class="recorded-video__list">
                               <ul>
@@ -950,6 +962,19 @@
           btnIcon.classList.toggle('down', isExpanded);
         }
       });
+    });
+
+    // 20261119 SB v0.84 추가
+    const chkTimestamp = document.getElementById('chkTimestamp');
+    const timestampWrap = document.querySelector('.recorded-video__list');
+    chkTimestamp.addEventListener('change', function(e){
+      if (this.checked) {
+        // 체크했을 때
+        timestampWrap.style.display = 'none';
+      } else {
+        // 체크 해제했을 때
+        timestampWrap.style.display = 'block';
+      }
     });
   </script>
    
