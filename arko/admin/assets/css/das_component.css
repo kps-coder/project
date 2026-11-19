@@ -193,6 +193,7 @@ button {
   line-height: var(--das-btn-height);
   white-space: nowrap;
   color: #fff;
+  font-weight: 400;
   background-color: var(--das-primary-color);
 }
 .btn-secondary {
@@ -204,6 +205,7 @@ button {
   line-height: var(--das-btn-height);
   white-space: nowrap;
   color: var(--das-primary-color);
+  font-weight: 400;
   background-color: #fff;
 }
 .btn-secondary.green {
@@ -219,6 +221,7 @@ button {
   line-height: var(--das-btn-height);
   white-space: nowrap;
   color: #333;
+  font-weight: 400;
   background-color: #fff;
 }
 .btn-danger {
@@ -230,6 +233,7 @@ button {
   line-height: var(--das-btn-height);
   white-space: nowrap;
   color: #E5483F;
+  font-weight: 400;
   background-color: #fff;
 }
 
@@ -266,6 +270,7 @@ button {
   white-space: nowrap;
   color: #fff;
   font-size: 14px;
+  font-weight: 400;
   background-color: var(--das-primary-color);
 }
 .btn-cta-secondary {
@@ -278,6 +283,7 @@ button {
   white-space: nowrap;
   color: var(--das-primary-color);
   font-size: 14px;
+  font-weight: 400;
   background-color: #fff;
 }
 .btn-cta-default {
@@ -290,6 +296,7 @@ button {
   white-space: nowrap;
   color: #333;
   font-size: 14px;
+  font-weight: 400;
   background-color: #fff;
 }
 .btn-cta-danger {
@@ -302,6 +309,7 @@ button {
   white-space: nowrap;
   color: #fff;
   font-size: 14px;
+  font-weight: 400;
   background-color: #E5483F;
 }
 .btn-text-danger {
@@ -422,6 +430,7 @@ button {
   border:1px solid var(--das-input-border-color);
   border-radius: var(--das-input-border-radius);
   color: var(--das-font-color-base);
+  vertical-align: middle;
   background-color: #fff;
 }
 .das-input-date {
@@ -431,6 +440,7 @@ button {
   border:1px solid var(--das-input-border-color);
   border-radius: var(--das-input-border-radius);
   color: var(--das-font-color-base);
+  vertical-align: middle;
   background: #fff url(../img/ico14_calendar.svg) no-repeat right 12px center / 14px 14px;
 }
 .das-select {
@@ -440,6 +450,7 @@ button {
   border:1px solid var(--das-input-border-color);
   border-radius: var(--das-input-border-radius);
   color: var(--das-font-color-base);
+  vertical-align: middle;
   background:#fff url(../img/form_select_combo.svg) no-repeat right 12px center / 14px 14px;
 }
 .das-textarea {
@@ -447,6 +458,7 @@ button {
   border:1px solid var(--das-input-border-color);
   border-radius: var(--das-input-border-radius);
   line-height: 1.6;
+  vertical-align: middle;
   background-color: #fff;
 }
 .das-input-text.block,
@@ -663,22 +675,22 @@ button {
   border: 1px solid var(--das-border-color);
   border-radius: var(--das-input-border-radius);
 }
-.row-table > table tbody th {
+.row-table > table > tbody > tr > th {
   padding:var(--das-gap-xsmall) var(--das-gap-small);
   border-right:1px solid var(--das-border-color);
   text-align: left;
   background-color: #FAFAFA;
 }
-.row-table > table tbody th:nth-child(n+2) {
+.row-table > table > tbody > tr > th:nth-child(n+2) {
   border-left:1px solid var(--das-border-color);
 }
-.row-table > table tbody td {
+.row-table > table > tbody > tr > td {
   height: var(--das-btn-height);
   padding:var(--das-gap-xsmall) var(--das-gap-small);
   box-sizing: content-box;
 }
-.row-table > table tbody tr:nth-child(n+2) th,
-.row-table > table tbody tr:nth-child(n+2) td {
+.row-table > table > tbody > tr:nth-child(n+2) > th,
+.row-table > table > tbody > tr:nth-child(n+2) > td {
   border-top:1px solid var(--das-border-color);
 }
 
@@ -1036,3 +1048,22 @@ button {
 .archive-img {
   width: 100%;
 }
+
+/* info table */
+.info-table > dl {
+  display: flex;
+}
+.info-table > dl > dt {
+  width: 100px;
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+}
+.info-table > dl > dd {
+  flex: 1;
+  text-align: left;
+}
+.info-table > dl ~ dl {
+  margin-top:6px;
+}
+
