@@ -183,6 +183,7 @@ const headerCtrl = {
         this.gnbClose();
       });
     }
+    
   },
 
 
@@ -380,15 +381,25 @@ const arko_mobile_gnb = {
 
     // 2depth 버튼 설정
     this.mobileGnb.depth2Btn.forEach((btn, i) => {
+
+      // 하위 메뉴가 있는 항목만 설정
+      const parent = btn.parentElement;
+      const hasDepth3 = parent.querySelector('.sitemap__depth3');
+
+      if (!hasDepth3) return;
+
       btn.setAttribute('aria-controls', `moGnbSub2${i}`);
       btn.setAttribute('aria-expanded', 'false');
 
       btn.addEventListener('click', (event) => {
+
+        // PC에서는 기본 링크 이동
+        if (window.innerWidth > 1024) return;
+
+        // 하위 메뉴 열기
         event.preventDefault();
 
-        const parent = btn.parentElement;
         const isOpen = parent.classList.contains('gnb-open');
-
 
         this.mobileGnb.depth2Item.forEach((item) => {
           item.classList.remove('gnb-open');
@@ -398,9 +409,10 @@ const arko_mobile_gnb = {
           btn.setAttribute('aria-expanded', 'false');
         });
 
-        // 선택한 GNB 열기
-        parent.classList.add('gnb-open');
-        btn.setAttribute('aria-expanded', 'true');
+        if (!isOpen) {
+          parent.classList.add('gnb-open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
   },
