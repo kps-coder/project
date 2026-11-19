@@ -1330,7 +1330,7 @@ button {
   margin-right: var(--arko-qna-head-q-left-gap);
 }
 .arko-faq-board .btn-accordion .notice-badge {
-  width: 10.4rem;
+  min-width: 10.4rem;
   margin-right:2.4rem;
   font-weight: 400;
 }
