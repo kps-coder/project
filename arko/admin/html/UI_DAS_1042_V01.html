@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 1:1문의</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">1:1문의</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>안내·지원센터</li>
+                  <li>1:1문의</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">1:1문의</h2>
+            </div>
+            <div class="conts-body">
+              <div class="view-head">
+                <button type="button" class="btn-default"><i class="ico14-prev"></i>목록</button>
+                <h3 class="h3-title">1:1문의 [상세]</h3>
+              </div>
+
+              <div class="row-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 120px;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">제목</th>
+                      <td>파화당 관련하여 오류 확인부탁드려요</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">작성자</th>
+                      <td>홍길동</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">작성일</th>
+                      <td>2026.01.01</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">내용</th>
+                      <td>파화당 열람하고 싶은데 계속 오류가 나서 확인 부탁드립니다</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">첨부파일</th>
+                      <td>
+                        <span class="das-badge-doc img mr-xsmall">JPG</span>
+                        <a href="#n" class="btn-text-link">파화당.jpg</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="required-mark">*</span> 
+                        <label for="dasTextareaConts">답변</label>
+                      </th>
+                      <td>
+                        <textarea class="das-textarea block" id="dasTextareaConts" rows="5"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">답변<br>첨부파일</th>
+                      <td>
+                        <div class="attach-file">
+                          <div class="file-find">
+                            <input type="file" id="dasfileFind" hidden>
+                            <label for="dasfileFind">
+                              <i class="ico22-clip"></i>                          
+                            </label>                              
+                          </div>
+                          <dl>
+                            <dt>이미지 파일을 드래그 하거나 클릭하여 파일을 선택하세요.</dt>
+                            <dd>권장 사이즈 : 1920*780px / 파일형식 : JPG, PNG / 최대용량 : 5MB</dd>
+                          </dl>
+                        </div>
+                        <ul class="file-list">
+                          <li>
+                            <span class="das-badge-doc img">JPG</span>
+                            <div class="file__item">
+                              <p class="name">원시트1.jpg</p>
+                              <p class="info">
+                                <span>2.4MB</span>
+                                <button type="button" class="btn-text-danger">삭제</button>
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">답변여부</th>
+                      <td>
+                        <span class="das-radio">
+                          <input type="radio" name="dasRadio1" id="dasRadio1">
+                          <label for="dasRadio1">미답변</label>
+                        </span>   
+                        <span class="das-radio">
+                          <input type="radio" name="dasRadio1" id="dasRadio1_1">
+                          <label for="dasRadio1_1">임시저장</label>
+                        </span> 
+                        <span class="das-radio">
+                          <input type="radio" name="dasRadio1" id="dasRadio1_2" checked>
+                          <label for="dasRadio1_2">답변완료</label>
+                        </span> 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">운영정보</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">등록일</th>
+                        <td>2025-10-28</td>
+                        <th scope="row">수정일</th>
+                        <td>2025-10-28</td>
+                        <th scope="row">작성자</th>
+                        <td>admin@arko.or.kr</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="das-cta-btns">
+                <div class="left">
+                  <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>목록</button>
+                  <button type="button" class="btn-cta-default"><i class="ico14-save-bk"></i>임시저장</button>
+                  <button type="button" class="btn-cta-primary"><i class="ico14-check-w"></i>답변완료</button>
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+</body>
+</html>
