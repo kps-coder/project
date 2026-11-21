@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 일반회원</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude2"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">일반회원</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>회원관리</li>
+                  <li>일반회원</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">일반회원</h2>
+            </div>
+            <div class="conts-body">
+              <div class="view-head">
+                <button type="button" class="btn-default"><i class="ico14-prev"></i>목록</button>
+                <h3 class="h3-title">일반회원 [상세]</h3>
+              </div>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">일반회원 상세</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">사용자아이디</th>
+                        <td colspan="3">abcdefg</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">사용자명</th>
+                        <td colspan="3">홍길동</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">성별</th>
+                        <td>남자</td>
+                        <th scope="row">생년월일</th>
+                        <td>1999.01.01</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">휴대전화</th>
+                        <td>010-0000-0000</td>
+                        <th scope="row">전화번호</th>
+                        <td>02-0000-0000</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">우편번호</th>
+                        <td colspan="3">123-456</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">주소</th>
+                        <td colspan="3">서울특별시 oo구 oo동 oo아파트</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">이메일</th>
+                        <td colspan="3">abc@naver.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">일반회원 상태값</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">회원상태</th>
+                        <td><span class="das-badge success">활성화</span></td>
+                        <th scope="row">마지막 로그인</th>
+                        <td>2025-10-28</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">동의정보 <small class="sub-text ml-medium">회원가입 시 동의한 이용약관 및 개인정보 수집·이용 동의 여부입니다.</small></h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 240px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">회원가입 이용약관(필수)</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1" checked>
+                            <label for="dasRadio1">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio1_1">
+                            <label for="dasRadio1_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">개인정보 수집 및 이용 동의(필수)</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio2" id="dasRadio2" checked>
+                            <label for="dasRadio2">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio1" id="dasRadio2_1">
+                            <label for="dasRadio2_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">개인정보 수집 및 이용 동의(선택)</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio3" id="dasRadio3" checked>
+                            <label for="dasRadio2">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio3" id="dasRadio3_1">
+                            <label for="dasRadio3_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">개인정보 홍보 및 마케팅 동의(선택)</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio4" id="dasRadio4" checked>
+                            <label for="dasRadio2">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio4" id="dasRadio4_1">
+                            <label for="dasRadio4_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">개인화 서비스 설정</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 240px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">개인화 항목1 동의 (필수)</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio5" id="dasRadio5" checked>
+                            <label for="dasRadio5">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio5" id="dasRadio5_1">
+                            <label for="dasRadio5_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">개인화 항목2 동의 (선택)</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio6" id="dasRadio6" checked>
+                            <label for="dasRadio6">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio6" id="dasRadio6_1">
+                            <label for="dasRadio6_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h4 class="h4-title">알림설정</h4>
+                </div>
+
+                <div class="row-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 240px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">열람 신청 알림</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio7" id="dasRadio7" checked>
+                            <label for="dasRadio7">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio7" id="dasRadio7_1">
+                            <label for="dasRadio7_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">예약 알림</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio8" id="dasRadio8" checked>
+                            <label for="dasRadio8">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio8" id="dasRadio8_1">
+                            <label for="dasRadio8_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">관심 자료 알림</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio9" id="dasRadio9" checked>
+                            <label for="dasRadio9">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio9" id="dasRadio9_1">
+                            <label for="dasRadio9_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">추천 콘텐츠 알림</th>
+                        <td>
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio10" id="dasRadio10" checked>
+                            <label for="dasRadio10">동의</label>
+                          </span>   
+                          <span class="das-radio">
+                            <input type="radio" name="dasRadio10" id="dasRadio10_1">
+                            <label for="dasRadio10_1">비동의</label>
+                          </span>  
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <!-- tab -->
+              <div class="das-tab-wrap">
+                <div class="das-tab">
+                  <ul>
+                    <li class="active"><button type="button" class="btn-tab">기록물 예약현황</button></li>
+                    <li><button type="button" class="btn-tab">열람 현황</button></li>
+                  </ul>
+                </div>
+                <div class="das-tab-contents">
+                  <div class="das-tab-conts active">
+                    <div class="deco-title-area">
+                      <h4 class="h4-title">기록물 예약 이력</h4>
+                    </div>
+                    <div class="row-table">
+                      <table>
+                        <colgroup>
+                          <col style="width: 120px;">
+                          <col style="width: auto;">
+                          <col style="width: 120px;">
+                          <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">신청번호</th>
+                            <td>1</td>
+                            <th scope="row">이용시설</th>
+                            <td>보존자료열람실A</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">신청일</th>
+                            <td>2026-08-25</td>
+                            <th scope="row">참가인원</th>
+                            <td>2명</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">이용일</th>
+                            <td>
+                              2026-08-25 10:00~11:00<br>
+                              2026-08-25 10:00~11:00
+                            </td>
+                            <th scope="row">처리상태</th>
+                            <td>
+                              <span class="das-badge warning">승인대기</span>
+                              <!--
+                              <span class="das-badge success">승인</span>
+                              <span class="das-badge success">승인(일부)</span>
+                              <span class="das-badge error">관리자취소</span>
+                              <span class="das-badge error">신청자취소</span>
+                              <span class="das-badge neutral">이용완료</span>
+                              -->
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">열람목적</th>
+                            <td>연구</td>
+                            <th scope="row">처리사유</th>
+                            <td>일반자료 1건 예약신청</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">처리 등록일</th>
+                            <td colspan="3">2026-08-25 10:00~11:00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <div class="das-grid">
+                      <div class="grid__head">
+                        <div class="deco-title-area">
+                          <h4 class="h4-title">신청 기록물</h4>
+                          <div class="count">전체 <strong>1,123</strong>건</div>
+                        </div>
+                        
+                        <div class="sort">
+                          <select class="das-select">
+                            <option>이용일(내림차순)</option>
+                            <option>이용일(오름차순)</option>
+                          </select>
+                          <select class="das-select">
+                            <option>승인대기</option>
+                            <option>승인</option>
+                            <option>승인(일부)</option>
+                            <option>관리자취소</option>
+                            <option>신청자취소</option>
+                            <option>이용완료</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="grid__body">
+                        <div class="das-grid-table">
+                          <table>
+                            <colgroup>
+                              <col style="width: 80px;">
+                              <col style="width: auto;">
+                              <col style="width: 200px;">
+                              <col style="width: 200px;">
+                              <col style="width: 100px;">
+                              <col style="width: 110px;">
+                            </colgroup>
+                            <thead>
+                              <th scope="col">신청번호</th>
+                              <th scope="col">기록물명</th>
+                              <th scope="col">이용일</th>
+                              <th scope="col">이용시설</th>
+                              <th scope="col">처리상태</th>
+                              <th scope="col">관리</th>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td rowspan="2">1</td>
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25 10:00~11:00</td>
+                                <td rowspan="2">기록물열람실A</td>
+                                <td rowspan="2">
+                                  <span class="das-badge success">승인</span>
+                                </td>
+                                <td rowspan="2">
+                                  <button type="button" class="btn-default small">상세보기</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="al">강희산 自鏡展 [전시팜플렛] : The 2rd Exhibition</td>
+                                <td>2026-08-25 11:00~12:00</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25 10:00~11:00</td>
+                                <td>공동감상석</td>
+                                <td>
+                                  <span class="das-badge error">신청자취소</span>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn-default small">상세보기</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25 10:00~11:00</td>
+                                <td>기록물열람실B</td> 
+                                <td>
+                                  <span class="das-badge neutral">이용완료</span>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn-default small">상세보기</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25 10:00~11:00</td>
+                                <td>기록물열람실B</td> 
+                                <td>
+                                  <span class="das-badge error">관리자취소</span>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn-default small">상세보기</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25 10:00~11:00</td>
+                                <td>기록물열람실B</td> 
+                                <td>
+                                  <span class="das-badge warning">승인대기</span>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn-default small">상세보기</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25 10:00~11:00</td>
+                                <td>기록물열람실B</td> 
+                                <td>
+                                  <span class="das-badge success">승인(일부)</span>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn-default small">상세보기</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="grid__foot">
+                        <!-- pagenation -->
+                        <div class="das-pagenation">
+                          <div class="pagenation__list">
+                            <button type="button" class="btn-page-first" disabled>
+                              <span class="blind">처음으로</span>
+                            </button>
+                            <button type="button" class="btn-page-prev" disabled>
+                              <span class="blind">이전</span>
+                            </button>
+                            <div class="page__number">
+                              <button type="button" class="btn-page-num active">1</button>
+                              <button type="button" class="btn-page-num">2</button>
+                              <button type="button" class="btn-page-num">3</button>
+                              <button type="button" class="btn-page-num">4</button>
+                              <button type="button" class="btn-page-num">5</button>
+                              <span>&middot;&middot;&middot;</span>
+                              <button type="button" class="btn-page-num">9</button>
+                            </div>
+                            <button type="button" class="btn-page-next">
+                              <span class="blind">다음</span>
+                            </button>
+                            <button type="button" class="btn-page-last">
+                              <span class="blind">마지막으로</span>
+                            </button>
+                          </div>
+                          <div class="pagenation__select">
+                            <select class="das-select">
+                              <option>10 / page</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- //pagenation -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="das-tab-conts">
+                    <div class="das-grid">
+                      <div class="grid__head">
+                        <div class="deco-title-area">
+                          <h4 class="h4-title">열람 현황</h4>
+                          <div class="count">전체 <strong>1,123</strong>건</div>
+                        </div>
+                        
+                        <div class="sort">
+                          <select class="das-select">
+                            <option>전체상태</option>
+                            <option>이용중</option>
+                            <option>이용완료</option>
+                            <option>연체</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="grid__body">
+                        <div class="das-grid-table">
+                          <table>
+                            <colgroup>
+                              <col style="width: auto;">
+                              <col style="width: 112px;">
+                              <col style="width: 100px;">
+                            </colgroup>
+                            <thead>
+                              <th scope="col">기록물명</th>
+                              <th scope="col">이용일</th>
+                              <th scope="col">상태</th>
+                            </thead>
+                            <tbody>
+                              <tr>                                
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25</td>
+                                <td>
+                                  <span class="das-badge info">이용중</span>
+                                </td>
+                              </tr>
+                              <tr>                                
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25</td>
+                                <td>
+                                  <span class="das-badge neutral">이용완료</span>
+                                </td>
+                              </tr>
+                              <tr>                                
+                                <td class="al">'공정보상' 체계를 위한 기초연구 사업보고서</td>
+                                <td>2026-08-25</td>
+                                <td>
+                                  <span class="das-badge error">연체</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="grid__foot">
+                        <!-- pagenation -->
+                        <div class="das-pagenation">
+                          <div class="pagenation__list">
+                            <button type="button" class="btn-page-first" disabled>
+                              <span class="blind">처음으로</span>
+                            </button>
+                            <button type="button" class="btn-page-prev" disabled>
+                              <span class="blind">이전</span>
+                            </button>
+                            <div class="page__number">
+                              <button type="button" class="btn-page-num active">1</button>
+                              <button type="button" class="btn-page-num">2</button>
+                              <button type="button" class="btn-page-num">3</button>
+                              <button type="button" class="btn-page-num">4</button>
+                              <button type="button" class="btn-page-num">5</button>
+                              <span>&middot;&middot;&middot;</span>
+                              <button type="button" class="btn-page-num">9</button>
+                            </div>
+                            <button type="button" class="btn-page-next">
+                              <span class="blind">다음</span>
+                            </button>
+                            <button type="button" class="btn-page-last">
+                              <span class="blind">마지막으로</span>
+                            </button>
+                          </div>
+                          <div class="pagenation__select">
+                            <select class="das-select">
+                              <option>10 / page</option>
+                              <option>1</option>
+                              <option>2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- //pagenation -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="das-cta-btns">
+                <div class="left">
+                  <button type="button" class="btn-cta-default"><i class="ico14-prev"></i>목록</button>
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <script>
+    //tab
+    const tabBtn = document.querySelectorAll('.btn-tab');
+    const tabLi = document.querySelectorAll('.das-tab li');
+    const tabConts = document.querySelectorAll('.das-tab-conts');
+
+    tabBtn.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        tabLi.forEach((li) => {
+          li.classList.remove('active');
+        });
+        tabLi[i].classList.add('active');
+        tabConts.forEach((cont) => {
+          cont.classList.remove('active');
+        });
+        tabConts[i].classList.add('active');
+      });
+    })
+
+
+
+
+    // 퍼블확인 용 gnb 
+    document.addEventListener('DOMContentLoaded', function(){
+      setTimeout(() => {
+        const gnbList = document.querySelector('.das-gnb-list');
+        const gnbListItem = gnbList.querySelectorAll('li');
+
+        gnbListItem.forEach(function(li){
+          li.classList.remove('active');
+        });
+        gnbListItem[1].classList.add('active');
+      }, 10);      
+    });
+  </script>
+</body>
+</html>
