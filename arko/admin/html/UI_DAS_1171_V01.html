@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 검색 통계</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude3"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">검색 통계</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>통계</li>
+                  <li>검색</li>
+                  <li>검색 통계</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">
+                검색 통계
+                <small class="sub-text ml-small">레피아 검색 통계 데이터를 기반으로 주요 검색 현황을 요약해서 제공합니다.</small>
+              </h2>
+            </div>
+            <div class="conts-body">
+              <div class="statistics-list">
+                <div class="statistics-list__head">
+                  <dl class="update">
+                    <dt>최종 집계 일시</dt> 
+                    <dd>2026-08-28 12:00</dd>
+                  </dl>
+                  <button type="button" class="btn-cta-default"><i class="ico14-new-win"></i>레피아 상세 통계 보기</button>
+                </div>
+                <ul>
+                  <li>
+                    <dl class="figures">
+                      <dt>총 검색 횟수</dt>
+                      <dd><strong>12,540</strong> 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="figures">
+                      <dt>검색어 수</dt>
+                      <dd><strong>3,210</strong> 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="figures">
+                      <dt>결과 없음 비율</dt>
+                      <dd><strong>8.2</strong> %</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="figures">
+                      <dt>오류 비율</dt>
+                      <dd><strong>0.4</strong> %</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex-sec">
+                <section class="sec-box">
+                  <div class="sec-box__head">
+                    <h3 class="h4-title">월별 검색 횟수 추이</h3>
+                  </div>
+                  <div class="sec-box__body">
+                    <div class="chart-wrap">
+                      <canvas id="searchChart"></canvas>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="sec-box">
+                  <div class="sec-box__head">
+                    <h3 class="h4-title">최근 3개월 인기 검색어 TOP 5</h3>
+                    <p class="unit">(단위 : 회)</p>
+                  </div>
+                  <div class="sec-box__body">
+                    <div class="das-grid-table">
+                      <table>
+                        <colgroup>
+                          <col style="width: 100px;">
+                          <col style="width: auto;">
+                          <col style="width: 100px;">
+                        </colgroup>
+                        <thead>
+                          <th scope="col">순위</th>
+                          <th scope="col" class="al">검색어</th>
+                          <th scope="col">검색 횟수</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td class="al">박서보</td>
+                            <td class="font-color-sub">3,000</td>    
+                          </tr> 
+                          <tr>
+                            <td>2</td>
+                            <td class="al">박서보</td>
+                            <td class="font-color-sub">3,000</td>    
+                          </tr> 
+                          <tr>
+                            <td>3</td>
+                            <td class="al">박서보</td>
+                            <td class="font-color-sub">3,000</td>    
+                          </tr> 
+                          <tr>
+                            <td>4</td>
+                            <td class="al">박서보</td>
+                            <td class="font-color-sub">3,000</td>    
+                          </tr> 
+                          <tr>
+                            <td>5</td>
+                            <td class="al">박서보</td>
+                            <td class="font-color-sub">3,000</td>    
+                          </tr> 
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <section class="sec-box">
+                <div class="sec-box__head">
+                  <h3 class="h4-title">검색 결과 현황 <small class="sub-text ml-small">(최근 3개월)</small></h3>
+                </div>
+                <div class="sec-box__body">
+                  <div class="search-result-chart">
+                    <canvas id="searchResultChart"></canvas>
+                  </div>
+                  <div class="statistics-list">
+                    <ul>
+                      <li>
+                        <dl class="figures2">
+                          <dt><span class="legend src1"></span> 결과 있음</dt>
+                          <dd>
+                            <strong>91.4%</strong> 
+                            <span class="sub-text">(11,460건)</span>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl class="figures2">
+                          <dt><span class="legend src2"></span> 결과 없음</dt>
+                          <dd>
+                            <strong>8.2%</strong> 
+                            <span class="sub-text">(1,030건)</span>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl class="figures2">
+                          <dt><span class="legend src3"></span> 오류</dt>
+                          <dd>
+                            <strong>0.4%</strong> 
+                            <span class="sub-text">(50건)</span>
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <div class="noti-box mt-medium">
+                <i class="ico14-noti"></i>
+                <p>
+                  <b>검색 통계는 레피아 검색엔진의 집계 데이터를 기준으로 합니다.</b> <br> 
+                  더 자세한 기간별 분석, 검색어 분석, 결과없음/오류 상세 내역은 레피아 상세 통계에서 확인하세요.
+                </p>
+                <button type="button" class="btn-cta-default"><i class="ico14-new-win"></i>레피아 상세 통계 보기로 이동</button>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <script>
+
+    const searchChart = document.getElementById("searchChart");
+
+    const searchData = [9240, 7860, 8530, 11420, 12010, 12540];
+    const average = 10267;
+
+    const searchChartConfig = {
+      type: "bar",
+      data: {
+        labels: ["3월", "4월", "5월", "6월", "7월", "8월"],
+        datasets: [
+          {
+            type: "bar",
+            label: "검색 횟수",
+            data: searchData,
+            backgroundColor: "#5B85D6",
+            borderRadius: 4,
+            borderSkipped: false,
+            barThickness: 41,
+            order: 1,
+          },
+          {
+            type: "line",
+            label: "평균 검색 횟수",
+            data: Array(6).fill(average),
+            borderColor: "#8A8A8A",
+            borderWidth: 1,
+            borderDash: [4, 3],
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            fill: false,
+            order: 2,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: { 
+            top: 0,
+            right: 10,
+          },
+        },
+        plugins: {
+          legend: {
+            position: "top",
+            align: "end",
+            labels: {
+              usePointStyle: false,
+              boxWidth: 8,
+              boxHeight: 8,
+              padding: 12,
+              font: {
+                family: '"Pretendard GOV", sans-serif',
+                size: 12,
+              },
+            },
+          },
+          tooltip: {
+            enabled: false,
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+            border: {
+              color: "#EBEBEB",
+            },
+            ticks: {
+              color: "#555555",
+              font: {
+                family: '"Pretendard GOV", sans-serif',
+                size: 12,
+              },
+            },
+          },
+          y: {
+            min: 0,
+            max: 15000,
+            ticks: {
+              stepSize: 3000,
+              color: "#999999",
+              font: {
+                family: '"Pretendard GOV", sans-serif',
+                size: 10,
+              },
+              callback: (value) => value.toLocaleString("ko-KR"),
+            },
+            grid: {
+              color: "#EAEAEA",
+              drawTicks: false,
+            },
+            border: {
+              display: false,
+            },
+          },
+        },
+      },
+      plugins: [
+        {
+          id: "customChartLabels",
+          afterDatasetsDraw(chart) {
+            const { ctx, chartArea, scales } = chart;
+            const yScale = scales.y;
+            const meta = chart.getDatasetMeta(0);
+
+            ctx.save();
+
+            // 막대 위 검색 횟수 표시
+            ctx.font = 'bold 12px "Pretendard GOV", sans-serif';
+            ctx.fillStyle = "#333333";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "bottom";
+
+            meta.data.forEach((bar, index) => {
+              const position = bar.getProps(["x", "y"], true);
+
+              ctx.fillText(
+                searchData[index].toLocaleString("ko-KR"),
+                position.x,
+                position.y - 5
+              );
+            });
+
+            // 평균 검색 횟수 텍스트
+            const averageY = yScale.getPixelForValue(average);
+
+            ctx.font = '11px "Pretendard GOV", sans-serif';
+            ctx.fillStyle = "#555555";
+            ctx.textAlign = "left";
+            ctx.textBaseline = "bottom";
+
+            ctx.fillText(
+              `평균 ${average.toLocaleString("ko-KR")}`,
+              chartArea.left + 5,
+              averageY - 6
+            );
+
+            ctx.restore();
+          },
+        },
+      ],
+    };
+
+    new Chart(searchChart, searchChartConfig);
+
+
+    // 검색 결과 현황
+    const ratioChart = document.getElementById("searchResultChart");
+
+    new Chart(ratioChart, {
+      type: "bar",
+      data: {
+        labels: ["비율"],
+        datasets: [
+          {
+            label: "결과 있음",
+            data: [91.4],
+            backgroundColor: "#5A87D9",
+            borderWidth: 0,
+            barThickness: 36,
+          },
+          {
+            label: "결과 없음",
+            data: [8.2],
+            backgroundColor: "#D97706",
+            borderWidth: 0,
+            barThickness: 36,
+          },
+          {
+            label: "오류",
+            data: [0.4],
+            backgroundColor: "#DC2626",
+            borderWidth: 0,
+            barThickness: 36,
+          },
+        ],
+      },
+      options: {
+        indexAxis: "y",
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: 0,
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            enabled: false,
+          },
+        },
+        scales: {
+          x: {
+            stacked: true,
+            display: false,
+            min: 0,
+            max: 100,
+          },
+          y: {
+            stacked: true,
+            display: false,
+          },
+        },
+      },
+      plugins: [
+        {
+          id: "ratioLabels",
+          afterDatasetsDraw(chart) {
+            const { ctx } = chart;
+
+            ctx.save();
+            ctx.font = 'bold 13px "Pretendard GOV", sans-serif';
+            ctx.fillStyle = "#FFFFFF";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+
+            chart.data.datasets.forEach((dataset, index) => {
+              const value = dataset.data[0];
+
+              // 작은 영역은 텍스트 표시 제외
+              if (value < 5) return;
+
+              const bar = chart.getDatasetMeta(index).data[0];
+              const { x, y } = bar.getCenterPoint();
+
+              ctx.fillText(`${value}%`, x, y);
+            });
+
+            ctx.restore();
+          },
+        },
+      ],
+    });
+
+    // 퍼블확인 용 gnb 
+    document.addEventListener('DOMContentLoaded', function(){
+      setTimeout(() => {
+        const gnbList = document.querySelector('.das-gnb-list');
+        const gnbListItem = gnbList.querySelectorAll('li');
+
+        gnbListItem.forEach(function(li){
+          li.classList.remove('active');
+        });
+        gnbListItem[2].classList.add('active');
+      }, 10);      
+    });
+  </script>
+</body>
+</html>

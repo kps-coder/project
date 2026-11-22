@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 구술채록 통계</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude3"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">구술채록 통계</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>통계</li>
+                  <li>구술채록 통계</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">
+                구술채록 통계
+                <small class="sub-text ml-small">구술채록 자료의 전체 보유 현황과 이용 통계를 확인할 수 있습니다.</small>
+              </h2>
+            </div>
+            <div class="conts-body">
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h3 class="h4-title">생애사</h3>
+                  <div class="btns">
+                    <button type="button" class="btn-primary xls-download"><i class="ico14-download"></i>엑셀 다운로드</button>
+                    <button type="button" class="btn-secondary green"><i class="ico14-doc"></i>엑셀 다운로드 양식</button>
+                  </div>
+                </div>
+                <div class="statistics-list">
+                  <ul>
+                    <li>
+                      <dl class="figures">
+                        <dt>구술자 수</dt>
+                        <dd><strong>2,540</strong> 명</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="figures">
+                        <dt>회차 수</dt>
+                        <dd><strong>21,540</strong> 회</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="figures">
+                        <dt>채록문 수</dt>
+                        <dd><strong>2,540</strong> 건</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="figures">
+                        <dt>채록영상 수</dt>
+                        <dd><strong>21,540</strong> 건</dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="deco-title-area">
+                  <h4 class="h4-title">장르별 구술채록 수</h4>
+                </div>
+                <div class="das-grid-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 10%;" span="10">
+                    </colgroup>
+                    <thead>
+                      <th scope="col">문학</th>
+                      <th scope="col">시각예술</th>
+                      <th scope="col">연극&middot;뮤지컬</th>
+                      <th scope="col">무용</th>
+                      <th scope="col">음악</th>
+                      <th scope="col">다원예술</th>
+                      <th scope="col">예술종합</th>
+                      <th scope="col">예술일반</th>
+                      <th scope="col">예술정책</th>
+                      <th scope="col">기타</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                      </tr> 
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="lower-sec">
+                <div class="lower-title-area">
+                  <h3 class="h4-title">주제사</h3>
+                  <div class="btns">
+                    <button type="button" class="btn-primary xls-download"><i class="ico14-download"></i>엑셀 다운로드</button>
+                  </div>
+                </div>
+                <div class="statistics-list">
+                  <ul>
+                    <li>
+                      <dl class="figures">
+                        <dt>주제수</dt>
+                        <dd><strong>40</strong> 개</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="figures">
+                        <dt>구술자 수</dt>
+                        <dd><strong>21,540</strong> 명</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="figures">
+                        <dt>회차 수</dt>
+                        <dd><strong>2,540</strong> 회</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="figures">
+                        <dt>채록문 수</dt>
+                        <dd><strong>21,540</strong> 건</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="figures">
+                        <dt>채록영상 수</dt>
+                        <dd><strong>21,540</strong> 건</dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="deco-title-area">
+                  <h4 class="h4-title">장르별 구술채록 수</h4>
+                </div>
+                <div class="das-grid-table">
+                  <table>
+                    <colgroup>
+                      <col style="width: 10%;" span="10">
+                    </colgroup>
+                    <thead>
+                      <th scope="col">문학</th>
+                      <th scope="col">시각예술</th>
+                      <th scope="col">연극&middot;뮤지컬</th>
+                      <th scope="col">무용</th>
+                      <th scope="col">음악</th>
+                      <th scope="col">다원예술</th>
+                      <th scope="col">예술종합</th>
+                      <th scope="col">예술일반</th>
+                      <th scope="col">예술정책</th>
+                      <th scope="col">기타</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                        <td>1,100</td>
+                      </tr> 
+                    </tbody>
+                  </table>
+                </div>
+              </section>          
+
+              
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <script>
+    // 퍼블확인 용 gnb 
+    document.addEventListener('DOMContentLoaded', function(){
+      setTimeout(() => {
+        const gnbList = document.querySelector('.das-gnb-list');
+        const gnbListItem = gnbList.querySelectorAll('li');
+
+        gnbListItem.forEach(function(li){
+          li.classList.remove('active');
+        });
+        gnbListItem[2].classList.add('active');
+      }, 10);      
+    });
+  </script>
+</body>
+</html>

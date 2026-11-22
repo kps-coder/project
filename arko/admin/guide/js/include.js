@@ -176,6 +176,12 @@ window.addEventListener('DOMContentLoaded', function() {
               </li>
             </ul>
           </li>
+          <li>
+            <a href="#n" class="btn-lnb-depth1">구술채록 통계</a>
+          </li>
+          <li>
+            <a href="#n" class="btn-lnb-depth1">멀티미디어 통계</a>
+          </li>
         </ul>
       </aside>`;
     }
