@@ -211,6 +211,37 @@ button {
   background-image: url(../img/ico38_alert_error.svg);
 }
 
+[class^="ico34-"] {
+  display: inline-block;
+  vertical-align: middle;
+  width: 34px;
+  height: 34px;
+  background: no-repeat center;
+}
+.ico34-cont {
+  background-image: url(../img/ico34_cont.svg);
+}
+.ico34-mike {
+  background-image: url(../img/ico34_mike.svg);
+}
+.ico34-people {
+  background-image: url(../img/ico34_people.svg);
+}
+.ico34-table {
+  background-image: url(../img/ico34_table.svg);
+}
+.ico34-noti {
+  background-image: url(../img/ico34_noti.svg);
+}
+.ico34-faq {
+  background-image: url(../img/ico34_faq.svg);
+}
+.ico34-inquiry {
+  background-image: url(../img/ico34_inquiry.svg);
+}
+.ico34-danger {
+  background-image: url(../img/ico34_danger.svg);
+}
 
 /* === btn === */
 .btn-primary {
@@ -1284,6 +1315,32 @@ button {
   color: #555555;
 }
 
+.statistics-list .change {
+  margin-top:6px;
+}
+.statistics-list .change > em {
+  color: var(--das-sub-font-color);
+  font-size: 12px;
+}
+.statistics-list .change > span {
+  font-size: 12px;
+  font-weight: 600;
+}
+.statistics-list .change > .increase {
+  color: #DC2626;
+}
+.statistics-list .change > .decrease {
+  color: #2563EB;
+}
+
+.statistics-list > ul li.spotlight {
+  background-color: #FFFBEB;
+}
+
+.statistics-list > ul li.spotlight .figures > dd > strong {
+  color: #D97706;
+}
+
 /* section */
 .flex-sec {
   display: flex;
@@ -1460,4 +1517,52 @@ button {
 .legend.ur4 {
   border-radius: 100%;
   background-color: #5aa9fe;
+}
+
+/* 대시보드 */
+.dashboard-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.dashboard-list > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 34px 14px 8px;
+  background: url(../img/ico14_view_g.svg) no-repeat right 8px center / 14px 14px;
+}
+.dashboard-list__item > span {
+  font-weight: 600;
+}
+.dashboard-list__item > span > i {
+  margin-right: var(--das-gap-medium);
+}
+.dashboard-list__item > em {
+  color: #555555;
+  font-size: 11px;
+}
+.dashboard-list__item > em > b {
+  font-size: 13px;
+  color: #111111;
+}
+.dashboard-list .sub-text {
+  margin-top: auto;
+}
+.dashboard-list > ul > li ~ li {
+  border-top:1px solid #EBEBEB;
+}
+.dashboard-list > ul > li.danger {
+  border-radius: 4px;
+  background-color: #FEF2F2;
+}
+
+.dashboard-list > ul > li.danger .dashboard-list__item > span,
+.dashboard-list > ul > li.danger .dashboard-list__item > em > b {
+  color: #DC2626;
 }
