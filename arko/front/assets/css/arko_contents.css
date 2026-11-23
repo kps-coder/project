@@ -983,8 +983,11 @@
 .tree-list > li:last-child {
   padding-bottom:0;
 }
-.tree-list > li:last-child::before {
+.tree-list > li:last-child:not(:has(.tree-depth2))::before {
   display: none;
+}
+.tree-list > li:first-child::before {
+  display: block;
 }
 
 .tree-depth1-link {
