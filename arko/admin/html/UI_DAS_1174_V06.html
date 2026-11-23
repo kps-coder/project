@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 멀티미디어 통계</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude3"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">멀티미디어 통계</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>통계</li>
+                  <li>멀티미디어 통계</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">
+                멀티미디어 통계
+                <small class="sub-text ml-small">디지털 원문 및 멀티미디어 콘텐츠의 이용 현황을 조회합니다.</small>
+              </h2>
+            </div>
+            <div class="conts-body">
+              <div class="das-search-optin">
+                <table>
+                  <colgroup>
+                    <col style="width: 124px;">
+                    <col style="width: auto;">
+                    <col style="width: 170px;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">기간</th>
+                      <td colspan="2">
+                        <input type="text" class="das-input-date" id="dasInputDate1" value="2015-08-29"> 
+                        ~ 
+                        <input type="text" class="das-input-date" id="dasInputDate2" value="2015-08-29">
+
+                        <div class="das-radio-btn large ml-small">
+                          <span class="radio-btn">
+                            <input type="radio" name="dasRadioBtn1" id="dasRadioBtn1" checked>
+                            <label for="dasRadioBtn1">오늘</label>
+                          </span>
+                          <span class="radio-btn">
+                            <input type="radio" name="dasRadioBtn1" id="dasRadioBtn1_1">
+                            <label for="dasRadioBtn1_1">최근 7일</label>
+                          </span>
+                          <span class="radio-btn">
+                            <input type="radio" name="dasRadioBtn1" id="dasRadioBtn1_2">
+                            <label for="dasRadioBtn1_2">최근 30일</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="inputSearch02">멀티미디어 유형</label></th>
+                      <td>
+                        <select class="das-select">
+                          <option>전체</option>
+                          <option>영상</option>
+                          <option>음원</option>
+                          <option>이미지</option>
+                          <option>PDF</option>
+                        </select>
+                      </td>
+                      <td class="ar">
+                        <button type="button" class="btn-default">초기화</button>
+                        <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="statistics-list">
+                <ul>
+                  <li>
+                    <dl class="figures">
+                      <dt>멀티미디어 전체 이용 건수</dt>
+                      <dd><strong>8,320</strong> 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="figures">
+                      <dt>영상 이용 건수</dt>
+                      <dd><strong>3,210</strong> 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="figures">
+                      <dt>음원 이용 건수</dt>
+                      <dd><strong>1,820</strong> 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="figures">
+                      <dt>이미지 이용 건수</dt>
+                      <dd><strong>2,100</strong> 건</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="figures">
+                      <dt>PDF 이용 건수</dt>
+                      <dd><strong>1,190</strong> 건</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex-sec">
+                <section class="sec-box">
+                  <div class="sec-box__head">
+                    <h3 class="h4-title">일자별 멀티미디어 이용 추이</h3>
+                    <p class="unit">(단위 : 건)</p>
+                  </div>
+                  <div class="sec-box__body">
+                    
+                    <div class="chart-area">
+                      <canvas id="trendsUsageByDateChart" class="trendsUsageByDateChart"></canvas>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="sec-box">
+                  <div class="sec-box__head">
+                    <h3 class="h4-title">유형별 이용 비율</h3>
+                    <p class="unit">(단위 : 건, %)</p>
+                  </div>
+                  <div class="sec-box__body">
+                    <div class="usage-chart-area">
+                      <canvas id="usageRateChart" class="usageRateChart"></canvas>
+                      <div class="access-list">
+                        <table>
+                          <colgroup>
+                            <col style="width: auto;">
+                            <col style="width: 80px">
+                            <col style="width: 50px;">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row"><span class="legend ur1"></span> 직접접속</th>
+                              <td class="ar"><strong>3,210</strong></td>
+                              <td class="ar sub-text">38.6%</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="legend ur2"></span> 검색</th>
+                              <td class="ar"><strong>1,820</strong></td>
+                              <td class="ar sub-text">21.9%</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="legend ur3"></span> 외부 링크</th>
+                              <td class="ar"><strong>2,100</strong></td>
+                              <td class="ar sub-text">25.2%</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="legend ur4"></span> SNS</th>
+                              <td class="ar"><strong>1,190</strong></td>
+                              <td class="ar sub-text">14.3%</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>              
+
+              <section class="sec-box">
+                <div class="sec-box__head">
+                  <h3 class="h4-title">멀티미디어 콘텐츠별 이용 현황</h3>
+                  <button type="button" class="btn-primary xls-download"><i class="ico14-download"></i>엑셀 다운로드</button>
+                </div>
+                <div class="sec-box__body">
+                  <div class="das-grid-table">
+                    <table>
+                      <colgroup>
+                        <col style="width: 80px;">
+                        <col style="width: 100px;">
+                        <col style="width: 150px;">
+                        <col style="width: auto;">
+                        <col style="width: 120px;">
+                        <col style="width: 140px;">
+                      </colgroup>
+                      <thead>
+                        <th scope="col">No</th>
+                        <th scope="col">자산유형</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">기록물명(제목)</th>
+                        <th scope="col">열람 건수</th>
+                        <th scope="col">최근 공개범위 전환일</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>이미지</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>영상</td>
+                          <td>공연 프로그램북</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>영상</td>
+                          <td>공연전체</td>
+                          <td>2018 가우데아무스 교류음악회</td>
+                          <td>1,240</td>
+                          <td>2026-06-30</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- pagenation -->
+                  <div class="das-pagenation">
+                    <div class="pagenation__list">
+                      <button type="button" class="btn-page-first" disabled>
+                        <span class="blind">처음으로</span>
+                      </button>
+                      <button type="button" class="btn-page-prev" disabled>
+                        <span class="blind">이전</span>
+                      </button>
+                      <div class="page__number">
+                        <button type="button" class="btn-page-num active">1</button>
+                        <button type="button" class="btn-page-num">2</button>
+                        <button type="button" class="btn-page-num">3</button>
+                        <button type="button" class="btn-page-num">4</button>
+                        <button type="button" class="btn-page-num">5</button>
+                        <span>&middot;&middot;&middot;</span>
+                        <button type="button" class="btn-page-num">9</button>
+                      </div>
+                      <button type="button" class="btn-page-next">
+                        <span class="blind">다음</span>
+                      </button>
+                      <button type="button" class="btn-page-last">
+                        <span class="blind">마지막으로</span>
+                      </button>
+                    </div>
+                    <div class="pagenation__select">
+                      <select class="das-select">
+                        <option>10 / page</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- //pagenation -->
+                </div>
+              </section>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <script>
+
+    const ctx = document.getElementById("trendsUsageByDateChart");
+
+    const trendsUsageByDateChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["08/22(월)", "08/23(화)", "08/24(수)", "08/25(목)", "08/26(금)", "08/27(토)", "08/28(일)"],
+        datasets: [
+          {
+            label: "전체",
+            data: [1500, 1700, 1900, 2400, 1700, 2000, 2400],
+            borderColor: "#2361fd",
+            backgroundColor: "#5685E8",
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 5,
+            pointBackgroundColor: "#2361fd",
+            pointBorderColor: "#2361fd",
+            pointBorderWidth: 2,
+            tension: 0,
+          },
+          {
+            label: "영상",
+            data: [900, 1000, 1100, 1400, 1000, 1200, 1400],
+            borderColor: "#fd78ba",
+            backgroundColor: "rgba(0, 168, 68, 0.08)",
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 5,
+            pointBackgroundColor: "#fd78ba",
+            pointBorderColor: "#fd78ba",
+            pointBorderWidth: 2,
+            tension: 0,
+          },
+          {
+            label: "음원",
+            data: [400, 450, 500, 600, 400, 500, 600],
+            borderColor: "#fec447",
+            backgroundColor: "rgba(0, 168, 68, 0.08)",
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 5,
+            pointBackgroundColor: "#fec447",
+            pointBorderColor: "#fec447",
+            pointBorderWidth: 2,
+            tension: 0,
+          },
+          {
+            label: "이미지",
+            data: [600, 800, 700, 1000, 600, 700, 1000],
+            borderColor: "#5abf83",
+            backgroundColor: "rgba(0, 168, 68, 0.08)",
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 5,
+            pointBackgroundColor: "#5abf83",
+            pointBorderColor: "#5abf83",
+            pointBorderWidth: 2,
+            tension: 0,
+          },
+          {
+            label: "PDF",
+            data: [100, 200, 300, 500, 300, 200, 400],
+            borderColor: "#9477f9",
+            backgroundColor: "rgba(0, 168, 68, 0.08)",
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 5,
+            pointBackgroundColor: "#9477f9",
+            pointBorderColor: "#9477f9",
+            pointBorderWidth: 2,
+            tension: 0,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: "index",
+          intersect: false,
+        },
+        layout: {
+          padding: {
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: "top",
+            align: "center",
+            labels: {
+              usePointStyle: true,
+              boxWidth: 6,
+              boxHeight: 6,
+              padding: 30,
+              font: {
+                family: '"Pretendard GOV", sans-serif',
+                size: 11,
+              },
+            },
+          },
+          tooltip: {
+            enabled: true,
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: true,
+            },
+            border: {
+              color: "#E5E5E5",
+            },
+            ticks: {
+              color: "#555555",
+              font: {
+                family: '"Pretendard GOV", sans-serif',
+                size: 12,
+              },
+            },
+          },
+          y: {
+            type: "linear",
+            position: "left",
+            min: 0,
+            max: 2500,
+            ticks: {
+              stepSize: 500,
+              color: "#8A8A8A",
+              font: {
+                family: '"Pretendard GOV", sans-serif',
+                size: 11,
+              },
+              callback: (value) => value.toLocaleString("ko-KR"),
+            },
+            grid: {
+              color: "#EAEAEA",
+              drawTicks: false,
+            },
+            border: {
+              display: false,
+            },
+          },
+        },
+      },
+    });
+
+    const ctx3 = document.getElementById("usageRateChart");
+    const centerTextPlugin = {
+      id: "centerText",
+      afterDraw(chart) {
+        const { ctx, chartArea } = chart;
+
+        if (!chartArea) return;
+
+        const centerX = (chartArea.left + chartArea.right) / 2;
+        const centerY = (chartArea.top + chartArea.bottom) / 2;
+
+        ctx.save();
+
+        // 전체 방문자수
+        ctx.font = 'bold 20px "Pretendard GOV", sans-serif';
+        ctx.fillStyle = "#111111";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("8,320건", centerX, centerY + 10);
+
+        // 안내 문구
+        ctx.font = '12px "Pretendard GOV", sans-serif';
+        ctx.fillStyle = "#8A8A8A";
+        ctx.fillText("전체", centerX, centerY - 15 );
+
+        ctx.restore();
+      },
+    };
+
+    const usageRateChart = new Chart(ctx3, {
+      type: "doughnut",
+      plugins: [centerTextPlugin],
+      data: {
+        labels: ['직접접속', '검색', '외부 링크', 'SNS', '기타'],
+        datasets: [
+          {
+            label: "접속 경로",
+            data: [3210, 1820, 2100, 1190],
+            backgroundColor: [
+              "#fb7fc2",
+              "#fcc54f",
+              "#68c484",
+              "#5aa9fe",
+            ],
+            borderWidth: 1,
+            cutout: "65%"
+          },          
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            enabled: false,
+          },
+        }
+      }
+    });
+
+    $(function () {
+      // 공통 옵션
+      const dateOptions = {
+        dateFormat: 'yy-mm-dd',
+        firstDay: 0,
+        showOtherMonths: true,
+        selectOtherMonths: false,
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true,
+        yearRange: 'c-10:c+10',
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+      };
+
+      // 시작일
+      $('#dasInputDate1').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate2').datepicker('option', 'minDate', date);
+        }
+      });
+
+      // 종료일
+      $('#dasInputDate2').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate1').datepicker('option', 'maxDate', date);
+        }
+      });
+    });
+
+    $('.das-contents').on('scroll', function () {
+      $('.hasDatepicker').datepicker('widget').hide();
+    });
+
+    // 퍼블확인 용 gnb 
+    document.addEventListener('DOMContentLoaded', function(){
+      setTimeout(() => {
+        const gnbList = document.querySelector('.das-gnb-list');
+        const gnbListItem = gnbList.querySelectorAll('li');
+
+        gnbListItem.forEach(function(li){
+          li.classList.remove('active');
+        });
+        gnbListItem[2].classList.add('active');
+      }, 10);      
+    });
+  </script>
+</body>
+</html>
