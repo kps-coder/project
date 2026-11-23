@@ -1008,6 +1008,7 @@ button {
 .krds-side-navigation {
   max-width: 324px;
   width: 23%;
+  padding-top:0;
 }
 
 .krds-side-navigation  .lnb-tit {
