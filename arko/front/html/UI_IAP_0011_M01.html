@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+  <title>메인 팝업 : 아르코예술기록원</title>  
+
+  <meta property="og:title" content="소장 기록물 : 아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/krds/css/common/common.css">
+  <link rel="stylesheet" href="../assets/krds/css/component/component.css">
+  <link rel="stylesheet" href="../assets/css/arko_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/krds/js/plugin/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="inner">
+    <button type="button" class="krds-btn medium tertiary open-modal" data-target="modalMainNoti">
+      메인 팝업
+    </button>
+  </div>
+
+  <!-- modal -->
+  <!-- 메인 팝업 -->
+  <section id="modalMainNoti" class="krds-modal fade" role="dialog" aria-labelledby="tit_modalMainNoti">
+    <div class="modal-dialog modal-xlg">
+      <div class="modal-content">
+        <!-- modal title -->
+        <div class="modal-header">
+          <h2 id="tit_modalURL" class="modal-title">
+            <div class="pop-logo">
+              <span class="sr-only">아르코예술기록원</span>
+            </div>
+          </h2>
+        </div>
+        <!-- //modal title -->
+        <!-- modal contents -->
+        <div class="modal-conts">
+          <div class="conts-area">
+            <div class="main-noti-pop">
+              <p class="title">한국예술디지털아카이브( DA-Arts ) 디지털 기록물 열람 서비스 변경 안내</p>
+              <div class="pop-img">
+                <img src="../assets/img/temp/img_sample_activity.jpg" alt="이미지 설명">
+              </div>
+            </div>            
+          </div>
+        </div>
+        <!-- //modal contents -->
+        <!-- modal btn -->
+        <div class="modal-btn btn-wrap">
+          <button type="button" class="krds-btn medium primary close-modal">확인</button>
+          <button type="button" class="krds-btn medium tertiary">자세히 보기</button>
+          <div class="pop-none-area">
+            <div class="krds-form-check medium">
+              <input type="checkbox" name="chkDayNone" id="chkDayNone">
+              <label for="chkDayNone">오늘 하루동안 보지않기</label>
+            </div>
+          </div>
+        </div>
+        <!-- //modal btn -->
+        <!-- close button -->
+        <button type="button" class="krds-btn medium icon btn-close close-modal">
+          <span class="sr-only">닫기</span>
+          <i class="svg-icon ico-popup-close"></i>
+        </button>
+        <!-- //close button -->
+      </div>
+    </div>
+    <div class="modal-back in"></div>
+  </section>
+  <!-- //modal -->
+
+
+  <!-- 퍼블전용:: include용 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+
+  <!-- UI js -->
+  <script src="../assets/krds/js/component/ui-script.js"></script> <!-- krds 제공 스크립트 -->
+  <script src="../assets/js/arko-ui-script.js"></script> <!-- arko 전용 ui 스크립트 -->
+
+   <script>
+    krds_modal.openModal('modalMainNoti');
+   </script>
+</body>
+</html>

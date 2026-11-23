@@ -629,6 +629,64 @@ button {
   border-bottom: 1px solid var(--arko-line-color-etc);
 }
 
+/* 메인 팝업 */
+.pop-logo {
+  width: 27.5rem;
+  height: 3.7rem;
+  margin:0 auto;
+  background:url(../img/comm/h1_logo.svg) no-repeat center / contain;
+}
+.main-noti-pop {
+  --main-noti-pop-title-font-size : 2.5rem;
+
+  padding-block: var(--arko-contents-gap-large);
+}
+.main-noti-pop .title {
+  margin-bottom: var(--arko-contents-gap-large);
+  font-size: var(--main-noti-pop-title-font-size);
+  font-weight: 500;
+  color: var(--arko-font-color-title);
+  text-align: center;
+}
+.main-noti-pop .pop-img {
+  text-align: center;
+}
+
+.pop-none-area {
+  position: absolute;
+  right: var(--krds-modal--padding) ;
+}
+
+.pop-none-area .krds-form-check.medium > input[type=checkbox] ~ label {
+  font-size: 1.8rem;
+}
+
+@media (max-width:767px) {
+  .main-noti-pop {
+    --main-noti-pop-title-font-size : 1.8rem;
+  }
+  .pop-logo {
+    width: 60%;
+    max-width: 20.2rem;
+    height: 2.5rem;
+  }
+
+  .pop-none-area {
+    position: static;
+    width: 100%;
+    text-align: right;
+    margin-top:var(--arko-contents-gap-medium);
+  }
+
+  .pop-none-area .krds-form-check.medium > input[type=checkbox] ~ label {
+    font-size: 1.6rem;
+  }
+
+  .krds-modal .modal-btn:has(.pop-none-area) {
+    flex-wrap: wrap;
+  }
+}
+
 /* 아이콘 */
 .svg-icon.ico-sch {
   -webkit-mask-image: url(../img/comm/ico_sch.svg);

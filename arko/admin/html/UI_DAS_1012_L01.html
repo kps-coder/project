@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <title>DAS :: 최근 변경 사항</title>  
+
+  <meta property="og:title" content="아르코예술기록원">
+  <meta property="og:description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+  <meta name="description" content="아르코예술기록원, 한국예술디지털아카이브, 한국근현대예술사 구술채록사업, 공연영상화사업, 예술 아카이빙 교육사업, 원 테이블">
+
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/das_common.css">
+  
+  <!-- js -->
+  <script src="../assets/js/lib/jquery.js"></script>
+  <script src="../assets/js/lib/jquery-ui.min.js"></script>
+  <script src="../assets/js/das_ui_script.js"></script>
+
+  <!-- 퍼블전용 js :: 사용금지 -->
+  <script src="../guide/js/include.js"></script>
+</head>
+<body>
+  <div class="das-wrapper">
+    <header id="dasHeaderInclude"><!-- Header Includ 영역 :: 퍼블 전용 사용금지 --></header>
+
+    <div class="das-container">
+      <aside id="dasLnbInclude1"><!-- Lnb Includ 영역 :: 퍼블 전용 사용금지 --></aside>
+
+      <div class="das-contents-wrap"> 
+        <div class="open-pages">
+          <ul>
+            <li><button type="button" class="btn-page-open">대시보드 홈</button></li>
+            <li class="active">
+              <button type="button" class="btn-page-open">최근 변경 사항</button>
+              <button type="button" class="btn-page-close"><span class="sr-only">닫기</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="das-contents">
+          <section class="contents">
+            <div class="conts-head">
+              <div class="breadcrumb">
+                <ol>
+                  <li>사이트 관리</li>
+                  <li>Dashboard</li>
+                  <li>최근 변경 사항</li>
+                </ol>
+              </div>
+              <h2 class="h2-title">최근 변경 사항</h2>
+            </div>
+            <div class="conts-body">
+              <div class="das-search-optin">
+                <table>
+                  <colgroup>
+                    <col style="width: 124px;">
+                    <col style="width: 20%;">
+                    <col style="width: 124px;">
+                    <col style="width: auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">기간</th>
+                      <td colspan="3">
+                        <input type="text" class="das-input-date" id="dasInputDate1" value="2015-08-29"> 
+                        ~ 
+                        <input type="text" class="das-input-date" id="dasInputDate2" value="2015-08-29">
+
+                        <div class="das-radio-btn large ml-small">
+                          <span class="radio-btn">
+                            <input type="radio" name="dasRadioBtn1" id="dasRadioBtn1" checked>
+                            <label for="dasRadioBtn1">오늘</label>
+                          </span>
+                          <span class="radio-btn">
+                            <input type="radio" name="dasRadioBtn1" id="dasRadioBtn1_1">
+                            <label for="dasRadioBtn1_1">최근 7일</label>
+                          </span>
+                          <span class="radio-btn">
+                            <input type="radio" name="dasRadioBtn1" id="dasRadioBtn1_2">
+                            <label for="dasRadioBtn1_2">최근 30일</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="selectSearch01">구분</label></th>
+                      <td>
+                        <select class="das-select block" id="selectSearch01">
+                          <option>전체</option>
+                          <option>제목</option>
+                          <option>작업자</option>
+                        </select>
+                      </td>
+                      <th scope="row"><label for="inputSearch01">키워드</label></th>
+                      <td>
+                        <div class="input-search">
+                          <input type="text" class="das-input-text" id="inputSearch01">
+                          <button type="button" class="btn-default">초기화</button>
+                          <button type="button" class="btn-primary"><i class="ico14-search"></i>조회</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div class="das-grid">
+                <div class="grid__head">
+                  <div class="count">전체 <strong>1,123</strong>건</div>
+                  <div class="sort">
+                    <select class="das-select">
+                      <option>내림차순</option>
+                      <option>오름차순</option>
+                    </select>
+                    <select class="das-select">
+                      <option>10개씩 보기</option>
+                      <option>20개씩 보기</option>
+                      <option>50개씩 보기</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid__body">
+                  <div class="das-grid-table">
+                    <table>
+                      <colgroup>
+                        <col style="width: 5%;">
+                        <col style="width: 160px;">
+                        <col style="width: 30%;">
+                        <col style="width: auto">
+                        <col style="width: 100px;">
+                        <col style="width: 120px;">
+                      </colgroup>
+                      <thead>
+                        <th scope="col">NO</th>
+                        <th scope="col">일시</th>
+                        <th scope="col">관리영역</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">작업내용</th>
+                        <th scope="col">작업자</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge info">수정</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge success">등록</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge info">수정</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge success">등록</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge info">수정</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge success">등록</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge info">수정</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge success">등록</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge info">수정</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2026-08-26 13:20:41</td>
+                          <td>사이트관리&gt;메인화면관리&gt;Hero 영역 관리</td>
+                          <td class="al">
+                            <a href="#n" class="btn-text-link">국악관현악을 위한 &lt;기억의 노래&gt;</a>
+                          </td>
+                          <td><span class="das-badge success">등록</span></td>
+                          <td>관리자(admin)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="grid__foot">
+                  <!-- pagenation -->
+                  <div class="das-pagenation">
+                    <div class="pagenation__list">
+                      <button type="button" class="btn-page-first" disabled>
+                        <span class="blind">처음으로</span>
+                      </button>
+                      <button type="button" class="btn-page-prev" disabled>
+                        <span class="blind">이전</span>
+                      </button>
+                      <div class="page__number">
+                        <button type="button" class="btn-page-num active">1</button>
+                        <button type="button" class="btn-page-num">2</button>
+                        <button type="button" class="btn-page-num">3</button>
+                        <button type="button" class="btn-page-num">4</button>
+                        <button type="button" class="btn-page-num">5</button>
+                        <span>&middot;&middot;&middot;</span>
+                        <button type="button" class="btn-page-num">9</button>
+                      </div>
+                      <button type="button" class="btn-page-next">
+                        <span class="blind">다음</span>
+                      </button>
+                      <button type="button" class="btn-page-last">
+                        <span class="blind">마지막으로</span>
+                      </button>
+                    </div>
+                    <div class="pagenation__select">
+                      <select class="das-select">
+                        <option>10 / page</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- //pagenation -->
+                </div>
+              </div>
+            </div><!-- //conts-body -->
+          </section>
+        </div>
+
+        <footer id="dasFooterInclude"><!-- Footer Includ 영역 :: 퍼블 전용 사용금지 --></footer>
+      </div>
+    </div><!-- //das-container -->
+  </div>
+
+  <script>
+    $(function () {
+      // 공통 옵션
+      const dateOptions = {
+        dateFormat: 'yy-mm-dd',
+        firstDay: 0,
+        showOtherMonths: true,
+        selectOtherMonths: false,
+        minDate: 0,
+        changeMonth: true,
+        changeYear: true,
+        yearRange: 'c-10:c+10',
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+      };
+
+      // 시작일
+      $('#dasInputDate1').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate2').datepicker('option', 'minDate', date);
+        }
+      });
+
+      // 종료일
+      $('#dasInputDate2').datepicker({
+        ...dateOptions,
+        onSelect: function (date) {
+          $('#dasInputDate1').datepicker('option', 'maxDate', date);
+        }
+      });
+    });
+
+    $('.das-contents').on('scroll', function () {
+      $('.hasDatepicker').datepicker('widget').hide();
+    });
+  </script>
+</body>
+</html>
