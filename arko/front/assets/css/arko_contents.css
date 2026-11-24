@@ -1330,6 +1330,7 @@
 
 /* === 원테이블 === */
 .one-table__box {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: var(--arko-contents-gap-large);
@@ -1341,12 +1342,13 @@
   margin-top:var(--arko-contents-gap-xlarge);
 }
 .one-table__thum {
-  
+
 }
 .one-table__thum img {
-  width: 100%;
-  max-height: 346px;
-  object-fit: contain;
+  width: 100%;  
+  /* max-height: 346px; */
+  aspect-ratio: 277 / 346;
+  object-fit: cover;
   border-radius: var(--arko-border-radius-default);
 }
 .one-table__title {
@@ -1358,6 +1360,7 @@
 .one-table__info {
   flex: 1;
 }
+
 .one-table__meta dl {
   display: flex;
 }
@@ -1376,14 +1379,28 @@
 /* pc */
 @media (min-width:900px) {
   .one-table .arko-btns {
-    align-self: flex-end;
+    position: absolute;
+    bottom:var(--arko-contents-gap-medium);
+    right:var(--arko-contents-gap-medium);
+  }
+  .one-table__thum img {
+    max-width: 277px;
+  }
+  .one-table__meta {
+    padding-bottom: 4rem;
   }
 }
 
 /* mob */
 @media (max-width:899px) {
+  .one-table__thum img {
+    display: block;
+    max-width: 500px;
+    margin:0 auto;
+  }
   .one-table__box {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
 
