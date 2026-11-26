@@ -412,8 +412,12 @@
               UI-IAP-3511-V12
             </td>
             <td class="plan">2026-10-23</td>
-            <td class="date"></td>
-            <td class="etc"></td>
+            <td class="date">
+              2026-10-20
+            </td>
+            <td class="etc">
+              <p class="fc-point1"><a href="html/UI_IAP_3511_V01.html" target="_blank">UI-IAP-3511-V01</a> 참조</p>
+            </td>
           </tr>
           <tr>
             <td class="no"></td>
@@ -429,8 +433,12 @@
               UI-IAP-3511-V18
             </td>
             <td class="plan">2026-10-23</td>
-            <td class="date"></td>
-            <td class="etc"></td>
+            <td class="date">
+              2026-10-20
+            </td>
+            <td class="etc">
+              <p class="fc-point1"><a href="html/UI_IAP_3511_V01.html" target="_blank">UI-IAP-3511-V01</a> 참조</p>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -601,8 +609,10 @@
             <td class="3dep">└ PDF뷰어</td>
             <td class="file">UI-IAP-3111-V04</td>
             <td class="plan">2026-10-12</td>
-            <td class="date"></td>
-            <td class="etc"></td>
+            <td class="date">-</td>
+            <td class="etc">
+              <p>asis 사용</p>
+            </td>
           </tr>
           <tr>
             <td class="no"></td>
@@ -746,8 +756,10 @@
             <td class="3dep">이미지뷰어(L)</td>
             <td class="file">UI-IAP-3641-P01</td>
             <td class="plan">2026-10-23</td>
-            <td class="date"></td>
-            <td class="etc"></td>
+            <td class="date">-</td>
+            <td class="etc">
+              <p>asis 사용</p>
+            </td>
           </tr>
           <tr>
             <td class="no"></td>
@@ -786,8 +798,10 @@
             <td class="3dep">이미지뷰어</td>
             <td class="file">UI-IAP-3651-P01</td>
             <td class="plan">2026-10-23</td>
-            <td class="date"></td>
-            <td class="etc"></td>
+            <td class="date">-</td>
+            <td class="etc">
+              <p>asis 사용</p>
+            </td>
           </tr>
           <tr>
             <td class="no"></td>
@@ -840,8 +854,10 @@
             <td class="3dep">└ 음원 플래이어(L)</td>
             <td class="file">UI-IAP-3661-P01</td>
             <td class="plan">2026-10-23</td>
-            <td class="date"></td>
-            <td class="etc"></td>
+            <td class="date">-</td>
+            <td class="etc">
+              <p>asis 사용</p>
+            </td>
           </tr>
           <tr>
             <td class="no"></td>
@@ -890,8 +906,10 @@
             <td class="3dep">└ 이미지뷰어(L)</td>
             <td class="file">UI-IAP-3663-P01</td>
             <td class="plan">2026-10-23</td>
-            <td class="date"></td>
-            <td class="etc"></td>
+            <td class="date">-</td>
+            <td class="etc">
+              <p>asis 사용</p>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -1828,7 +1846,7 @@
       });
       console.log(elemDel.length);
 
-      total.innerHTML = elemNo.length - elemDel.length;
+      total.innerHTML = elemNo.length;
 
       // 완료건 count 및 진척률
       elemDate.forEach(function(obj, i){
@@ -1839,7 +1857,7 @@
           console.log(obj.hasChildNodes());
         }
 
-        let progr = ( count / (elemNo.length - elemDel.length) ) * 100;
+        let progr = ( count / elemNo.length ) * 100;
         progress.innerHTML = Math.floor(progr);
       });
 
